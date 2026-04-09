@@ -1,0 +1,487 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ChevronRight, ArrowRight, Star, Clock, MapPin, Users } from 'lucide-astro';
+
+const tours = [
+  {
+    title: "Classic Sacred Valley",
+    price: "$850",
+    image: "/images/hero.png",
+    duration: "4 Days",
+    rating: 4.9,
+    tag: "Cultural"
+  },
+  {
+    title: "The Ultimate Marathon",
+    price: "$1200",
+    image: "/images/marathon.png",
+    duration: "7 Days",
+    rating: 5.0,
+    tag: "Active"
+  },
+  {
+    title: "Llama Trek Expedition",
+    price: "$950",
+    image: "/images/hero.png",
+    duration: "5 Days",
+    rating: 4.8,
+    tag: "Adventure"
+  }
+];
+---
+
+<Layout title="Adventure & Luxury Travel Agency">
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h4 class="animate-fade-in delay-1 serif italic">Experience the Andes like never before</h4>
+      <h1 class="animate-fade-in delay-2 serif">Machu Picchu <br/> <span>Andes Marathon</span></h1>
+      <p class="animate-fade-in delay-3">Where pure endurance meets timeless mystique. Join the most breathtaking trail race on earth or explore luxury custom tours in the heart of Peru.</p>
+      <div class="hero-btns animate-fade-in delay-3">
+        <a href="#tours" class="btn btn-primary">Explore Expeditions <ArrowRight size="20" /></a>
+        <a href="#marathon" class="btn btn-outline">The Race Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Tours -->
+  <section id="tours" class="section tours">
+    <div class="container section-header">
+      <div>
+        <h2 class="serif">Featured Expeditions</h2>
+        <p class="text-muted">Curated journeys designed for the sophisticated traveler.</p>
+      </div>
+      <a href="#" class="view-all">View All Tours <ChevronRight size="18" /></a>
+    </div>
+
+    <div class="container tour-grid">
+      {tours.map((tour, index) => (
+        <div class="tour-card animate-fade-in delay-{index + 1}">
+          <div class="tour-image-w">
+            <img src={tour.image} alt={tour.title} />
+            <span class="tour-tag">{tour.tag}</span>
+          </div>
+          <div class="tour-body">
+            <div class="tour-meta">
+              <span><Clock size="16" /> {tour.duration}</span>
+              <span><Star size="16" fill="var(--secondary)" color="var(--secondary)" /> {tour.rating}</span>
+            </div>
+            <h3 class="serif">{tour.title}</h3>
+            <div class="tour-footer">
+              <span class="tour-price">From {tour.price}</span>
+              <a href="#" class="btn-icon"><ArrowRight size="20" /></a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Marathon Highlight -->
+  <section id="marathon" class="highlight-section">
+    <div class="container marathon-grid">
+      <div class="marathon-content">
+        <h2 class="serif">The Highest Race <br/> In Incan Territory</h2>
+        <p>Prepare for the ultimate test of endurance. Running across the ancient Incan trail at 4,000 meters above sea level is not just a race; it's a spiritual transformation.</p>
+        
+        <ul class="features">
+          <li>
+            <div class="feature-icon"><MapPin size="24" /></div>
+            <div>
+              <h4 class="serif">Historic Route</h4>
+              <p>Run through original Incan stone paths and hidden archaeological sites.</p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon"><Users size="24" /></div>
+            <div>
+              <h4 class="serif">Limited Entry</h4>
+              <p>Only 100 participants per year to ensure minimal environmental impact.</p>
+            </div>
+          </li>
+        </ul>
+
+        <a href="#" class="btn btn-dark">Register Now</a>
+      </div>
+      <div class="marathon-image animate-fade-in">
+        <img src="/images/marathon.png" alt="Marathon Runner" class="floating-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking CTA -->
+  <section id="contact" class="cta-section container">
+    <div class="cta-box animate-fade-in">
+      <div class="cta-content">
+        <h2 class="serif">Your Andean Journey <br/> Starts Here</h2>
+        <p>Contact our luxury travel consultants to personalize your Sacred Valley experience.</p>
+        <form class="booking-form">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <select required>
+            <option disabled selected>Select Expedition</option>
+            <option>Sacred Valley Classic</option>
+            <option>Andes Marathon</option>
+            <option>Custom Luxury Tour</option>
+          </select>
+          <button type="submit" class="btn btn-primary">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    min-height: 700px;
+    background: url('/images/hero.png') center/cover no-repeat fixed;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: var(--text-light);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+  }
+
+  .hero-content h4 {
+    color: var(--secondary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(3rem, 10vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+  }
+
+  .hero-content h1 span {
+    color: var(--secondary);
+    display: block;
+  }
+
+  .hero-content p {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin-bottom: 3rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .hero-btns .btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn-outline {
+    border: 2px solid var(--text-light);
+    color: var(--text-light);
+  }
+
+  .btn-outline:hover {
+    background: var(--text-light);
+    color: var(--primary);
+  }
+
+  /* Tours Section */
+  .section {
+    padding: 100px 0;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .view-all {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  .tour-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .tour-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+  }
+
+  .tour-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .tour-image-w {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .tour-image-w img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+
+  .tour-card:hover img {
+    transform: scale(1.1);
+  }
+
+  .tour-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary);
+  }
+
+  .tour-body {
+    padding: 1.5rem;
+  }
+
+  .tour-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .tour-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .tour-body h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tour-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .tour-price {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .btn-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-muted);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tour-card:hover .btn-icon {
+    background: var(--primary);
+    color: white;
+  }
+
+  /* Highlight Section */
+  .highlight-section {
+    background: var(--bg-muted);
+    padding: 120px 0;
+  }
+
+  .marathon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .marathon-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .marathon-content p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+  }
+
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .features li {
+    display: flex;
+    gap: 20px;
+  }
+
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+    color: var(--secondary);
+  }
+
+  .features h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .btn-dark {
+    background: var(--primary);
+    color: white;
+    padding: 1.25rem 2.5rem;
+  }
+
+  .marathon-image img {
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* CTA Section */
+  .cta-section {
+    margin-top: -100px;
+    position: relative;
+    z-index: 20;
+  }
+
+  .cta-box {
+    background: var(--primary);
+    padding: 5rem;
+    border-radius: 30px;
+    color: var(--text-light);
+    text-align: center;
+    background-image: linear-gradient(rgba(14, 59, 46, 0.9), rgba(14, 59, 46, 0.9)), url('/images/hero.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .cta-box h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-box p {
+    margin-bottom: 3rem;
+    opacity: 0.8;
+  }
+
+  .booking-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.8fr;
+    gap: 1rem;
+  }
+
+  .booking-form input, .booking-form select {
+    padding: 1.25rem;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-family: inherit;
+  }
+
+  .booking-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .booking-form option {
+    color: black;
+  }
+
+  @media (max-width: 1024px) {
+    .tour-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .booking-form {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .marathon-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .tour-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-box {
+      padding: 3rem 1.5rem;
+    }
+
+    .booking-form {
+      grid-template-columns: 1fr;
+    }
+
+    .section-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+  }
+</style>

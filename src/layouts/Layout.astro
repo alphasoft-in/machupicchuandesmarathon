@@ -1,0 +1,322 @@
+---
+import '../styles/global.css';
+import { Menu, X, Phone, Mail, Instagram, Facebook, Monitor, MapPin } from 'lucide-astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Discover the ultimate adventure in the Andes with Machu Picchu Andes Marathon. Luxury tours, trail marathons, and cultural experiences in the heart of Peru." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Machu Picchu Andes Marathon</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="Machu Picchu, Andes, Marathon, Peru, Travel Agency, Luxury Tours, Adventure Travel" />
+  </head>
+  <body>
+    <!-- Premium Header -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="/" class="logo serif">
+          <span>MPA</span> Marathon
+        </a>
+        
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#tours">Expeditions</a></li>
+          <li><a href="#marathon">The Marathon</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="btn btn-primary">Book Now</a></li>
+        </ul>
+
+        <button class="mobile-toggle" id="mobile-toggle">
+          <Menu class="icon open-icon" />
+          <X class="icon close-icon hidden" />
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <!-- Professional Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-info">
+          <h2 class="serif">MPA Marathon</h2>
+          <p>The definitive adventure in the Sacred Valley. Excellence in high-altitude experiences and trail running.</p>
+          <div class="social-links">
+            <a href="#"><Instagram /></a>
+            <a href="#"><Facebook /></a>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><Phone size="18" /> +51 84 123 456</li>
+            <li><Mail size="18" /> hello@mpamarathon.com</li>
+            <li><MapPin size="18" /> Cusco, Peru</li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <p>&copy; {new Date().getFullYear()} Machu Picchu Andes Marathon. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <style>
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0;
+        z-index: 1000;
+        transition: var(--transition);
+      }
+
+      .header.scrolled {
+        padding: 1rem 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        color: var(--text-light);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .header.scrolled .logo {
+        color: var(--primary);
+      }
+
+      .logo span {
+        color: var(--secondary);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+      }
+
+      .nav-links constant a {
+        color: var(--text-light);
+        font-weight: 500;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .header.scrolled .nav-links a {
+        color: var(--text-dark);
+      }
+
+      .nav-links a:hover {
+        color: var(--secondary);
+      }
+
+      .btn {
+        padding: 0.8rem 1.5rem;
+        border-radius: 4px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: var(--transition);
+      }
+
+      .btn-primary {
+        background: var(--secondary);
+        color: #000 !important;
+      }
+
+      .btn-primary:hover {
+        background: var(--accent);
+        transform: translateY(-2px);
+      }
+
+      .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text-light);
+        cursor: pointer;
+      }
+
+      .header.scrolled .mobile-toggle {
+        color: var(--text-dark);
+      }
+
+      .close-icon.hidden, .open-icon.hidden {
+        display: none;
+      }
+
+      .close-icon {
+        display: block;
+      }
+
+      .close-icon.hidden {
+        display: none;
+      }
+
+      /* Footer Styles */
+      .footer {
+        background: var(--primary);
+        color: var(--text-light);
+        padding: 5rem 0 2rem;
+        margin-top: 5rem;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 4rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 3rem;
+      }
+
+      .footer-info h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-info p {
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 320px;
+        margin-bottom: 2rem;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .footer h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-contact ul, .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .footer-contact li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .footer-links a:hover {
+        color: var(--secondary);
+      }
+
+      .footer-bottom {
+        padding-top: 2rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      @media (max-width: 968px) {
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .mobile-toggle {
+          display: block;
+        }
+
+        .nav-links {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 80%;
+          height: 100vh;
+          background: white;
+          flex-direction: column;
+          padding: 6rem 2rem;
+          transition: var(--transition);
+          box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links.active {
+          right: 0;
+        }
+
+        .nav-links a {
+          color: var(--text-dark) !important;
+          font-size: 1.25rem;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+      }
+    </style>
+
+    <script>
+      const header = document.getElementById('header');
+      const mobileToggle = document.getElementById('mobile-toggle');
+      const navMenu = document.getElementById('nav-menu');
+
+      if (header) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        });
+      }
+
+      if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+          const openIcon = mobileToggle.querySelector('.open-icon');
+          const closeIcon = mobileToggle.querySelector('.close-icon');
+          
+          if (openIcon) openIcon.classList.toggle('hidden');
+          if (closeIcon) closeIcon.classList.toggle('hidden');
+        });
+      }
+    </script>
+  </body>
+</html>

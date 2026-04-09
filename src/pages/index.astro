@@ -1,0 +1,204 @@
+---
+import '../styles/global.css';
+import { Instagram, Facebook, Mail, MapPin } from 'lucide-astro';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próximamente | Machu Picchu Andes Marathon</title>
+</head>
+<body>
+    <div class="coming-soon">
+        <div class="background"></div>
+        <div class="overlay"></div>
+        
+        <header class="header">
+            <div class="logo serif">MPA <span>Marathon</span></div>
+        </header>
+
+        <main class="content animate-fade-in">
+            <h1 class="serif">Próximamente</h1>
+            <p>Estamos preparando la experiencia de viaje y aventura más mística de los Andes. Prepárate para lo extraordinario.</p>
+            
+            <div class="countdown-placeholder">
+                <div class="status-badge">Explorando Nuevas Rutas...</div>
+            </div>
+
+            <div class="newsletter">
+                <form>
+                  <input type="email" placeholder="Tu correo electrónico" />
+                  <button type="button">Notificarme</button>
+                </form>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="socials">
+                <a href="#"><Instagram size="20" /></a>
+                <a href="#"><Facebook size="20" /></a>
+                <a href="#"><Mail size="20" /></a>
+            </div>
+            <div class="location">
+                <MapPin size="16" /> Cusco, Perú
+            </div>
+        </footer>
+    </div>
+
+    <style>
+        .coming-soon {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background: #000;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/images/hero.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+            filter: grayscale(30%);
+            transition: transform 10s linear;
+        }
+
+        .coming-soon:hover .background {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.8) 100%);
+        }
+
+        .header, .footer, .content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .content {
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 6rem);
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+        }
+
+        p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 3rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--secondary);
+            color: var(--secondary);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+        }
+
+        .newsletter {
+            margin-top: 2rem;
+        }
+
+        .newsletter form {
+            display: flex;
+            gap: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .newsletter input {
+            flex: 1;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            backdrop-filter: blur(5px);
+        }
+
+        .newsletter button {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            border: none;
+            background: var(--secondary);
+            color: #000;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter button:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .socials {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .socials a {
+            color: rgba(255,255,255,0.5);
+            transition: var(--transition);
+        }
+
+        .socials a:hover {
+            color: var(--secondary);
+        }
+
+        .location {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
+</body>
+</html>

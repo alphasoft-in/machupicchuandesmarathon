@@ -1,290 +1,413 @@
 ---
-import '../styles/global.css';
-import { Instagram, Facebook, Mail, MapPin } from 'lucide-astro';
+import Layout from '../layouts/Layout.astro';
+import { ArrowRight, MapPin, Users, Globe } from 'lucide-astro';
+
+const categories = [
+  {
+    title: "Inca Trail Tours",
+    desc: "The legendary path to Machu Picchu. Historic routes through original Incan stone paths and hidden archaeological sites.",
+    image: "/images/marathon.png",
+    link: "/inca-trail",
+    accent: "var(--secondary)"
+  },
+  {
+    title: "Alternative Treks",
+    desc: "Venture beyond the crowds. Discover Salkantay, Lares, and the hidden spirits of the high Andes Mountains.",
+    image: "/images/hero.png",
+    link: "/alternative-treks",
+    accent: "var(--primary)"
+  },
+  {
+    title: "Tour Days",
+    desc: "Perfect daily excursions from Cusco and the Sacred Valley. Culture, adventure, and history in a single day.",
+    image: "/images/marathon.png",
+    link: "/tour-days",
+    accent: "#ff8c42"
+  }
+];
 ---
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Próximamente | Machu Picchu Andes Marathon</title>
-</head>
-<body>
-    <div class="coming-soon">
-        <div class="background"></div>
-        <div class="overlay"></div>
-        
-        <header class="header">
-            <div class="logo-container">
-                <img src="/images/logo.png" alt="Logo" class="logo-img" />
-            </div>
-        </header>
+<Layout title="Adventure & Luxury Travel Agency">
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h4 class="animate-fade-in delay-1 serif italic">Experience the Andes like never before</h4>
+      <h1 class="animate-fade-in delay-2 serif">Machu Picchu <br/> <span>Andes Marathon</span></h1>
+      <p class="animate-fade-in delay-3">Where pure endurance meets timeless mystique. Join the most breathtaking trail race on earth or explore luxury custom tours in the heart of Peru.</p>
+      <div class="hero-btns animate-fade-in delay-3">
+        <a href="/inca-trail" class="btn btn-primary">Our Expeditions <ArrowRight size="20" /></a>
+        <a href="#about" class="btn btn-outline">Why Choose Us</a>
+      </div>
+    </div>
+  </section>
 
-        <main class="content animate-fade-in">
-            <h1 class="serif">Próximamente</h1>
-            <p>Estamos preparando la experiencia de viaje y aventura más mística de los Andes. Prepárate para lo extraordinario.</p>
-            
-            <div class="countdown-placeholder">
-                <div class="status-badge">Explorando Nuevas Rutas...</div>
-            </div>
-
-            <div class="newsletter">
-                <form>
-                  <input type="email" placeholder="Tu correo electrónico" />
-                  <button type="button">Notificarme</button>
-                </form>
-            </div>
-        </main>
-
-        <footer class="footer">
-            <div class="socials">
-                <a href="#"><Instagram size="20" /></a>
-                <a href="#"><Facebook size="20" /></a>
-                <a href="#"><Mail size="20" /></a>
-            </div>
-            <div class="location">
-                <MapPin size="16" /> Cusco, Perú
-            </div>
-        </footer>
+  <!-- Categories Section -->
+  <section id="categories" class="section categories pb-40">
+    <div class="container text-center mb-5">
+      <h2 class="serif section-title">Explore Our Categories</h2>
+      <p class="text-muted max-w-600 mx-auto">Choose your perfect adventure. From legendary treks to daily cultural immersions.</p>
     </div>
 
-    <style>
-        .coming-soon {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            background: #000;
-            color: #fff;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-            padding: 2rem;
-        }
+    <div class="container category-grid">
+      {categories.map((cat, index) => (
+        <a href={cat.link} class={`category-card animate-fade-in delay-${index + 1}`}>
+          <div class="cat-image-w">
+            <img src={cat.image} alt={cat.title} />
+            <div class="cat-overlay" style={`background: linear-gradient(to top, ${cat.accent}cc, transparent)`}></div>
+          </div>
+          <div class="cat-content">
+            <h3 class="serif">{cat.title}</h3>
+            <p>{cat.desc}</p>
+            <span class="cat-link">View Packages <ArrowRight size="18" /></span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
 
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('/images/hero.png');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.6;
-            filter: grayscale(30%);
-            transition: transform 10s linear;
-        }
+  <!-- About / Why Us -->
+  <section id="about" class="section bg-muted pt-40 pb-40">
+    <div class="container about-grid">
+      <div class="about-content">
+        <h2 class="serif">Excellence in Every Step</h2>
+        <p>With over 15 years of experience in the Peruvian Andes, we specialize in high-altitude logistics and luxury travel management. Our mission is to provide life-changing experiences while preserving the cultural and natural heritage of the Incas.</p>
+        
+        <ul class="stats-grid">
+          <li>
+            <div class="stat-icon"><Globe size="24" /></div>
+            <div>
+              <strong>Local Expertise</strong>
+              <p>100% Peruvian owned and operated company.</p>
+            </div>
+          </li>
+          <li>
+            <div class="stat-icon"><Users size="24" /></div>
+            <div>
+              <strong>Small Groups</strong>
+              <p>Personalized attention for an intimate experience.</p>
+            </div>
+          </li>
+          <li>
+            <div class="stat-icon"><MapPin size="24" /></div>
+            <div>
+              <strong>Hidden Paths</strong>
+              <p>Access to restricted and off-the-beaten-path locations.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="about-image">
+        <img src="/images/marathon.png" alt="Incan Trail" class="rounded-img shadow-lg" />
+      </div>
+    </div>
+  </section>
 
-        .coming-soon:hover .background {
-            transform: scale(1.1);
-        }
+  <!-- Booking CTA -->
+  <section id="contact" class="cta-section container pt-40">
+    <div class="cta-box animate-fade-in">
+      <div class="cta-content">
+        <h2 class="serif">Your Andean Journey <br/> Starts Here</h2>
+        <p>Contact our luxury travel consultants to personalize your Sacred Valley experience.</p>
+        <form class="booking-form">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <select required>
+            <option disabled selected>Select Interest</option>
+            <option>Inca Trail Tours</option>
+            <option>Alternative Treks</option>
+            <option>Tour Days</option>
+            <option>Custom Luxury Tour</option>
+          </select>
+          <button type="submit" class="btn btn-primary">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>
 
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.8) 100%);
-        }
+<style>
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    min-height: 700px;
+    background: url('/images/hero.png') center/cover no-repeat fixed;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: var(--text-light);
+  }
 
-        .header, .footer, .content {
-            position: relative;
-            z-index: 10;
-        }
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+  }
 
-        .logo-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-        }
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+  }
 
-        .logo-img {
-            width: 220px;
-            height: auto;
-            border-radius: 8px;
-        }
+  .hero-content h4 {
+    color: var(--secondary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
 
-        .content {
-            max-width: 800px;
-            width: 100%;
-            padding: 0 1rem;
-        }
+  .hero-content h1 {
+    font-size: clamp(3rem, 10vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+  }
 
-        h1 {
-            font-size: clamp(2.5rem, 12vw, 5.5rem);
-            margin-bottom: 1.5rem;
-            letter-spacing: -2px;
-            line-height: 1.1;
-        }
+  .hero-content h1 span {
+    color: var(--secondary);
+    display: block;
+  }
 
-        p {
-            font-size: clamp(1rem, 4vw, 1.25rem);
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: clamp(1.5rem, 6vw, 3rem);
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
-        }
+  .hero-content p {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin-bottom: 3.5rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
 
-        .status-badge {
-            display: inline-block;
-            padding: 0.6rem 2rem;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(10, 137, 58, 0.5);
-            color: #fff;
-            border-radius: 50px;
-            font-size: clamp(0.7rem, 2vw, 0.8rem);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: clamp(2rem, 8vw, 3rem);
-            animation: pulse 2s infinite;
-        }
+  .hero-btns {
+    display: flex;
+    gap: 1.25rem;
+  }
 
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(10, 137, 58, 0.3); }
-            70% { box-shadow: 0 0 0 10px rgba(10, 137, 58, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(10, 137, 58, 0); }
-        }
+  /* Categories */
+  .section-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    min-height: 700px;
+    background: url('/images/hero.png') center/cover no-repeat fixed;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: var(--text-light);
+  }
 
-        .newsletter {
-            margin-top: 1rem;
-        }
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+  }
 
-        .newsletter form {
-            display: flex;
-            gap: 12px;
-            max-width: 480px;
-            margin: 0 auto;
-        }
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+  }
 
-        .newsletter input {
-            flex: 1;
-            padding: 1.1rem 1.5rem;
-            border-radius: 12px;
-            border: 1.5px solid rgba(255, 255, 255, 0.5);
-            background: rgba(0, 0, 0, 0.4);
-            color: #fff;
-            backdrop-filter: blur(10px);
-            font-size: clamp(0.9rem, 3vw, 1rem);
-            outline: none;
-            transition: var(--transition);
-        }
+  .hero-content h4 {
+    color: var(--secondary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
 
-        .newsletter input:focus {
-            background: rgba(0, 0, 0, 0.6);
-            border-color: var(--primary);
-            box-shadow: 0 0 20px rgba(10, 137, 58, 0.2);
-        }
+  .hero-content h1 {
+    font-size: clamp(3rem, 10vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+  }
 
-        .newsletter input::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
+  .hero-content h1 span {
+    color: var(--secondary);
+    display: block;
+  }
 
-        .newsletter button {
-            padding: 1rem 2.5rem;
-            border-radius: 12px;
-            border: none;
-            background: var(--secondary);
-            color: #fff;
-            font-weight: 800;
-            font-size: clamp(0.85rem, 2.5vw, 0.95rem);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
+  .hero-content p {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin-bottom: 3.5rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
 
-        .newsletter button:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(10, 137, 58, 0.3);
-        }
+  .hero-btns {
+    display: flex;
+    gap: 1.25rem;
+  }
 
-        .footer {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            align-items: center;
-            width: 100%;
-        }
+  /* Categories */
+  .section-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
 
-        .socials {
-            display: flex;
-            gap: clamp(1.5rem, 5vw, 2.5rem);
-        }
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 
-        .socials a {
-            color: rgba(255,255,255,0.5);
-            transition: var(--transition);
-        }
+  .category-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+  }
 
-        .socials a:hover {
-            color: var(--secondary);
-            transform: translateY(-3px);
-        }
+  .category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+  }
 
-        .location {
-            font-size: 0.8rem;
-            color: rgba(255,255,255,0.4);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+  .cat-image-w {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+  }
 
-        /* Responsive Improvements */
-        @media (max-width: 640px) {
-            .coming-soon {
-                padding: 1.5rem 1rem;
-                justify-content: space-around;
-                gap: 2rem;
-            }
+  .cat-image-w img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+  }
 
-            .logo-img {
-                width: 140px;
-            }
+  .category-card:hover .cat-image-w img {
+    transform: scale(1.1);
+  }
 
-            .newsletter form {
-                flex-direction: column;
-                gap: 0.75rem;
-            }
+  .cat-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-            .newsletter input, .newsletter button {
-                width: 100%;
-                padding: 1rem;
-            }
+  .cat-content {
+    padding: 2rem;
+    background: white;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
 
-            .background {
-                opacity: 0.35;
-                filter: grayscale(10%) brightness(0.6);
-            }
-        }
+  .cat-content h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
 
-        @media (max-height: 700px) {
-            .coming-soon {
-                padding: 1rem;
-                justify-content: center;
-                gap: 1.5rem;
-            }
-            .logo-img {
-                width: 100px;
-            }
-            .status-badge {
-                margin-bottom: 1rem;
-            }
-            p { margin-bottom: 1.5rem; }
-        }
-    </style>
-</body>
-</html>
-    </style>
-</body>
-</html>
+  .cat-content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+  }
+
+  .cat-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  /* About Section */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 7rem;
+    align-items: center;
+  }
+
+  .about-content h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 4rem;
+  }
+
+  .stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .stats-grid li {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .stat-icon {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary);
+    box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
+  }
+
+  .stats-grid strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .stats-grid p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+
+  .rounded-img {
+    border-radius: 30px;
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    .category-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .category-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+    }
+  }
+</style>

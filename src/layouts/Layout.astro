@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { Menu, X, Phone, Mail, Instagram, Facebook, Monitor, MapPin } from 'lucide-astro';
+import { Menu, X, Phone, Mail, Instagram, Facebook, Monitor, MapPin, ArrowRight } from 'lucide-astro';
 
 interface Props {
   title: string;
@@ -25,15 +25,15 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
     <!-- Premium Header -->
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="/" class="logo serif">
-          <span>MPA</span> Marathon
+        <a href="/" class="logo">
+          <img src="/images/logo.png" alt="Machu Picchu Andes Marathon" class="logo-img" />
         </a>
         
         <ul class="nav-links" id="nav-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#tours">Expeditions</a></li>
-          <li><a href="#marathon">The Marathon</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/inca-trail">Inca Trail Tours</a></li>
+          <li><a href="/alternative-treks">Alternative Treks</a></li>
+          <li><a href="/tour-days">Tour Days</a></li>
           <li><a href="#contact" class="btn btn-primary">Book Now</a></li>
         </ul>
 
@@ -51,35 +51,57 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
     <!-- Professional Footer -->
     <footer class="footer">
       <div class="container footer-grid">
-        <div class="footer-info">
-          <h2 class="serif">MPA Marathon</h2>
-          <p>The definitive adventure in the Sacred Valley. Excellence in high-altitude experiences and trail running.</p>
+        <div class="footer-brand">
+          <a href="/" class="footer-logo-link">
+            <img src="/images/logo.png" alt="Logo" class="footer-logo" />
+          </a>
+          <p class="footer-tagline">Excellence in high-altitude experiences and trail running. Discover the soul of the Andes with experts.</p>
           <div class="social-links">
-            <a href="#"><Instagram /></a>
-            <a href="#"><Facebook /></a>
+            <a href="#" aria-label="Instagram"><Instagram size="20" /></a>
+            <a href="#" aria-label="Facebook"><Facebook size="20" /></a>
           </div>
         </div>
 
-        <div class="footer-contact">
-          <h3>Contact Us</h3>
-          <ul>
-            <li><Phone size="18" /> +51 84 123 456</li>
-            <li><Mail size="18" /> hello@mpamarathon.com</li>
-            <li><MapPin size="18" /> Cusco, Peru</li>
-          </ul>
+        <div class="footer-nav">
+          <div class="footer-col">
+            <h3>Expeditions</h3>
+            <ul>
+              <li><a href="/inca-trail">Inca Trail Tours</a></li>
+              <li><a href="/alternative-treks">Alternative Treks</a></li>
+              <li><a href="/tour-days">Daily Tours</a></li>
+              <li><a href="#">Luxury Custom Trips</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Travel Insurance</a></li>
+              <li><a href="#">Packing List</a></li>
+              <li><a href="#">Health & Safety</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
         </div>
 
-        <div class="footer-links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
+        <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Subscribe to get travel tips and exclusive early-bird marathon offers.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit" aria-label="Subscribe"><ArrowRight size="20" /></button>
+          </form>
         </div>
       </div>
+      
       <div class="footer-bottom container">
-        <p>&copy; {new Date().getFullYear()} Machu Picchu Andes Marathon. All rights reserved.</p>
+        <div class="footer-legal">
+          <p>&copy; {new Date().getFullYear()} Machu Picchu Andes Marathon. All rights reserved.</p>
+          <div class="legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
       </div>
     </footer>
 
@@ -108,18 +130,20 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
       }
 
       .logo {
-        font-size: 1.5rem;
-        color: var(--text-light);
-        text-transform: uppercase;
-        letter-spacing: 2px;
+        display: flex;
+        align-items: center;
+        z-index: 1001;
       }
 
-      .header.scrolled .logo {
-        color: var(--primary);
+      .logo-img {
+        height: 60px;
+        width: auto;
+        transition: var(--transition);
+        display: block;
       }
 
-      .logo span {
-        color: var(--secondary);
+      .header.scrolled .logo-img {
+        height: 50px;
       }
 
       .nav-links {
@@ -128,7 +152,7 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
         align-items: center;
       }
 
-      .nav-links constant a {
+      .nav-links a {
         color: var(--text-light);
         font-weight: 500;
         font-size: 0.9rem;
@@ -144,24 +168,7 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
         color: var(--secondary);
       }
 
-      .btn {
-        padding: 0.8rem 1.5rem;
-        border-radius: 4px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: var(--transition);
-      }
 
-      .btn-primary {
-        background: var(--secondary);
-        color: #000 !important;
-      }
-
-      .btn-primary:hover {
-        background: var(--accent);
-        transform: translateY(-2px);
-      }
 
       .mobile-toggle {
         display: none;
@@ -189,72 +196,169 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
 
       /* Footer Styles */
       .footer {
-        background: var(--primary);
+        background: #051c14;
         color: var(--text-light);
-        padding: 5rem 0 2rem;
-        margin-top: 5rem;
+        padding: 5rem 0 3rem;
+        margin-top: 0;
       }
 
       .footer-grid {
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-        gap: 4rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding-bottom: 3rem;
+        grid-template-columns: 1.5fr 2fr 1.5fr;
+        gap: 6rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding-bottom: 5rem;
       }
 
-      .footer-info h2 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
+      .footer-brand {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
       }
 
-      .footer-info p {
-        color: rgba(255, 255, 255, 0.7);
-        max-width: 320px;
-        margin-bottom: 2rem;
+      .footer-logo {
+        height: 70px;
+        width: auto;
+      }
+
+      .footer-tagline {
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.8;
+        font-size: 0.95rem;
       }
 
       .social-links {
         display: flex;
-        gap: 1.5rem;
-      }
-
-      .footer h3 {
-        font-size: 1.25rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .footer-contact ul, .footer-links ul {
-        display: flex;
-        flex-direction: column;
         gap: 1rem;
       }
 
-      .footer-contact li {
+      .social-links a {
+        width: 45px;
+        height: 45px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
         display: flex;
         align-items: center;
-        gap: 10px;
-        color: rgba(255, 255, 255, 0.7);
+        justify-content: center;
+        color: white;
+        transition: var(--transition);
       }
 
-      .footer-links a {
-        color: rgba(255, 255, 255, 0.7);
+      .social-links a:hover {
+        background: var(--secondary);
+        transform: translateY(-5px);
       }
 
-      .footer-links a:hover {
+      .footer-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+
+      .footer h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 2rem;
         color: var(--secondary);
       }
 
-      .footer-bottom {
-        padding-top: 2rem;
-        text-align: center;
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.5);
+      .footer-col ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
       }
 
-      @media (max-width: 968px) {
+      .footer-col a {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.95rem;
+        transition: var(--transition);
+      }
+
+      .footer-col a:hover {
+        color: white;
+        padding-left: 5px;
+      }
+
+      .footer-newsletter {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .footer-newsletter p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
+      .newsletter-form {
+        display: flex;
+        gap: 0;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 5px;
+        border-radius: 60px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .newsletter-form input {
+        background: none;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        color: white;
+        flex-grow: 1;
+        outline: none;
+        font-family: inherit;
+      }
+
+      .newsletter-form button {
+        background: var(--secondary);
+        color: white;
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .newsletter-form button:hover {
+        background: var(--accent);
+        transform: scale(1.05);
+      }
+
+      .footer-bottom {
+        padding-top: 3rem;
+      }
+
+      .footer-legal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      .legal-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .legal-links a:hover {
+        color: white;
+      }
+
+      @media (max-width: 1024px) {
         .footer-grid {
           grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+        }
+        .footer-newsletter {
+          grid-column: span 2;
         }
       }
 
@@ -274,6 +378,7 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
           padding: 6rem 2rem;
           transition: var(--transition);
           box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+          z-index: 1000;
         }
 
         .nav-links.active {
@@ -287,7 +392,17 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
 
         .footer-grid {
           grid-template-columns: 1fr;
-          gap: 2.5rem;
+        }
+        .footer-newsletter {
+          grid-column: span 1;
+        }
+        .footer-nav {
+          grid-template-columns: 1fr;
+        }
+        .footer-legal {
+          flex-direction: column;
+          gap: 1.5rem;
+          text-align: center;
         }
       }
     </style>

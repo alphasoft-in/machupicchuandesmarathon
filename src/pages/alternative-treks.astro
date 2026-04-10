@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Star, Clock, ArrowRight } from 'lucide-astro';
+import { allTours } from '../data/tours.js';
+
+const altTours = allTours.filter(t => t.category === 'alternative-treks');
+---
+
+<Layout title="Alternative Treks | Machu Picchu Andes Marathon">
+  <!-- Page Header -->
+  <section class="page-header alt-bg">
+    <div class="header-content container">
+      <h1 class="serif animate-fade-in">Alternative <br/> <span>Treks</span></h1>
+      <p class="animate-fade-in delay-1">Beyond the beaten path. Discover the hidden spirits of the Andes through our curated alternative routes.</p>
+    </div>
+  </section>
+
+  <!-- Tours Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="tour-grid">
+        {altTours.map((tour, index) => (
+          <div class={`tour-card animate-fade-in delay-${index % 3}`}>
+            <div class="tour-image-w">
+              <img src={tour.image} alt={tour.title} />
+              <span class="tour-tag">{tour.tag}</span>
+            </div>
+            <div class="tour-body">
+              <div class="tour-meta">
+                <span><Clock size="16" /> {tour.duration}</span>
+                <span><Star size="16" fill="var(--secondary)" color="var(--secondary)" /> {tour.rating}</span>
+              </div>
+              <h3 class="serif">{tour.title}</h3>
+              <p class="tour-desc">{tour.description}</p>
+              <div class="tour-footer">
+                <span class="tour-price">From {tour.price}</span>
+                <a href={`/tours/${tour.slug}`} class="btn-icon"><ArrowRight size="20" /></a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking CTA -->
+  <section id="contact" class="cta-section container">
+    <div class="cta-box animate-fade-in">
+      <div class="cta-content">
+        <h2 class="serif">Start Your Adventure</h2>
+        <p>Expert guides and premium equipment for the most challenging Andean trails.</p>
+        <form class="booking-form">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <select required>
+            <option disabled selected>Select Alternative Trek</option>
+            {altTours.map(tour => (
+              <option>{tour.title}</option>
+            ))}
+          </select>
+          <button type="submit" class="btn btn-primary">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    height: 60vh;
+    min-height: 480px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/hero.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-top: 120px;
+  }
+
+  .header-content {
+    max-width: 800px;
+  }
+
+  .page-header h1 {
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .page-header h1 span {
+    color: var(--secondary);
+  }
+
+  .page-header p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    .page-header {
+      height: 50vh;
+      text-align: center;
+    }
+    .header-content {
+      margin: 0 auto;
+    }
+  }
+</style>

@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-  --primary: #0a893a;
+  --primary: #0e3b2e; /* Darker, more elegant green */
   --secondary: #fc6111;
   --accent: #ff8c42;
   --bg-light: #ffffff;
-  --bg-muted: #f8f9fa;
-  --text-dark: #1a1a1a;
-  --text-muted: #6c757d;
+  --bg-muted: #fbfbfb;
+  --text-dark: #0a0a0a;
+  --text-muted: #555555;
   --text-light: #ffffff;
-  --overlay: rgba(14, 59, 46, 0.7);
+  --overlay: rgba(14, 59, 46, 0.85);
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Playfair Display', serif;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -28,12 +28,17 @@ html {
   font-family: var(--font-sans);
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
   background-color: var(--bg-light);
   color: var(--text-dark);
   line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 h1, h2, h3, h4, .serif {
@@ -66,7 +71,7 @@ ul {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 1.5rem;
+    padding: 0 1rem;
   }
 }
 
@@ -77,12 +82,25 @@ ul {
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+  animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.45s; }
+
+/* Subtle reveal effect on scroll */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+section.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Buttons */
 .btn {
@@ -98,6 +116,7 @@ ul {
   font-size: 0.8rem;
   cursor: pointer;
   line-height: 1;
+  border: none;
 }
 
 .btn-primary {
@@ -126,7 +145,7 @@ ul {
 }
 /* Sections */
 .section {
-  padding: 80px 0;
+  padding: 120px 0;
 }
 
 .section-header {
@@ -281,17 +300,21 @@ ul {
 .cta-section {
   position: relative;
   z-index: 20;
+  margin-top: 80px;
+  margin-bottom: 120px;
 }
 
 .cta-box {
   background: var(--primary);
-  padding: 5rem;
-  border-radius: 30px;
+  padding: 6rem 4rem;
+  border-radius: 40px;
   color: var(--text-light);
   text-align: center;
-  background-image: linear-gradient(rgba(14, 59, 46, 0.9), rgba(14, 59, 46, 0.9)), url('/images/hero.png');
+  background-image: linear-gradient(rgba(14, 59, 46, 0.92), rgba(14, 59, 46, 0.92)), url('/images/hero.png');
   background-position: center;
   background-size: cover;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 .cta-content {
@@ -301,20 +324,49 @@ ul {
 
 .booking-form {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 0.8fr;
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.booking-form button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 0.5rem;
+  min-width: 280px;
+  max-width: 100%;
+  height: 60px;
+}
+
+@media (max-width: 768px) {
+  .booking-form button {
+    min-width: unset;
+    width: 100%;
+  }
 }
 
 .booking-form input, .booking-form select {
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.08);
+  padding: 0.9rem 1.15rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
   color: white;
   font-family: inherit;
   font-size: 0.9rem;
   outline: none;
   transition: var(--transition);
+  width: 100%;
+}
+
+.booking-form input::placeholder {
+  color: var(--text-muted);
+}
+
+.cta-box .booking-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .booking-form input:focus, .booking-form select:focus {
@@ -323,13 +375,22 @@ ul {
 }
 
 .booking-form select {
+  grid-column: 1 / -1;
   cursor: pointer;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 0.75rem center;
-  background-size: 1rem;
-  padding-right: 2.5rem;
+  background-position: right 1.25rem center;
+  background-size: 1.1rem;
+  padding-right: 3rem;
   appearance: none;
+}
+
+.booking-form select option {
+  color: var(--text-dark);
+  background: white;
+  padding: 15px;
+  font-size: 1rem;
+  border-bottom: 1px solid #eee; /* Light divider line */
 }
 
 @media (max-width: 768px) {

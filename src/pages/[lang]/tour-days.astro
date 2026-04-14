@@ -1,0 +1,121 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Star, Clock, ArrowRight } from 'lucide-astro';
+import { allTours } from '../../data/tours.js';
+import { useTranslations, useTranslatedPath } from '../../utils/i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } }
+  ];
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+const dailyTours = allTours.filter(t => t.category === 'tour-days');
+---
+
+<Layout title={`${t('nav.daily')} | Machu Picchu Andes Marathon`} lang={lang}>
+  <!-- Page Header -->
+  <section class="page-header daily-bg">
+    <div class="header-content container">
+      <h1 class="serif animate-fade-in">{lang === 'en' ? 'Daily' : 'Tours de'} <br/> <span>{lang === 'en' ? 'Tours' : 'un Día'}</span></h1>
+      <p class="animate-fade-in delay-1">{lang === 'en' ? "Short immersions, deep connections. Experience the highlights of Cusco and the Sacred Valley in a single day." : "Inmersiones cortas, conexiones profundas. Experimenta los puntos más destacados de Cusco y el Valle Sagrado en un solo día."}</p>
+    </div>
+  </section>
+
+  <!-- Tours Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="tour-grid">
+        {dailyTours.map((tour, index) => (
+          <div class={`tour-card animate-fade-in delay-${index % 3}`}>
+            <div class="tour-image-w">
+              <img src={tour.image} alt={tour[lang].title} />
+              <span class="tour-tag">{tour[lang].tag}</span>
+            </div>
+            <div class="tour-body">
+              <div class="tour-meta">
+                <span><Clock size="16" /> {tour[lang].duration}</span>
+                <span><Star size="16" fill="var(--secondary)" color="var(--secondary)" /> {tour.rating}</span>
+              </div>
+              <h3 class="serif">{tour[lang].title}</h3>
+              <p class="tour-desc">{tour[lang].description}</p>
+              <div class="tour-footer">
+                <span class="tour-price">{t('tour.from')} {tour.price}</span>
+                <a href={translatePath(`/tours/${tour.slug}`)} class="btn-icon"><ArrowRight size="20" /></a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking CTA -->
+  <section id="contact" class="cta-section container">
+    <div class="cta-box animate-fade-in">
+      <div class="cta-content">
+        <h2 class="serif">{lang === 'en' ? 'Book Your Experience' : 'Reserva tu Experiencia'}</h2>
+        <p>{lang === 'en' ? "Perfect for tight schedules. Our daily tours catch the soul of the Incan Heartland." : "Perfecto para agendas apretadas. Nuestros tours diarios capturan el alma del corazón Inca."}</p>
+        <form class="booking-form">
+          <input type="text" placeholder={t('form.name')} required />
+          <input type="email" placeholder={t('form.email')} required />
+          <select required>
+            <option disabled selected>{lang === 'en' ? 'Select Tour' : 'Selecciona Tour'}</option>
+            {dailyTours.map(tour => (
+              <option>{tour[lang].title}</option>
+            ))}
+          </select>
+          <button type="submit" class="btn btn-primary">{t('form.submit')}</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    height: 60vh;
+    min-height: 480px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/sacred-valley.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-top: 120px;
+  }
+
+  .header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .page-header h1 span {
+    color: var(--secondary);
+  }
+
+  .page-header p {
+    font-size: 1rem;
+    max-width: 600px;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    .page-header {
+      height: 50vh;
+      text-align: center;
+    }
+    .header-content {
+      margin: 0 auto;
+    }
+  }
+</style>

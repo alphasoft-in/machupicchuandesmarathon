@@ -1,0 +1,907 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { Star, Clock, MapPin, CheckCircle, ArrowRight, Calendar, X, Shield, Award, Users, Globe, Baby, Train, Info, Plus } from 'lucide-astro';
+import { allTours } from '../../../data/tours.js';
+import { useTranslations, useTranslatedPath } from '../../../utils/i18n';
+
+export function getStaticPaths() {
+  return ['en', 'es'].flatMap(lang => 
+    allTours.map(tour => ({
+      params: { lang, slug: tour.slug },
+      props: { tour, lang },
+    }))
+  );
+}
+
+const { tour, lang } = Astro.props;
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+// Get tour content for current language
+const content = tour[lang as keyof typeof tour] as any;
+
+const recommendations = allTours
+  .filter(t => t.slug !== tour.slug)
+  .slice(0, 4);
+---
+
+<Layout title={`${content.title} | Machu Picchu Andes Marathon`} lang={lang}>
+  <!-- Tour Hero -->
+  <section class="tour-hero" style={`background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${tour.image})`}>
+    <div class="container hero-content">
+      <span class="tour-badge">{content.tag}</span>
+      <h1 class="serif">{content.title}</h1>
+      <p class="hero-description animate-fade-in delay-1">{content.description}</p>
+      <div class="tour-meta-grid">
+        <div class="meta-item">
+          <Clock size="24" color="var(--secondary)" />
+          <div class="meta-text">
+            <strong>{lang === 'en' ? 'Duration' : 'Duración'}</strong>
+            <span>{content.duration}</span>
+          </div>
+        </div>
+        <div class="meta-item">
+          <Users size="24" color="var(--secondary)" />
+          <div class="meta-text">
+            <strong>{lang === 'en' ? 'Max People' : 'Máx. Personas'}</strong>
+            <span>{content.maxPeople || '12'}</span>
+          </div>
+        </div>
+        <div class="meta-item">
+          <Baby size="24" color="var(--secondary)" />
+          <div class="meta-text">
+            <strong>{lang === 'en' ? 'Min Age' : 'Edad Mín.'}</strong>
+            <span>{content.minAge || '6'}</span>
+          </div>
+        </div>
+        <div class="meta-item">
+          <Train size="24" color="var(--secondary)" />
+          <div class="meta-text">
+            <strong>{lang === 'en' ? 'Pickup' : 'Traslado'}</strong>
+            <span>{content.pickup || (lang === 'en' ? 'Hotel' : 'Hotel')}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container tour-layout">
+    <main class="tour-details">
+      <!-- Tour Tabs Navigation -->
+      <nav class="tour-tabs" aria-label="Tour Information">
+        <button class="tab-btn active" data-tab="overview">
+          {lang === 'en' ? 'Overview' : 'Resumen'}
+        </button>
+        <button class="tab-btn" data-tab="itinerary">
+          {lang === 'en' ? 'Itinerary' : 'Itinerario'}
+        </button>
+        <button class="tab-btn" data-tab="includes">
+          {lang === 'en' ? 'Includes' : 'Incluye'}
+        </button>
+        <button class="tab-btn" data-tab="info">
+          {lang === 'en' ? 'Extra Info' : 'Info Extra'}
+        </button>
+      </nav>
+
+      <!-- Tab Content: Overview -->
+      <div id="overview" class="tab-panel active">
+        <!-- Overview / What to Expect -->
+        <section class="tour-section first-section">
+          <h2 class="serif">{content.expect?.title || t('tour.overview')}</h2>
+          
+          {content.expect ? (
+            <div class="expect-content">
+              {content.expect.paragraphs.map((p: string) => (
+                <p class="description-text">{p}</p>
+              ))}
+            </div>
+          ) : (
+            <p class="description-text">{content.description}</p>
+          )}
+          
+          {content.highlightsList && (
+            <div class="highlights-container">
+              <h3 class="section-subtitle">{lang === 'en' ? 'Tour Highlights' : 'Puntos Destacados'}</h3>
+              <div class="highlights-grid">
+                {content.highlightsList.map((item: string) => (
+                  <div class="highlight-item">
+                    <CheckCircle size="20" color="var(--secondary)" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </section>
+      </div>
+
+      <!-- Tab Content: Itinerary -->
+      <div id="itinerary" class="tab-panel">
+        <section class="tour-section first-section">
+          <h2 class="serif">{t('tour.itinerary')}</h2>
+          <div class="itinerary-timeline">
+            {content.itinerary?.map((item: any, index: number) => (
+              <div class="timeline-day">
+                <div class="day-number">{lang === 'en' ? 'Day' : 'Día'} {item.day}</div>
+                <div class="day-content">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      <!-- Tab Content: Includes -->
+      <div id="includes" class="tab-panel">
+        <!-- Includes & Excludes -->
+        <section class="tour-section first-section">
+          <h2 class="serif">{lang === 'en' ? 'Included & Excluded' : 'Incluido y Excluido'}</h2>
+          <div class="inc-exc-grid">
+            <div class="includes-box">
+              <h3 class="serif"><CheckCircle size="20" /> {t('tour.includes')}</h3>
+              <ul>
+                {content.includes?.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div class="excludes-box">
+              <h3 class="serif"><X size="20" /> {t('tour.excludes')}</h3>
+              <ul>
+                {content.excludes?.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Tab Content: Info -->
+      <div id="info" class="tab-panel">
+        <!-- Machu Picchu Circuits -->
+        {content.circuits && (
+          <section class="tour-section first-section">
+            <h2 class="serif">{content.circuits.title}</h2>
+            <div class="circuits-card">
+              <div class="circuits-header">
+                <Info size="24" color="var(--primary)" />
+                <p>{content.circuits.description}</p>
+              </div>
+              <div class="circuits-note">
+                <p>{content.circuits.note}</p>
+              </div>
+            </div>
+          </section>
+        )}
+
+        <!-- Optional Add-ons -->
+        {content.addons && (
+          <section class="tour-section">
+            <h2 class="serif">{lang === 'en' ? 'Optional Add-ons' : 'Adicionales Opcionales'}</h2>
+            <div class="addons-grid">
+              {content.addons.map((addon: string) => (
+                <div class="addon-item">
+                  <Plus size="18" color="var(--secondary)" />
+                  <span>{addon}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
+    </main>
+
+    <!-- Sidebar Booking -->
+    <aside class="tour-sidebar" id="booking-anchor">
+      <div class="booking-card sticky">
+        <div class="price-tag">
+          <span>{t('tour.from')}</span>
+          <h3>{tour.price}</h3>
+        </div>
+        
+        <form class="sidebar-form">
+          <div class="form-group">
+            <label><Calendar size="16" /> Select Date</label>
+            <input type="date" required />
+          </div>
+          <div class="form-group">
+            <label>Travelers</label>
+            <select>
+              <option>1 Adult</option>
+              <option>2 Adults</option>
+              <option>3+ Adults</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            {t('tour.book')} <ArrowRight size="18" />
+          </button>
+        </form>
+
+        <p class="sidebar-note">No payment required yet. Booking is safe and secure.</p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Call to Action Banner -->
+  <section class="tour-cta">
+    <div class="cta-overlay"></div>
+    <div class="container cta-content animate-fade-in">
+      <h2 class="serif">{lang === 'en' ? 'The Magic is Waiting' : 'La Magia te Espera'}</h2>
+      <p>{lang === 'en' ? 'Secure your permits for the Inca Trail today. Spots are limited and fill up fast!' : 'Asegura tus permisos para el Camino Inca hoy. ¡Los cupos son limitados y se agotan rápido!'}</p>
+      <a href="#booking-anchor" class="btn btn-secondary btn-large">
+        {lang === 'en' ? 'Book My Adventure' : 'Reservar mi Aventura'} <ArrowRight size="20" />
+      </a>
+    </div>
+  </section>
+
+  <!-- Recommended Tours -->
+  <section class="section highlight-section pb-0" style="padding-top: 40px;">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="serif">Related Experiences</h2>
+          <p class="text-muted">Explore more wonders of the Andes.</p>
+        </div>
+      </div>
+
+      <div class="compact-grid">
+        {recommendations.map((rec: any, index: number) => {
+          const recContent = rec[lang as keyof typeof rec] as any;
+          return (
+            <a href={translatePath(`/tours/${rec.slug}`)} class={`compact-card animate-fade-in delay-${index}`}>
+              <div class="compact-image">
+                <img src={rec.image} alt={recContent?.title || 'Tour'} />
+              </div>
+              <div class="compact-body">
+                <span class="compact-tag">{recContent?.tag}</span>
+                <h3 class="serif">{recContent?.title}</h3>
+                <div class="compact-meta">
+                  <span>{recContent?.duration}</span>
+                  <span class="compact-price">{rec.price}</span>
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  function setupTabs() {
+    const buttons = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.tab-panel');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tabId = btn.getAttribute('data-tab');
+
+        // Update buttons
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Update sections
+        sections.forEach(sec => {
+          sec.classList.remove('active');
+          if (sec.id === tabId) {
+            sec.classList.add('active');
+          }
+        });
+      });
+    });
+  }
+
+  // Run on first load and after client-side navigation
+  setupTabs();
+  document.addEventListener('astro:after-swap', setupTabs);
+</script>
+
+<style>
+  /* Tour Tabs Navigation */
+  .tour-tabs {
+    display: flex;
+    gap: 2rem;
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 3rem;
+    position: sticky;
+    top: 80px;
+    background: white;
+    z-index: 50;
+    padding: 1rem 0;
+  }
+
+  .tab-btn {
+    background: none;
+    border: none;
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    cursor: pointer;
+    position: relative;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .tab-btn:hover {
+    color: var(--primary);
+  }
+
+  .tab-btn.active {
+    color: var(--primary);
+  }
+
+  .tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--primary);
+  }
+
+  /* Tab Panels */
+  .tab-panel {
+    display: none;
+    animation: fadeIn 0.4s ease-out;
+  }
+
+  .tab-panel.active {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .first-section h2 {
+    margin-top: 0;
+  }
+
+  /* Call to Action Banner */
+  .tour-cta {
+    position: relative;
+    padding: 120px 0;
+    background-image: url('/images/cta-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    margin: 1rem 0 0;
+  }
+
+  .cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 10;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .tour-cta h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+
+  .tour-cta p {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+
+  .btn-large {
+    padding: 1.25rem 3rem;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+    .tour-cta {
+      padding: 80px 20px;
+      background-attachment: scroll;
+    }
+    .tour-cta h2 {
+      font-size: 2.2rem;
+    }
+  }
+
+  /* Recommendations */
+  .compact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .compact-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+    border: 1px solid #f0f0f0;
+  }
+
+  .compact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--secondary);
+  }
+
+  .compact-image {
+    height: 180px;
+    overflow: hidden;
+  }
+
+  .compact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+
+  .compact-card:hover img {
+    transform: scale(1.1);
+  }
+
+  .compact-body {
+    padding: 1.25rem;
+  }
+
+  .compact-tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--secondary);
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .compact-body h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .compact-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+  }
+
+  .compact-price {
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  @media (max-width: 1200px) {
+    .compact-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 600px) {
+    .compact-grid { grid-template-columns: 1fr; }
+  }
+
+  .tour-hero {
+    height: 70vh;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-top: 100px;
+  }
+
+  .hero-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.2rem, 7vw, 3.8rem);
+    margin: 1.25rem 0 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.85rem;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    opacity: 0.9;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  .tour-badge {
+    background: var(--secondary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .tour-meta-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2.5rem auto 0;
+    max-width: fit-content;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(12px);
+    padding: 1.5rem 3rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .meta-item :global(svg) {
+    flex-shrink: 0;
+    opacity: 0.9;
+  }
+
+  .meta-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2;
+  }
+
+  .meta-item strong {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--secondary);
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  .meta-item span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+  }
+
+  @media (max-width: 900px) {
+    .tour-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 2rem;
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .tour-meta-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 1.5rem;
+    }
+    .meta-item {
+      justify-content: center;
+    }
+  }
+
+  /* Tour Layout */
+  .tour-layout {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 6rem;
+    padding: 60px 0;
+  }
+
+  .tour-section {
+    margin-bottom: 5rem;
+  }
+
+  .tour-section h2 {
+    font-size: 1.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .description-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    margin: 2.5rem 0 1.5rem;
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+
+  .highlight-item span {
+    line-height: 1.4;
+  }
+
+  /* Circuits Section */
+  .circuits-card {
+    background: #f8fafc;
+    border-radius: 15px;
+    padding: 2rem;
+    border-left: 5px solid var(--primary);
+  }
+
+  .circuits-header {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+  }
+
+  .circuits-header p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.5;
+  }
+
+  .circuits-note p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  /* Addons */
+  .addons-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .addon-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: white;
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 1px solid #f0f0f0;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  /* Timeline */
+  .itinerary-timeline {
+    position: relative;
+    padding-left: 100px;
+  }
+
+  @media (max-width: 640px) {
+    .highlights-grid {
+      grid-template-columns: 1fr;
+    }
+    .circuits-card {
+      padding: 1.5rem;
+    }
+  }
+
+  .itinerary-timeline::before {
+    content: '';
+    position: absolute;
+    left: 45px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: #f0f0f0;
+  }
+
+  .timeline-day {
+    position: relative;
+    margin-bottom: 4rem;
+  }
+
+  .day-number {
+    position: absolute;
+    left: -100px;
+    width: 80px;
+    height: 34px;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    z-index: 10;
+  }
+
+  .day-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .day-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    white-space: pre-line;
+  }
+
+  /* Sidebar */
+  .booking-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    border: 1px solid #f0f0f0;
+  }
+
+  .sticky {
+    position: sticky;
+    top: 120px;
+  }
+
+  .price-tag {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .price-tag span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .price-tag h3 {
+    font-size: 2.5rem;
+    color: var(--primary);
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  .sidebar-form input, .sidebar-form select {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    font-family: inherit;
+  }
+
+  .btn-full {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .sidebar-note {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  .difficulty-tag {
+    background: rgba(255,255,255,0.1);
+    padding: 0.25rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .difficulty-tag[data-difficulty="Easy"] { color: #4ade80; }
+  .difficulty-tag[data-difficulty="Moderado"] { color: #facc15; }
+  .difficulty-tag[data-difficulty="Moderate"] { color: #facc15; }
+  .difficulty-tag[data-difficulty="Desafiante"] { color: #fb923c; }
+  .difficulty-tag[data-difficulty="Challenging"] { color: #fb923c; }
+  .difficulty-tag[data-difficulty="Difícil"] { color: #f87171; }
+  .difficulty-tag[data-difficulty="Hard"] { color: #f87171; }
+  .difficulty-tag[data-difficulty="Experto"] { color: #ef4444; border: 1px solid #ef4444; }
+  .difficulty-tag[data-difficulty="Expert"] { color: #ef4444; border: 1px solid #ef4444; }
+
+  .meta-divider { opacity: 0.3; }
+
+  .inc-exc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background: #fcfcfc;
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid #f0f0f0;
+  }
+
+  .includes-box h3 {
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  .excludes-box h3 {
+    color: #999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  .includes-box ul, .excludes-box ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .includes-box li::before {
+    content: '✓';
+    color: var(--secondary);
+    margin-right: 10px;
+    font-weight: 700;
+  }
+
+  .excludes-box li::before {
+    content: '×';
+    color: #ccc;
+    margin-right: 10px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 1024px) {
+    .inc-exc-grid {
+      grid-template-columns: 1fr;
+      padding: 2rem;
+    }
+  }
+</style>

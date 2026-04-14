@@ -1,17 +1,48 @@
 ---
-import '../styles/global.css';
-import { Menu, X, Phone, Mail, Instagram, Facebook, Monitor, MapPin, ArrowRight } from 'lucide-astro';
+import "../styles/global.css";
+import {
+  Menu,
+  X,
+  Phone,
+  Mail,
+  Instagram,
+  Facebook,
+  Monitor,
+  MapPin,
+  Shield,
+  Award,
+  Users,
+  Globe,
+} from "lucide-astro";
+import { getLangFromUrl, useTranslations, useTranslatedPath } from "../utils/i18n";
 
 interface Props {
   title: string;
   description?: string;
+  lang?: string;
 }
 
-const { title, description = "Discover the ultimate adventure in the Andes with Machu Picchu Andes Marathon. Luxury tours, trail marathons, and cultural experiences in the heart of Peru." } = Astro.props;
+const {
+  title,
+  description = "Discover the ultimate adventure in the Andes with Machu Picchu Andes Marathon. Luxury tours, trail marathons, and cultural experiences in the heart of Peru.",
+} = Astro.props;
+
+const lang = Astro.props.lang || getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+const currentPath = Astro.url.pathname;
+
+// Helper to switch language
+const otherLang = lang === 'en' ? 'es' : 'en';
+// Remove /[lang] prefix if exists to build switch link
+const pathWithoutLang = currentPath.replace(/^\/(en|es)/, '') || '/';
+const switchPath = `/${otherLang}${pathWithoutLang === '//' ? '/' : pathWithoutLang}`;
+
+const WhatsApp = Phone;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -19,28 +50,50 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
     <meta name="generator" content={Astro.generator} />
     <title>{title} | Machu Picchu Andes Marathon</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content="Machu Picchu, Andes, Marathon, Peru, Travel Agency, Luxury Tours, Adventure Travel" />
+    <meta
+      name="keywords"
+      content="Machu Picchu, Andes, Marathon, Peru, Travel Agency, Luxury Tours, Adventure Travel"
+    />
   </head>
   <body>
     <!-- Premium Header -->
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="/" class="logo">
-          <img src="/images/logo.png" alt="Machu Picchu Andes Marathon" class="logo-img" />
-        </a>
-        
+        <div class="header-left">
+          <a href={translatePath('/')} class="logo">
+            <img
+              src="/images/logo.png"
+              alt="Machu Picchu Andes Marathon"
+              class="logo-img"
+            />
+          </a>
+        </div>
+
         <ul class="nav-links" id="nav-menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="/inca-trail">Inca Trail Tours</a></li>
-          <li><a href="/alternative-treks">Alternative Treks</a></li>
-          <li><a href="/tour-days">Tour Days</a></li>
-          <li><a href="#contact" class="btn btn-primary">Book Now</a></li>
+          <li><a href={translatePath('/')}>{lang === 'en' ? 'Home' : 'Inicio'}</a></li>
+          <li><a href={translatePath('/inca-trail')}>{t('nav.inca')}</a></li>
+          <li><a href={translatePath('/alternative-treks')}>{t('nav.alternative')}</a></li>
+          <li><a href={translatePath('/tour-days')}>{t('nav.daily')}</a></li>
         </ul>
 
-        <button class="mobile-toggle" id="mobile-toggle">
-          <Menu class="icon open-icon" />
-          <X class="icon close-icon hidden" />
-        </button>
+        <div class="header-right">
+          <div class="nav-socials">
+            <a href="#" target="_blank" aria-label="Instagram"><Instagram size="18" /></a>
+            <a href="#" target="_blank" aria-label="Facebook"><Facebook size="18" /></a>
+            <a href="#" target="_blank" aria-label="WhatsApp"><WhatsApp size="18" /></a>
+          </div>
+
+          <div class="lang-switcher">
+            <a href={switchPath} class={lang === 'en' ? 'active' : ''}>EN</a>
+            <span class="divider">|</span>
+            <a href={switchPath} class={lang === 'es' ? 'active' : ''}>ES</a>
+          </div>
+
+          <button class="mobile-toggle" id="mobile-toggle">
+            <Menu class="icon open-icon" />
+            <X class="icon close-icon hidden" />
+          </button>
+        </div>
       </nav>
     </header>
 
@@ -52,54 +105,96 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
     <footer class="footer">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <a href="/" class="footer-logo-link">
+          <a href={translatePath('/')} class="footer-logo-link">
             <img src="/images/logo.png" alt="Logo" class="footer-logo" />
           </a>
-          <p class="footer-tagline">Excellence in high-altitude experiences and trail running. Discover the soul of the Andes with experts.</p>
+          <p class="footer-tagline">
+            {t('footer.tagline')}
+          </p>
           <div class="social-links">
-            <a href="#" aria-label="Instagram"><Instagram size="20" /></a>
-            <a href="#" aria-label="Facebook"><Facebook size="20" /></a>
+            <a
+              href="https://instagram.com/machupicchu_andes"
+              target="_blank"
+              aria-label="Instagram"><Instagram size="20" /></a
+            >
+            <a
+              href="https://facebook.com/machupicchuandesmarathon"
+              target="_blank"
+              aria-label="Facebook"><Facebook size="20" /></a
+            >
           </div>
         </div>
 
         <div class="footer-nav">
           <div class="footer-col">
-            <h3>Expeditions</h3>
+            <h3>{t('footer.expeditions')}</h3>
             <ul>
-              <li><a href="/inca-trail">Inca Trail Tours</a></li>
-              <li><a href="/alternative-treks">Alternative Treks</a></li>
-              <li><a href="/tour-days">Daily Tours</a></li>
-              <li><a href="#">Luxury Custom Trips</a></li>
+              <li><a href={translatePath('/inca-trail')}>{t('nav.inca')}</a></li>
+              <li><a href={translatePath('/alternative-treks')}>{t('nav.alternative')}</a></li>
+              <li><a href={translatePath('/tour-days')}>{t('nav.daily')}</a></li>
+              <li><a href="#">{lang === 'en' ? 'Luxury Custom Trips' : 'Viajes Personalizados'}</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
-            <h3>Resources</h3>
+            <h3>{t('footer.resources')}</h3>
             <ul>
-              <li><a href="#">Travel Insurance</a></li>
-              <li><a href="#">Packing List</a></li>
-              <li><a href="#">Health & Safety</a></li>
-              <li><a href="#">FAQ</a></li>
+              <li><a href="#">{t('footer.safety')}</a></li>
+              <li><a href="#">{t('footer.packing')}</a></li>
+              <li><a href="#">{t('footer.altitude')}</a></li>
+              <li><a href="#">{t('footer.faq')}</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>{t('footer.contact')}</h3>
+            <ul style="gap: 1rem;">
+              <li>
+                <a
+                  href="mailto:info@machupicchuandesmarathon.com"
+                  style="display: flex; align-items: center; gap: 8px;"
+                  ><Mail size="18" /> info@machupicchuandesmarathon.com</a>
+              </li>
+              <li>
+                <a
+                  href="tel:+51993187203"
+                  style="display: flex; align-items: center; gap: 8px;"
+                  ><Phone size="18" /> +51 993 187 203</a>
+              </li>
+              <li
+                style="display: flex; align-items: flex-start; gap: 8px; color: rgba(255, 255, 255, 0.6); font-size: 0.95rem; line-height: 1.4;"
+              >
+                <MapPin size="18" style="flex-shrink: 0;" /> Av. zarzuela Jr Santa
+                Rosa P7 Cusco - Perú
+              </li>
             </ul>
           </div>
         </div>
+      </div>
 
-        <div class="footer-newsletter">
-          <h3>Newsletter</h3>
-          <p>Subscribe to get travel tips and exclusive early-bird marathon offers.</p>
-          <form class="newsletter-form">
-            <input type="email" placeholder="Your email address" required />
-            <button type="submit" aria-label="Subscribe"><ArrowRight size="20" /></button>
-          </form>
+      <div class="footer-trust container">
+        <div class="trust-item">
+          <Shield size="20" />
+          <span>{t('trust.secure')}</span>
+        </div>
+        <div class="trust-item">
+          <Award size="20" />
+          <span>{t('trust.certified')}</span>
+        </div>
+        <div class="trust-item">
+          <Users size="20" />
+          <span>{t('trust.small')}</span>
         </div>
       </div>
-      
+
       <div class="footer-bottom container">
         <div class="footer-legal">
-          <p>&copy; {new Date().getFullYear()} Machu Picchu Andes Marathon. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Machu Picchu Andes Marathon. {lang === 'en' ? 'All rights reserved.' : 'Todos los derechos reservados.'}
+          </p>
           <div class="legal-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <a href="#">{lang === 'en' ? 'Privacy Policy' : 'Política de Privacidad'}</a>
+            <a href="#">{lang === 'en' ? 'Terms of Service' : 'Términos de Servicio'}</a>
           </div>
         </div>
       </div>
@@ -111,45 +206,89 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
         top: 0;
         left: 0;
         width: 100%;
-        padding: 1.5rem 0;
+        padding: 1rem 0;
         z-index: 1000;
         transition: var(--transition);
       }
 
       .header.scrolled {
-        padding: 1rem 0;
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(10px);
         box-shadow: var(--shadow-md);
       }
 
       .nav {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
         align-items: center;
+      }
+
+      .header-left {
+        display: flex;
+        align-items: center;
+      }
+
+      .header-right {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        justify-content: flex-end;
+      }
+
+      .nav-socials {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        padding-right: 1.5rem;
+      }
+
+      .header.scrolled .nav-socials {
+        border-right-color: rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-socials a {
+        color: var(--text-light);
+        opacity: 0.7;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+      }
+
+      .header.scrolled .nav-socials a {
+        color: var(--text-dark);
+      }
+
+      .nav-socials a:hover {
+        opacity: 1;
+        color: var(--secondary);
+        transform: translateY(-2px);
       }
 
       .logo {
         display: flex;
         align-items: center;
         z-index: 1001;
+        margin-right: 4rem;
       }
 
       .logo-img {
         height: 60px;
         width: auto;
         transition: var(--transition);
-        display: block;
       }
 
-      .header.scrolled .logo-img {
-        height: 50px;
+      @media (max-width: 768px) {
+        .logo-img {
+          height: 45px;
+        }
       }
 
       .nav-links {
         display: flex;
-        gap: 2.5rem;
+        gap: 1.5rem;
         align-items: center;
+        justify-content: center;
       }
 
       .nav-links a {
@@ -168,7 +307,34 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
         color: var(--secondary);
       }
 
+      .lang-switcher {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--text-light);
+      }
 
+      .header.scrolled .lang-switcher {
+        color: var(--text-dark);
+      }
+
+      .lang-switcher a {
+        color: inherit;
+        text-decoration: none;
+        opacity: 0.5;
+        transition: var(--transition);
+      }
+
+      .lang-switcher a.active {
+        opacity: 1;
+        color: var(--secondary);
+      }
+
+      .lang-switcher .divider {
+        opacity: 0.2;
+      }
 
       .mobile-toggle {
         display: none;
@@ -182,7 +348,8 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
         color: var(--text-dark);
       }
 
-      .close-icon.hidden, .open-icon.hidden {
+      .close-icon.hidden,
+      .open-icon.hidden {
         display: none;
       }
 
@@ -204,7 +371,7 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
 
       .footer-grid {
         display: grid;
-        grid-template-columns: 1.5fr 2fr 1.5fr;
+        grid-template-columns: 1fr 2fr;
         gap: 6rem;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         padding-bottom: 5rem;
@@ -225,6 +392,30 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
         color: rgba(255, 255, 255, 0.6);
         line-height: 1.8;
         font-size: 0.95rem;
+      }
+
+      .cta-grid {
+        gap: 2.5rem;
+      }
+      .cta-form-wrapper {
+        padding: 1.5rem;
+        overflow: hidden;
+      }
+      .contact-card-list {
+        margin: 2rem 0;
+        gap: 1.5rem;
+      }
+      .item-icon {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+      }
+      .trust-badges {
+        gap: 1rem;
+        justify-content: center;
+      }
+      .badge-item {
+        font-size: 0.75rem;
       }
 
       .social-links {
@@ -251,7 +442,7 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
 
       .footer-nav {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
       }
 
@@ -281,56 +472,6 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
         padding-left: 5px;
       }
 
-      .footer-newsletter {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-
-      .footer-newsletter p {
-        color: rgba(255, 255, 255, 0.6);
-        font-size: 0.9rem;
-        line-height: 1.6;
-      }
-
-      .newsletter-form {
-        display: flex;
-        gap: 0;
-        background: rgba(255, 255, 255, 0.05);
-        padding: 5px;
-        border-radius: 60px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .newsletter-form input {
-        background: none;
-        border: none;
-        padding: 0.75rem 1.5rem;
-        color: white;
-        flex-grow: 1;
-        outline: none;
-        font-family: inherit;
-      }
-
-      .newsletter-form button {
-        background: var(--secondary);
-        color: white;
-        border: none;
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: var(--transition);
-      }
-
-      .newsletter-form button:hover {
-        background: var(--accent);
-        transform: scale(1.05);
-      }
-
       .footer-bottom {
         padding-top: 3rem;
       }
@@ -352,17 +493,51 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
         color: white;
       }
 
+      .footer-trust {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        padding: 3rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        margin-bottom: 0;
+      }
+
+      .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+
+      .trust-item :global(svg) {
+        color: var(--secondary);
+      }
+
+      @media (max-width: 1210px) {
+        .header-right { gap: 1rem; }
+        .nav-links { gap: 0.75rem; }
+        .nav-socials { display: none; }
+      }
+
       @media (max-width: 1024px) {
         .footer-grid {
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 1fr;
           gap: 4rem;
-        }
-        .footer-newsletter {
-          grid-column: span 2;
         }
       }
 
       @media (max-width: 768px) {
+        .nav {
+          display: flex;
+          justify-content: space-between;
+        }
+
         .mobile-toggle {
           display: block;
         }
@@ -392,46 +567,78 @@ const { title, description = "Discover the ultimate adventure in the Andes with 
 
         .footer-grid {
           grid-template-columns: 1fr;
-        }
-        .footer-newsletter {
-          grid-column: span 1;
+          gap: 3rem;
         }
         .footer-nav {
           grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .footer-col {
+          overflow-wrap: anywhere;
+        }
+        .footer-trust {
+          flex-direction: column;
+          gap: 2rem;
+          padding: 2.5rem 1.5rem;
+        }
+        .trust-item {
+          justify-content: center;
         }
         .footer-legal {
           flex-direction: column;
           gap: 1.5rem;
           text-align: center;
+          padding: 2rem 0;
+        }
+        .legal-links {
+          gap: 1.5rem;
+          justify-content: center;
         }
       }
     </style>
 
     <script>
-      const header = document.getElementById('header');
-      const mobileToggle = document.getElementById('mobile-toggle');
-      const navMenu = document.getElementById('nav-menu');
+      const header = document.getElementById("header");
+      const mobileToggle = document.getElementById("mobile-toggle");
+      const navMenu = document.getElementById("nav-menu");
 
       if (header) {
-        window.addEventListener('scroll', () => {
+        window.addEventListener("scroll", () => {
           if (window.scrollY > 50) {
-            header.classList.add('scrolled');
+            header.classList.add("scrolled");
           } else {
-            header.classList.remove('scrolled');
+            header.classList.remove("scrolled");
           }
         });
       }
 
       if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener('click', () => {
-          navMenu.classList.toggle('active');
-          const openIcon = mobileToggle.querySelector('.open-icon');
-          const closeIcon = mobileToggle.querySelector('.close-icon');
-          
-          if (openIcon) openIcon.classList.toggle('hidden');
-          if (closeIcon) closeIcon.classList.toggle('hidden');
+        mobileToggle.addEventListener("click", () => {
+          navMenu.classList.toggle("active");
+          const openIcon = mobileToggle.querySelector(".open-icon");
+          const closeIcon = mobileToggle.querySelector(".close-icon");
+
+          if (openIcon) openIcon.classList.toggle("hidden");
+          if (closeIcon) closeIcon.classList.toggle("hidden");
         });
       }
+
+      // Scroll Reveal Observer
+      const observerOptions = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll("section").forEach((section) => {
+        observer.observe(section);
+      });
     </script>
   </body>
 </html>

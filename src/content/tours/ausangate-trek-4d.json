@@ -1,0 +1,93 @@
+{
+  "slug": "ausangate-trek-4d",
+  "category": "alternative-treks",
+  "price": "Contact Us",
+  "image": "/images/ausangate-circuit-trek-4d.png",
+  "rating": 4.9,
+  "en": {
+    "title": "Ausangate Circuit Trek - 4 Days",
+    "duration": "4 Days",
+    "difficulty": "Hard",
+    "maxAltitude": "5,200m",
+    "tag": "Classic",
+    "description": "A challenging circuit around the highest peak in the Cusco region. This 4-day route covers massive glaciers, turquoise lakes, and remote Andean passes for experienced trekkers.",
+    "includes": [
+      "Professional bilingual guide",
+      "Private transport from/to Cusco",
+      "Camping equipment & logistics",
+      "All meals provided by trekking chef",
+      "Horses for equipment and support",
+      "First aid and satellite communication"
+    ],
+    "excludes": [
+      "Sleeping bag",
+      "Walking sticks",
+      "Tips"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Tinki – Upis Hot Springs",
+        "description": "Travel to Tinki and begin hiking to Upis (4400m). Camp at the foot of Ausangate and enjoy natural thermal baths."
+      },
+      {
+        "day": 2,
+        "title": "Upis – Arapa Pass – Pucacocha Lakes",
+        "description": "Cross the Arapa Pass (4850m) and descend to the stunning multi-colored Pucacocha glacial lakes."
+      },
+      {
+        "day": 3,
+        "title": "Pucacocha – Palomani Pass – Ausangate Cocha",
+        "description": "Climb to the highest point of the circuit, Palomani Pass (5200m), for unparalleled views of the mountain range. Camp at Ausangate Cocha."
+      },
+      {
+        "day": 4,
+        "title": "Ausangate Cocha – Jampa Pass – Pacchanta – Cusco",
+        "description": "A long day crossing Jampa Pass (5080m) down to the thermal springs of Pacchanta before returning to Cusco."
+      }
+    ]
+  },
+  "es": {
+    "title": "Circuito Ausangate - 4 Días",
+    "duration": "4 Días",
+    "difficulty": "Difícil",
+    "maxAltitude": "5,200m",
+    "tag": "Clásico",
+    "description": "Un circuito desafiante alrededor del pico más alto de la región del Cusco. Esta ruta de 4 días cubre glaciares masivos, lagunas turquesas y pasos andinos remotos para senderistas experimentados.",
+    "includes": [
+      "Guía profesional bilingüe",
+      "Transporte privado desde/hacia Cusco",
+      "Equipo de campamento y logística",
+      "Todas las comidas preparadas por chef",
+      "Caballos para equipo y apoyo",
+      "Primeros auxilios y comunicación satelital"
+    ],
+    "excludes": [
+      "Bolsa de dormir",
+      "Bastones",
+      "Propinas"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Tinki – Aguas Termales Upis",
+        "description": "Viaje a Tinki y caminata inicial hasta Upis (4400m). Campamento a los pies del Ausangate con baños termales naturales."
+      },
+      {
+        "day": 2,
+        "title": "Upis – Paso Arapa – Lagunas Pucacocha",
+        "description": "Cruce del Paso Arapa (4850m) y descenso hacia las impresionantes lagunas glaciares de colores de Pucacocha."
+      },
+      {
+        "day": 3,
+        "title": "Pucacocha – Paso Palomani – Ausangate Cocha",
+        "description": "Ascenso al punto más alto del circuito, el Paso Palomani (5200m), para vistas inigualables. Campamento en Ausangate Cocha."
+      },
+      {
+        "day": 4,
+        "title": "Ausangate Cocha – Paso Jampa – Pacchanta – Cusco",
+        "description": "Día largo cruzando el Paso Jampa (5080m) hacia las aguas termales de Pacchanta antes del retorno a Cusco."
+      }
+    ]
+  }
+}

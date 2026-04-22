@@ -1,0 +1,107 @@
+{
+  "slug": "hidden-valley-trek-5d4n",
+  "category": "other-treks",
+  "price": "Contact Us",
+  "image": "/images/hero.webp",
+  "rating": 5.0,
+  "en": {
+    "title": "Tomacaya Hidden Valley trek to machupicchu - 5D/4N",
+    "duration": "5 Days",
+    "difficulty": "Challenging",
+    "maxAltitude": "4,900m",
+    "tag": "Off-grid",
+    "description": "Ready to test your limits and feel the raw, living magic of the Andes? Our Hidden Valley Trek to Machu Picchu – 5 epic days, 4 wild nights – is the most authentic, least-trampled path to the lost city.",
+    "includes": [
+      "Professional bilingual guides",
+      "Pre-Trek Briefing",
+      "Transportation (van and train)",
+      "Entrance fees to Inca Trail and Machu Picchu",
+      "Meals (breakfast, lunch, dinner)",
+      "Camping equipment (tents, sleeping pads)",
+      "Hotel in Aguas Calientes",
+      "First-aid kit and emergency oxygen"
+    ],
+    "excludes": [
+      "Travel Insurance",
+      "Tips for guides and porters",
+      "Extra personal expenses"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Trailhead (Tomacaya) – Tinko",
+        "description": "Driving distance: 77.2 km (48 mi). Trekking distance: 12 km (7.4 miles). Time: 6-7 hours. Accommodation: Tents. Wave goodbye to Cusco’s bustling city streets – today, your journey into the remote wilderness begins! We’ll set up camp at Tinko (4154 m / 13,628 ft)."
+      },
+      {
+        "day": 2,
+        "title": "Tinko – Tocto Pass – Pampacahuana",
+        "description": "Trekking distance: 15 km (9.3 miles). Time: 8-9 hours. Accommodation: Tents. Get ready to test your limits! Reaching Tocto Pass (4,900m) with panoramic views of Mt. Salkantay. Descend to camp at Mirador Pampaccahuana."
+      },
+      {
+        "day": 3,
+        "title": "Pampacahuana – Paucarcancha – Chamana",
+        "description": "Trekking distance: 15 km (9.3 miles). Time: 7-8 hours. Accommodation: Tents. Descend into a lush new world, passing Inca canals. Visit Paucarcancha and Llactapata ruins, camping at Chamana."
+      },
+      {
+        "day": 4,
+        "title": "Chamana – KM 82 – Ollantaytambo – Aguas Calientes",
+        "description": "Trekking: 7 km. Train to Aguas Calientes. Explore Qorihuayrachina and the Inca Trail entrance at Piscacucho. Train to Aguas Calientes for hotel stay."
+      },
+      {
+        "day": 5,
+        "title": "Aguas Calientes – Machu Picchu – Cusco",
+        "description": "Early bus to Machu Picchu for a guided tour. Free time to explore or hike Huayna Picchu. Afternoon train and van back to Cusco."
+      }
+    ]
+  },
+  "es": {
+    "title": "Tomacaya Hidden Valley trek a machupicchu - 5D/4N",
+    "duration": "5 Días",
+    "difficulty": "Desafiante",
+    "maxAltitude": "4,900m",
+    "tag": "Auténtico",
+    "description": "¿Listo para poner a prueba tus límites y sentir la magia viva y cruda de los Andes? Nuestro Trek del Valle Oculto a Machu Picchu – 5 días épicos, 4 noches salvajes – es el camino más auténtico y menos pisado hacia la ciudad perdida.",
+    "includes": [
+      "Guías profesionales bilingües",
+      "Sesión informativa previa",
+      "Transporte (van y tren)",
+      "Entradas al Camino Inca y Machu Picchu",
+      "Comidas (desayuno, almuerzo, cena)",
+      "Equipo de campamento (carpas, colchonetas)",
+      "Hotel en Aguas Calientes",
+      "Botiquín de primeros auxilios y oxígeno"
+    ],
+    "excludes": [
+      "Seguro de viaje",
+      "Propinas para guías y porteadores",
+      "Gastos personales extra"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Inicio (Tomacaya) – Tinko",
+        "description": "Distancia en auto: 77.2 km. Caminata: 12 km. Tiempo: 6-7 hrs. Alojamiento: Carpas. Despídete de Cusco y adéntrate en la naturaleza. Acamparemos en Tinko (4,154 m)."
+      },
+      {
+        "day": 2,
+        "title": "Tinko – Paso Tocto – Pampacahuana",
+        "description": "Caminata: 15 km. Tiempo: 8-9 hrs. Alojamiento: Carpas. ¡Pon a prueba tus límites! Llegada al Paso Tocto (4,900m) con vistas del nevado Salkantay. Descenso al campamento Mirador Pampaccahuana."
+      },
+      {
+        "day": 3,
+        "title": "Pampacahuana – Paucarcancha – Chamana",
+        "description": "Caminata: 15 km. Tiempo: 7-8 hrs. Alojamiento: Carpas. Descenso a un exuberante mundo verde. Visita a las ruinas de Paucarcancha y Llactapata. Campamento en Chamana."
+      },
+      {
+        "day": 4,
+        "title": "Chamana – KM 82 – Ollantaytambo – Aguas Calientes",
+        "description": "Caminata: 7 km. Tren a Aguas Calientes. Exploración de Qorihuayrachina y la entrada de Piscacucho. Noche en hotel en Aguas Calientes."
+      },
+      {
+        "day": 5,
+        "title": "Aguas Calientes – Machu Picchu – Cusco",
+        "description": "Bus temprano a Machu Picchu para tour guiado. Tiempo libre. Tren en la tarde y van de regreso a Cusco."
+      }
+    ]
+  }
+}

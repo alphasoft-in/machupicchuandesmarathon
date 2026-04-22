@@ -1,0 +1,67 @@
+{
+  "slug": "humantay-lake-day-hike",
+  "category": "tour-days",
+  "price": "$35",
+  "image": "/images/humantay.webp",
+  "rating": 4.9,
+  "en": {
+    "title": "Humantay Lake Full Day Tour",
+    "duration": "1 Day",
+    "difficulty": "Moderate",
+    "maxAltitude": "4,260m",
+    "tag": "Adventure",
+    "maxPeople": "16",
+    "minAge": "8",
+    "pickup": "Hotel (04:45 am)",
+    "description": "Enjoy the Humantay Lake full day tour with wonderful landscapes to take the best photos of the turquoise Humantay Lake. Surrounded by majestic glaciers that are part of the Andes range, including the Humantay and Salkantay snow-capped peaks, whose melting gives origin to this marvelous lake.",
+    "includes": [
+      "Hotel pick-up and round-trip transport",
+      "Professional bilingual guide (Spanish/English)",
+      "Meals (1 Breakfast / 1 Lunch)",
+      "First aid kit",
+      "Oxygen bottle"
+    ],
+    "excludes": [
+      "Entrance fees (s/5.00 local - s/10.00 foreign)",
+      "Extra expenses not mentioned",
+      "Snacks and water"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Mollepata – Soraypampa – Humantay Lake",
+        "description": "Pickup from your hotel (04:45 am) and travel to Mollepata (2.5 hours) for a delicious breakfast. Continue to Soraypampa (3900m). Begin a 1.5-hour hike to Humantay Lake (4260m). After exploring and photos, return to Soraypampa, then to Mollepata for an exquisite buffet lunch before returning to Cusco."
+      }
+    ]
+  },
+  "es": {
+    "title": "Tour Laguna Humantay Full Day",
+    "duration": "1 Día",
+    "difficulty": "Moderado",
+    "maxAltitude": "4,260m",
+    "tag": "Aventura",
+    "maxPeople": "16",
+    "minAge": "8",
+    "pickup": "Hotel (04:45 am)",
+    "description": "Disfruta del Tour a la Laguna Humantay full day en 1 día con paisajes realmente maravillosos para tomar las mejores fotos de la Laguna turquesa Humantay. Rodeada de maravillosos glaciares que forman parte de la Cordillera de los Andes, entre estos el majestuoso Nevado Humantay y Salkantay cuyo deshielo da origen a la maravillosa laguna.",
+    "includes": [
+      "Recojo del hotel y transporte turístico ida y vuelta",
+      "Guía profesional (Español/Inglés)",
+      "Alimentación (01 Desayuno / 01 Almuerzo)",
+      "Equipo de primeros auxilios",
+      "Balón de oxígeno"
+    ],
+    "excludes": [
+      "Entradas (s/5.00 peruanos - s/10.00 extranjeros)",
+      "Gastos extras no mencionados",
+      "Snacks y agua"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Mollepata – Soraypampa – Laguna Humantay",
+        "description": "Recojo del hotel (04:45 am) y viaje hacia Mollepata (2.5 hrs) para un delicioso desayuno. Continuamos hacia Soraypampa (3900 msnm). Caminata de 1.5 hrs hasta la Laguna Humantay (4260 msnm). Después de disfrutar el paisaje, retorno a Soraypampa y viaje a Mollepata para un exquisito almuerzo buffet antes de volver a Cusco."
+      }
+    ]
+  }
+}

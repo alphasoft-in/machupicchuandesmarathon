@@ -1,0 +1,59 @@
+{
+  "slug": "rainbow-mountain-peru-vinicunca",
+  "category": "tour-days",
+  "price": "$80",
+  "image": "/images/rainbow.webp",
+  "rating": 4.8,
+  "en": {
+    "title": "Rainbow Mountain Peru - Vinicunca",
+    "duration": "1 Day",
+    "difficulty": "Hard",
+    "maxAltitude": "5,200m",
+    "tag": "Scenic",
+    "description": "Trek to the breathtaking 5,200m peak of the Mountain of Seven Colors. A geological wonder that looks like a painting come to life.",
+    "includes": [
+      "Early Transfer",
+      "Breakfast & Trekking Snack",
+      "Trekking Guide",
+      "First Aid & Oxygen",
+      "Lunch after descent"
+    ],
+    "excludes": [
+      "Horse Rental (Optional)",
+      "Tips"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Vinicunca Ascent",
+        "description": "Early morning hike to witness the spectacular geological formations."
+      }
+    ]
+  },
+  "es": {
+    "title": "Montaña de Colores Perú - Vinicunca",
+    "duration": "1 Día",
+    "difficulty": "Difícil",
+    "maxAltitude": "5,200m",
+    "tag": "Paisajístico",
+    "description": "Caminata al impresionante pico de 5,200m de la Montaña de Siete Colores. Una maravilla geológica que parece una pintura cobrando vida.",
+    "includes": [
+      "Traslado Temprano",
+      "Desayuno y Snack de Caminata",
+      "Guía de Trekking",
+      "Primeros Auxilios y Oxígeno",
+      "Almuerzo después del descenso"
+    ],
+    "excludes": [
+      "Alquiler de Caballo (Opcional)",
+      "Propinas"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Ascenso Vinicunca",
+        "description": "Caminata temprano por la mañana para presenciar las espectaculares formaciones geológicas."
+      }
+    ]
+  }
+}

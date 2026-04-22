@@ -1,0 +1,59 @@
+{
+  "slug": "south-valley-tour",
+  "category": "tour-days",
+  "price": "$70",
+  "image": "/images/sacred-valley.webp",
+  "rating": 4.7,
+  "en": {
+    "title": "South Valley Tour",
+    "duration": "1 Day",
+    "difficulty": "Easy",
+    "maxAltitude": "3,500m",
+    "tag": "Historic",
+    "description": "Explore the impressive Tipón waterways, the Wari ruins of Pikillaqta, and the colonial church of Andahuaylillas. Discover a quieter side of the Cusco region.",
+    "includes": [
+      "Group Transport",
+      "Professional Guide",
+      "Pick-up from Hotel",
+      "Bottled Water"
+    ],
+    "excludes": [
+      "Tourist Ticket",
+      "Lunch",
+      "Staff Tips"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Southern Architectural Marvels",
+        "description": "Visit less crowded, highly significant pre-Incan, Incan and Colonial sites."
+      }
+    ]
+  },
+  "es": {
+    "title": "Tour Valle Sur",
+    "duration": "1 Día",
+    "difficulty": "Fácil",
+    "maxAltitude": "3,500m",
+    "tag": "Histórico",
+    "description": "Explora los impresionantes canales de Tipón, las ruinas Wari de Pikillaqta y la iglesia colonial de Andahuaylillas. Descubre un lado más tranquilo de la región de Cusco.",
+    "includes": [
+      "Transporte de Grupo",
+      "Guía Profesional",
+      "Pick-up desde el Hotel",
+      "Agua Embotellada"
+    ],
+    "excludes": [
+      "Boleto Turístico",
+      "Almuerzo",
+      "Propinas del Personal"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Maravillas Arquitectónicas del Sur",
+        "description": "Visita sitios pre-incas, incas y coloniales de gran importancia y menos concurridos."
+      }
+    ]
+  }
+}

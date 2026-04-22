@@ -19,24 +19,24 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
 const tours = await getCollection('tours');
-const altTours = tours
+const otherTours = tours
   .map(t => t.data)
-  .filter(t => t.category === 'alternative-treks');
+  .filter(t => t.category === 'other-treks');
 ---
 
-<Layout title={`${t('nav.alternative')} | Machu Picchu Andes Marathon`} lang={lang}>
+<Layout title={`${t('nav.other')} | Machu Picchu Andes Marathon`} lang={lang}>
   <PageHeader 
     client:load
     lang={lang}
-    title={lang === 'en' ? 'Alternative' : 'Treks'}
-    titleAccent={lang === 'en' ? 'Treks' : 'Alternativos'}
-    subtitle={lang === 'en' ? "Beyond the beaten path. Discover the hidden spirits of the Andes through our curated alternative routes." : "Más allá de las rutas comunes. Descubre los espíritus ocultos de los Andes a través de nuestras rutas alternativas curadas."}
+    title={lang === 'en' ? 'Other' : 'Otros'}
+    titleAccent={lang === 'en' ? 'Treks' : 'Treks'}
+    subtitle={lang === 'en' ? "Unique and specialized treks for the adventurous spirit." : "Treks únicos y especializados para el espíritu aventurero."}
     bgImage="/images/hero.webp"
   />
 
   <section class="section">
     <div class="container">
-      <TourGrid client:visible lang={lang} tours={altTours} />
+      <TourGrid client:visible lang={lang} tours={otherTours} />
     </div>
   </section>
 

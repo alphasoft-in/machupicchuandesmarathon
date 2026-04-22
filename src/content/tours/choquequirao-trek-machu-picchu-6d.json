@@ -1,0 +1,61 @@
+{
+  "slug": "choquequirao-trek-machu-picchu-6d",
+  "category": "alternative-treks",
+  "price": "$950",
+  "image": "/images/choquequirao.webp",
+  "rating": 5,
+  "en": {
+    "title": "Choquequirao Trek to Machu Picchu - 6 Days",
+    "duration": "6 Days",
+    "difficulty": "Expert",
+    "maxAltitude": "4,660m",
+    "tag": "Ultimate",
+    "description": "The ultimate expedition connecting two of the most important Incan citadels. A deep dive into the history of the last Incan resistance.",
+    "includes": [
+      "6-Day Gourmet Meal Service",
+      "Logistics Team",
+      "All Site Entrances",
+      "Train & Bus Logistics",
+      "Celebration Dinner"
+    ],
+    "excludes": [
+      "Extra Porter",
+      "Travel Insurance",
+      "Gratuities"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "The Great Traverse",
+        "description": "Hike through the deep canyons connecting Choquequirao and Machu Picchu."
+      }
+    ]
+  },
+  "es": {
+    "title": "Trek de Choquequirao a Machu Picchu - 6 Días",
+    "duration": "6 Días",
+    "difficulty": "Experto",
+    "maxAltitude": "4,660m",
+    "tag": "Definitivo",
+    "description": "La expedición definitiva que conecta dos de las ciudadelas incas más importantes. Una inmersión profunda en la historia de la última resistencia inca.",
+    "includes": [
+      "Servicio de Comidas Gourmet de 6 Días",
+      "Equipo de Logística",
+      "Todas las Entradas a Sitios",
+      "Logística de Tren y Bus",
+      "Cena de Celebración"
+    ],
+    "excludes": [
+      "Porteador Extra",
+      "Seguro de Viaje",
+      "Gratificaciones"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "La Gran Travesía",
+        "description": "Camina a través de los profundos cañones que conectan Choquequirao y Machu Picchu."
+      }
+    ]
+  }
+}

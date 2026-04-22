@@ -1,0 +1,89 @@
+{
+  "slug": "tomaccaya-salkantay-mistico-3d",
+  "category": "other-treks",
+  "price": "Contact Us",
+  "image": "/images/salkantay.webp",
+  "rating": 4.9,
+  "en": {
+    "title": "Tomaccaya - Salkantay Místico - 3D/2N",
+    "duration": "3 Days",
+    "difficulty": "Challenging",
+    "maxAltitude": "5,100m",
+    "tag": "Mystical",
+    "description": "An epic journey through the Andes combining history, adventure on ATVs, horseback riding, and the mystical presence of Mt. Salkantay. Discover ancient ruins and high mountain passes in this off-the-beaten-path experience.",
+    "includes": [
+      "Professional bilingual guide",
+      "All transportation (Cusco - Tomaccaya - Soraypampa - Cusco)",
+      "ATV Adventure (2.5 hours)",
+      "Horseback riding assistance",
+      "Camping equipment",
+      "All meals (Breakfast, Lunch, Dinner)",
+      "Entrance to Humantay Lake and local sites",
+      "First aid kit and oxygen"
+    ],
+    "excludes": [
+      "Travel Insurance",
+      "Sleeping bags",
+      "Tips",
+      "Personal expenses"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Tarawasi – Tomaccaya – Tinko – Pampaccahuana",
+        "description": "Depart Cusco towards Limatambo. Visit Tarawasi ruins. Andean breakfast in Tomaccaya. 2.5-hour ATV adventure to Tinko (4154m) for lunch. 3-hour hike to Cruzccasa Pass (4800m) followed by a 3-hour descent to Pampaccahuana (4000m) next to an original Inca canal."
+      },
+      {
+        "day": 2,
+        "title": "Pampaccahuana – Inkachiriaska Pass – Soraypampa",
+        "description": "Breakfast with the local community. 2-hour horseback ride to Accopampa. 1-hour hike to the high Inkachiriaska Pass (5100m) for the best photos and a coca leaf ceremony for the Apus. 4-hour descent through mountain plateaus to Soraypampa camp (3900m)."
+      },
+      {
+        "day": 3,
+        "title": "Soraypampa – Humantay Lake – Mollepata – Cusco",
+        "description": "2-hour ascent to the majestic Humantay Lake (4200m). After photos, 2-hour descent through the valley to the bus terminal. Bus to Mollepata for lunch and return to Cusco."
+      }
+    ]
+  },
+  "es": {
+    "title": "Tomaccaya - Salkantay Místico - 3D/2N",
+    "duration": "3 Días",
+    "difficulty": "Desafiante",
+    "maxAltitude": "5,100m",
+    "tag": "Místico",
+    "description": "Un viaje épico por los Andes que combina historia, aventura en cuatrimotos, cabalgatas y la presencia mística del nevado Salkantay. Descubre ruinas antiguas y pasos de alta montaña en esta experiencia fuera de lo común.",
+    "includes": [
+      "Guía profesional bilingüe",
+      "Todo el transporte (Cusco - Tomaccaya - Soraypampa - Cusco)",
+      "Aventura en cuatrimotos (2.5 horas)",
+      "Asistencia con caballos",
+      "Equipo de campamento",
+      "Todas las comidas (Desayuno, Almuerzo, Cena)",
+      "Entrada a la Laguna Humantay y sitios locales",
+      "Botiquín y oxígeno"
+    ],
+    "excludes": [
+      "Seguro de viaje",
+      "Sacos de dormir",
+      "Propinas",
+      "Gastos personales"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Tarawasi – Tomaccaya – Tinko – Pampaccahuana",
+        "description": "Salida de Cusco hacia Limatambo. Visita a las ruinas de Tarawasi. Desayuno andino en Tomaccaya. Aventura en cuatrimotos (2.5 hrs) hasta Tinko (4154m). Caminata de 3 hrs al Paso Cruzccasa (4800m) y descenso de 3 hrs hasta Pampaccahuana (4000m) junto a un canal inca."
+      },
+      {
+        "day": 2,
+        "title": "Pampaccahuana – Paso Inkachiriaska – Soraypampa",
+        "description": "Desayuno con la comunidad. Cabalgata de 2 hrs hasta Accopampa. Caminata de 1 hr hasta el paso Inkachiriaska (5100m), el punto más alto para fotos y ceremonia de agradecimiento a los Apus. Descenso de 4 hrs hasta el campamento Soraypampa (3900m)."
+      },
+      {
+        "day": 3,
+        "title": "Soraypampa – Laguna Humantay – Mollepata – Cusco",
+        "description": "Ascenso de 2 hrs a la majestuosa Laguna Humantay (4200m). Descenso de 2 hrs por el valle hasta el terminal de bus. Bus a Mollepata para el almuerzo y retorno a Cusco."
+      }
+    ]
+  }
+}

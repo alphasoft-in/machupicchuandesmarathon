@@ -1,0 +1,113 @@
+{
+  "slug": "short-inca-trail",
+  "category": "inca-trail",
+  "price": "$650",
+  "image": "/images/hero.webp",
+  "rating": 4.8,
+  "en": {
+    "title": "Short Inca Trail to Machu Picchu - 2D/1N",
+    "duration": "4 hours",
+    "maxPeople": "50",
+    "minAge": "2+",
+    "pickup": "Airport",
+    "difficulty": "Moderate",
+    "maxAltitude": "2,730m",
+    "tag": "Short",
+    "description": "Hike from Km 104 to Machu Picchu via the ruins of Wiñay Wayna and the Sun Gate for iconic views. Stay in Aguas Calientes. Next day, explore Machu Picchu. Permits essential. Moderate fitness needed.",
+    "expect": {
+      "paragraphs": [
+        "Embark on an adventure of a lifetime and hike the Inca Trail in just 2 days! Yes, it's very much possible. If you have limited time but you've got unlimited energy, motivation, and desire to go on a journey that transcends the boundaries of ordinary exploration, our Short Inca Trail 2 days tour is perfect for you!",
+        "This year, the Peruvian tourism authorities have expanded the daily permit allocation for this trek by an additional 200 permits. This means that there are more than enough slots for the rest of 2023, as well as 2024, for adventurers seeking to experience this once-in-a-lifetime journey.",
+        "This trek is not for the faint of heart but for those seeking adventure, cultural immersion, and the exhilaration of conquering high-altitude challenges.",
+        "Discover breathtaking landscapes, listen to stories of conquests, and walk in the footsteps of ancient people as you travel back in time. The ultimate reward of this arduous journey is the awe-inspiring arrival at Machu Picchu",
+        "Are you ready for a short but action-packed and adrenaline-filled journey of a lifetime?",
+        "Here's what our Short Inca Trail hike 2D1N looks like:"
+      ]
+    },
+    "includes": [
+      "Professional English speaking guide. Additional guide for groups over 8 people.",
+      "Pre-trek briefing (a Short Inca Trail map is also provided during the briefing time)",
+      "Transportation from your hotel to Ollantaytambo",
+      "Expedition train from Ollantaytambo to KM 104",
+      "Bus ticket from Machu Picchu to Aguas Calientes on day 1. Round trip bus ticket from Aguas Calientes to Machu Picchu on day 2.",
+      "Expedition train from Aguas Calientes to Poroy or Ollantaytambo.",
+      "Transport by private car from Ollantaytambo or Poroy train station to Cusco.",
+      "Admission ticket to the Inca Trail and Machu Picchu Archaeological site. (circuit 2 included, switching to circuit 3 if unavailable).",
+      "One-night accommodation at Hatun Inti Classic hotel in Aguas Calientes (double occupancy)",
+      "1 Box lunch, 1 dinner at Indio Feliz restaurant, 1 breakfast at the Hatun Inti Classic hotel.",
+      "Private guided walking tour of Machu Picchu"
+    ],
+    "excludes": [
+      "Hiking poles (can be rented from us)",
+      "Breakfast on day 1 and lunch on day 2",
+      "Huayna Picchu Mountain permit (can be purchased for an extra USD $75 pp)",
+      "Tip for your guide",
+      "Travel Insurance (highly recommended)"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Chachabamba – Wiñay Wayna – Sun Gate – Machu Picchu – Aguas Calientes",
+        "description": "The tour starts at 4:00 am, where we will collect you from your hotel in Cusco. You will be transferred in a minivan to the train station at Ollantaytambo. The train ride lasts about two hours.\nExplore the Chachabamba Ruins: Our stop at Kilometer 104 is where our adventure begins. As we pass the checkpoint, the first site you will discover is the magnificent ruins at Chachabamba, an ancient spiritual and agricultural center.\nHike the Inca stone steps: For about 3 hours of ascent, you will climb original Inca stone steps while discovering unique ecosystems.\nEat lunch at the Ruins of Wiñay Wayna: Shortly after a cascading waterfall is the ruins of Wiñay Wayna (Forever Young). You will have your well-deserved lunch here.\nVisit a temple: We will visit a temple with 7 windows and observe the incredible engineering of functional water channels. Afterwards, we continue our hike for 1 to 2 hours.\nReach the Sun Gate of Machu Picchu: At around 3:00 p.m., we reach the Sun Gate (Intipunku) offering breathtaking panoramic views of the Sacred City.\nTake a bus to Aguas Calientes: We make a short walk down to the main entrance where we take the bus down to Aguas Calientes.\nCheck in at hotel and have dinner: We will check you in at your hotel so you can rest. You can have a dip in the hot springs before dining together at Indio Feliz restaurant.\nMeals: Box Lunch, Dinner | Accommodations: Hatun Inti Classic Machu Picchu hotel\nMax altitude: 2,720 m/8,920 ft | Min Altitude: 2,040 m/6,691 ft\nDistance to walk: 13 km/8 miles | Approx walking time: 5-6 hours"
+      },
+      {
+        "day": 2,
+        "title": "Aguas Calientes – Machu Picchu – Cusco",
+        "description": "Eat breakfast: We will have an early breakfast at the hotel before taking the bus ride to Machu Picchu. Our bus ride is scheduled to allow you to witness the magnificent sunrise over the Andes.\nSite tour: During the two-hour tour, you will learn from our expert guides about the history and legends of Machu Picchu. Our goal is to bring the city to life for you, enabling you to travel back through time and experience the ancient culture. We provide plenty of time for picture-taking.\nClimb the Huayna Picchu Mountain (optional): If you decide to climb Huayna Picchu, you will begin the hike at 10:00 a.m. (permits not included). If you are not climbing, you will spend more time at Machu Picchu on your own before returning to Aguas Calientes by bus.\nDeparture: As we return to Aguas Calientes, you will board the expedition train to either Poroy or Ollantaytambo. Then, you will be transferred to our minivan to head back to your hotel in Cusco. Arrival is generally between 8:00 and 9:00 p.m.\nThat's it! A short but exceptionally amazing Inca Trail tour that is definitely for the books.\nMeals: Breakfast\nMin altitude: 2,040 m/6,691 ft | Max altitude: 2,440 m/8,052 ft"
+      }
+    ]
+  },
+  "es": {
+    "title": "Camino Inca Corto a Machu Picchu - 2D/1N",
+    "duration": "4 horas",
+    "maxPeople": "50",
+    "minAge": "2+",
+    "pickup": "Aeropuerto",
+    "difficulty": "Moderado",
+    "maxAltitude": "2,730m",
+    "tag": "Corto",
+    "description": "Camina desde el Km 104 a Machu Picchu a través de las ruinas de Wiñay Wayna y la Puerta del Sol para vistas icónicas. Hospedaje en Aguas Calientes. Al día siguiente, explora Machu Picchu. Permisos esenciales. Se requiere estado físico moderado.",
+    "expect": {
+      "paragraphs": [
+        "¡Embárcate en la aventura de tu vida y haz el Camino Inca en solo 2 días! Sí, es muy posible. Si tienes tiempo limitado pero energía, motivación y deseos ilimitados de emprender un viaje que trascienda los límites de la exploración ordinaria, ¡nuestro tour del Camino Inca Corto de 2 días es perfecto para ti!",
+        "Este año, las autoridades de turismo peruanas han ampliado la asignación diaria de permisos para esta caminata con 200 permisos adicionales. Esto significa que hay cupos más que suficientes para el resto de 2023, así como para 2024, para aquellos aventureros que busquen experimentar este viaje único.",
+        "Esta caminata no es para los débiles de corazón, sino para aquellos que buscan aventura, inmersión cultural y la emoción de superar desafíos de gran altitud.",
+        "Descubre paisajes impresionantes, escucha historias de conquistas y camina tras los pasos de antiguos pobladores mientras viajas en el tiempo. La recompensa final de este arduo viaje es la asombrosa llegada a Machu Picchu.",
+        "¿Estás preparado para un viaje de tu vida, corto pero lleno de acción y adrenalina?",
+        "Así luce nuestra caminata por el Camino Inca Corto de 2D/1N:"
+      ]
+    },
+    "includes": [
+      "Guía profesional de habla inglesa/española. Guía adicional para grupos de más de 8 personas.",
+      "Charla previa a la caminata (se proporciona mapa del Camino Inca Corto).",
+      "Transporte desde tu hotel hasta Ollantaytambo.",
+      "Tren Expedition de Ollantaytambo al KM 104.",
+      "Ticket de bus de Machu Picchu a Aguas Calientes el día 1. Ticket de bus de ida y vuelta a Machu Picchu el día 2.",
+      "Tren Expedition de Aguas Calientes a Poroy u Ollantaytambo.",
+      "Transporte privado desde la estación de Ollantaytambo o Poroy hasta Cusco.",
+      "Boleto de ingreso al Camino Inca y al sitio arqueológico de Machu Picchu.",
+      "Una noche de alojamiento en el hotel Hatun Inti Classic en Aguas Calientes (ocupación doble).",
+      "1 Box lunch, 1 cena en el restaurante Indio Feliz, 1 desayuno en el hotel Hatun Inti Classic.",
+      "Tour guiado privado a pie por Machu Picchu."
+    ],
+    "excludes": [
+      "Bastones de caminata (pueden ser alquilados con nosotros).",
+      "Desayuno el día 1 y almuerzo el día 2.",
+      "Permiso para la Montaña Huayna Picchu (puede comprarse por $75 USD adicionales pp).",
+      "Propina general para el equipo.",
+      "Seguro de viaje (altamente recomendado)."
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Chachabamba – Wiñay Wayna – Puerta del Sol – Machu Picchu – Aguas Calientes",
+        "description": "El tour comienza a las 4:00 am cuando lo recogeremos de su hotel en Cusco. Será trasladado en minivan hasta la estación de tren en Ollantaytambo. El viaje en tren durará unas dos horas.\nExplore las Ruinas de Chachabamba: En el Kilómetro 104 comienza nuestra aventura. Al pasar el control, el primer sitio que descubrirá son las magníficas ruinas de Chachabamba, un antiguo centro espiritual.\nSuba los escalones Incas: Durante unas 3 horas de ascenso, escalará escalones de piedra originales mientras descubre ecosistemas únicos.\nAlmuerce en Wiñay Wayna: Poco después de una hermosa cascada, se encuentran las ruinas de Wiñay Wayna (Siempre Joven). Disfrutará de su merecido almuerzo aquí.\nVisite un templo: En el receso visitaremos un templo de 7 ventanas y su increíble ingeniería de canales de agua. Luego, continuaremos caminando por 1 a 2 horas.\nLlegue a la Puerta del Sol: Alrededor de las 3:00 p.m., llegaremos a Intipunku que ofrece impresionantes vistas panorámicas de la Ciudad Sagrada.\nTome el bus a Aguas Calientes: Tras unas fotos, daremos una breve caminata hasta la entrada principal para tomar el autobús de bajada a Aguas Calientes.\nCheck in en el hotel y cena: Lo instalaremos en su hotel para que pueda descansar. Puede tomar un baño en las aguas termales antes de cenar juntos en el restaurante Indio Feliz.\nComidas: Box Lunch, Cena | Alojamiento: Hotel Hatun Inti Classic Machu Picchu\nAltitud máxima: 2,720 m/8,920 ft | Altitud mínima: 2,040 m/6,691 ft\nDistancia: 13 km/8 millas | Tiempo de caminata: 5-6 horas"
+      },
+      {
+        "day": 2,
+        "title": "Aguas Calientes – Machu Picchu – Cusco",
+        "description": "Desayuno: Tendremos un desayuno temprano en el hotel antes de tomar el autobús a Machu Picchu, programado para permitirle presenciar el magnífico amanecer sobre los Andes.\nRecorrido por el sitio: Durante el recorrido de dos horas, aprenderá de nuestros guías expertos sobre la historia y leyendas de Machu Picchu. Nuestro objetivo es darle vida a la ciudad y permitirle viajar en el tiempo. Habrá mucho tiempo para tomar fotografías.\nEscale Huayna Picchu (opcional): Si decide escalar la montaña, comenzará la caminata a las 10:00 a.m. (permisos no incluidos). Si no escala, pasará más tiempo explorando Machu Picchu por su cuenta antes de regresar a Aguas Calientes en bus.\nSalida: Al regresar a Aguas Calientes, abordará el tren expedition hacia Poroy u Ollantaytambo. Luego, será trasladado en nuestra minivan para regresar a su hotel en Cusco. Su llegada será generalmente entre las 8:00 y las 9:00 p.m.\n¡Eso es todo! Un tour del Camino Inca excepcional y un viaje que nunca olvidará.\nComidas: Desayuno\nAltitud mínima: 2,040 m/6,691 ft | Altitud máxima: 2,440 m/8,052 ft"
+      }
+    ]
+  }
+}

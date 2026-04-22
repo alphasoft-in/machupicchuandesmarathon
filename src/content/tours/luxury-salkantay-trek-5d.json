@@ -1,0 +1,113 @@
+{
+  "slug": "luxury-salkantay-trek-5d",
+  "category": "treks",
+  "price": "Contact Us",
+  "image": "/images/salkantay.webp",
+  "rating": 5.0,
+  "en": {
+    "title": "Luxury Salkantay Trek to Machu Picchu - 5D/4N",
+    "duration": "5 Days",
+    "difficulty": "Challenging",
+    "maxAltitude": "4,650m",
+    "tag": "Luxury",
+    "description": "Experience the legendary Salkantay Trek with unprecedented luxury. Recently featured on National Geographic's Ultimate Adventure bucket list, this trek blends extreme mountain scenery with 5-star service. Enjoy private massages every night, gourmet dining with an open bar, and high-end camping with feather duvets and silk robes before a grand finale at the Hiram Bingham train.",
+    "includes": [
+      "Professional English-speaking guide",
+      "Private chef and assistant for gourmet meals",
+      "Massage therapist for every camping night (1 per 2 guests)",
+      "Luxury camping setup with cots, air mattresses, and silk robes",
+      "Hiram Bingham Luxury Train from Aguas Calientes to Poroy",
+      "5-star buffet lunch at Belmond Sanctuary Lodge",
+      "Luxury hotel in Aguas Calientes (Sumaq or Inkaterra)",
+      "All permits and Machu Picchu entry fees",
+      "Private coffee tour in Lucmabamba",
+      "Open bar at each campsite"
+    ],
+    "excludes": [
+      "Personal hiking backpack",
+      "Travel Insurance",
+      "Tips for staff",
+      "Personal expenses"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Soraypampa – Humantay Lake – Salkantaypampa",
+        "description": "Private drive to Soraypampa (3800m). Hike to the turquoise Humantay Lake. Continue to Salkantaypampa for a gourmet lunch next to the glacier. Camp at Soyrococha (4400m)."
+      },
+      {
+        "day": 2,
+        "title": "Salkantay Pass – Colpapampa",
+        "description": "Conquer the Salkantay Pass (4650m) with spectacular views of Mt. Salkantay and Pumasillo. Descend from the highlands into the cloud forest and eventually the rainforest at Colpapampa (3100m)."
+      },
+      {
+        "day": 3,
+        "title": "Colpapampa – Lucmabamba – Coffee Experience",
+        "description": "A gentle hike through passion fruit and banana plantations. Arrive at Lucmabamba for an exclusive coffee tour, where you'll harvest, roast, and grind your own beans."
+      },
+      {
+        "day": 4,
+        "title": "Llactapata – Machu Picchu View – Aguas Calientes",
+        "description": "Climb to the Llactapata Inca site (2700m) for your first distant glimpse of Machu Picchu. Descend to Hydroelectric for lunch and take the train to your luxury hotel in Aguas Calientes."
+      },
+      {
+        "day": 5,
+        "title": "Machu Picchu Sanctuary – Hiram Bingham Train – Cusco",
+        "description": "Private walking tour of the citadel. Enjoy a 5-star buffet lunch at Belmond Sanctuary Lodge. Evening return on the luxurious Hiram Bingham train with fine dining and live entertainment."
+      }
+    ]
+  },
+  "es": {
+    "title": "Trek Salkantay de Gran Lujo a Machu Picchu - 5D/4N",
+    "duration": "5 Días",
+    "difficulty": "Desafiante",
+    "maxAltitude": "4,650m",
+    "tag": "Lujo",
+    "description": "Vive el legendario Salkantay Trek con un lujo sin precedentes. Recientemente destacado en la lista de aventuras definitivas de National Geographic, este trek combina paisajes de montaña extremos con un servicio de 5 estrellas. Disfruta de masajes privados cada noche, cena gourmet con barra libre y campamentos de alta gama con edredones de plumas y batas de seda.",
+    "includes": [
+      "Guía profesional bilingüe experto",
+      "Chef privado y asistente para comidas gourmet",
+      "Terapeuta de masajes cada noche de campamento (1 por cada 2 personas)",
+      "Campamento de lujo con catres, colchones de aire y batas de seda",
+      "Tren de Lujo Hiram Bingham de Aguas Calientes a Poroy",
+      "Almuerzo buffet de 5 estrellas en Belmond Sanctuary Lodge",
+      "Hotel de lujo en Aguas Calientes (Sumaq o Inkaterra)",
+      "Todos los permisos y entradas a Machu Picchu",
+      "Tour privado de café en Lucmabamba",
+      "Barra libre en cada campamento"
+    ],
+    "excludes": [
+      "Mochila personal de caminata",
+      "Seguro de viaje",
+      "Propinas para el personal",
+      "Gastos personales"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Soraypampa – Laguna Humantay – Salkantaypampa",
+        "description": "Viaje privado a Soraypampa (3800m). Caminata a la turquesa Laguna Humantay. Continuamos hacia Salkantaypampa para un almuerzo gourmet junto al glaciar. Campamento en Soyrococha (4400m)."
+      },
+      {
+        "day": 2,
+        "title": "Paso Salkantay – Colpapampa",
+        "description": "Conquista el Paso Salkantay (4650m) con vistas espectaculares del Nevado Salkantay y Pumasillo. Descenso desde el altiplano hacia el bosque nuboso y finalmente la selva en Colpapampa (3100m)."
+      },
+      {
+        "day": 3,
+        "title": "Colpapampa – Lucmabamba – Experiencia de Café",
+        "description": "Caminata suave por plantaciones de fruta de la pasión y plátanos. Llegada a Lucmabamba para un tour de café exclusivo, donde cosecharás, tostarás y molerás tus propios granos."
+      },
+      {
+        "day": 4,
+        "title": "Llactapata – Vista de Machu Picchu – Aguas Calientes",
+        "description": "Ascenso al sitio inca de Llactapata (2700m) para tu primera vista distante de Machu Picchu. Descenso a Hidroeléctrica para almorzar y viaje en tren a tu hotel de lujo en Aguas Calientes."
+      },
+      {
+        "day": 5,
+        "title": "Santuario Machu Picchu – Tren Hiram Bingham – Cusco",
+        "description": "Tour privado a pie por la ciudadela. Disfruta de un almuerzo buffet de 5 estrellas en Belmond Sanctuary Lodge. Retorno por la noche en el lujoso tren Hiram Bingham con cena refinada y entretenimiento en vivo."
+      }
+    ]
+  }
+}

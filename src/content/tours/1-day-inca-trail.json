@@ -1,0 +1,132 @@
+{
+  "slug": "1-day-inca-trail",
+  "category": "inca-trail",
+  "price": "$350",
+  "image": "/images/inca-trail-to-machu-picchu.png",
+  "rating": 4.8,
+  "gallery": [
+    "/images/inca-trail-to-machu-picchu.png",
+    "/images/cta-bg.webp",
+    "/images/sacred-valley.webp",
+    "/images/rainbow.webp",
+    "/images/salkantay.webp",
+    "/images/humantay.webp",
+    "/images/choquequirao.webp"
+  ],
+  "en": {
+    "title": "1 Day Inca Trail to Machu Picchu",
+    "duration": "1 day",
+    "tag": "Express",
+    "maxPeople": "20",
+    "minAge": "2",
+    "pickup": "Train",
+    "description": "Looking for a full-day adventure that includes the Inca Trail and Machu Picchu? Travel from Cusco to KM 104 on our 1 Day Inca Trail to Machu Picchu Tour, exploring fascinating archaeological sites like Chachabamba, Wiñay Wayna, and the Sun Gate. Then explore Machu Picchu’s viewpoints at sunset. This route is ideal for those who want to experience the Inca Trail without a multi-day hike. Book today and discover one of Peru’s most iconic journeys!",
+    "expect": {
+      "title": "What to expect on the Inca Trail 1 Day",
+      "paragraphs": [
+        "The Inca Trail 1 day tour to Machu Picchu allows you to travel from Cusco to Ollantaytambo, board one of the first trains, and hike the trail for about 6 hours, reaching Machu Picchu and returning to Cusco the same day.",
+        "Along the Inca Trail, you will be able to explore amazing Inca sites, enjoy delicious meals with our expert tour guides, and arrive at Machu Picchu through the Sun Gate. You will also explore the Citadel in the late afternoon via Circuit 1, which offers some of the most incredible views of Machu Picchu.",
+        "This is the perfect option for travelers who want to experience adventure, hiking, and the Inca Trail in one day, while returning to Cusco by night."
+      ]
+    },
+    "highlightsList": [
+      "Hike the legendary Inca Trail in one day.",
+      "Visit the Inca sites of Chachabamba and Wiñay Wayna.",
+      "Reach Machu Picchu through the Sun Gate (Inti Punku).",
+      "Explore Circuit 1 in Machu Picchu for incredible panoramic views.",
+      "Return to Cusco by train and private vehicle."
+    ],
+    "circuits": {
+      "title": "Machu Picchu Circuits included",
+      "description": "Circuit 1-C: Through this route all Inca Trail hikers arrive at Machu Picchu. It allows you to visit the lower observatory, the upper observatory, the Sun Gate, and the possibility of having 360° views of Machu Picchu!",
+      "note": "The Ministry of Culture set 3 routes to spread visitor flow, reduce erosion, and avoid crowding. Learn more in our Machu Picchu Entrances & Circuits 2026."
+    },
+    "addons": [
+      "Private Tour: Walk at your own pace with a personalized guide. Request during booking.",
+      "Overnight in Aguas Calientes: Stay an extra night to explore Machu Picchu the following day.",
+      "Circuit 2 or 3 Ticket: Subject to availability. Includes access to the main archaeological site."
+    ],
+    "includes": [
+      "Pickup and drop-off at your hotel in Cusco",
+      "Expedition train to km 104 – Inca Trail",
+      "Entrance tickets (Inca Trail + Machu Picchu Circuit 1)",
+      "Box breakfast and picnic lunch",
+      "Bus from Machu Picchu to Aguas Calientes",
+      "Return Expedition train to Ollantaytambo",
+      "Transfer from Ollantaytambo to Cusco",
+      "English-speaking guide"
+    ],
+    "excludes": [
+      "Dinner",
+      "Travel insurance",
+      "Personal expenses (snacks, souvenirs, etc.)",
+      "Access to Circuits 2 or 3 at Machu Picchu"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Inca Trail at a Glance",
+        "description": "Early Pickup: 4:00 am departure from Cusco to Ollantaytambo for the train to km 104.\nStart Hiking: Explore Chachabamba and follow the trail to Wiñaywayna with a picnic lunch.\nSun Gate Arrival: First view of Machu Picchu entering through Inti Punku.\nExplore Machu Picchu: Walk Circuit 1 for panoramic views.\nReturn Journey: Bus to Aguas Calientes, train to Ollantaytambo, and vehicle back to Cusco (arriving ~9:30 pm)."
+      }
+    ]
+  },
+  "es": {
+    "title": "Camino Inca de 1 Día a Machu Picchu",
+    "duration": "1 Día",
+    "difficulty": "Moderado",
+    "maxAltitude": "2,730m",
+    "tag": "Express",
+    "maxPeople": "20",
+    "minAge": "2",
+    "pickup": "Tren",
+    "description": "¿Buscas una aventura de un día completo que incluya el Camino Inca y Machu Picchu? Viaja con nosotros desde Cusco hasta el KM 104 en el Tour de 1 día al Camino Inca, explorando fascinantes sitios arqueológicos como Chachabamba, Wiñay Wayna y la Puerta del Sol. Luego, explora los miradores de Machu Picchu al atardecer. Esta ruta es ideal para aquellos que desean experimentar el Camino Inca sin una caminata de varios días. ¡Reserva hoy y descubre uno de los viajes más icónicos de Perú!",
+    "expect": {
+      "title": "Qué esperar en el Camino Inca de 1 día",
+      "paragraphs": [
+        "El tour del Camino Inca de 1 día a Machu Picchu te permite viajar desde Cusco a Ollantaytambo, abordar uno de los primeros trenes y recorrer el sendero durante aproximadamente 6 horas, llegando a Machu Picchu y regresando a Cusco el mismo día.",
+        "A lo largo del Camino Inca, podrás explorar increíbles sitios incas, disfrutar de deliciosas comidas con nuestros guías expertos y llegar a Machu Picchu a través de la Puerta del Sol. También explorarás la Ciudadela al final de la tarde a través del Circuito 1, que ofrece algunas de las vistas más increíbles de Machu Picchu.",
+        "Esta es la opción perfecta para los viajeros que desean experimentar la aventura, el senderismo y el Camino Inca en un solo día, regresando a Cusco por la noche."
+      ]
+    },
+    "highlightsList": [
+      "Camina por el legendario Camino Inca en un día.",
+      "Visita los sitios incas de Chachabamba y Wiñay Wayna.",
+      "Llega a Machu Picchu a través de la Puerta del Sol (Inti Punku).",
+      "Explora el Circuito 1 en Machu Picchu para obtener vistas panorámicas increíbles.",
+      "Regresa a Cusco en tren y vehículo privado."
+    ],
+    "circuits": {
+      "title": "Circuitos de Machu Picchu incluidos",
+      "description": "Circuito 1-C: A través de esta ruta todos los excursionistas del Camino Inca llegan a Machu Picchu. ¡Permite visitar el observatorio bajo, el observatorio alto, la Puerta del Sol y la posibilidad de tener vistas de 360° de Machu Picchu!",
+      "note": "El Ministerio de Cultura estableció 3 rutas para distribuir el flujo de visitantes, reducir la erosión y evitar aglomeraciones. Conoce más en nuestras Entradas y Circuitos de Machu Picchu 2026."
+    },
+    "addons": [
+      "Tour Privado: Camina a tu propio ritmo con un guía personalizado. Solicítalo al reservar.",
+      "Pernocte en Aguas Calientes: Quédate una noche adicional para explorar Machu Picchu al día siguiente.",
+      "Boleto del Circuito 2 o 3: Sujeto a disponibilidad. Incluye acceso al sitio arqueológico principal."
+    ],
+    "includes": [
+      "Recojo y traslado de retorno en tu hotel en Cusco",
+      "Tren Expedition hasta el km 104 – Camino Inca",
+      "Entradas (Camino Inca + Circuito 1 de Machu Picchu)",
+      "Box breakfast y almuerzo picnic",
+      "Bus desde Machu Picchu a Aguas Calientes",
+      "Tren Expedition de retorno a Ollantaytambo",
+      "Traslado desde Ollantaytambo a Cusco",
+      "Guía bilingüe"
+    ],
+    "excludes": [
+      "Cena",
+      "Seguro de viaje",
+      "Gastos personales (snacks, recuerdos, etc.)",
+      "Acceso a los Circuitos 2 o 3 en Machu Picchu"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Día 01 Camino Inca de un Vistazo",
+        "description": "• Recojo Temprano: Salida a las 4:00 am hacia Ollantaytambo para tomar el tren al KM 104.\n• Inicio de Caminata: Exploración de Chachabamba y caminata hacia Wiñay Wayna con almuerzo picnic.\n• Puerta del Sol: Primera vista de Machu Picchu ingresando por Inti Punku.\n• Explora Machu Picchu: Recorrido por el Circuito 1 para las mejores vistas panorámicas.\n• Retorno: Bus a Aguas Calientes, tren a Ollantaytambo y retorno privado a Cusco cerca de las 9:30 pm."
+      }
+    ]
+  }
+}

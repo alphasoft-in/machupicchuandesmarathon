@@ -1,0 +1,113 @@
+{
+  "slug": "luxury-inca-trail-5d",
+  "category": "inca-trail",
+  "price": "$3,850",
+  "image": "/images/marathon.webp",
+  "rating": 5.0,
+  "en": {
+    "title": "Luxury Inca Trail to Machu Picchu - 5D/4N",
+    "duration": "5 Days",
+    "difficulty": "Moderate",
+    "maxAltitude": "4,215m",
+    "tag": "Luxury",
+    "description": "Experience the ultimate Inca Trail trek where luxury meets adventure. This exclusive 5-day program offers quieter campsites, gourmet meals with champagne, relaxing massages every night, and the highest quality camping equipment, including bed feather duvets and cotton sheets. Perfect for families and those seeking the most refined trekking experience in the world.",
+    "includes": [
+      "Professional bilingual guide (2 guides for 8+ people)",
+      "Luxury camping with feather duvets, cotton sheets, and pillows",
+      "Massage service every afternoon at the campsite",
+      "Gourmet meals, wine, champagne, and Pisco sour",
+      "Porters for all equipment and personal gear (up to 10kg)",
+      "Hot shower facilities and biodegradable amenities",
+      "Hiram Bingham Luxury Train return to Poroy",
+      "Huayna Picchu Mountain entrance ticket included",
+      "Buffet lunch at Belmond Sanctuary Lodge",
+      "Luxury hotel in Aguas Calientes (Sumaq or Inkaterra)"
+    ],
+    "excludes": [
+      "Breakfast on Day 1",
+      "Trekking poles (Available for rent)",
+      "Tips for staff",
+      "Personal travel insurance"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – KM 82 – Llactapata",
+        "description": "Private transport to KM 82. Hike along the Urubamba River to the majestic ruins of Llactapata (2750m). Luxury camp setup with spectacular views."
+      },
+      {
+        "day": 2,
+        "title": "Llactapata – Wayllabamba – Llulluchapampa",
+        "description": "Trek through the Kusichaca valley and cloud forests. Witness llamas and alpacas in their natural habitat. Camp at Llulluchapampa (3800m), a quiet and scenic high-altitude site."
+      },
+      {
+        "day": 3,
+        "title": "Llulluchapampa – Dead Woman’s Pass – Phuyupatamarca",
+        "description": "Conquer Dead Woman's Pass (4200m). Explore Runkurakay and Sayacmarca ruins. Arrive at Phuyupatamarca, the 'City Above the Clouds', for a breathtaking sunset over the Urubamba valley."
+      },
+      {
+        "day": 4,
+        "title": "Phuyupatamarca – Sun Gate – Machu Picchu",
+        "description": "Ancient stone steps lead to Wiñay Wayna. Reach the Sun Gate for a classic first view of Machu Picchu. Enjoy a buffet lunch at Belmond Sanctuary Lodge before descending to your luxury hotel in Aguas Calientes."
+      },
+      {
+        "day": 5,
+        "title": "Machu Picchu Sanctuary – Hiram Bingham Train – Cusco",
+        "description": "Complete guided tour of the citadel. Optional Huayna Picchu climb. Return to Cusco on the legendary Hiram Bingham train with a gourmet dinner and live music."
+      }
+    ]
+  },
+  "es": {
+    "title": "Camino Inca de Gran Lujo - 5D/4N",
+    "duration": "5 Días",
+    "difficulty": "Moderado",
+    "maxAltitude": "4,215m",
+    "tag": "Lujo",
+    "description": "Vive la máxima aventura donde el lujo se encuentra con la historia. Este programa exclusivo de 5 días ofrece campamentos privados, comidas gourmet con champán, masajes relajantes cada noche y el equipo de campamento de la más alta calidad, incluyendo edredones de plumas y sábanas de algodón. Perfecto para familias y quienes buscan la experiencia de trekking más refinada del mundo.",
+    "includes": [
+      "Guía profesional bilingüe (2 guías para grupos de 8+)",
+      "Campamento de lujo con edredones de plumas, sábanas de algodón y almohadas",
+      "Servicio de masajes todas las tardes en el campamento",
+      "Comidas gourmet, vino, champán y Pisco sour",
+      "Porteadores para todo el equipo y carga personal (hasta 10kg)",
+      "Duchas calientes y amenidades biodegradables",
+      "Tren de Lujo Hiram Bingham de retorno a Poroy",
+      "Entrada a la montaña Huayna Picchu incluida",
+      "Almuerzo buffet en Belmond Sanctuary Lodge",
+      "Hotel de lujo en Aguas Calientes (Sumaq o Inkaterra)"
+    ],
+    "excludes": [
+      "Desayuno el Día 1",
+      "Bastones de trekking (Disponibles para alquiler)",
+      "Propinas para el personal",
+      "Seguro de viaje personal"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – KM 82 – Llactapata",
+        "description": "Transporte privado al KM 82. Caminata junto al río Urubamba hasta las majestuosas ruinas de Llactapata (2750m). Campamento de lujo con vistas espectaculares."
+      },
+      {
+        "day": 2,
+        "title": "Llactapata – Wayllabamba – Llulluchapampa",
+        "description": "Trek por el valle de Kusichaca y bosques nubosos. Observa llamas y alpacas en su hábitat. Campamento en Llulluchapampa (3800m), un sitio tranquilo y escénico."
+      },
+      {
+        "day": 3,
+        "title": "Llulluchapampa – Paso de la Mujer Muerta – Phuyupatamarca",
+        "description": "Conquista el Paso de la Mujer Muerta (4200m). Explora las ruinas de Runkurakay y Sayacmarca. Llega a Phuyupatamarca, la 'Ciudad sobre las Nubes', para un atardecer inolvidable."
+      },
+      {
+        "day": 4,
+        "title": "Phuyupatamarca – Intipunku – Machu Picchu",
+        "description": "Escalones incas originales hacia Wiñay Wayna. Llega a la Puerta del Sol para la vista clásica de Machu Picchu. Almuerzo buffet en Belmond Sanctuary Lodge antes de bajar a tu hotel de lujo en Aguas Calientes."
+      },
+      {
+        "day": 5,
+        "title": "Santuario Machu Picchu – Tren Hiram Bingham – Cusco",
+        "description": "Tour guiado completo de la ciudadela. Ascenso opcional al Huayna Picchu. Retorno a Cusco en el legendario tren Hiram Bingham con cena gourmet y música en vivo."
+      }
+    ]
+  }
+}

@@ -1,7 +1,14 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { ArrowRight, MapPin, Users, Globe, Mail, Phone, Star, CheckCircle, User } from 'lucide-astro';
+import { getCollection } from 'astro:content';
+import { Mail, Phone, MapPin, CheckCircle, Globe, Users } from 'lucide-react';
 import { useTranslations, useTranslatedPath } from '../../utils/i18n';
+import Hero from '../../components/Hero';
+import CategoryGrid from '../../components/CategoryGrid';
+import TourGrid from '../../components/TourGrid';
+import TestimonialsSlider from '../../components/TestimonialsSlider';
+import BookingForm from '../../components/BookingForm';
+import BookingCTA from '../../components/BookingCTA.astro';
 
 export function getStaticPaths() {
   return [
@@ -10,82 +17,109 @@ export function getStaticPaths() {
   ];
 }
 
-const { lang } = Astro.params;
+const { lang: rawLang } = Astro.params;
+const lang = rawLang as 'en' | 'es';
+
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
+
+// Data fetching
+const allTours = await getCollection('tours');
+const featuredTours = allTours
+  .map(t => t.data)
+  .slice(0, 6);
 
 const categories = [
   {
     title: t('nav.inca'),
     desc: lang === 'en' 
-      ? "The legendary path to Machu Picchu. Historic routes through original Incan stone paths and hidden archaeological sites."
-      : "El legendario sendero a Machu Picchu. Rutas históricas por caminos de piedra originales y sitios arqueológicos ocultos.",
-    image: "/images/marathon.png",
+      ? "Discover the legendary path of the Incas. A unique journey through history and breathtaking landscapes." 
+      : "Descubre el legendario camino de los Incas. Un viaje único a través de la historia y paisajes impresionantes.",
+    image: "/images/hero.webp",
     link: "/inca-trail",
-    accent: "var(--secondary)"
+    accent: "#0e3b2e"
   },
   {
     title: t('nav.alternative'),
     desc: lang === 'en'
-      ? "Venture beyond the crowds. Discover Salkantay, Lares, and the hidden spirits of the high Andes Mountains."
-      : "Aventúrate más allá de las multitudes. Descubre Salkantay, Lares y los espíritus ocultos de los altos Andes.",
-    image: "/images/hero.png",
+      ? "Explore off-the-beaten-path trails. Salkantay, Choquequirao, and more adventure awaits."
+      : "Explora rutas fuera de lo común. Salkantay, Choquequirao y más aventuras te esperan.",
+    image: "/images/salkantay.webp",
     link: "/alternative-treks",
-    accent: "var(--primary)"
+    accent: "#fc6111"
   },
   {
     title: t('nav.daily'),
     desc: lang === 'en'
       ? "Perfect daily excursions from Cusco and the Sacred Valley. Culture, adventure, and history in a single day."
       : "Excursiones diarias perfectas desde Cusco y el Valle Sagrado. Cultura, aventura e historia en un solo día.",
-    image: "/images/marathon.png",
+    image: "/images/sacred-valley.webp",
     link: "/tour-days",
     accent: "#ff8c42"
+  }
+];
+
+const testimonials = [
+  {
+    rating: 5,
+    text: lang === 'en' 
+      ? "The Premium Inca Trail was life-changing. The glamping tents and the private chef felt like a 5-star hotel in the middle of the mountains." 
+      : "El Camino Inca Premium cambió mi vida. Las carpas glamping y el chef privado se sentían como un hotel de 5 estrellas en medio de las montañas.",
+    client: "Sarah Jenkins, UK"
+  },
+  {
+    rating: 5,
+    text: lang === 'en'
+      ? "Excellence in every step. Our guide knew every hidden stone and told stories that brought the ruins to life."
+      : "Excelencia en cada paso. Nuestro guía conocía cada piedra oculta y contaba historias que daban vida a las ruinas.",
+    client: "Marc Dubois, France"
+  },
+  {
+    rating: 5,
+    text: lang === 'en'
+      ? "Best decision of my life. The local expertise of Machu Picchu Andes Marathon is unmatched. They really care about the culture."
+      : "La mejor decisión de mi vida. El conocimiento local de Machu Picchu Andes Marathon es inigualable. Realmente se preocupan por la cultura.",
+    client: "Elena Rossi, Italy"
+  },
+  {
+    rating: 5,
+    text: lang === 'en'
+      ? "Unforgettable experience. The attention to detail on the Salkantay Trek was beyond my expectations."
+      : "Experiencia inolvidable. La atención al detalle en el Salkantay Trek superó mis expectativas.",
+    client: "James Wilson, Australia"
   }
 ];
 ---
 
 <Layout title={t('hero.title')} lang={lang}>
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content container">
-      <h4 class="animate-fade-in delay-1 serif italic">{lang === 'en' ? 'Experience the Andes like never before' : 'Vive los Andes como nunca antes'}</h4>
-      <h1 class="animate-fade-in delay-2 serif">Machu Picchu <br/> <span>Andes Marathon</span></h1>
-      <p class="animate-fade-in delay-3">{t('hero.subtitle')}</p>
-      <div class="hero-btns animate-fade-in delay-3">
-        <a href={translatePath('/inca-trail')} class="btn btn-primary">{t('hero.cta')} <ArrowRight size="20" /></a>
-        <a href="#about" class="btn btn-outline">{lang === 'en' ? 'Why Choose Us' : 'Por qué elegirnos'}</a>
+  <Hero 
+    client:load 
+    lang={lang} 
+    subtitle={t('hero.subtitle')} 
+    ctaText={t('hero.cta')} 
+    categoryPath={translatePath('/inca-trail')} 
+  />
+
+  <section id="categories" class="section categories" style="padding-bottom: 0;">
+    <CategoryGrid client:visible lang={lang} categories={categories} translatePath={translatePath} />
+  </section>
+
+  <section id="featured-tours" class="section bg-light" style="padding-top: 0;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3rem; width: 100%;">
+        <h2 class="section-title serif" style="margin-bottom: 1.5rem; text-align: center;">{t('home.featured.title')}</h2>
+        <p class="section-subtitle" style="max-width: 700px; margin-left: auto; margin-right: auto; text-align: center;">
+          {t('home.featured.subtitle')}
+        </p>
       </div>
+      
+      <TourGrid client:visible lang={lang} tours={featuredTours} />
+      
     </div>
   </section>
 
-  <!-- Categories Section -->
-  <section id="categories" class="section categories pb-40">
-    <div class="container text-center header-group">
-      <h2 class="serif section-title">{lang === 'en' ? 'Explore Our Categories' : 'Explora nuestras categorías'}</h2>
-      <p class="text-muted max-w-600 mx-auto section-subtitle">{lang === 'en' ? 'Choose your perfect adventure. From legendary treks to daily cultural immersions.' : 'Elige tu aventura perfecta. Desde treks legendarios hasta inmersiones culturales diarias.'}</p>
-    </div>
-
-    <div class="container category-grid">
-      {categories.map((cat, index) => (
-        <a href={translatePath(cat.link)} class={`category-card animate-fade-in delay-${index + 1}`}>
-          <div class="cat-image-w">
-            <img src={cat.image} alt={cat.title} />
-            <div class="cat-overlay" style={`background: linear-gradient(to top, ${cat.accent}cc, transparent)`}></div>
-          </div>
-          <div class="cat-content">
-            <h3 class="serif">{cat.title}</h3>
-            <p>{cat.desc}</p>
-            <span class="cat-link">{lang === 'en' ? 'View Packages' : 'Ver Paquetes'} <ArrowRight size="18" /></span>
-          </div>
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <!-- About / Why Us -->
-  <section id="about" class="section bg-muted pt-40 pb-40">
+  <!-- About / Why Us (Keep structural HTML in Astro, but using React icons) -->
+  <section id="about" class="section bg-muted">
     <div class="container about-grid">
       <div class="about-content">
         <h2 class="serif">{lang === 'en' ? 'Excellence in Every Step' : 'Excelencia en cada paso'}</h2>
@@ -93,21 +127,21 @@ const categories = [
         
         <ul class="stats-grid">
           <li>
-            <div class="stat-icon"><Globe size="24" /></div>
+            <div class="stat-icon"><Globe size={24} /></div>
             <div>
               <strong>{lang === 'en' ? 'Local Expertise' : 'Experiencia Local'}</strong>
               <p>{lang === 'en' ? '100% Peruvian owned and operated company.' : 'Empresa 100% peruana.'}</p>
             </div>
           </li>
           <li>
-            <div class="stat-icon"><Users size="24" /></div>
+            <div class="stat-icon"><Users size={24} /></div>
             <div>
               <strong>{lang === 'en' ? 'Small Groups' : 'Grupos Pequeños'}</strong>
               <p>{lang === 'en' ? 'Personalized attention for an intimate experience.' : 'Atención personalizada para una experiencia íntima.'}</p>
             </div>
           </li>
           <li>
-            <div class="stat-icon"><MapPin size="24" /></div>
+            <div class="stat-icon"><MapPin size={24} /></div>
             <div>
               <strong>{lang === 'en' ? 'Hidden Paths' : 'Senderos Ocultos'}</strong>
               <p>{lang === 'en' ? 'Access to restricted and off-the-beaten-path locations.' : 'Acceso a lugares restringidos y fuera de las rutas comunes.'}</p>
@@ -116,675 +150,13 @@ const categories = [
         </ul>
       </div>
       <div class="about-image">
-        <img src="/images/marathon.png" alt="Incan Trail" class="rounded-img shadow-lg" />
+        <img src="/images/marathon.webp" alt="Incan Trail" class="rounded-img shadow-lg" />
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="section bg-white text-center testimonials-section">
-    <div class="container header-group">
-      <h2 class="serif section-title">{lang === 'en' ? 'Whispers from the Andes' : 'Susurros de los Andes'}</h2>
-      <p class="text-muted section-subtitle">{lang === 'en' ? 'Join hundreds of satisfied explorers who found their soul in the mountains.' : 'Únete a los cientos de exploradores que encontraron su alma en las montañas.'}</p>
-    </div>
-    
-    <!-- Swiper Slider -->
-    <div class="container relative testimonials-slider-wrapper">
-      <div class="swiper testimonials-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="stars"><Star size="16" fill="var(--secondary)" color="var(--secondary)" /> <Star size="16" fill="var(--secondary)" color="var(--secondary)" /> <Star size="16" fill="var(--secondary)" color="var(--secondary)" /> <Star size="16" fill="var(--secondary)" color="var(--secondary)" /> <Star size="16" fill="var(--secondary)" color="var(--secondary)" /></div>
-              <p>{lang === 'en' ? '"The Premium Inca Trail was life-changing. The glamping tents and the private chef felt like a 5-star hotel in the middle of the mountains."' : '"El Camino Inca Premium cambió mi vida. Las carpas glamping y el chef privado se sentían como un hotel de 5 estrellas en medio de las montañas."'}</p>
-              <div class="client">- Sarah Jenkins, UK</div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="stars"><Star size="16" fill="var(--secondary)" color="var(--secondary)" /> <Star size="16" fill="var(--secondary)" color="var(--secondary)" /> <Star size="16" fill="var(--secondary)" color="var(--secondary)" /> <Star size="16" fill="var(--secondary)" color="var(--secondary)" /> <Star size="16" fill="var(--secondary)" color="var(--secondary)" /></div>
-              <p>{lang === 'en' ? '"Excellence in every step. Our guide knew every hidden stone and told stories that brought the ruins to life."' : '"Excelencia en cada paso. Nuestro guía conocía cada piedra oculta y contaba historias que daban vida a las ruinas."'}</p>
-              <div class="client">- Marc Dubois, France</div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="stars"><Star size="16" fill="var(--secondary)" color="var(--secondary)" /> <Star size="16" fill="var(--secondary)" color="var(--secondary)" /> <Star size="16" fill="var(--secondary)" color="var(--secondary)" /> <Star size="16" fill="var(--secondary)" color="var(--secondary)" /> <Star size="16" fill="var(--secondary)" color="var(--secondary)" /></div>
-              <p>{lang === 'en' ? '"Best decision of my life. The local expertise of Machu Picchu Andes Marathon is unmatched. They really care about the culture."' : '"La mejor decisión de mi vida. El conocimiento local de Machu Picchu Andes Marathon es inigualable. Realmente se preocupan por la cultura."'}</p>
-              <div class="client">- Elena Rossi, Italy</div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="stars"><Star size="16" fill="var(--secondary)" color="var(--secondary)" /> <Star size="16" fill="var(--secondary)" color="var(--secondary)" /> <Star size="16" fill="var(--secondary)" color="var(--secondary)" /> <Star size="16" fill="var(--secondary)" color="var(--secondary)" /> <Star size="16" fill="var(--secondary)" color="var(--secondary)" /></div>
-              <p>{lang === 'en' ? '"Unforgettable experience. The attention to detail on the Salkantay Trek was beyond my expectations."' : '"Experiencia inolvidable. La atención al detalle en el Salkantay Trek superó mis expectativas."'}</p>
-              <div class="client">- James Wilson, Australia</div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <TestimonialsSlider client:visible lang={lang} testimonials={testimonials} />
 
-      <!-- Navigation buttons -->
-      <button class="swiper-nav prev" aria-label="Previous slide"><ArrowRight style="transform: rotate(180deg)" /></button>
-      <button class="swiper-nav next" aria-label="Next slide"><ArrowRight /></button>
-
-      <!-- Pagination dots -->
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-
-  <!-- Swiper Assets -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Booking CTA -->
-  <section id="contact" class="cta-section pt-40 pb-40">
-    <div class="container">
-      <div class="cta-grid animate-fade-in">
-        <div class="cta-info">
-          <h2 class="serif">{t('booking.title')}</h2>
-          <p>{t('booking.subtitle')}</p>
-          
-          <div class="contact-card-list">
-            <div class="contact-item">
-              <div class="item-icon"><Mail size="20" /></div>
-              <div>
-                <strong>{lang === 'en' ? 'Email Us' : 'Escríbenos'}</strong>
-                <p>info@machupicchuandesmarathon.com</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="item-icon"><Phone size="20" /></div>
-              <div>
-                <strong>{lang === 'en' ? 'Call / WhatsApp' : 'Llámanos / WhatsApp'}</strong>
-                <p>+51 993 187 203</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="item-icon"><MapPin size="20" /></div>
-              <div>
-                <strong>{lang === 'en' ? 'Visit Our HQ' : 'Visítanos'}</strong>
-                <p>Av. zarzuela Jr Santa Rosa P7 Cusco - Perú</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="trust-badges mt-4">
-             <div class="badge-item"><CheckCircle size="18" /> {lang === 'en' ? 'Licensed Operator' : 'Operador Licenciado'}</div>
-             <div class="badge-item"><CheckCircle size="18" /> {lang === 'en' ? '100% Local Guides' : 'Guías 100% Locales'}</div>
-          </div>
-        </div>
-        
-        <div class="cta-form-wrapper">
-          <form class="booking-form">
-            <div class="form-group">
-              <User size="18" class="form-icon" />
-              <input type="text" placeholder={t('form.name')} required />
-            </div>
-            <div class="form-group">
-              <Mail size="18" class="form-icon" />
-              <input type="email" placeholder={t('form.email')} required />
-            </div>
-            <div class="form-group">
-              <Globe size="18" class="form-icon" />
-              <select required>
-                <option disabled selected>{t('form.select')}</option>
-                <option>{t('form.interest.inca')}</option>
-                <option>{t('form.interest.alt')}</option>
-                <option>{t('form.interest.daily')}</option>
-                <option>{t('form.interest.custom')}</option>
-              </select>
-            </div>
-            <textarea placeholder={lang === 'en' ? "Tell us more about your group or dates (optional)" : "Cuéntanos más sobre tu grupo o fechas (opcional)"} rows="4"></textarea>
-            <button type="submit" class="btn btn-primary btn-full">{t('form.submit')} <ArrowRight size="20" /></button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Booking CTA Section -->
+  <BookingCTA lang={lang} />
 </Layout>
-
-<style>
-  /* Hero Section */
-  .hero {
-    height: 100vh;
-    min-height: 700px;
-    background: url('/images/hero.png') center/cover no-repeat fixed;
-    display: flex;
-    align-items: center;
-    position: relative;
-    color: var(--text-light);
-  }
-
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 10;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .hero-content h4 {
-    color: var(--secondary);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    letter-spacing: 2px;
-  }
-
-  .hero-content h1 {
-    font-size: clamp(2rem, 8vw, 4.5rem);
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    color: white;
-  }
-
-  .hero-content h1 span {
-    color: var(--secondary);
-    display: block;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-    max-width: 600px;
-    margin: 0 auto 3.5rem;
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  .hero-btns {
-    display: flex;
-    gap: 1.25rem;
-    justify-content: center;
-  }
-
-  /* Categories */
-  .section-title {
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .header-group {
-    margin-bottom: 2.5rem;
-    text-align: center;
-  }
-
-  .section-subtitle {
-    font-size: 1.125rem;
-    line-height: 1.6;
-  }
-
-  .category-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-
-  .category-card {
-    background: white;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-    transition: var(--transition);
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .category-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .cat-image-w {
-    position: relative;
-    height: 300px;
-    overflow: hidden;
-  }
-
-  .cat-image-w img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-  }
-
-  .category-card:hover .cat-image-w img {
-    transform: scale(1.1);
-  }
-
-  .cat-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .cat-content {
-    padding: 2rem;
-    background: white;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .cat-content h3 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-  }
-
-  .cat-content p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    flex-grow: 1;
-  }
-
-  .cat-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    color: var(--primary);
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-  }
-
-  /* About Section */
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 7rem;
-    align-items: center;
-  }
-
-  .about-content h2 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-  }
-
-  .about-content p {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    margin-bottom: 4rem;
-  }
-
-  .stats-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    margin-bottom: 2rem;
-  }
-
-  .stats-grid li {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-  }
-
-  .stat-icon {
-    width: 50px;
-    height: 50px;
-    background: white;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--secondary);
-    box-shadow: var(--shadow-sm);
-    flex-shrink: 0;
-  }
-
-  .stats-grid strong {
-    display: block;
-    font-size: 1.1rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .stats-grid p {
-    font-size: 0.9rem;
-    margin-bottom: 0;
-  }
-
-  .rounded-img {
-    border-radius: 30px;
-    width: 100%;
-  }
-
-  @media (max-width: 1024px) {
-    .category-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 768px) {
-    .category-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .about-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-    }
-  }
-
-  .cta-section {
-    margin-bottom: 0 !important;
-    padding-bottom: 30px !important;
-  }
-
-  /* Testimonials Swiper Refinement */
-  .testimonials-slider-wrapper {
-    position: relative;
-    padding: 0 4rem;
-  }
-
-  .testimonials-swiper {
-    padding: 2rem 0 4rem;
-  }
-
-  .testimonial-card {
-    background: #fcfcfc;
-    padding: 3rem;
-    border-radius: 24px;
-    border: 1px solid #f0f0f0;
-    transition: var(--transition);
-    height: 100%;
-    text-align: center;
-  }
-
-  .testimonial-card:hover {
-    box-shadow: var(--shadow-md);
-    border-color: var(--secondary);
-  }
-
-  .stars {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .testimonial-card p {
-    font-style: italic;
-    color: var(--text-dark);
-    line-height: 1.8;
-    margin: 1.5rem 0;
-  }
-
-  .testimonial-card .client {
-    font-weight: 700;
-    color: var(--primary);
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  .swiper-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    color: var(--primary);
-    cursor: pointer;
-    z-index: 20;
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-  }
-
-  .swiper-nav:hover {
-    color: var(--secondary);
-    transform: translateY(-50%) scale(1.2);
-  }
-
-  .swiper-nav :global(svg) {
-    width: 40px;
-    height: 40px;
-  }
-
-  .swiper-nav.prev { left: 0; }
-  .swiper-nav.next { right: 0; }
-
-  /* Custom Pagination dots for Swiper */
-  :global(.swiper-pagination) {
-    position: relative !important;
-    bottom: 0 !important;
-    margin-top: 1rem;
-  }
-
-  :global(.swiper-pagination-bullet) {
-    width: 10px;
-    height: 10px;
-    background: #eee !important;
-    opacity: 1 !important;
-    transition: var(--transition);
-  }
-
-  :global(.swiper-pagination-bullet-active) {
-    background: var(--secondary) !important;
-    width: 30px !important;
-    border-radius: 10px !important;
-  }
-
-  /* CTA Section Styling */
-  .cta-section {
-    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('/images/sacred-valley.png') center/cover no-repeat fixed;
-    color: white;
-  }
-
-  .cta-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8rem;
-    align-items: center;
-  }
-
-  .contact-card-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin: 3rem 0;
-  }
-
-  .contact-item {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    overflow-wrap: anywhere;
-  }
-
-  .item-icon {
-    width: 50px;
-    height: 50px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--secondary);
-    border: 1px solid rgba(255,255,255,0.1);
-  }
-
-  .contact-item strong {
-    display: block;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--secondary);
-    margin-bottom: 5px;
-  }
-
-  .cta-form-wrapper {
-    background: white;
-    padding: 4rem;
-    border-radius: 30px;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-  }
-
-  .cta-form-wrapper .booking-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin: 0;
-  }
-
-  .form-group {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-
-  .form-icon {
-    position: absolute;
-    left: 1.25rem;
-    color: var(--text-muted);
-    pointer-events: none;
-  }
-
-  .form-group input, .form-group select {
-    padding-left: 3.5rem !important;
-  }
-
-  .cta-form-wrapper input, .cta-form-wrapper select, .cta-form-wrapper textarea {
-    background: #fcfcfc;
-    border: 1px solid #eee;
-    color: var(--text-dark);
-    padding: 1.25rem;
-    border-radius: 12px;
-    width: 100%;
-    font-family: inherit;
-  }
-
-  .cta-form-wrapper textarea {
-    background: #fcfcfc;
-  }
-
-  .cta-form-wrapper input:focus, .cta-form-wrapper select:focus, .cta-form-wrapper textarea:focus {
-    background: white;
-    border-color: var(--secondary);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    outline: none;
-  }
-
-  .btn-full {
-    width: 100%;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .trust-badges {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-
-  .badge-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.7);
-  }
-
-    @media (max-width: 1024px) {
-      .testimonial-slide {
-        flex: 0 0 calc(50% - 1rem);
-      }
-      .cta-grid {
-        grid-template-columns: 1fr;
-        gap: 4rem;
-      }
-      .cta-form-wrapper {
-        padding: 2.5rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .hero-content {
-        padding: 0 1.5rem;
-      }
-      .hero-btns {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-      }
-      .hero-btns .btn {
-        width: 100%;
-        max-width: 300px;
-      }
-      .cta-grid {
-        gap: 2.5rem;
-      }
-      .cta-form-wrapper {
-        padding: 1.5rem;
-      }
-      .contact-card-list {
-        margin: 2rem 0;
-        gap: 1.5rem;
-      }
-      .item-icon {
-        width: 40px;
-        height: 40px;
-        flex-shrink: 0;
-      }
-      .trust-badges {
-        gap: 1rem;
-        justify-content: center;
-      }
-      .badge-item {
-        font-size: 0.75rem;
-      }
-      .testimonials-slider-wrapper { padding: 0 1rem; }
-      .swiper-nav { display: none; }
-    }
-  </style>
-
-  <script is:inline>
-    function initSwiper() {
-      new Swiper('.testimonials-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-nav.next',
-          prevEl: '.swiper-nav.prev',
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
-        },
-      });
-    }
-
-    // Initialize on load and on Astro swap
-    initSwiper();
-    document.addEventListener('astro:after-swap', initSwiper);
-  </script>

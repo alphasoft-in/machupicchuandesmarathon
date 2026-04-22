@@ -1,0 +1,83 @@
+{
+  "slug": "ausangate-trek-3d",
+  "category": "alternative-treks",
+  "price": "Contact Us",
+  "image": "/images/rainbow.webp",
+  "rating": 4.8,
+  "en": {
+    "title": "Ausangate Trek - 3 Days",
+    "duration": "3 Days",
+    "difficulty": "Hard",
+    "maxAltitude": "5,080m",
+    "tag": "High Altitude",
+    "description": "A condensed but intense high-altitude trek through the sacred Apu Ausangate. Experience the Seven Lakes, local communities, and the raw beauty of the Vilcanota mountain range.",
+    "includes": [
+      "Professional bilingual guide",
+      "Private transport to/from Cusco",
+      "Camping equipment",
+      "All meals during the trek",
+      "Horsemen and pack horses",
+      "Emergency oxygen and first aid"
+    ],
+    "excludes": [
+      "Sleeping bag",
+      "Tips",
+      "Personal travel insurance"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Pacchanta – 7 Lakes",
+        "description": "Depart Cusco for the village of Pacchanta. Enjoy a scenic hike to the famous 7 Glacial Lakes of Ausangate. Relax in local hot springs in the afternoon."
+      },
+      {
+        "day": 2,
+        "title": "Pacchanta – Jampa Pass – Camp",
+        "description": "Ascend towards the Jampa Pass (5080m), the highest point of the trek. Spectacular views of Mt. Ausangate and hanging glaciers."
+      },
+      {
+        "day": 3,
+        "title": "Camp – Tinki – Cusco",
+        "description": "Descent through highland meadows and llama grazing lands back to Tinki. Private transport return to Cusco in the late afternoon."
+      }
+    ]
+  },
+  "es": {
+    "title": "Ausangate Trek - 3 Días",
+    "duration": "3 Días",
+    "difficulty": "Difícil",
+    "maxAltitude": "5,080m",
+    "tag": "Alta Montaña",
+    "description": "Un trek condensado pero intenso por el sagrado Apu Ausangate. Experimenta las Siete Lagunas, comunidades locales y la belleza cruda de la cordillera de Vilcanota.",
+    "includes": [
+      "Guía profesional bilingüe",
+      "Transporte privado ida/vuelta",
+      "Equipo de campamento",
+      "Todas las comidas durante el trek",
+      "Arrieros y caballos de carga",
+      "Oxígeno de emergencia y primeros auxilios"
+    ],
+    "excludes": [
+      "Bolsa de dormir",
+      "Propinas",
+      "Seguro de viaje personal"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Pacchanta – 7 Lagunas",
+        "description": "Salida de Cusco hacia el pueblo de Pacchanta. Caminata escénica a las famosas 7 Lagunas Glaciares del Ausangate. Tarde de relajo en aguas termales locales."
+      },
+      {
+        "day": 2,
+        "title": "Pacchanta – Paso Jampa – Campamento",
+        "description": "Ascenso hacia el Paso Jampa (5080m), el punto más alto del trek. Vistas espectaculares del Nevado Ausangate y glaciares colgantes."
+      },
+      {
+        "day": 3,
+        "title": "Campamento – Tinki – Cusco",
+        "description": "Descenso por prados altoandinos y zonas de pastoreo de llamas de regreso a Tinki. Retorno en transporte privado a Cusco por la tarde."
+      }
+    ]
+  }
+}

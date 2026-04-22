@@ -1,0 +1,93 @@
+{
+  "slug": "classic-inca-trail",
+  "category": "inca-trail",
+  "price": "$850",
+  "image": "/images/marathon.webp",
+  "rating": 4.9,
+  "en": {
+    "title": "Classic Inca Trail to Machu Picchu - 4D/3N",
+    "duration": "4 Days",
+    "difficulty": "Challenging",
+    "maxAltitude": "4,215m",
+    "tag": "Historic",
+    "description": "The most iconic trek in the world. Walk through original Incan paved paths and explore mystical cloud forests. A test of endurance that rewards you with timeless spiritual connection.",
+    "includes": [
+      "Private Chef",
+      "Porters for Gear",
+      "Official Permits",
+      "Camping Equipment",
+      "Machu Picchu Entrance",
+      "Train Tickets"
+    ],
+    "excludes": [
+      "Travel Insurance",
+      "Sleeping Bags",
+      "Tips for Porters"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Piscacucho - Wayllabamba",
+        "description": "Beginning of the trek at KM 82. Gentle hike along the Urubamba river, visiting the Patallacta ruins."
+      },
+      {
+        "day": 2,
+        "title": "Wayllabamba - Dead Woman's Pass - Pacaymayu",
+        "description": "The most challenging day. Ascend to Warmiwañusca at 4,215m for breathtaking views."
+      },
+      {
+        "day": 3,
+        "title": "Pacaymayu - Phuyupatamarca - Wiñay Wayna",
+        "description": "Exploration of archaeological sites including Runkurakay and Sayacmarca."
+      },
+      {
+        "day": 4,
+        "title": "Wiñay Wayna - Sun Gate - Machu Picchu",
+        "description": "Early morning arrival at Inti Punku to witness the sunrise over the Incan citadel."
+      }
+    ]
+  },
+  "es": {
+    "title": "Camino Inca Clásico a Machu Picchu - 4D/3N",
+    "duration": "4 Días",
+    "difficulty": "Desafiante",
+    "maxAltitude": "4,215m",
+    "tag": "Histórico",
+    "description": "El trekking más icónico del mundo. Camina por senderos empedrados originales y explora místicos bosques de nubes. Una prueba de resistencia que te premia con una conexión espiritual atemporal.",
+    "includes": [
+      "Chef Privado",
+      "Porteadores de Equipo",
+      "Permisos Oficiales",
+      "Equipo de Campamento",
+      "Entrada a Machu Picchu",
+      "Tickets de Tren"
+    ],
+    "excludes": [
+      "Seguro de Viaje",
+      "Sacos de Dormir",
+      "Propinas para Porteadores"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Piscacucho - Wayllabamba",
+        "description": "Inicio de la caminata en el KM 82. Caminata suave junto al río Urubamba, visitando las ruinas de Patallacta."
+      },
+      {
+        "day": 2,
+        "title": "Wayllabamba - Paso de la Mujer Muerta - Pacaymayu",
+        "description": "El día más desafiante. Asciende a Warmiwañusca a 4,215m para vistas impresionantes."
+      },
+      {
+        "day": 3,
+        "title": "Pacaymayu - Phuyupatamarca - Wiñay Wayna",
+        "description": "Exploración de sitios arqueológicos incluyendo Runkurakay y Sayacmarca."
+      },
+      {
+        "day": 4,
+        "title": "Wiñay Wayna - Puerta del Sol - Machu Picchu",
+        "description": "Llegada temprano por la mañana a Inti Punku para ver el amanecer sobre la ciudadela inca."
+      }
+    ]
+  }
+}

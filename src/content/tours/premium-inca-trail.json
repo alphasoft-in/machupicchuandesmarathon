@@ -1,0 +1,103 @@
+{
+  "slug": "premium-inca-trail",
+  "category": "inca-trail",
+  "price": "$1250",
+  "image": "/images/premium-inca.webp",
+  "rating": 5,
+  "en": {
+    "title": "Premium Inca Trail to Machu Picchu - 5D/4N",
+    "duration": "5 Days",
+    "difficulty": "Moderate",
+    "maxAltitude": "4,215m",
+    "tag": "Luxury",
+    "description": "Experience the iconic trail with premium camping, gourmet meals, and extended exploration time. This slower pace allows for deeper meditation among ruins and a VIP treatment throughout.",
+    "includes": [
+      "Massage Therapist",
+      "Glamping Tents",
+      "Gourmet Catering",
+      "Private High-End Guide",
+      "Luxury Train Return",
+      "Hot Shower Facilities"
+    ],
+    "excludes": [
+      "International Flights",
+      "Personal Expenses",
+      "Tips"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - KM 82 - Wayllabamba",
+        "description": "Begin the journey with luxury amenities and private guides."
+      },
+      {
+        "day": 2,
+        "title": "Wayllabamba - Pacaymayu",
+        "description": "Cross the challenging passes with premium support and frequent breaks."
+      },
+      {
+        "day": 3,
+        "title": "Pacaymayu - Phuyupatamarca",
+        "description": "Enjoy exclusive camping sites with panoramic views of the Vilcabamba range."
+      },
+      {
+        "day": 4,
+        "title": "Phuyupatamarca - Machu Picchu Pueblo",
+        "description": "Descend to the valley and stay at a luxury hotel before the grand visit."
+      },
+      {
+        "day": 5,
+        "title": "Machu Picchu VIP Exploration",
+        "description": "A detailed 3-hour private tour of the citadel followed by a gourmet lunch and Vistadome train return."
+      }
+    ]
+  },
+  "es": {
+    "title": "Premium Camino Inca a Machu Picchu - 5D/4N",
+    "duration": "5 Días",
+    "difficulty": "Moderado",
+    "maxAltitude": "4,215m",
+    "tag": "Lujo",
+    "description": "Vive el sendero icónico con campamentos premium, comidas gourmet y tiempo de exploración extendido. Este ritmo más pausado permite una meditación profunda entre ruinas y un trato VIP en todo momento.",
+    "includes": [
+      "Terapeuta de Masajes",
+      "Carpas Glamping",
+      "Catering Gourmet",
+      "Guía Privado de Alto Nivel",
+      "Retorno en Tren de Lujo",
+      "Instalaciones de Ducha Caliente"
+    ],
+    "excludes": [
+      "Vuelos Internacionales",
+      "Gastos Personales",
+      "Propinas"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - KM 82 - Wayllabamba",
+        "description": "Comienza el viaje con amenidades de lujo y guías privados."
+      },
+      {
+        "day": 2,
+        "title": "Wayllabamba - Pacaymayu",
+        "description": "Cruza los pasos desafiantes con apoyo premium y descansos frecuentes."
+      },
+      {
+        "day": 3,
+        "title": "Pacaymayu - Phuyupatamarca",
+        "description": "Disfruta de campamentos exclusivos con vistas panorámicas de la cordillera de Vilcabamba."
+      },
+      {
+        "day": 4,
+        "title": "Phuyupatamarca - Machu Picchu Pueblo",
+        "description": "Desciende al valle y hospédate en un hotel de lujo antes de la gran visita."
+      },
+      {
+        "day": 5,
+        "title": "Exploración VIP de Machu Picchu",
+        "description": "Tour privado detallado de 3 horas por la ciudadela seguido de un almuerzo gourmet y retorno en tren Vistadome."
+      }
+    ]
+  }
+}

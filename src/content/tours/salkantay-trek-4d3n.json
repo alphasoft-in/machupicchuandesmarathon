@@ -1,0 +1,61 @@
+{
+  "slug": "salkantay-trek-4d3n",
+  "category": "alternative-treks",
+  "price": "$450",
+  "image": "/images/salkantay.webp",
+  "rating": 4.8,
+  "en": {
+    "title": "Salkantay Trek to Machu Picchu - 4D/3N",
+    "duration": "4 Days",
+    "difficulty": "Challenging",
+    "maxAltitude": "4,630m",
+    "tag": "Adventure",
+    "description": "A fast-paced journey through the stunning Salkantay pass and lush jungles. Witness the power of the glacial peaks before descending into tropical fruit orchards.",
+    "includes": [
+      "Expert Trekking Guide",
+      "Pony/Mule Support",
+      "All Camping Gear",
+      "Transport to trailhead",
+      "Machu Picchu Entrance"
+    ],
+    "excludes": [
+      "Sleeping Bag Rental",
+      "Horses for personal riding",
+      "Last Day Dinner"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Salkantay Trail",
+        "description": "Explore the breathtaking Andean wilderness on the way to Machu Picchu."
+      }
+    ]
+  },
+  "es": {
+    "title": "Salkantay Trek a Machu Picchu - 4D/3N",
+    "duration": "4 Días",
+    "difficulty": "Desafiante",
+    "maxAltitude": "4,630m",
+    "tag": "Aventura",
+    "description": "Un viaje rápido a través del impresionante paso Salkantay y selvas exuberantes. Sé testigo del poder de los picos glaciares antes de descender a huertos de frutas tropicales.",
+    "includes": [
+      "Guía Experto en Trekking",
+      "Soporte de Mulas/Ponis",
+      "Todo el Equipo de Campamento",
+      "Transporte al inicio de ruta",
+      "Entrada a Machu Picchu"
+    ],
+    "excludes": [
+      "Alquiler de Saco de Dormir",
+      "Caballos para uso personal",
+      "Cena del último día"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Sendero Salkantay",
+        "description": "Explora la impresionante naturaleza andina en camino a Machu Picchu."
+      }
+    ]
+  }
+}

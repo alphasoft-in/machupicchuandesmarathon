@@ -1,0 +1,81 @@
+{
+  "slug": "luxury-sacred-valley-machu-picchu-2d",
+  "category": "tour-days",
+  "price": "$1,900",
+  "image": "/images/train.webp",
+  "rating": 5.0,
+  "en": {
+    "title": "Luxury Sacred Valley to Machu Picchu Tour - 2D/1N",
+    "duration": "2 Days",
+    "difficulty": "Easy",
+    "maxAltitude": "3,700m",
+    "tag": "Luxury",
+    "description": "Dreaming of Machu Picchu without skimping on luxury? Our Luxury Sacred Valley Tour is your exclusive gateway to Peru’s most mesmerizing marvels. From the sun-kissed glow of ancient citadels to gourmet feasts at MIL Centro and an opulent voyage on the Hiram Bingham Train, this is adventure transmuted into ethereal luxury.",
+    "includes": [
+      "Expert professional bilingual guide",
+      "Private luxury transportation",
+      "Vistadome Train to Aguas Calientes",
+      "Luxury Hiram Bingham Train return to Cusco",
+      "Entrance fees to Machu Picchu and all Sacred Valley sites",
+      "Luxury hotel in Aguas Calientes (Sumaq or Inkaterra)",
+      "Lunch at MIL Centro (World-renowned culinary experience)",
+      "Lunch at Belmond Sanctuary Lodge",
+      "All meals mentioned (Gourmet quality)"
+    ],
+    "excludes": [
+      "Travel Insurance",
+      "Huayna Picchu mountain entrance",
+      "Tips",
+      "Personal expenses"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Chinchero – Moray – Maras – Aguas Calientes",
+        "description": "Private pickup at 7:00 AM. Visit Chinchero's weavers and Moray's experimental terraces. Indulge in a gourmet lunch at MIL Centro. Explore Maras Salt Mines. Board the Vistadome Train to Aguas Calientes for a night at a luxury sanctuary."
+      },
+      {
+        "day": 2,
+        "title": "Machu Picchu – Hiram Bingham Train – Cusco",
+        "description": "Early ascent to the Lost City for a guided mystical tour. Gourmet lunch at Belmond Sanctuary Lodge. The pinnacle: return to Cusco on the legendary Hiram Bingham Train with cocktails, live music, and a multi-course dinner."
+      }
+    ]
+  },
+  "es": {
+    "title": "Tour de Lujo Valle Sagrado a Machu Picchu - 2D/1N",
+    "duration": "2 Días",
+    "difficulty": "Fácil",
+    "maxAltitude": "3,700m",
+    "tag": "Lujo",
+    "description": "¿Sueñas con Machu Picchu sin escatimar en lujos? Nuestro Tour de Lujo por el Valle Sagrado es tu puerta exclusiva a las maravillas más fascinantes del Perú. Desde ciudadelas antiguas hasta banquetes gourmet en MIL Centro y un viaje opulento en el Tren Hiram Bingham, esta es la aventura transmutada en lujo etéreo.",
+    "includes": [
+      "Guía profesional bilingüe experto",
+      "Transporte privado de lujo",
+      "Tren Vistadome hacia Aguas Calientes",
+      "Tren de lujo Hiram Bingham de retorno a Cusco",
+      "Entradas a Machu Picchu y sitios del Valle Sagrado",
+      "Hotel de lujo en Aguas Calientes (Sumaq o Inkaterra)",
+      "Almuerzo en MIL Centro (Experiencia culinaria mundial)",
+      "Almuerzo en Belmond Sanctuary Lodge",
+      "Todas las comidas mencionadas (Calidad gourmet)"
+    ],
+    "excludes": [
+      "Seguro de viaje",
+      "Entrada a la montaña Huayna Picchu",
+      "Propinas",
+      "Gastos personales"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Chinchero – Moray – Salineras de Maras – Aguas Calientes",
+        "description": "Recojo privado a las 7:00 AM. Visita a los tejedores de Chinchero y las terrazas de Moray. Almuerzo gourmet en MIL Centro. Explora las Salineras de Maras. Viaje en Tren Vistadome a Aguas Calientes para una noche en un santuario de lujo."
+      },
+      {
+        "day": 2,
+        "title": "Machu Picchu – Tren Hiram Bingham – Cusco",
+        "description": "Ascenso temprano a la Ciudad Perdida para un tour místico guiado. Almuerzo gourmet en Belmond Sanctuary Lodge. El punto culminante: retorno a Cusco en el legendario Tren Hiram Bingham con cocteles, música en vivo y cena de varios tiempos."
+      }
+    ]
+  }
+}

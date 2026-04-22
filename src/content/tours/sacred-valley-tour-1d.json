@@ -1,0 +1,59 @@
+{
+  "slug": "sacred-valley-tour-1d",
+  "category": "tour-days",
+  "price": "$90",
+  "image": "/images/sacred-valley.webp",
+  "rating": 4.8,
+  "en": {
+    "title": "Sacred Valley Tour - 1 D",
+    "duration": "1 Day",
+    "difficulty": "Easy",
+    "maxAltitude": "2,980m",
+    "tag": "Cultural",
+    "description": "Visit Pisac, Ollantaytambo and Chinchero. The perfect introduction to Andean history. See the agricultural ingenuity of the Incas and their magnificent stone masonry.",
+    "includes": [
+      "Private Group Transport",
+      "Expert Historian Guide",
+      "Buffet Lunch in Urubamba",
+      "Pick-up"
+    ],
+    "excludes": [
+      "Partial/General Tourist Ticket",
+      "Extra Drinks",
+      "Tips"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Valley Exploration",
+        "description": "Full exploration of the valley's major archaeological sites and markets."
+      }
+    ]
+  },
+  "es": {
+    "title": "Tour Valle Sagrado - 1 Día",
+    "duration": "1 Día",
+    "difficulty": "Fácil",
+    "maxAltitude": "2,980m",
+    "tag": "Cultural",
+    "description": "Visita Písac, Ollantaytambo y Chinchero. La introducción perfecta a la historia andina. Observa la ingeniosidad agrícola de los Incas y su magnífica arquitectura en piedra.",
+    "includes": [
+      "Transporte de Grupo Privado",
+      "Guía Historiador Experto",
+      "Almuerzo Buffet en Urubamba",
+      "Pick-up"
+    ],
+    "excludes": [
+      "Boleto Turístico Parcial/General",
+      "Bebidas Extras",
+      "Propinas"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Exploración del Valle",
+        "description": "Exploración completa de los principales sitios arqueológicos y mercados del valle."
+      }
+    ]
+  }
+}

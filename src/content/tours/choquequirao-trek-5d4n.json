@@ -1,0 +1,59 @@
+{
+  "slug": "choquequirao-trek-5d4n",
+  "category": "alternative-treks",
+  "price": "$700",
+  "image": "/images/choquequirao.webp",
+  "rating": 4.9,
+  "en": {
+    "title": "Choquequirao Trek - 5 Days 4 Nights",
+    "duration": "5 Days",
+    "difficulty": "Expert",
+    "maxAltitude": "3,100m",
+    "tag": "Expedition",
+    "description": "An extended exploration of the breathtaking Choquequirao archaeological site. Spend a full day exploring the hidden terraces and llamas of stone.",
+    "includes": [
+      "Private Support Team",
+      "Extended Tour of Ruins",
+      "Sanitary Tent",
+      "All Camping Logistics",
+      "Entrance Tickets"
+    ],
+    "excludes": [
+      "Tips for the team",
+      "Personal Gear"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Choquequirao Extended",
+        "description": "Spend more time exploring the terraces and plazas of the city."
+      }
+    ]
+  },
+  "es": {
+    "title": "Caminata Choquequirao - 5 Días 4 Noches",
+    "duration": "5 Días",
+    "difficulty": "Experto",
+    "maxAltitude": "3,100m",
+    "tag": "Expedición",
+    "description": "Una exploración extendida del impresionante sitio arqueológico de Choquequirao. Pasa un día completo explorando las terrazas ocultas y llamas de piedra.",
+    "includes": [
+      "Equipo de Soporte Privado",
+      "Tour Extendido de las Ruinas",
+      "Carpa Sanitaria",
+      "Toda la Logística de Camping",
+      "Tickets de Entrada"
+    ],
+    "excludes": [
+      "Propinas para el equipo",
+      "Equipo Personal"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Choquequirao Extendido",
+        "description": "Pasa más tiempo explorando las terrazas y plazas de la ciudad."
+      }
+    ]
+  }
+}

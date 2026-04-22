@@ -1,0 +1,59 @@
+{
+  "slug": "extended-sacred-valley-tour-vip",
+  "category": "tour-days",
+  "price": "$150",
+  "image": "/images/sacred-valley.webp",
+  "rating": 5,
+  "en": {
+    "title": "Extended Sacred Valley Tour - VIP",
+    "duration": "1 Day",
+    "difficulty": "Moderate",
+    "maxAltitude": "3,350m",
+    "tag": "VIP",
+    "description": "Discover additional sites like Moray and the Maras salt mines in a premium extended circuit. An intensive but deeply rewarding cultural immersion.",
+    "includes": [
+      "VIP Driver Service",
+      "Private Guide",
+      "Superior Buffet Lunch",
+      "Entrances to Maras/Moray",
+      "Small Group Exclusive"
+    ],
+    "excludes": [
+      "Personal Souvenirs",
+      "Optional Gratuities"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Extended Circuit",
+        "description": "VIP transport and guided visits to the complete Sacred Valley sites."
+      }
+    ]
+  },
+  "es": {
+    "title": "Tour Extendido Valle Sagrado - VIP",
+    "duration": "1 Día",
+    "difficulty": "Moderado",
+    "maxAltitude": "3,350m",
+    "tag": "VIP",
+    "description": "Descubre sitios adicionales como Moray y las salineras de Maras en un circuito extendido premium. Una inmersión cultural intensa pero profundamente gratificante.",
+    "includes": [
+      "Servicio de Conductor VIP",
+      "Guía Privado",
+      "Almuerzo Buffet Superior",
+      "Entradas a Maras/Moray",
+      "Grupo Pequeño Exclusivo"
+    ],
+    "excludes": [
+      "Souvenirs Personales",
+      "Gratificaciones Opcionales"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Circuito Extendido",
+        "description": "Transporte VIP y visitas guiadas a los sitios completos del Valle Sagrado."
+      }
+    ]
+  }
+}

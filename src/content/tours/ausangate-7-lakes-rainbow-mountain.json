@@ -1,0 +1,61 @@
+{
+  "slug": "ausangate-7-lakes-rainbow-mountain",
+  "category": "alternative-treks",
+  "price": "$350",
+  "image": "/images/ausangate-7-lakes-3d.png",
+  "rating": 4.9,
+  "en": {
+    "title": "Ausangate 7 Lakes to Rainbow Mountain - 3/2 Days",
+    "duration": "3 Days",
+    "difficulty": "Hard",
+    "maxAltitude": "5,200m",
+    "tag": "Scenic",
+    "description": "Explore the most vivid landscapes of the Andes, far off the beaten path. Discover the hidden spirits of the 7 glacial lakes and the world-famous Vinicunca.",
+    "includes": [
+      "Private Transport",
+      "Small Group Guide",
+      "Meals & Oxygen",
+      "Camping Gear",
+      "Entrance Fees"
+    ],
+    "excludes": [
+      "Personal Porter",
+      "Alcoholic Beverages",
+      "Personal Insurance"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Ausangate Exploration",
+        "description": "Discover hidden glacial lakes and the vibrant Rainbow Mountain."
+      }
+    ]
+  },
+  "es": {
+    "title": "Ausangate 7 Lagunas a Montaña de Colores - 3/2 Días",
+    "duration": "3 Días",
+    "difficulty": "Difícil",
+    "maxAltitude": "5,200m",
+    "tag": "Paisajístico",
+    "description": "Explora los paisajes más vívidos de los Andes, lejos de las rutas comunes. Descubre los espíritus ocultos de las 7 lagunas glaciares y la famosa Vinicunca.",
+    "includes": [
+      "Transporte Privado",
+      "Guía en Grupo Pequeño",
+      "Comidas y Oxígeno",
+      "Equipo de Campamento",
+      "Entradas"
+    ],
+    "excludes": [
+      "Porteador Personal",
+      "Bebidas Alcohólicas",
+      "Seguro Personal"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Exploración Ausangate",
+        "description": "Descubre lagunas glaciares ocultas y la vibrante Montaña de Siete Colores."
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+---
+import { Mail, Phone, MapPin, CheckCircle } from 'lucide-react';
+import BookingForm from './BookingForm';
+import { useTranslations } from '../utils/i18n';
+
+interface Props {
+  lang: 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section id="contact" class="cta-section">
+  <div class="container">
+    <div class="cta-grid animate-fade-in">
+      <div class="cta-info">
+        <div class="cta-eyebrow">
+          <span class="cta-eyebrow-dot"></span>
+          {lang === 'en' ? 'Expert-guided expeditions since 2010' : 'Expediciones con guías expertos desde 2010'}
+        </div>
+
+        <h2 class="serif">{t('booking.title')}</h2>
+        <p class="cta-subtitle">{t('booking.subtitle')}</p>
+
+        <div class="contact-card-list">
+          <a href="mailto:info@machupicchuandesmarathon.com" class="contact-item contact-item--link">
+            <div class="item-icon"><Mail size={18} /></div>
+            <div>
+              <strong>{lang === 'en' ? 'Email Us' : 'Escríbenos'}</strong>
+              <p>info@machupicchuandesmarathon.com</p>
+            </div>
+          </a>
+          <a href="https://wa.me/51993187203" target="_blank" rel="noopener" class="contact-item contact-item--link">
+            <div class="item-icon item-icon--whatsapp"><Phone size={18} /></div>
+            <div>
+              <strong>{lang === 'en' ? 'Call / WhatsApp' : 'Llámanos / WhatsApp'}</strong>
+              <p>+51 993 187 203</p>
+            </div>
+          </a>
+          <div class="contact-item">
+            <div class="item-icon"><MapPin size={18} /></div>
+            <div>
+              <strong>{lang === 'en' ? 'Visit Our HQ' : 'Visítanos'}</strong>
+              <p>Jr. Santa Rosa P7, Cusco – Perú</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="trust-badges">
+          <div class="badge-item">
+            <CheckCircle size={16} />
+            <span>{lang === 'en' ? 'Licensed Operator' : 'Operador Licenciado'}</span>
+          </div>
+          <div class="badge-item">
+            <CheckCircle size={16} />
+            <span>{lang === 'en' ? '100% Local Guides' : 'Guías 100% Locales'}</span>
+          </div>
+          <div class="badge-item">
+            <CheckCircle size={16} />
+            <span>{lang === 'en' ? 'Free Cancellation' : 'Cancelación Gratuita'}</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cta-form-wrapper">
+        <BookingForm client:visible lang={lang} tours={[]} />
+      </div>
+    </div>
+  </div>
+</section>

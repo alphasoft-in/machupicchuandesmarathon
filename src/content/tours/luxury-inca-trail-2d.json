@@ -1,0 +1,85 @@
+{
+  "slug": "luxury-inca-trail-2d",
+  "category": "inca-trail",
+  "price": "$1,500",
+  "image": "/images/marathon.webp",
+  "rating": 5.0,
+  "en": {
+    "title": "Luxury Short Inca Trail to Machu Picchu - 2D/1N",
+    "duration": "2 Days",
+    "difficulty": "Moderate",
+    "maxAltitude": "2,720m",
+    "tag": "Luxury",
+    "description": "Embark on an exquisite journey with our premium Short Inca Trail, curated for discerning adventurers. This compact itinerary offers a luxurious exploration without rush, including the plush Vistadome train, the elegant Hiram Bingham train return, and fine dining at the Belmond Sanctuary Lodge.",
+    "includes": [
+      "Professional bilingual guide",
+      "Pre-trek briefing in your luxury hotel",
+      "Private transport from hotel to Ollantaytambo",
+      "Vistadome Train to KM 104 (Trailhead)",
+      "Luxury Hiram Bingham Train return to Poroy/Cusco",
+      "Round-trip bus tickets for Machu Picchu",
+      "Admission tickets to Inca Trail and Machu Picchu",
+      "One night at a luxury hotel in Aguas Calientes (Sumaq or Inkaterra)",
+      "Gourmet box lunch, dinner, and breakfast",
+      "Private guided tour of Machu Picchu (Circuit 2)"
+    ],
+    "excludes": [
+      "Hiking poles (Available for rent)",
+      "Huayna Picchu Mountain permit ($75 extra)",
+      "Travel Insurance",
+      "Tips",
+      "Breakfast Day 1 and Lunch Day 2"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Ollantaytambo – KM 104 – Sun Gate – Aguas Calientes",
+        "description": "Travel in the Vistadome Train to KM 104. Explore Chachabamba and the majestic Wiñay Wayna ruins with a gourmet box lunch. Reach the Sun Gate (Intipunku) by late afternoon for your first view of Machu Picchu. Overnight in a luxury sanctuary in Aguas Calientes."
+      },
+      {
+        "day": 2,
+        "title": "Machu Picchu Sanctuary – Hiram Bingham Train – Cusco",
+        "description": "Early morning bus to Machu Picchu for a private 2-hour guided tour. Explore the citadel's wonders and capture the best photos. Optional Huayna Picchu hike. The grand finale: board the Hiram Bingham luxury train for an evening of fine dining and music back to Cusco."
+      }
+    ]
+  },
+  "es": {
+    "title": "Camino Inca de Lujo a Machu Picchu - 2D/1N",
+    "duration": "2 Días",
+    "difficulty": "Moderado",
+    "maxAltitude": "2,720m",
+    "tag": "Lujo",
+    "description": "Embárcate en un viaje exquisito con nuestro Camino Inca Corto premium, curado para aventureros exigentes. Este itinerario compacto ofrece una exploración de lujo sin prisas, incluyendo el tren Vistadome, el elegante retorno en el tren Hiram Bingham y una cena refinada en el Belmond Sanctuary Lodge.",
+    "includes": [
+      "Guía profesional bilingüe",
+      "Sesión informativa previa en tu hotel de lujo",
+      "Transporte privado desde el hotel hasta Ollantaytambo",
+      "Tren Vistadome hasta el KM 104 (Inicio del trail)",
+      "Tren de lujo Hiram Bingham de retorno a Poroy/Cusco",
+      "Tickets de bus ida y vuelta para Machu Picchu",
+      "Entradas al Camino Inca y Machu Picchu",
+      "Una noche en hotel de lujo en Aguas Calientes (Sumaq o Inkaterra)",
+      "Box lunch gourmet, cena y desayuno",
+      "Tour guiado privado por Machu Picchu (Circuito 2)"
+    ],
+    "excludes": [
+      "Bastones de caminata (Disponibles para alquiler)",
+      "Permiso para la montaña Huayna Picchu ($75 extra)",
+      "Seguro de viaje",
+      "Propinas",
+      "Desayuno Día 1 y Almuerzo Día 2"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Ollantaytambo – KM 104 – Puerta del Sol – Aguas Calientes",
+        "description": "Viaje en el Tren Vistadome al KM 104. Explora Chachabamba y las majestuosas ruinas de Wiñay Wayna con un box lunch gourmet. Llega a la Puerta del Sol (Intipunku) por la tarde para tu primera vista de Machu Picchu. Noche en un santuario de lujo en Aguas Calientes."
+      },
+      {
+        "day": 2,
+        "title": "Santuario Machu Picchu – Tren Hiram Bingham – Cusco",
+        "description": "Bus temprano a Machu Picchu para un tour guiado privado de 2 horas. Explora las maravillas de la ciudadela y captura las mejores fotos. Caminata opcional al Huayna Picchu. El gran final: aborda el tren de lujo Hiram Bingham para una noche de cena refinada y música de regreso a Cusco."
+      }
+    ]
+  }
+}

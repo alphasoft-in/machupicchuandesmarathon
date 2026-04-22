@@ -1,0 +1,249 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { useTranslations, useTranslatedPath } from '../../utils/i18n';
+import PageHeader from '../../components/PageHeader';
+import BookingCTA from '../../components/BookingCTA.astro';
+import { Sun, Zap, Users, GraduationCap, Heart, Leaf, Rocket } from 'lucide-react';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } }
+  ];
+}
+
+const { lang: rawLang } = Astro.params;
+const lang = rawLang as 'en' | 'es';
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+const content = {
+  en: {
+    title: "AYNI Project",
+    subtitle: "Solar Energy for Andean Communities of Peru (2025–2027)",
+    description: "The AYNI Project is a social initiative that seeks to bring clean, free, and sustainable electrical energy to low-income Andean communities in Peru, through the installation of home and community solar systems. Inspired by the Andean principle of reciprocity, AYNI connects donors, allies, and travelers with communities to generate long-term sustainable development.",
+    phase: "Currently in the support-seeking phase, the project aims to benefit 500 families in 5 pilot communities, providing them with access to electricity for decades.",
+    whyTitle: "Why is it necessary?",
+    whyText: "In the Peruvian highlands, thousands of families still live without access to reliable electricity. This limits education, affects health, reduces economic opportunities, and generates negative environmental impacts due to the use of candles, kerosene, and firewood.",
+    whyText2: "Thanks to the high solar radiation in the Andes, photovoltaic energy is an efficient, sustainable, and low-maintenance solution to close this gap.",
+    objectivesTitle: "Main Objectives",
+    objectives: [
+      { icon: Sun, text: "Install solar systems in homes and community spaces." },
+      { icon: Zap, text: "Electrify schools and health centers." },
+      { icon: Users, text: "Train local technicians to ensure sustainability." },
+      { icon: Leaf, text: "Reduce the use of polluting fuels." },
+      { icon: Rocket, text: "Create a replicable model for other regions of the country." }
+    ],
+    executionTitle: "Project Execution",
+    executionText: "The project will be developed in phases between 2025 and 2027, including design, pilot installation, expansion, evaluation, and scaling to new communities.",
+    impactTitle: "Expected Impact",
+    impacts: [
+      { icon: Zap, title: "Energy Access", text: "Electricity for hundreds of families" },
+      { icon: GraduationCap, title: "Education", text: "Improvement in education (more study hours)" },
+      { icon: Heart, title: "Health", text: "More efficient medical care" },
+      { icon: Leaf, title: "Environment", text: "Reduction of polluting emissions" },
+      { icon: Users, title: "Community", text: "Boosting the local economy and community strengthening" }
+    ],
+    ctaTitle: "Join the AYNI Project",
+    ctaText: "This project also invites travelers roaming the Andes to be part of the change. Through their contribution, they can directly help improve the quality of life of local communities and leave a positive impact during their experience in Peru.",
+    footerText: "AYNI is more than energy: it is development, human connection, and a future for the Andes."
+  },
+  es: {
+    title: "Proyecto AYNI",
+    subtitle: "Energía Solar para Comunidades Andinas del Perú (2025–2027)",
+    description: "El Proyecto AYNI es una iniciativa social que busca llevar energía eléctrica limpia, gratuita y sostenible a comunidades andinas de escasos recursos en el Perú, mediante la instalación de sistemas solares domiciliarios y comunitarios. Inspirado en el principio andino de reciprocidad, AYNI conecta a donantes, aliados y viajeros con comunidades para generar desarrollo sostenible a largo plazo.",
+    phase: "Actualmente en fase de búsqueda de apoyo, el proyecto tiene como meta beneficiar a 500 familias en 5 comunidades piloto, brindándoles acceso a electricidad por décadas.",
+    whyTitle: "¿Por qué es necesario?",
+    whyText: "En la sierra peruana, miles de familias aún viven sin acceso a electricidad confiable. Esto limita la educación, afecta la salud, reduce oportunidades económicas y genera impactos ambientales negativos debido al uso de velas, kerosene y leña.",
+    whyText2: "Gracias a la alta radiación solar en los Andes, la energía fotovoltaica es una solución eficiente, sostenible y de bajo mantenimiento para cerrar esta brecha.",
+    objectivesTitle: "Objetivos principales",
+    objectives: [
+      { icon: Sun, text: "Instalar sistemas solares en viviendas y espacios comunitarios." },
+      { icon: Zap, text: "Electrificar escuelas y centros de salud." },
+      { icon: Users, text: "Capacitar técnicos locales para asegurar sostenibilidad." },
+      { icon: Leaf, text: "Reducir el uso de combustibles contaminantes." },
+      { icon: Rocket, text: "Crear un modelo replicable para otras regiones del país." }
+    ],
+    executionTitle: "Ejecución del proyecto",
+    executionText: "El proyecto se desarrollará por fases entre 2025 y 2027, incluyendo diseño, instalación piloto, expansión, evaluación y escalamiento a nuevas comunidades.",
+    impactTitle: "Impacto esperado",
+    impacts: [
+      { icon: Zap, title: "Acceso Energía", text: "Acceso a electricidad para cientos de familias" },
+      { icon: GraduationCap, title: "Educación", text: "Mejora en educación (más horas de estudio)" },
+      { icon: Heart, title: "Salud", text: "Atención médica más eficiente" },
+      { icon: Leaf, title: "Ambiente", text: "Reducción de emisiones contaminantes" },
+      { icon: Users, title: "Comunidad", text: "Impulso a la economía local y fortalecimiento comunitario" }
+    ],
+    ctaTitle: "Súmate al Proyecto AYNI",
+    ctaText: "Este proyecto también invita a viajeros que recorren los Andes a ser parte del cambio. A través de su aporte, pueden contribuir directamente a mejorar la calidad de vida de comunidades locales y dejar un impacto positivo durante su experiencia en el Perú.",
+    footerText: "AYNI es más que energía: es desarrollo, conexión humana y futuro para los Andes."
+  }
+};
+
+const tAyni = content[lang];
+---
+
+<Layout title={`${tAyni.title} | Machu Picchu Andes Marathon`} lang={lang}>
+  <PageHeader 
+    client:load
+    lang={lang}
+    title={tAyni.title}
+    subtitle={tAyni.subtitle}
+    bgImage="/images/hero.webp"
+  />
+
+  <section class="section">
+    <div class="container max-w-800">
+      <div class="prose animate-fade-in">
+        <p class="lead text-lg mb-8">
+          {tAyni.description}
+        </p>
+        <div class="bg-muted p-6 rounded-xl mb-12 border-l-4 border-secondary">
+          <p class="m-0 font-medium italic">
+            {tAyni.phase}
+          </p>
+        </div>
+
+        <h2 class="serif text-3xl mb-6">{tAyni.whyTitle}</h2>
+        <p>{tAyni.whyText}</p>
+        <p class="mb-12">{tAyni.whyText2}</p>
+
+        <h2 class="serif text-3xl mb-8">{tAyni.objectivesTitle}</h2>
+        <div class="grid-list mb-12">
+          {tAyni.objectives.map((obj) => (
+            <div class="flex items-start gap-4 mb-4">
+              <div class="bg-secondary/10 p-2 rounded-lg text-secondary">
+                <obj.icon size={24} />
+              </div>
+              <p class="m-0">{obj.text}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-dark text-white p-10 rounded-2xl mb-12 relative overflow-hidden">
+          <div class="relative z-10">
+            <h2 class="serif text-3xl mb-4 text-white">{tAyni.executionTitle}</h2>
+            <p class="text-white/80 m-0">{tAyni.executionText}</p>
+          </div>
+          <div class="absolute top-0 right-0 p-8 opacity-10">
+             <Rocket size={120} />
+          </div>
+        </div>
+
+        <h2 class="serif text-3xl mb-8 text-center">{tAyni.impactTitle}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {tAyni.impacts.map((impact) => (
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+              <div class="bg-primary/5 w-12 h-12 flex items-center justify-center rounded-full mx-auto mb-4 text-primary">
+                <impact.icon size={24} />
+              </div>
+              <h3 class="font-bold mb-2">{impact.title}</h3>
+              <p class="text-sm text-gray-600 m-0">{impact.text}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center bg-secondary/5 p-12 rounded-3xl border border-secondary/20 mb-8">
+          <h2 class="serif text-4xl mb-6">{tAyni.ctaTitle}</h2>
+          <p class="max-w-600 mx-auto mb-8 text-lg">
+            {tAyni.ctaText}
+          </p>
+          <p class="font-bold text-secondary text-xl italic">
+            {tAyni.footerText}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <BookingCTA lang={lang} />
+</Layout>
+
+<style>
+  .max-w-800 {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .max-w-600 {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .prose p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #4b5563;
+  }
+  .grid-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .bg-dark {
+    background-color: #0e3b2e;
+  }
+  .grid {
+    display: grid;
+  }
+  @media (min-width: 768px) {
+    .md\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 1024px) {
+    .lg\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .items-center { align-items: center; }
+  .justify-center { justify-content: center; }
+  .text-center { text-align: center; }
+  .mx-auto { margin-left: auto; margin-right: auto; }
+  .mb-2 { margin-bottom: 0.5rem; }
+  .mb-4 { margin-bottom: 1rem; }
+  .mb-6 { margin-bottom: 1.5rem; }
+  .mb-8 { margin-bottom: 2rem; }
+  .mb-12 { margin-bottom: 3rem; }
+  .mb-16 { margin-bottom: 4rem; }
+  .m-0 { margin: 0; }
+  .p-2 { padding: 0.5rem; }
+  .p-6 { padding: 1.5rem; }
+  .p-10 { padding: 2.5rem; }
+  .p-12 { padding: 3rem; }
+  .rounded-lg { border-radius: 0.5rem; }
+  .rounded-xl { border-radius: 0.75rem; }
+  .rounded-2xl { border-radius: 1rem; }
+  .rounded-3xl { border-radius: 1.5rem; }
+  .font-medium { font-weight: 500; }
+  .font-bold { font-weight: 700; }
+  .italic { font-style: italic; }
+  .text-lg { font-size: 1.125rem; }
+  .text-xl { font-size: 1.25rem; }
+  .text-3xl { font-size: 1.875rem; }
+  .text-4xl { font-size: 2.25rem; }
+  .text-white { color: white; }
+  .text-white\/80 { color: rgba(255, 255, 255, 0.8); }
+  .text-secondary { color: #fc6111; }
+  .bg-secondary\/10 { background-color: rgba(252, 97, 17, 0.1); }
+  .bg-secondary\/5 { background-color: rgba(252, 97, 17, 0.05); }
+  .bg-primary\/5 { background-color: rgba(14, 59, 46, 0.05); }
+  .border-secondary\/20 { border-color: rgba(252, 97, 17, 0.2); }
+  .border-l-4 { border-left-width: 4px; }
+  .border-secondary { border-color: #fc6111; }
+  .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+  .border { border-width: 1px; }
+  .border-gray-100 { border-color: #f3f4f6; }
+  .flex { display: flex; }
+  .items-start { align-items: flex-start; }
+  .gap-4 { gap: 1rem; }
+  .gap-6 { gap: 1.5rem; }
+  .relative { position: relative; }
+  .absolute { position: absolute; }
+  .top-0 { top: 0; }
+  .right-0 { right: 0; }
+  .z-10 { z-index: 10; }
+  .opacity-10 { opacity: 0.1; }
+  .w-12 { width: 3rem; }
+  .h-12 { height: 3rem; }
+</style>

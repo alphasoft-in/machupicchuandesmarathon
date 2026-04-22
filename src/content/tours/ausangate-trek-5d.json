@@ -1,0 +1,103 @@
+{
+  "slug": "ausangate-trek-5d",
+  "category": "alternative-treks",
+  "price": "Contact Us",
+  "image": "/images/rainbow.webp",
+  "rating": 5.0,
+  "en": {
+    "title": "Full Ausangate Circuit - 5 Days",
+    "duration": "5 Days",
+    "difficulty": "Challenging",
+    "maxAltitude": "5,200m",
+    "tag": "Expert",
+    "description": "The ultimate high-altitude experience. A full 5-day loop around the sacred mountain, allowing more time for photography, local interaction, and better acclimatization to the extreme environment.",
+    "includes": [
+      "Expert high-altitude guide",
+      "Private transport logistics",
+      "Premium camping equipment",
+      "High-energy mountain nutrition",
+      "Horse support and extra weight allowance",
+      "Complete safety kit and oxygen"
+    ],
+    "excludes": [
+      "Sleeping bag",
+      "Personal equipment",
+      "Travel insurance"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Tinki – Upis",
+        "description": "Drive from Cusco to Tinki (3800m). Hike to Upis (4400m) while observing the massive north face of Ausangate."
+      },
+      {
+        "day": 2,
+        "title": "Upis – Arapa Pass – Pucacocha",
+        "description": "Cross the Arapa Pass (4850m). Descend into the Pucacocha valley, home to massive hanging glaciers."
+      },
+      {
+        "day": 3,
+        "title": "Pucacocha – Palomani Pass – Ausangate Cocha",
+        "description": "Climb to the Palomani Pass (5200m), the highest point of the trek. Panoramic views of the entire Cordillera Vilcanota."
+      },
+      {
+        "day": 4,
+        "title": "Ausangate Cocha – Jampa Pass – Pacchanta",
+        "description": "Cross the Jampa Pass (5080m), often seeing wild vicuñas and condors. Camp in the hot spring village of Pacchanta."
+      },
+      {
+        "day": 5,
+        "title": "Pacchanta – Tinki – Cusco",
+        "description": "A final morning enjoying the hot springs before a short hike back to Tinki and transport to Cusco."
+      }
+    ]
+  },
+  "es": {
+    "title": "Circuito Completo Ausangate - 5 Días",
+    "duration": "5 Días",
+    "difficulty": "Desafiante",
+    "maxAltitude": "5,200m",
+    "tag": "Experto",
+    "description": "La experiencia definitiva de alta montaña. Un circuito completo de 5 días alrededor de la montaña sagrada, permitiendo más tiempo para fotografía, interacción local y mejor aclimatación.",
+    "includes": [
+      "Guía experto en alta montaña",
+      "Logística de transporte privado",
+      "Equipo de campamento premium",
+      "Nutrición de montaña de alta energía",
+      "Apoyo de caballos y carga extra",
+      "Kit completo de seguridad y oxígeno"
+    ],
+    "excludes": [
+      "Bolsa de dormir",
+      "Equipo personal",
+      "Seguro de viaje"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco – Tinki – Upis",
+        "description": "Viaje de Cusco a Tinki (3800m). Caminata hasta Upis (4400m) observando la cara norte del Ausangate."
+      },
+      {
+        "day": 2,
+        "title": "Upis – Paso Arapa – Pucacocha",
+        "description": "Cruce del Paso Arapa (4850m). Descenso al valle de Pucacocha, hogar de masivos glaciares colgantes."
+      },
+      {
+        "day": 3,
+        "title": "Pucacocha – Paso Palomani – Ausangate Cocha",
+        "description": "Ascenso al Paso Palomani (5200m), el punto más alto del trek. Vistas panorámicas de toda la Cordillera Vilcanota."
+      },
+      {
+        "day": 4,
+        "title": "Ausangate Cocha – Paso Jampa – Pacchanta",
+        "description": "Cruce del Paso Jampa (5080m), avistando a menudo vicuñas salvajes y cóndores. Campamento en el pueblo de Pacchanta."
+      },
+      {
+        "day": 5,
+        "title": "Pacchanta – Tinki – Cusco",
+        "description": "Mañana final disfrutando de las aguas termales antes de una caminata corta a Tinki y transporte a Cusco."
+      }
+    ]
+  }
+}

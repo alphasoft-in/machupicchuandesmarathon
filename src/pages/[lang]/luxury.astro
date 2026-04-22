@@ -18,29 +18,27 @@ const lang = rawLang as 'en' | 'es';
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
-const tours = await getCollection('tours');
-const altTours = tours
+const allTours = await getCollection('tours');
+const luxuryTours = allTours
   .map(t => t.data)
-  .filter(t => t.category === 'alternative-treks');
+  .filter(t => t.en.tag === 'Luxury');
 ---
 
-<Layout title={`${t('nav.alternative')} | Machu Picchu Andes Marathon`} lang={lang}>
+<Layout title={`${t('nav.luxury')} | Machu Picchu Andes Marathon`} lang={lang}>
   <PageHeader 
     client:load
     lang={lang}
-    title={lang === 'en' ? 'Alternative' : 'Treks'}
-    titleAccent={lang === 'en' ? 'Treks' : 'Alternativos'}
-    subtitle={lang === 'en' ? "Beyond the beaten path. Discover the hidden spirits of the Andes through our curated alternative routes." : "Más allá de las rutas comunes. Descubre los espíritus ocultos de los Andes a través de nuestras rutas alternativas curadas."}
-    bgImage="/images/hero.webp"
+    title={lang === 'en' ? 'Luxury' : 'Experiencias'}
+    titleAccent={lang === 'en' ? 'Experiences' : 'de Lujo'}
+    subtitle={lang === 'en' ? "Indulge in the extraordinary. Bespoke journeys that blend high-altitude adventure with world-class comfort and elegance." : "Entrégate a lo extraordinario. Viajes a medida que combinan la aventura de alta montaña con el confort y la elegancia de clase mundial."}
+    bgImage="/images/train.webp"
   />
 
   <section class="section">
     <div class="container">
-      <TourGrid client:visible lang={lang} tours={altTours} />
+      <TourGrid client:visible lang={lang} tours={luxuryTours} />
     </div>
   </section>
 
   <BookingCTA lang={lang} />
 </Layout>
-
-

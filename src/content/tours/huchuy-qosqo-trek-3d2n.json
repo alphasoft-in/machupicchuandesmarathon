@@ -1,0 +1,59 @@
+{
+  "slug": "huchuy-qosqo-trek-3d2n",
+  "category": "alternative-treks",
+  "price": "$400",
+  "image": "/images/sacred-valley.webp",
+  "rating": 4.7,
+  "en": {
+    "title": "Huchuy Qosqo Trek to Machu Picchu - 3D/2N",
+    "duration": "3 Days",
+    "difficulty": "Moderate",
+    "maxAltitude": "4,200m",
+    "tag": "Cultural",
+    "description": "A fantastic short trek discovering local communities and lesser-known ruins above the Sacred Valley. A peaceful alternative to the busy trails.",
+    "includes": [
+      "Transfer to trailhead",
+      "Bilingual Guide",
+      "Meals & Snacks",
+      "Hotels/Camping info",
+      "Machu Picchu Ticket"
+    ],
+    "excludes": [
+      "Extra Drinks",
+      "Staff Gratuities"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Sacred Valley Paths",
+        "description": "Walk ancient trails connecting Andean villages."
+      }
+    ]
+  },
+  "es": {
+    "title": "Trek Huchuy Qosqo a Machu Picchu - 3D/2N",
+    "duration": "3 Días",
+    "difficulty": "Moderado",
+    "maxAltitude": "4,200m",
+    "tag": "Cultural",
+    "description": "Un fantástico trek corto descubriendo comunidades locales y ruinas menos conocidas sobre el Valle Sagrado. Una alternativa pacífica a los senderos concurridos.",
+    "includes": [
+      "Traslado al inicio de ruta",
+      "Guía Bilingüe",
+      "Comidas y Snacks",
+      "Información de Hoteles/Camping",
+      "Entrada a Machu Picchu"
+    ],
+    "excludes": [
+      "Bebidas Extras",
+      "Propinas del Personal"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Senderos del Valle Sagrado",
+        "description": "Camina por senderos antiguos que conectan pueblos andinos."
+      }
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "machu-picchu-tour-by-train",
+  "category": "tour-days",
+  "price": "$250",
+  "image": "/images/hero.webp",
+  "rating": 4.9,
+  "en": {
+    "title": "Machu Picchu Tour by Train - Full Day",
+    "duration": "1 day",
+    "difficulty": "Easy",
+    "maxAltitude": "2,430m",
+    "tag": "Express",
+    "maxPeople": "20",
+    "minAge": "2",
+    "pickup": "Train",
+    "description": "A comprehensive express journey to the wonder of the world by scenic train. Perfect for those who want to see the legendary citadel without the physical strain of multi-day trekking.",
+    "includes": [
+      "Train Tickets (Round trip)",
+      "Bus Aguas Calientes - Machu Picchu",
+      "Official Guide",
+      "Lunch in Aguas Calientes",
+      "Pick-up/Drop-off"
+    ],
+    "excludes": [
+      "Extra Gratuities",
+      "Optional Huayna Picchu Hike"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Train to Machu Picchu",
+        "description": "Enjoy the scenic train ride and a guided tour of the citadel."
+      }
+    ]
+  },
+  "es": {
+    "title": "Tour a Machu Picchu en Tren - Full Day",
+    "duration": "1 día",
+    "difficulty": "Fácil",
+    "maxAltitude": "2,430m",
+    "tag": "Express",
+    "maxPeople": "20",
+    "minAge": "2",
+    "pickup": "Tren",
+    "description": "Un viaje expreso completo a la maravilla del mundo en tren panorámico. Perfecto para quienes desean ver la legendaria ciudadela sin el esfuerzo físico de un trekking de varios días.",
+    "includes": [
+      "Tickets de Tren (Ida y vuelta)",
+      "Bus Aguas Calientes - Machu Picchu",
+      "Guía Oficial",
+      "Almuerzo en Aguas Calientes",
+      "Pick-up/Drop-off"
+    ],
+    "excludes": [
+      "Gratificaciones Extras",
+      "Caminata opcional al Huayna Picchu"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Tren a Machu Picchu",
+        "description": "Disfruta del viaje en tren panorámico y un tour guiado por la ciudadela."
+      }
+    ]
+  }
+}

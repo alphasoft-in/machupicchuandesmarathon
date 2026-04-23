@@ -66,34 +66,19 @@ export default function Footer({ lang }: Props) {
 
           <div className="footer-col">
             <h3>{t('footer.contact')}</h3>
-            <ul style={{ gap: '1rem' }}>
+            <ul className="footer-contact-list">
               <li>
-                <a
-                  href="mailto:info@machupicchuandesmarathon.com"
-                  style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
-                >
+                <a href="mailto:info@machupicchuandesmarathon.com">
                   <Mail size={18} /> info@machupicchuandesmarathon.com
                 </a>
               </li>
               <li>
-                <a
-                  href="tel:+51993187203"
-                  style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
-                >
+                <a href="tel:+51993187203">
                   <Phone size={18} /> +51 993 187 203
                 </a>
               </li>
-              <li
-                style={{ 
-                  display: 'flex', 
-                  alignItems: 'flex-start', 
-                  gap: '8px', 
-                  color: 'rgba(255, 255, 255, 0.6)', 
-                  fontSize: '0.85rem', 
-                  lineHeight: '1.4' 
-                }}
-              >
-                <MapPin size={18} style={{ flexShrink: 0 }} /> 
+              <li className="footer-address">
+                <MapPin size={18} /> 
                 <span>Jr. Santa Rosa P7, Cusco – Perú</span>
               </li>
             </ul>

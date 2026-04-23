@@ -1,0 +1,59 @@
+{
+  "slug": "waqrapukara-trek-1d",
+  "category": "tour-days",
+  "price": "$90",
+  "image": "/images/hero.webp",
+  "rating": 5.0,
+  "en": {
+    "title": "Waqrapukara One Day Trek",
+    "duration": "1 Day",
+    "difficulty": "Challenging",
+    "maxAltitude": "4,140m",
+    "tag": "Mystical",
+    "description": "Visit the 'Horned Fortress', a stunning Inca archaeological site perched on a cliff above the Apurimac canyon. A deep journey into Inca spirituality and architecture.",
+    "includes": [
+      "Bilingual Professional Guide",
+      "Private Transportation",
+      "Breakfast and Lunch",
+      "Entrance Fee",
+      "Oxygen and First Aid"
+    ],
+    "excludes": [
+      "Tips",
+      "Travel Insurance"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Sangarara - Waqrapukara",
+        "description": "Long drive and challenging hike to one of the most impressive and mysterious fortresses of the Inca Empire."
+      }
+    ]
+  },
+  "es": {
+    "title": "Waqrapukara One Day Trek",
+    "duration": "1 Día",
+    "difficulty": "Desafiante",
+    "maxAltitude": "4,140m",
+    "tag": "Místico",
+    "description": "Visita la 'Fortaleza en forma de cuerno', un impresionante sitio arqueológico inca ubicado en un acantilado sobre el cañón del Apurímac. Un viaje profundo a la espiritualidad y arquitectura inca.",
+    "includes": [
+      "Guía Profesional Bilingüe",
+      "Transporte Privado",
+      "Desayuno y Almuerzo",
+      "Entrada",
+      "Oxígeno y Primeros Auxilios"
+    ],
+    "excludes": [
+      "Propinas",
+      "Seguro de Viaje"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Sangarará - Waqrapukara",
+        "description": "Viaje largo y caminata desafiante a una de las fortalezas más impresionantes y misteriosas del Imperio Inca."
+      }
+    ]
+  }
+}

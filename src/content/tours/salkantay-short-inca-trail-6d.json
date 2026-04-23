@@ -1,0 +1,117 @@
+{
+  "slug": "salkantay-short-inca-trail-6d",
+  "category": "inca-trail",
+  "price": "$980",
+  "image": "/images/salkantay.webp",
+  "rating": 4.9,
+  "en": {
+    "title": "Salkantay & Short Inca Trail - 6D/5N",
+    "duration": "6 Days",
+    "difficulty": "Challenging",
+    "maxAltitude": "4,630m",
+    "tag": "Adventure",
+    "description": "The ultimate adventure combining the dramatic glacial scenery of Salkantay with the historical magic of the Short Inca Trail. A unique journey through high mountains and tropical cloud forest.",
+    "includes": [
+      "Expert Bilingual Guide",
+      "All Permits (Salkantay & Inca Trail)",
+      "Professional Chef & Support Crew",
+      "High-End Camping Gear",
+      "Hotel in Aguas Calientes (Day 5)",
+      "Vistadome Train Return",
+      "All Meals included"
+    ],
+    "excludes": [
+      "Sleeping Bag",
+      "Inflatable Mattress",
+      "Personal Expenses",
+      "Tips"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Mollepata - Soraypampa",
+        "description": "Journey to the start of Salkantay. Hike to Soraypampa with stunning views of Humantay Lake."
+      },
+      {
+        "day": 2,
+        "title": "Soraypampa - Salkantay Pass - Chaullay",
+        "description": "The highest point at 4,630m. Descend from glacial peaks into the high jungle."
+      },
+      {
+        "day": 3,
+        "title": "Chaullay - La Playa - Lucmabamba",
+        "description": "Trek through coffee plantations and tropical fruit orchards."
+      },
+      {
+        "day": 4,
+        "title": "Lucmabamba - Llactapata - Hydroelectric - KM 104",
+        "description": "Climb to Llactapata for a unique view of Machu Picchu. Continue to KM 104 area."
+      },
+      {
+        "day": 5,
+        "title": "KM 104 - Wiñay Wayna - Sun Gate - Aguas Calientes",
+        "description": "Begin the Short Inca Trail. Arrive at Machu Picchu via the Sun Gate before staying in town."
+      },
+      {
+        "day": 6,
+        "title": "Machu Picchu Citadel Exploration",
+        "description": "Full tour of the citadel and return to Cusco by train."
+      }
+    ]
+  },
+  "es": {
+    "title": "Salkantay y Camino Inca Corto - 6D/5N",
+    "duration": "6 Días",
+    "difficulty": "Desafiante",
+    "maxAltitude": "4,630m",
+    "tag": "Aventura",
+    "description": "La aventura definitiva que combina los dramáticos paisajes glaciares de Salkantay con la magia histórica del Camino Inca Corto. Un viaje único por altas montañas y bosque de nubes tropical.",
+    "includes": [
+      "Guía Bilingüe Experto",
+      "Todos los Permisos (Salkantay y Camino Inca)",
+      "Chef Profesional y Equipo de Apoyo",
+      "Equipo de Campamento de Alta Gama",
+      "Hotel en Aguas Calientes (Día 5)",
+      "Retorno en Tren Vistadome",
+      "Todas las comidas incluidas"
+    ],
+    "excludes": [
+      "Saco de Dormir",
+      "Colchoneta Inflable",
+      "Gastos Personales",
+      "Propinas"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Mollepata - Soraypampa",
+        "description": "Viaje al inicio de Salkantay. Caminata a Soraypampa con vistas impresionantes de la Laguna Humantay."
+      },
+      {
+        "day": 2,
+        "title": "Soraypampa - Paso Salkantay - Chaullay",
+        "description": "El punto más alto a 4,630m. Desciende de los picos glaciares hacia la selva alta."
+      },
+      {
+        "day": 3,
+        "title": "Chaullay - La Playa - Lucmabamba",
+        "description": "Caminata por plantaciones de café y huertos de frutas tropicales."
+      },
+      {
+        "day": 4,
+        "title": "Lucmabamba - Llactapata - Hidroeléctrica - KM 104",
+        "description": "Sube a Llactapata para una vista única de Machu Picchu. Continúa hacia el área del KM 104."
+      },
+      {
+        "day": 5,
+        "title": "KM 104 - Wiñay Wayna - Puerta del Sol - Aguas Calientes",
+        "description": "Comienza el Camino Inca Corto. Llega a Machu Picchu por la Puerta del Sol antes de alojarte en el pueblo."
+      },
+      {
+        "day": 6,
+        "title": "Exploración de la Ciudadela de Machu Picchu",
+        "description": "Tour completo de la ciudadela y retorno a Cusco en tren."
+      }
+    ]
+  }
+}

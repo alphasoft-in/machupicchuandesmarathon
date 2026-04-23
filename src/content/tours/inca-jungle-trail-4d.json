@@ -1,0 +1,95 @@
+{
+  "slug": "inca-jungle-trail-4d",
+  "category": "alternative-treks",
+  "price": "$450",
+  "image": "/images/hero.webp",
+  "rating": 4.6,
+  "en": {
+    "title": "Inca Jungle Trail to Machu Picchu - 4D/3N",
+    "duration": "4 Days",
+    "difficulty": "Moderate",
+    "maxAltitude": "4,316m (start)",
+    "tag": "Multi-Sport",
+    "description": "The most adventurous way to reach Machu Picchu. A mix of mountain biking, trekking, and optional rafting/ziplining through the tropical cloud forest.",
+    "includes": [
+      "Bilingual Professional Guide",
+      "Mountain Bikes & Safety Gear",
+      "All Accommodations (Hostels)",
+      "All Meals during the trek",
+      "Machu Picchu Tickets",
+      "Return Train to Cusco"
+    ],
+    "excludes": [
+      "Rafting and Ziplining extras",
+      "Tips",
+      "Travel Insurance",
+      "Bus up to Machu Picchu"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Abra Malaga - Santa Maria (Biking)",
+        "description": "Drive to Abra Malaga and descend by mountain bike through the cloud forest to Santa Maria."
+      },
+      {
+        "day": 2,
+        "title": "Santa Maria - Santa Teresa (Trekking)",
+        "description": "Hike through coffee and coca plantations. Enjoy the Cocalmayo hot springs in the afternoon."
+      },
+      {
+        "day": 3,
+        "title": "Santa Teresa - Lucmabamba - Aguas Calientes",
+        "description": "Trek along the Urubamba river, with optional ziplining, arriving at Machu Picchu town."
+      },
+      {
+        "day": 4,
+        "title": "Machu Picchu Exploration - Cusco",
+        "description": "Guided visit of the citadel and return to Cusco by train."
+      }
+    ]
+  },
+  "es": {
+    "title": "Inca Jungle Trail a Machu Picchu - 4D/3N",
+    "duration": "4 Días",
+    "difficulty": "Moderado",
+    "maxAltitude": "4,316m (inicio)",
+    "tag": "Multideporte",
+    "description": "La forma más aventurera de llegar a Machu Picchu. Una mezcla de ciclismo de montaña, trekking y canotaje/tirolesa opcional a través del bosque de nubes tropical.",
+    "includes": [
+      "Guía Profesional Bilingüe",
+      "Bicicletas de Montaña y Equipo",
+      "Todos los Alojamientos (Hostales)",
+      "Todas las Comidas durante el trayecto",
+      "Entradas a Machu Picchu",
+      "Tren de Retorno a Cusco"
+    ],
+    "excludes": [
+      "Extras de Canotaje y Tirolesa",
+      "Propinas",
+      "Seguro de Viaje",
+      "Bus de subida a Machu Picchu"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Abra Málaga - Santa María (Ciclismo)",
+        "description": "Viaje al Abra Málaga y descenso en bicicleta de montaña por el bosque de nubes hasta Santa María."
+      },
+      {
+        "day": 2,
+        "title": "Santa María - Santa Teresa (Trekking)",
+        "description": "Caminata por plantaciones de café y coca. Disfruta de las termas de Cocalmayo por la tarde."
+      },
+      {
+        "day": 3,
+        "title": "Santa Teresa - Lucmabamba - Aguas Calientes",
+        "description": "Caminata junto al río Urubamba, con tirolesa opcional, llegando al pueblo de Machu Picchu."
+      },
+      {
+        "day": 4,
+        "title": "Exploración de Machu Picchu - Cusco",
+        "description": "Visita guiada de la ciudadela y retorno a Cusco en tren."
+      }
+    ]
+  }
+}

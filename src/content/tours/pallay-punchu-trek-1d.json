@@ -1,0 +1,59 @@
+{
+  "slug": "pallay-punchu-trek-1d",
+  "category": "tour-days",
+  "price": "$80",
+  "image": "/images/rainbow.webp",
+  "rating": 4.9,
+  "en": {
+    "title": "Pallay Punchu One Day Trek",
+    "duration": "1 Day",
+    "difficulty": "Hard",
+    "maxAltitude": "4,700m",
+    "tag": "New Discovery",
+    "description": "The sharpest and most dramatic colorful mountain in Cusco. Pallay Punchu (Filo de Poncho) offers sharp ridges and vibrant colors overlooking the Langui-Layo lagoon.",
+    "includes": [
+      "Expert Bilingual Guide",
+      "Private Transportation",
+      "Breakfast and Lunch",
+      "Entrance Tickets",
+      "Oxygen and First Aid"
+    ],
+    "excludes": [
+      "Tips",
+      "Personal Expenses"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Layo - Pallay Punchu",
+        "description": "Travel to the south of Cusco to discover this newly discovered natural wonder."
+      }
+    ]
+  },
+  "es": {
+    "title": "Trek Pallay Punchu 1 Día",
+    "duration": "1 Día",
+    "difficulty": "Difícil",
+    "maxAltitude": "4,700m",
+    "tag": "Nuevo Descubrimiento",
+    "description": "La montaña de colores más afilada y dramática de Cusco. Pallay Punchu (Filo de Poncho) ofrece crestas afiladas y colores vibrantes con vistas a la laguna Langui-Layo.",
+    "includes": [
+      "Guía Experto Bilingüe",
+      "Transporte Privado",
+      "Desayuno y Almuerzo",
+      "Entradas",
+      "Oxígeno y Primeros Auxilios"
+    ],
+    "excludes": [
+      "Propinas",
+      "Gastos Personales"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Layo - Pallay Punchu",
+        "description": "Viaje al sur de Cusco para descubrir esta maravilla natural recientemente descubierta."
+      }
+    ]
+  }
+}

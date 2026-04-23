@@ -80,7 +80,6 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
 
           <div className="lang-switcher">
             <a href={switchPath} className={lang === 'en' ? 'active' : ''}>EN</a>
-            <span className="divider">|</span>
             <a href={switchPath} className={lang === 'es' ? 'active' : ''}>ES</a>
           </div>
 
@@ -103,7 +102,7 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            style={{ display: 'flex' }}
+            style={{ display: 'flex', padding: '6rem 3rem' }}
           >
             {navLinks.map((link) => {
               const isHome = link.path === '/';

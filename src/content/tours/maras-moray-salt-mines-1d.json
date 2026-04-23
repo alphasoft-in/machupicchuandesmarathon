@@ -1,0 +1,59 @@
+{
+  "slug": "maras-moray-salt-mines-1d",
+  "category": "tour-days",
+  "price": "$45",
+  "image": "/images/sacred-valley.webp",
+  "rating": 4.7,
+  "en": {
+    "title": "Maras, Moray & Salt Mines - 1D",
+    "duration": "1 Day",
+    "difficulty": "Easy",
+    "maxAltitude": "3,500m",
+    "tag": "Unique",
+    "description": "Discover the incredible circular terraces of Moray and the ancient salt ponds of Maras. A journey through the unique landscapes and engineering of the Incas.",
+    "includes": [
+      "Bilingual Professional Guide",
+      "Private Transportation",
+      "Hotel Pick-up"
+    ],
+    "excludes": [
+      "Boleto Turistico (Tourist Ticket)",
+      "Entrance to Salt Mines (10 Soles)",
+      "Lunch",
+      "Tips"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Moray Terraces & Maras Salt Mines",
+        "description": "Visit the agricultural laboratory of Moray and the traditional salt evaporation ponds."
+      }
+    ]
+  },
+  "es": {
+    "title": "Maras, Moray y Salineras - 1D",
+    "duration": "1 Día",
+    "difficulty": "Fácil",
+    "maxAltitude": "3,500m",
+    "tag": "Único",
+    "description": "Descubre las increíbles terrazas circulares de Moray y las antiguas pozas de sal de Maras. Un viaje a través de paisajes e ingeniería únicos de los Incas.",
+    "includes": [
+      "Guía Profesional Bilingüe",
+      "Transporte Privado",
+      "Recojo del Hotel"
+    ],
+    "excludes": [
+      "Boleto Turístico",
+      "Entrada a las Salineras (10 Soles)",
+      "Almuerzo",
+      "Propinas"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Terrazas de Moray y Salineras de Maras",
+        "description": "Visita el laboratorio agrícola de Moray y las tradicionales pozas de evaporación de sal."
+      }
+    ]
+  }
+}

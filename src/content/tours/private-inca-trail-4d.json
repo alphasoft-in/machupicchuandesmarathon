@@ -1,0 +1,95 @@
+{
+  "slug": "private-inca-trail-4d",
+  "category": "inca-trail",
+  "price": "$1050",
+  "image": "/images/marathon.webp",
+  "rating": 5.0,
+  "en": {
+    "title": "Private Inca Trail to Machu Picchu - 4D/3N",
+    "duration": "4 Days",
+    "difficulty": "Challenging",
+    "maxAltitude": "4,215m",
+    "tag": "Exclusive",
+    "description": "Experience the world's most famous trek with the exclusivity of a private service. Enjoy personalized attention, a private chef, and a flexible pace through original Incan paths and cloud forests.",
+    "includes": [
+      "Private Professional Guide",
+      "Private Chef & Gourmet Meals",
+      "Porters for Personal Gear",
+      "High-Quality Camping Equipment",
+      "Official Permits & Tickets",
+      "Private Transportation to Trailhead",
+      "Panoramic Train Return (Vistadome)"
+    ],
+    "excludes": [
+      "Travel Insurance",
+      "Sleeping Bags (Available for rent)",
+      "Tips for the crew"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - KM 82 - Wayllabamba",
+        "description": "Private transfer to KM 82. Gentle hike along the Urubamba river with exclusive service."
+      },
+      {
+        "day": 2,
+        "title": "Wayllabamba - Warmiwañusca - Pacaymayu",
+        "description": "Cross the 'Dead Woman's Pass' at 4,215m with personalized support."
+      },
+      {
+        "day": 3,
+        "title": "Pacaymayu - Phuyupatamarca - Wiñay Wayna",
+        "description": "Visit archaeological sites with deep historical insights from your private guide."
+      },
+      {
+        "day": 4,
+        "title": "Wiñay Wayna - Machu Picchu Exploration",
+        "description": "Sunrise at the Sun Gate followed by an extensive private tour of the citadel."
+      }
+    ]
+  },
+  "es": {
+    "title": "Camino Inca Privado a Machu Picchu - 4D/3N",
+    "duration": "4 Días",
+    "difficulty": "Desafiante",
+    "maxAltitude": "4,215m",
+    "tag": "Exclusivo",
+    "description": "Vive la caminata más famosa del mundo con la exclusividad de un servicio privado. Disfruta de atención personalizada, un chef privado y un ritmo flexible a través de senderos incas originales.",
+    "includes": [
+      "Guía Profesional Privado",
+      "Chef Privado y Comidas Gourmet",
+      "Porteadores para Equipo Personal",
+      "Equipo de Campamento de Alta Calidad",
+      "Permisos y Entradas Oficiales",
+      "Transporte Privado al Inicio del Camino",
+      "Retorno en Tren Panorámico (Vistadome)"
+    ],
+    "excludes": [
+      "Seguro de Viaje",
+      "Sacos de Dormir (Disponibles para alquiler)",
+      "Propinas para el equipo"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - KM 82 - Wayllabamba",
+        "description": "Traslado privado al KM 82. Caminata suave junto al río Urubamba con servicio exclusivo."
+      },
+      {
+        "day": 2,
+        "title": "Wayllabamba - Warmiwañusca - Pacaymayu",
+        "description": "Cruza el 'Paso de la Mujer Muerta' a 4,215m con apoyo personalizado."
+      },
+      {
+        "day": 3,
+        "title": "Pacaymayu - Phuyupatamarca - Wiñay Wayna",
+        "description": "Visita sitios arqueológicos con profundos conocimientos históricos de tu guía privado."
+      },
+      {
+        "day": 4,
+        "title": "Wiñay Wayna - Exploración de Machu Picchu",
+        "description": "Amanecer en la Puerta del Sol seguido de un extenso tour privado por la ciudadela."
+      }
+    ]
+  }
+}

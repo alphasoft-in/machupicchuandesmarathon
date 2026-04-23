@@ -1,0 +1,97 @@
+{
+  "slug": "lares-trek-4d",
+  "category": "alternative-treks",
+  "price": "$580",
+  "image": "/images/hero.webp",
+  "rating": 4.7,
+  "en": {
+    "title": "Lares Trek to Machu Picchu - 4D/3N",
+    "duration": "4 Days",
+    "difficulty": "Moderate",
+    "maxAltitude": "4,450m",
+    "tag": "Cultural",
+    "description": "A beautiful cultural journey through the Lares Valley. Meet local weaving communities, enjoy natural hot springs, and witness spectacular mountain scenery before reaching Machu Picchu.",
+    "includes": [
+      "Bilingual Professional Guide",
+      "Private Transportation",
+      "Horses and Horsemen",
+      "Camping Equipment",
+      "Chef and Meals",
+      "Machu Picchu Tickets",
+      "Train from Ollantaytambo"
+    ],
+    "excludes": [
+      "Sleeping Bag",
+      "Walking Poles",
+      "Tips",
+      "Personal Insurance"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Lares Hot Springs - Huacahuasi",
+        "description": "Drive to Lares, enjoy the medicinal hot springs, and begin the trek to the traditional weaving village of Huacahuasi."
+      },
+      {
+        "day": 2,
+        "title": "Huacahuasi - Ipsaycocha Pass - Patacancha",
+        "description": "Ascend to the highest point at Ipsaycocha Pass (4,450m) with views of Mt. Veronica, then descend to Patacancha."
+      },
+      {
+        "day": 3,
+        "title": "Patacancha - Willoq - Ollantaytambo - Aguas Calientes",
+        "description": "Explore local communities known for their colorful textiles, then take the train to Aguas Calientes."
+      },
+      {
+        "day": 4,
+        "title": "Machu Picchu Citadel - Cusco",
+        "description": "Sunrise visit to Machu Picchu for a guided tour, then return to Cusco by train."
+      }
+    ]
+  },
+  "es": {
+    "title": "Caminata Lares a Machu Picchu - 4D/3N",
+    "duration": "4 Días",
+    "difficulty": "Moderado",
+    "maxAltitude": "4,450m",
+    "tag": "Cultural",
+    "description": "Un hermoso viaje cultural por el Valle de Lares. Conoce comunidades de tejedores locales, disfruta de aguas termales naturales y presencia paisajes montañosos espectaculares antes de llegar a Machu Picchu.",
+    "includes": [
+      "Guía Profesional Bilingüe",
+      "Transporte Privado",
+      "Caballos y Arrieros",
+      "Equipo de Campamento",
+      "Chef y Comidas",
+      "Entradas a Machu Picchu",
+      "Tren desde Ollantaytambo"
+    ],
+    "excludes": [
+      "Saco de Dormir",
+      "Bastones",
+      "Propinas",
+      "Seguro Personal"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Aguas Termales de Lares - Huacahuasi",
+        "description": "Viaje a Lares, disfruta de las termas medicinales y comienza la caminata hacia el pueblo tradicional de Huacahuasi."
+      },
+      {
+        "day": 2,
+        "title": "Huacahuasi - Paso Ipsaycocha - Patacancha",
+        "description": "Ascenso al punto más alto en el Paso Ipsaycocha (4,450m) con vistas al Nevado Verónica, luego descenso a Patacancha."
+      },
+      {
+        "day": 3,
+        "title": "Patacancha - Willoq - Ollantaytambo - Aguas Calientes",
+        "description": "Explora comunidades locales conocidas por sus textiles coloridos, luego toma el tren a Aguas Calientes."
+      },
+      {
+        "day": 4,
+        "title": "Ciudadela Machu Picchu - Cusco",
+        "description": "Visita al amanecer a Machu Picchu para un tour guiado, luego retorno a Cusco en tren."
+      }
+    ]
+  }
+}

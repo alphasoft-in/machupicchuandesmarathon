@@ -1,0 +1,127 @@
+{
+  "slug": "salkantay-inca-trail-7d",
+  "category": "inca-trail",
+  "price": "$1250",
+  "image": "/images/salkantay.webp",
+  "rating": 5.0,
+  "en": {
+    "title": "Salkantay & Classic Inca Trail - 7D/6N",
+    "duration": "7 Days",
+    "difficulty": "Very Challenging",
+    "maxAltitude": "4,630m",
+    "tag": "Epic",
+    "description": "The ultimate trekking challenge for true adventurers. Combine the high-altitude majesty of Salkantay with the full 4-day Classic Inca Trail. This epic journey covers the most spectacular landscapes of the Peruvian Andes.",
+    "includes": [
+      "Expert Bilingual Trekking Guide",
+      "Full Classic Inca Trail Permits",
+      "Professional Support Team & Chef",
+      "Superior Camping Equipment",
+      "Porters for Personal Gear",
+      "Expedition/Vistadome Train Return",
+      "All Meals during the trek"
+    ],
+    "excludes": [
+      "Sleeping Bag",
+      "Inflatable Mattress",
+      "Travel Insurance",
+      "Tips"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Soraypampa - Humantay Lake",
+        "description": "Begin the Salkantay portion with a visit to the turquoise Humantay Lake."
+      },
+      {
+        "day": 2,
+        "title": "Soraypampa - Salkantay Pass - Huayracmachay",
+        "description": "Conquer the high pass at 4,630m before descending into the cloud forest."
+      },
+      {
+        "day": 3,
+        "title": "Huayracmachay - Collpapampa - Lucmabamba",
+        "description": "Follow the Salkantay river through lush vegetation and waterfalls."
+      },
+      {
+        "day": 4,
+        "title": "Lucmabamba - Llactapata - Wayllabamba",
+        "description": "Transfer to KM 82 to join the Classic Inca Trail at Wayllabamba."
+      },
+      {
+        "day": 5,
+        "title": "Inca Trail: Dead Woman's Pass",
+        "description": "Face the challenge of Warmiwañusca, the highest point of the Inca Trail."
+      },
+      {
+        "day": 6,
+        "title": "Inca Trail: Wiñay Wayna",
+        "description": "Explore several Incan ruins and cloud forest ecosystems."
+      },
+      {
+        "day": 7,
+        "title": "Machu Picchu - Cusco",
+        "description": "Sunrise at the Sun Gate and exploration of the magical Machu Picchu."
+      }
+    ]
+  },
+  "es": {
+    "title": "Salkantay y Camino Inca Clásico - 7D/6N",
+    "duration": "7 Días",
+    "difficulty": "Muy Desafiante",
+    "maxAltitude": "4,630m",
+    "tag": "Épico",
+    "description": "El desafío definitivo para verdaderos aventureros. Combina la majestuosidad de Salkantay con los 4 días completos del Camino Inca Clásico. Este viaje épico cubre los paisajes más espectaculares de los Andes peruanos.",
+    "includes": [
+      "Guía de Trekking Experto Bilingüe",
+      "Permisos Completos del Camino Inca Clásico",
+      "Equipo de Apoyo Profesional y Chef",
+      "Equipo de Campamento Superior",
+      "Porteadores para Equipo Personal",
+      "Retorno en Tren Expedition/Vistadome",
+      "Todas las comidas durante el trek"
+    ],
+    "excludes": [
+      "Saco de Dormir",
+      "Colchoneta Inflable",
+      "Seguro de Viaje",
+      "Propinas"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Soraypampa - Laguna Humantay",
+        "description": "Comienza la porción de Salkantay con una visita a la laguna turquesa Humantay."
+      },
+      {
+        "day": 2,
+        "title": "Soraypampa - Paso Salkantay - Huayracmachay",
+        "description": "Conquista el paso alto a 4,630m antes de descender al bosque de nubes."
+      },
+      {
+        "day": 3,
+        "title": "Huayracmachay - Collpapampa - Lucmabamba",
+        "description": "Sigue el río Salkantay a través de exuberante vegetación y cascadas."
+      },
+      {
+        "day": 4,
+        "title": "Lucmabamba - Llactapata - Wayllabamba",
+        "description": "Traslado al KM 82 para unirse al Camino Inca Clásico en Wayllabamba."
+      },
+      {
+        "day": 5,
+        "title": "Camino Inca: Paso de la Mujer Muerta",
+        "description": "Enfréntate al desafío de Warmiwañusca, el punto más alto del Camino Inca."
+      },
+      {
+        "day": 6,
+        "title": "Camino Inca: Wiñay Wayna",
+        "description": "Explora varias ruinas incas y ecosistemas de bosque de nubes."
+      },
+      {
+        "day": 7,
+        "title": "Machu Picchu - Cusco",
+        "description": "Amanecer en la Puerta del Sol y exploración del mágico Machu Picchu."
+      }
+    ]
+  }
+}

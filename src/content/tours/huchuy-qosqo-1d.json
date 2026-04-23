@@ -1,0 +1,57 @@
+{
+  "slug": "huchuy-qosqo-1d",
+  "category": "tour-days",
+  "price": "$85",
+  "image": "/images/sacred-valley.webp",
+  "rating": 4.7,
+  "en": {
+    "title": "Huchuy Qosqo One Day Tour",
+    "duration": "1 Day",
+    "difficulty": "Moderate",
+    "maxAltitude": "4,100m",
+    "tag": "Historical",
+    "description": "The 'Little Cusco'. Explore this impressive Inca palace and administrative center overlooking the Sacred Valley. A beautiful hike through the original Inca trail.",
+    "includes": [
+      "Bilingual Professional Guide",
+      "Private Transportation",
+      "Box Lunch",
+      "Entrance Fee"
+    ],
+    "excludes": [
+      "Tips",
+      "Personal Expenses"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Tauca - Huchuy Qosqo - Lamay",
+        "description": "Trek from the high plains of Tauca down to the palace of Huchuy Qosqo, descending to Lamay in the Sacred Valley."
+      }
+    ]
+  },
+  "es": {
+    "title": "Tour Huchuy Qosqo 1 Día",
+    "duration": "1 Día",
+    "difficulty": "Moderado",
+    "maxAltitude": "4,100m",
+    "tag": "Histórico",
+    "description": "El 'Pequeño Cusco'. Explora este impresionante palacio inca y centro administrativo con vista al Valle Sagrado. Una hermosa caminata a través del camino inca original.",
+    "includes": [
+      "Guía Profesional Bilingüe",
+      "Transporte Privado",
+      "Box Lunch",
+      "Entrada"
+    ],
+    "excludes": [
+      "Propinas",
+      "Gastos Personales"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Tauca - Huchuy Qosqo - Lamay",
+        "description": "Caminata desde las llanuras altas de Tauca hasta el palacio de Huchuy Qosqo, descendiendo hasta Lamay en el Valle Sagrado."
+      }
+    ]
+  }
+}

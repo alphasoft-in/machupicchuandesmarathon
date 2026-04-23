@@ -1,0 +1,57 @@
+{
+  "slug": "qeswachaca-bridge-1d",
+  "category": "tour-days",
+  "price": "$80",
+  "image": "/images/hero.webp",
+  "rating": 4.9,
+  "en": {
+    "title": "Q'eswachaka Bridge - 1D",
+    "duration": "1 Day",
+    "difficulty": "Easy",
+    "maxAltitude": "3,700m",
+    "tag": "Living Culture",
+    "description": "Visit the last remaining Inca rope bridge, hand-woven every year by the local communities. A journey to a hidden part of Cusco's cultural heritage.",
+    "includes": [
+      "Expert Bilingual Guide",
+      "Private Transportation",
+      "Breakfast and Lunch",
+      "Entrance Fee"
+    ],
+    "excludes": [
+      "Personal Expenses",
+      "Tips"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Four Lagoons - Q'eswachaka",
+        "description": "Scenic drive through the Pomacanchi lagoons to the incredible hand-woven bridge."
+      }
+    ]
+  },
+  "es": {
+    "title": "Puente Q'eswachaka - 1D",
+    "duration": "1 Día",
+    "difficulty": "Fácil",
+    "maxAltitude": "3,700m",
+    "tag": "Cultura Viva",
+    "description": "Visita el último puente inca de cuerda, tejido a mano cada año por las comunidades locales. Un viaje a una parte oculta del patrimonio cultural de Cusco.",
+    "includes": [
+      "Guía Experto Bilingüe",
+      "Transporte Privado",
+      "Desayuno y Almuerzo",
+      "Entrada"
+    ],
+    "excludes": [
+      "Gastos Personales",
+      "Propinas"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Cuatro Lagunas - Q'eswachaka",
+        "description": "Viaje escénico a través de las lagunas de Pomacanchi hasta el increíble puente tejido a mano."
+      }
+    ]
+  }
+}

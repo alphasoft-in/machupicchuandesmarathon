@@ -1,0 +1,93 @@
+{
+  "slug": "machu-picchu-highlights-4d",
+  "category": "alternative-treks",
+  "price": "$550",
+  "image": "/images/hero.webp",
+  "rating": 4.8,
+  "en": {
+    "title": "Machu Picchu Treks Highlights - 4D/3N",
+    "duration": "4 Days",
+    "difficulty": "Moderate",
+    "maxAltitude": "3,800m",
+    "tag": "Bestseller",
+    "description": "A curated experience featuring the absolute highlights of the Sacred Valley and the most iconic views leading to Machu Picchu. Perfect for those who want to see it all in 4 days.",
+    "includes": [
+      "Professional Guide",
+      "All Transport",
+      "Highlights of Sacred Valley",
+      "Short Inca Trail entry",
+      "Hotel Accommodations",
+      "All Entrance Tickets"
+    ],
+    "excludes": [
+      "Tips",
+      "Personal Expenses",
+      "Travel Insurance"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Sacred Valley Explorer",
+        "description": "Visit Pisac ruins, local markets, and Ollantaytambo fortress."
+      },
+      {
+        "day": 2,
+        "title": "Train to KM 104 - Wiñay Wayna",
+        "description": "Board the train to KM 104 and hike the most beautiful section of the Inca Trail."
+      },
+      {
+        "day": 3,
+        "title": "Sun Gate & Machu Picchu Citadel",
+        "description": "Enter the citadel via the Sun Gate and enjoy a comprehensive tour."
+      },
+      {
+        "day": 4,
+        "title": "Aguas Calientes - Cusco",
+        "description": "Relax in the morning or visit local hot springs before returning to Cusco."
+      }
+    ]
+  },
+  "es": {
+    "title": "Lo Mejor de los Treks a Machu Picchu - 4D/3N",
+    "duration": "4 Días",
+    "difficulty": "Moderado",
+    "maxAltitude": "3,800m",
+    "tag": "Más Vendido",
+    "description": "Una experiencia curada que presenta lo mejor del Valle Sagrado y las vistas más icónicas que conducen a Machu Picchu. Perfecto para quienes quieren verlo todo en 4 días.",
+    "includes": [
+      "Guía Profesional",
+      "Todo el Transporte",
+      "Lo mejor del Valle Sagrado",
+      "Entrada al Camino Inca Corto",
+      "Alojamientos en Hotel",
+      "Todas las Entradas"
+    ],
+    "excludes": [
+      "Propinas",
+      "Gastos Personales",
+      "Seguro de Viaje"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Explorador del Valle Sagrado",
+        "description": "Visita las ruinas de Pisac, mercados locales y la fortaleza de Ollantaytambo."
+      },
+      {
+        "day": 2,
+        "title": "Tren al KM 104 - Wiñay Wayna",
+        "description": "Toma el tren al KM 104 y camina por la sección más hermosa del Camino Inca."
+      },
+      {
+        "day": 3,
+        "title": "Puerta del Sol y Ciudadela Machu Picchu",
+        "description": "Entra a la ciudadela por la Puerta del Sol y disfruta de un tour completo."
+      },
+      {
+        "day": 4,
+        "title": "Aguas Calientes - Cusco",
+        "description": "Relájate por la mañana o visita las termas locales antes de regresar a Cusco."
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "palccoyo-rainbow-mountain-1d",
+  "category": "tour-days",
+  "price": "$60",
+  "image": "/images/rainbow.webp",
+  "rating": 4.8,
+  "en": {
+    "title": "Palccoyo Rainbow Mountain - 1D",
+    "duration": "1 Day",
+    "difficulty": "Easy",
+    "maxAltitude": "4,900m",
+    "tag": "Hidden Gem",
+    "description": "The alternative to Vinicunca. Three rainbow mountains and a stone forest with much shorter and easier hiking. Perfect for those who want the colors without the crowds or intense effort.",
+    "includes": [
+      "Bilingual Professional Guide",
+      "Private Transportation",
+      "Breakfast and Buffet Lunch",
+      "Entrance Fee",
+      "First Aid and Oxygen"
+    ],
+    "excludes": [
+      "Tips",
+      "Personal Expenses"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Palccoyo Valley",
+        "description": "Scenic drive to the Palccoyo valley followed by an easy 45-minute hike to see the colored mountains."
+      }
+    ]
+  },
+  "es": {
+    "title": "Montaña de Colores Palccoyo - 1D",
+    "duration": "1 Día",
+    "difficulty": "Fácil",
+    "maxAltitude": "4,900m",
+    "tag": "Joyas Ocultas",
+    "description": "La alternativa a Vinicunca. Tres montañas de colores y un bosque de piedras con una caminata mucho más corta y fácil. Perfecto para quienes quieren los colores sin las multitudes o el esfuerzo intenso.",
+    "includes": [
+      "Guía Profesional Bilingüe",
+      "Transporte Privado",
+      "Desayuno y Almuerzo Buffet",
+      "Entrada",
+      "Primeros Auxilios y Oxígeno"
+    ],
+    "excludes": [
+      "Propinas",
+      "Gastos Personales"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Valle de Palccoyo",
+        "description": "Viaje escénico al valle de Palccoyo seguido de una caminata fácil de 45 minutos para ver las montañas de colores."
+      }
+    ]
+  }
+}

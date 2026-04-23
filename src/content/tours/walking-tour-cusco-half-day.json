@@ -1,0 +1,57 @@
+{
+  "slug": "walking-tour-cusco-half-day",
+  "category": "tour-days",
+  "price": "$20",
+  "image": "/images/hero.webp",
+  "rating": 4.6,
+  "en": {
+    "title": "Walking Tour Cusco - Half Day",
+    "duration": "4 Hours",
+    "difficulty": "Easy",
+    "maxAltitude": "3,400m",
+    "tag": "Authentic",
+    "description": "Discover the hidden alleys, local markets, and historical secrets of Cusco on foot. A more intimate way to experience the heart of the city.",
+    "includes": [
+      "Local Professional Guide",
+      "San Pedro Market Visit",
+      "San Blas Neighborhood Exploration"
+    ],
+    "excludes": [
+      "Entrance Fees (if any)",
+      "Meals",
+      "Tips"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco Historical Center Walk",
+        "description": "Walk through the Main Square, Loreto Alley, San Pedro Market, and San Blas."
+      }
+    ]
+  },
+  "es": {
+    "title": "Walking Tour Cusco - Medio Día",
+    "duration": "4 Horas",
+    "difficulty": "Fácil",
+    "maxAltitude": "3,400m",
+    "tag": "Auténtico",
+    "description": "Descubre los callejones ocultos, mercados locales y secretos históricos de Cusco a pie. Una forma más íntima de experimentar el corazón de la ciudad.",
+    "includes": [
+      "Guía Local Profesional",
+      "Visita al Mercado de San Pedro",
+      "Exploración del Barrio de San Blas"
+    ],
+    "excludes": [
+      "Entradas (si aplica)",
+      "Comidas",
+      "Propinas"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Caminata por el Centro Histórico",
+        "description": "Caminata por la Plaza de Armas, Calle Loreto, Mercado San Pedro y San Blas."
+      }
+    ]
+  }
+}

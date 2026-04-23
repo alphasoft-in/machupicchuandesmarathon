@@ -1,0 +1,93 @@
+{
+  "slug": "inca-quarry-trail-4d",
+  "category": "alternative-treks",
+  "price": "$520",
+  "image": "/images/hero.webp",
+  "rating": 4.8,
+  "en": {
+    "title": "Inca Quarry Trail - 4D/3N",
+    "duration": "4 Days",
+    "difficulty": "Moderate",
+    "maxAltitude": "4,450m",
+    "tag": "Hidden Gem",
+    "description": "A less-known but spectacular trail that takes you through ancient Incan quarries, waterfalls, and the Sun Gate of Ollantaytambo before reaching Machu Picchu.",
+    "includes": [
+      "Professional Bilingual Guide",
+      "Private Transportation",
+      "Camping Equipment",
+      "Horses and Chef",
+      "Machu Picchu Entrance",
+      "Train from Ollantaytambo"
+    ],
+    "excludes": [
+      "Sleeping Bag",
+      "Tips",
+      "Personal Expenses"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Rafq'a - Perolniyoc Waterfall",
+        "description": "Begin the trek at Rafq'a, visit the stunning Perolniyoc waterfall and the archaeological site of Racaypata."
+      },
+      {
+        "day": 2,
+        "title": "Perolniyoc - Kuychiq'asa Pass - Chancachuco",
+        "description": "Ascend to the high pass of Kuychiq'asa (4,450m) for panoramic views of the Sacred Valley."
+      },
+      {
+        "day": 3,
+        "title": "Chancachuco - Incan Quarries - Ollantaytambo",
+        "description": "Explore the massive stones at the Cachiqata quarries and hike down to Ollantaytambo."
+      },
+      {
+        "day": 4,
+        "title": "Machu Picchu - Cusco",
+        "description": "Train to Aguas Calientes and early visit to the Sanctuary of Machu Picchu."
+      }
+    ]
+  },
+  "es": {
+    "title": "Camino de las Canteras Inca - 4D/3N",
+    "duration": "4 Días",
+    "difficulty": "Moderado",
+    "maxAltitude": "4,450m",
+    "tag": "Joyas Ocultas",
+    "description": "Un sendero poco conocido pero espectacular que te lleva a través de antiguas canteras incas, cascadas y la Puerta del Sol de Ollantaytambo antes de llegar a Machu Picchu.",
+    "includes": [
+      "Guía Bilingüe Profesional",
+      "Transporte Privado",
+      "Equipo de Campamento",
+      "Caballos y Chef",
+      "Entrada a Machu Picchu",
+      "Tren desde Ollantaytambo"
+    ],
+    "excludes": [
+      "Saco de Dormir",
+      "Propinas",
+      "Gastos Personales"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Rafq'a - Cascada Perolniyoc",
+        "description": "Comienza el trek en Rafq'a, visita la impresionante cascada de Perolniyoc y el sitio arqueológico de Racaypata."
+      },
+      {
+        "day": 2,
+        "title": "Perolniyoc - Paso Kuychiq'asa - Chancachuco",
+        "description": "Asciende al paso alto de Kuychiq'asa (4,450m) para vistas panorámicas del Valle Sagrado."
+      },
+      {
+        "day": 3,
+        "title": "Chancachuco - Canteras Incas - Ollantaytambo",
+        "description": "Explora las enormes piedras en las canteras de Cachiqata y baja hacia Ollantaytambo."
+      },
+      {
+        "day": 4,
+        "title": "Machu Picchu - Cusco",
+        "description": "Tren a Aguas Calientes y visita temprana al Santuario de Machu Picchu."
+      }
+    ]
+  }
+}

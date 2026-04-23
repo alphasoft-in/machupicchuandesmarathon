@@ -1,0 +1,105 @@
+{
+  "slug": "ancascocha-trek-5d",
+  "category": "alternative-treks",
+  "price": "$690",
+  "image": "/images/hero.webp",
+  "rating": 4.9,
+  "en": {
+    "title": "Ancascocha Trek to Machu Picchu - 5D/4N",
+    "duration": "5 Days",
+    "difficulty": "Hard",
+    "maxAltitude": "4,700m",
+    "tag": "Wilderness",
+    "description": "Rated by National Geographic as one of the best treks in the world. Experience true mountain solitude, turquoise lagoons, and the impressive Huayanay Pass.",
+    "includes": [
+      "Expert Bilingual Guide",
+      "Private Transportation",
+      "Horses and Mules",
+      "Camping Equipment",
+      "Full Board Meals",
+      "Machu Picchu Tickets",
+      "Train Return"
+    ],
+    "excludes": [
+      "Sleeping Bag",
+      "Tips",
+      "Travel Insurance"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Soqma - Rayan",
+        "description": "Drive to Soqma, visit the Perolniyoc waterfall and climb to the first campsite at Rayan."
+      },
+      {
+        "day": 2,
+        "title": "Rayan - Kuychiq'asa Pass - Chancachuco",
+        "description": "Hike to the first pass with incredible views of the Vilcanota range."
+      },
+      {
+        "day": 3,
+        "title": "Chancachuco - Ancascocha Lagoon - Huayanay Pass",
+        "description": "Pass by the turquoise Ancascocha lagoon and conquer the highest point at Huayanay Pass (4,700m)."
+      },
+      {
+        "day": 4,
+        "title": "Huayanay - Paucarcancha - KM 82 - Aguas Calientes",
+        "description": "Visit the Paucarcancha ruins and walk to the start of the classic Inca Trail before taking the train."
+      },
+      {
+        "day": 5,
+        "title": "Machu Picchu - Cusco",
+        "description": "Full guided tour of Machu Picchu and return to Cusco."
+      }
+    ]
+  },
+  "es": {
+    "title": "Caminata Ancascocha a Machu Picchu - 5D/4N",
+    "duration": "5 Días",
+    "difficulty": "Difícil",
+    "maxAltitude": "4,700m",
+    "tag": "Naturaleza",
+    "description": "Calificado por National Geographic como uno de los mejores treks del mundo. Vive la verdadera soledad de la montaña, lagunas turquesas y el impresionante Paso Huayanay.",
+    "includes": [
+      "Guía Experto Bilingüe",
+      "Transporte Privado",
+      "Caballos y Mulas",
+      "Equipo de Campamento",
+      "Pensión Completa",
+      "Entradas a Machu Picchu",
+      "Retorno en Tren"
+    ],
+    "excludes": [
+      "Saco de Dormir",
+      "Propinas",
+      "Seguro de Viaje"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco - Soqma - Rayan",
+        "description": "Viaje a Soqma, visita la cascada de Perolniyoc y sube al primer campamento en Rayan."
+      },
+      {
+        "day": 2,
+        "title": "Rayan - Paso Kuychiq'asa - Chancachuco",
+        "description": "Caminata al primer paso con vistas increíbles de la cordillera de Vilcanota."
+      },
+      {
+        "day": 3,
+        "title": "Chancachuco - Laguna Ancascocha - Paso Huayanay",
+        "description": "Pasa por la laguna turquesa Ancascocha y conquista el punto más alto en el Paso Huayanay (4,700m)."
+      },
+      {
+        "day": 4,
+        "title": "Huayanay - Paucarcancha - KM 82 - Aguas Calientes",
+        "description": "Visita las ruinas de Paucarcancha y camina hacia el inicio del Camino Inca clásico antes de tomar el tren."
+      },
+      {
+        "day": 5,
+        "title": "Machu Picchu - Cusco",
+        "description": "Tour guiado completo de Machu Picchu y retorno a Cusco."
+      }
+    ]
+  }
+}

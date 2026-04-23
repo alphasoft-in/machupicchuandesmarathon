@@ -1,0 +1,59 @@
+{
+  "slug": "city-tour-cusco-half-day",
+  "category": "tour-days",
+  "price": "$25",
+  "image": "/images/hero.webp",
+  "rating": 4.5,
+  "en": {
+    "title": "City Tour Cusco - Half Day",
+    "duration": "5 Hours",
+    "difficulty": "Easy",
+    "maxAltitude": "3,700m",
+    "tag": "Classic",
+    "description": "Explore the historical center of the Inca Empire. Visit the Cathedral, the Temple of the Sun (Qoricancha), and the impressive archaeological sites of Saqsayhuaman, Q’enqo, Puca Pucara, and Tambomachay.",
+    "includes": [
+      "Professional Bilingual Guide",
+      "Tourist Transportation",
+      "Hotel Pick-up"
+    ],
+    "excludes": [
+      "Tourist Ticket (Boleto Turístico)",
+      "Entrance to Qoricancha",
+      "Entrance to Cathedral",
+      "Tips"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco City & Surroundings",
+        "description": "Visit the main historical sites within and around Cusco city."
+      }
+    ]
+  },
+  "es": {
+    "title": "City Tour Cusco - Medio Día",
+    "duration": "5 Horas",
+    "difficulty": "Fácil",
+    "maxAltitude": "3,700m",
+    "tag": "Clásico",
+    "description": "Explora el centro histórico del Imperio Inca. Visita la Catedral, el Templo del Sol (Qoricancha) y los impresionantes sitios arqueológicos de Saqsayhuaman, Q’enqo, Puca Pucara y Tambomachay.",
+    "includes": [
+      "Guía Profesional Bilingüe",
+      "Transporte Turístico",
+      "Recojo del Hotel"
+    ],
+    "excludes": [
+      "Boleto Turístico",
+      "Entrada al Qoricancha",
+      "Entrada a la Catedral",
+      "Propinas"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cusco Ciudad y Alrededores",
+        "description": "Visita los principales sitios históricos dentro y alrededor de la ciudad de Cusco."
+      }
+    ]
+  }
+}

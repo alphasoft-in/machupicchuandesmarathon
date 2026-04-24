@@ -26,8 +26,28 @@
     "itinerary": [
       {
         "day": 1,
-        "title": "Salkantay Pass",
-        "description": "Cross the highest points of the Vilcabamba mountain range."
+        "title": "Cusco – Soraypampa – Humantay Lake",
+        "description": "Morning drive to Soraypampa. Afternoon hike to Humantay Lake (4,200m) for acclimatization. Camp at Soraypampa (3,900m) under the stars."
+      },
+      {
+        "day": 2,
+        "title": "Soraypampa – Salkantay Pass – Chaullay",
+        "description": "Tough ascent to the Salkantay Pass (4,600m), the highest point of the trek. Witness the massive glaciers before a long descent into the cloud forest, camping at Chaullay (2,900m)."
+      },
+      {
+        "day": 3,
+        "title": "Chaullay – Lucmabamba",
+        "description": "Hike through the Santa Teresa valley, a lush microclimate with orchids, coffee farms, and waterfalls. Camp at Lucmabamba (2,000m) and enjoy a local coffee tour."
+      },
+      {
+        "day": 4,
+        "title": "Lucmabamba – Llactapata – Aguas Calientes",
+        "description": "Hike up a section of the original Inca Trail to the Llactapata ruins, offering a unique distant view of Machu Picchu. Descend to Hidroelectrica and walk to Aguas Calientes for the night."
+      },
+      {
+        "day": 5,
+        "title": "Aguas Calientes – Machu Picchu – Cusco",
+        "description": "Take the first bus to Machu Picchu. Fully guided tour of the lost city. In the afternoon, take the train back to Ollantaytambo and transfer to your hotel in Cusco."
       }
     ]
   },
@@ -53,8 +73,28 @@
     "itinerary": [
       {
         "day": 1,
-        "title": "Paso Salkantay",
-        "description": "Cruza los puntos más altos de la cordillera de Vilcabamba."
+        "title": "Cusco – Soraypampa – Laguna Humantay",
+        "description": "Viaje matutino a Soraypampa. Caminata por la tarde a la Laguna Humantay (4,200m) para aclimatación. Campamento en Soraypampa (3,900m) bajo las estrellas."
+      },
+      {
+        "day": 2,
+        "title": "Soraypampa – Paso Salkantay – Chaullay",
+        "description": "Exigente ascenso al Paso Salkantay (4,600m), el punto más alto del trek. Observa los inmensos glaciares antes de un largo descenso hacia el bosque nuboso, acampando en Chaullay (2,900m)."
+      },
+      {
+        "day": 3,
+        "title": "Chaullay – Lucmabamba",
+        "description": "Caminata por el valle de Santa Teresa, un exuberante microclima con orquídeas, fincas de café y cascadas. Campamento en Lucmabamba (2,000m) y tour de café local."
+      },
+      {
+        "day": 4,
+        "title": "Lucmabamba – Llactapata – Aguas Calientes",
+        "description": "Subida por una sección del Camino Inca original hasta las ruinas de Llactapata, que ofrecen una vista lejana y única de Machu Picchu. Descenso a Hidroeléctrica y caminata a Aguas Calientes para pasar la noche."
+      },
+      {
+        "day": 5,
+        "title": "Aguas Calientes – Machu Picchu – Cusco",
+        "description": "Toma el primer bus a Machu Picchu. Tour guiado completo por la ciudad perdida. Por la tarde, toma el tren de regreso a Ollantaytambo y traslado a tu hotel en Cusco."
       }
     ]
   }

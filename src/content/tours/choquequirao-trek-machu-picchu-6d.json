@@ -26,8 +26,33 @@
     "itinerary": [
       {
         "day": 1,
-        "title": "The Great Traverse",
-        "description": "Hike through the deep canyons connecting Choquequirao and Machu Picchu."
+        "title": "Cusco – Capuliyoc – Chiquiska",
+        "description": "Drive from Cusco to Capuliyoc. Hike down into the Apurimac canyon, enjoying spectacular views. Camp at Chiquiska (1,930m)."
+      },
+      {
+        "day": 2,
+        "title": "Chiquiska – Marampata – Choquequirao",
+        "description": "Cross the Apurimac River and hike uphill to Marampata. Continue to the Choquequirao campsite. Enjoy an afternoon introduction to the ruins."
+      },
+      {
+        "day": 3,
+        "title": "Choquequirao – Pinchaunuyoc – Rio Blanco – Maizal",
+        "description": "Explore Choquequirao in the morning. Then hike over the Choquequirao pass and descend to the Pinchaunuyoc ruins. Continue down to Rio Blanco and ascend to camp at Maizal (3,000m)."
+      },
+      {
+        "day": 4,
+        "title": "Maizal – San Juan Pass – Yanama",
+        "description": "A tough uphill hike through cloud forests and historic silver mines to the San Juan pass (4,150m). Enjoy views of the Vilcabamba range before descending to Yanama village (3,520m)."
+      },
+      {
+        "day": 5,
+        "title": "Yanama – Yanama Pass – Totora – Santa Teresa / Aguas Calientes",
+        "description": "Hike to the highest pass of the trek, Yanama Pass (4,668m). Descend into the jungle to Totora. From here, we take transport to Hidroelectrica and take the train to Aguas Calientes for a hotel stay."
+      },
+      {
+        "day": 6,
+        "title": "Aguas Calientes – Machu Picchu – Cusco",
+        "description": "Early morning bus to Machu Picchu. Enjoy a comprehensive guided tour of the lost citadel. In the afternoon, take the train and private transport back to Cusco."
       }
     ]
   },
@@ -53,8 +78,33 @@
     "itinerary": [
       {
         "day": 1,
-        "title": "La Gran Travesía",
-        "description": "Camina a través de los profundos cañones que conectan Choquequirao y Machu Picchu."
+        "title": "Cusco – Capuliyoc – Chiquiska",
+        "description": "Viaje desde Cusco a Capuliyoc. Descenso hacia el cañón del Apurímac, disfrutando de vistas espectaculares. Campamento en Chiquiska (1,930m)."
+      },
+      {
+        "day": 2,
+        "title": "Chiquiska – Marampata – Choquequirao",
+        "description": "Cruzamos el río Apurímac y subimos a Marampata. Continuamos hasta el campamento de Choquequirao. Disfruta de una introducción a las ruinas por la tarde."
+      },
+      {
+        "day": 3,
+        "title": "Choquequirao – Pinchaunuyoc – Río Blanco – Maizal",
+        "description": "Explora Choquequirao por la mañana. Luego caminamos sobre el paso de Choquequirao y descendemos a las ruinas de Pinchaunuyoc. Continuamos hasta Río Blanco y ascendemos al campamento en Maizal (3,000m)."
+      },
+      {
+        "day": 4,
+        "title": "Maizal – Paso San Juan – Yanama",
+        "description": "Una exigente caminata a través de bosques nubosos y antiguas minas de plata hasta el paso de San Juan (4,150m). Disfruta de las vistas de la cordillera de Vilcabamba antes de descender al pueblo de Yanama (3,520m)."
+      },
+      {
+        "day": 5,
+        "title": "Yanama – Paso Yanama – Totora – Santa Teresa / Aguas Calientes",
+        "description": "Caminata hasta el paso más alto del trek, Paso Yanama (4,668m). Descenso hacia la selva hasta Totora. Desde allí, tomamos transporte hasta Hidroeléctrica y tomamos el tren a Aguas Calientes para pasar la noche en un hotel."
+      },
+      {
+        "day": 6,
+        "title": "Aguas Calientes – Machu Picchu – Cusco",
+        "description": "Bus temprano por la mañana a Machu Picchu. Disfruta de un tour guiado completo por la ciudadela perdida. Por la tarde, toma el tren y transporte privado de regreso a Cusco."
       }
     ]
   }

@@ -119,38 +119,48 @@ const testimonials = [
   </section>
 
   <!-- About / Why Us (Keep structural HTML in Astro, but using React icons) -->
-  <section id="about" class="section bg-muted">
-    <div class="container about-grid">
-      <div class="about-content">
-        <h2 class="serif">{lang === 'en' ? 'Excellence in Every Step' : 'Excelencia en cada paso'}</h2>
-        <p>{lang === 'en' ? 'With over 15 years of experience in the Peruvian Andes, we specialize in high-altitude logistics and luxury travel management. Our mission is to provide life-changing experiences while preserving the cultural and natural heritage of the Incas.' : 'Con más de 15 años de experiencia en los Andes peruanos, nos especializamos en logística de gran altitud y gestión de viajes de lujo. Nuestra misión es brindar experiencias que cambien la vida mientras preservamos el patrimonio cultural y natural de los Incas.'}</p>
+  <section id="about" class="min-h-[80vh] flex items-center py-16 lg:py-24 bg-[#f7f7f5]">
+    <div class="container grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center w-full">
+      <div>
+        <h2 class="serif text-[clamp(1.5rem,5vw,2.2rem)] leading-[1.2] tracking-tight mb-6 sm:mb-8 relative before:content-[''] before:absolute before:-top-5 before:left-0 before:w-[50px] before:h-[3px] before:bg-secondary">
+          {lang === 'en' ? 'Excellence in Every Step' : 'Excelencia en cada paso'}
+        </h2>
+        <p class="text-[0.95rem] sm:text-[1.05rem] text-slate-500 mb-8 leading-relaxed max-w-full sm:max-w-[90%]">
+          {lang === 'en' ? 'With over 15 years of experience in the Peruvian Andes, we specialize in high-altitude logistics and luxury travel management. Our mission is to provide life-changing experiences while preserving the cultural and natural heritage of the Incas.' : 'Con más de 15 años de experiencia en los Andes peruanos, nos especializamos en logística de gran altitud y gestión de viajes de lujo. Nuestra misión es brindar experiencias que cambien la vida mientras preservamos el patrimonio cultural y natural de los Incas.'}
+        </p>
         
-        <ul class="stats-grid">
-          <li>
-            <div class="stat-icon"><Globe size={24} /></div>
+        <ul class="flex flex-col gap-4 list-none p-0 m-0">
+          <li class="flex gap-4 items-center">
+            <div class="w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] bg-white rounded-2xl flex items-center justify-center text-secondary shadow-[0_10px_20px_rgba(0,0,0,0.03)] shrink-0">
+              <Globe size={20} />
+            </div>
             <div>
-              <strong>{lang === 'en' ? 'Local Expertise' : 'Experiencia Local'}</strong>
-              <p>{lang === 'en' ? '100% Peruvian owned and operated company.' : 'Empresa 100% peruana.'}</p>
+              <strong class="block text-[0.95rem] sm:text-[1.05rem] mb-0.5 leading-tight">{lang === 'en' ? 'Local Expertise' : 'Experiencia Local'}</strong>
+              <p class="text-[0.85rem] sm:text-[0.9rem] text-slate-500 m-0">{lang === 'en' ? '100% Peruvian owned and operated company.' : 'Empresa 100% peruana.'}</p>
             </div>
           </li>
-          <li>
-            <div class="stat-icon"><Users size={24} /></div>
+          <li class="flex gap-4 items-center">
+            <div class="w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] bg-white rounded-2xl flex items-center justify-center text-secondary shadow-[0_10px_20px_rgba(0,0,0,0.03)] shrink-0">
+              <Users size={20} />
+            </div>
             <div>
-              <strong>{lang === 'en' ? 'Small Groups' : 'Grupos Pequeños'}</strong>
-              <p>{lang === 'en' ? 'Personalized attention for an intimate experience.' : 'Atención personalizada para una experiencia íntima.'}</p>
+              <strong class="block text-[0.95rem] sm:text-[1.05rem] mb-0.5 leading-tight">{lang === 'en' ? 'Small Groups' : 'Grupos Pequeños'}</strong>
+              <p class="text-[0.85rem] sm:text-[0.9rem] text-slate-500 m-0">{lang === 'en' ? 'Personalized attention for an intimate experience.' : 'Atención personalizada para una experiencia íntima.'}</p>
             </div>
           </li>
-          <li>
-            <div class="stat-icon"><MapPin size={24} /></div>
+          <li class="flex gap-4 items-center">
+            <div class="w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] bg-white rounded-2xl flex items-center justify-center text-secondary shadow-[0_10px_20px_rgba(0,0,0,0.03)] shrink-0">
+              <MapPin size={20} />
+            </div>
             <div>
-              <strong>{lang === 'en' ? 'Hidden Paths' : 'Senderos Ocultos'}</strong>
-              <p>{lang === 'en' ? 'Access to restricted and off-the-beaten-path locations.' : 'Acceso a lugares restringidos y fuera de las rutas comunes.'}</p>
+              <strong class="block text-[0.95rem] sm:text-[1.05rem] mb-0.5 leading-tight">{lang === 'en' ? 'Hidden Paths' : 'Senderos Ocultos'}</strong>
+              <p class="text-[0.85rem] sm:text-[0.9rem] text-slate-500 m-0">{lang === 'en' ? 'Access to restricted and off-the-beaten-path locations.' : 'Acceso a lugares restringidos y fuera de las rutas comunes.'}</p>
             </div>
           </li>
         </ul>
       </div>
-      <div class="about-image">
-        <img src="/images/marathon.webp" alt="Incan Trail" class="rounded-img shadow-lg" />
+      <div class="relative shadow-[0_40px_100px_rgba(0,0,0,0.15)] rounded-[60px_15px_60px_15px] overflow-hidden transition-transform duration-[600ms] ease-[cubic-bezier(0.165,0.84,0.44,1)] hover:-translate-y-2.5 group/about">
+        <img src="/images/marathon.webp" alt="Incan Trail" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover/about:scale-105" />
       </div>
     </div>
   </section>

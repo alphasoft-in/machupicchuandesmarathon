@@ -25,8 +25,18 @@
     "itinerary": [
       {
         "day": 1,
-        "title": "Sacred Valley Paths",
-        "description": "Walk ancient trails connecting Andean villages."
+        "title": "Cusco – Tambomachay – Pucamarca",
+        "description": "Start the trek near Cusco at Tambomachay. Hike up through high Andean passes, enjoying views of lakes and mountains. Camp at the traditional village of Pucamarca (3,800m)."
+      },
+      {
+        "day": 2,
+        "title": "Pucamarca – Huchuy Qosqo – Ollantaytambo",
+        "description": "Hike through a spectacular canyon on an original Inca trail to reach the Huchuy Qosqo ruins. Enjoy a guided tour before descending to the Sacred Valley at Lamay. Drive to Ollantaytambo and take the train to Aguas Calientes."
+      },
+      {
+        "day": 3,
+        "title": "Aguas Calientes – Machu Picchu – Cusco",
+        "description": "Early morning bus up to Machu Picchu. Discover the magic of the citadel with a guided tour. Afternoon return to Cusco by train and bus."
       }
     ]
   },
@@ -51,8 +61,18 @@
     "itinerary": [
       {
         "day": 1,
-        "title": "Senderos del Valle Sagrado",
-        "description": "Camina por senderos antiguos que conectan pueblos andinos."
+        "title": "Cusco – Tambomachay – Pucamarca",
+        "description": "Inicia el trek cerca de Cusco en Tambomachay. Camina por pasos altoandinos, disfrutando de vistas de lagunas y montañas. Acampa en el pueblo tradicional de Pucamarca (3,800m)."
+      },
+      {
+        "day": 2,
+        "title": "Pucamarca – Huchuy Qosqo – Ollantaytambo",
+        "description": "Camina por un cañón espectacular en un camino inca original hasta llegar a las ruinas de Huchuy Qosqo. Disfruta de un tour guiado antes de descender al Valle Sagrado en Lamay. Viaje a Ollantaytambo y tren a Aguas Calientes."
+      },
+      {
+        "day": 3,
+        "title": "Aguas Calientes – Machu Picchu – Cusco",
+        "description": "Bus temprano a Machu Picchu. Descubre la magia de la ciudadela con un tour guiado. Regreso a Cusco por la tarde en tren y bus."
       }
     ]
   }

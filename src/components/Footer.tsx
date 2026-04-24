@@ -11,21 +11,22 @@ export default function Footer({ lang }: Props) {
   const translatePath = useTranslatedPath(lang);
   
   return (
-    <footer className="footer">
-      <div className="container footer-grid">
-        <div className="footer-brand">
-          <a href={translatePath('/')} className="footer-logo-link">
-            <img src="/images/logo.webp" alt="Logo" className="footer-logo" />
+    <footer className="bg-[#051c14] text-[#f8fafc] py-16 lg:py-24 pb-12 mt-0">
+      <div className="container grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 pb-12 lg:pb-16">
+        <div className="flex flex-col gap-8 items-center lg:items-start text-center lg:text-left">
+          <a href={translatePath('/')} className="transition-opacity hover:opacity-80">
+            <img src="/images/logo.webp" alt="Logo" className="h-[60px] w-auto" />
           </a>
-          <p className="footer-tagline">
+          <p className="text-white/55 leading-loose text-[0.88rem] max-w-[260px]">
             {t('footer.tagline')}
           </p>
-          <div className="social-links">
+          <div className="flex gap-3">
             <a
               href="https://instagram.com/machupicchu_andes"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
+              className="w-[38px] h-[38px] bg-white/5 rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-secondary hover:text-white hover:-translate-y-1"
             >
               <Instagram size={20} />
             </a>
@@ -34,51 +35,52 @@ export default function Footer({ lang }: Props) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
+              className="w-[38px] h-[38px] bg-white/5 rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-secondary hover:text-white hover:-translate-y-1"
             >
               <Facebook size={20} />
             </a>
           </div>
         </div>
 
-        <div className="footer-nav">
-          <div className="footer-col">
-            <h3>{t('footer.expeditions')}</h3>
-            <ul>
-              <li><a href={translatePath('/inca-trail')}>{t('nav.inca')}</a></li>
-              <li><a href={translatePath('/alternative-treks')}>{t('nav.alternative')}</a></li>
-              <li><a href={translatePath('/other-treks')}>{t('nav.other')}</a></li>
-              <li><a href={translatePath('/tour-days')}>{t('nav.daily')}</a></li>
-              <li><a href={translatePath('/luxury')}>{t('nav.luxury')}</a></li>
-              <li><a href={translatePath('/ayni-project')}>{t('nav.ayni')}</a></li>
-              <li><a href="#">{lang === 'en' ? 'Luxury Custom Trips' : 'Viajes Personalizados'}</a></li>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 text-center md:text-left">
+          <div className="flex flex-col gap-4">
+            <h3 className="serif text-lg text-white">{t('footer.expeditions')}</h3>
+            <ul className="flex flex-col gap-2 list-none p-0 m-0">
+              <li><a href={translatePath('/inca-trail')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.inca')}</a></li>
+              <li><a href={translatePath('/alternative-treks')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.alternative')}</a></li>
+              <li><a href={translatePath('/other-treks')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.other')}</a></li>
+              <li><a href={translatePath('/tour-days')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.daily')}</a></li>
+              <li><a href={translatePath('/luxury')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.luxury')}</a></li>
+              <li><a href={translatePath('/ayni-project')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.ayni')}</a></li>
+              <li><a href="#" className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{lang === 'en' ? 'Luxury Custom Trips' : 'Viajes Personalizados'}</a></li>
             </ul>
           </div>
 
-          <div className="footer-col">
-            <h3>{t('footer.resources')}</h3>
-            <ul>
-              <li><a href="#">{t('footer.safety')}</a></li>
-              <li><a href="#">{t('footer.packing')}</a></li>
-              <li><a href="#">{t('footer.altitude')}</a></li>
-              <li><a href="#">{t('footer.faq')}</a></li>
+          <div className="flex flex-col gap-4">
+            <h3 className="serif text-lg text-white">{t('footer.resources')}</h3>
+            <ul className="flex flex-col gap-2 list-none p-0 m-0">
+              <li><a href="#" className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('footer.safety')}</a></li>
+              <li><a href="#" className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('footer.packing')}</a></li>
+              <li><a href="#" className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('footer.altitude')}</a></li>
+              <li><a href="#" className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('footer.faq')}</a></li>
             </ul>
           </div>
 
-          <div className="footer-col">
-            <h3>{t('footer.contact')}</h3>
-            <ul className="footer-contact-list">
+          <div className="flex flex-col gap-4">
+            <h3 className="serif text-lg text-white">{t('footer.contact')}</h3>
+            <ul className="flex flex-col gap-2 list-none p-0 m-0">
               <li>
-                <a href="mailto:info@machupicchuandesmarathon.com">
-                  <Mail size={18} /> info@machupicchuandesmarathon.com
+                <a href="mailto:info@machupicchuandesmarathon.com" className="flex items-center justify-center md:justify-start gap-2 text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary">
+                  <Mail size={16} /> info@machupicchuandesmarathon.com
                 </a>
               </li>
               <li>
-                <a href="tel:+51993187203">
-                  <Phone size={18} /> +51 993 187 203
+                <a href="tel:+51993187203" className="flex items-center justify-center md:justify-start gap-2 text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary">
+                  <Phone size={16} /> +51 993 187 203
                 </a>
               </li>
-              <li className="footer-address">
-                <MapPin size={18} /> 
+              <li className="flex items-start justify-center md:justify-start gap-2 text-white/60 text-[0.82rem] leading-snug">
+                <MapPin size={16} className="shrink-0 mt-0.5" /> 
                 <span>Jr. Santa Rosa P7, Cusco – Perú</span>
               </li>
             </ul>
@@ -86,29 +88,29 @@ export default function Footer({ lang }: Props) {
         </div>
       </div>
 
-      <div className="footer-trust container">
-        <div className="trust-item">
-          <Shield size={16} />
+      <div className="container flex flex-col md:flex-row justify-center items-center gap-6 md:gap-16 py-8 border-y border-white/5 mb-0 px-6 md:px-0">
+        <div className="flex items-center gap-3 text-white/60 text-[0.65rem] font-bold uppercase tracking-widest text-center">
+          <Shield size={16} className="text-secondary" />
           <span>{t('trust.secure')}</span>
         </div>
-        <div className="trust-item">
-          <Award size={16} />
+        <div className="flex items-center gap-3 text-white/60 text-[0.65rem] font-bold uppercase tracking-widest text-center">
+          <Award size={16} className="text-secondary" />
           <span>{t('trust.certified')}</span>
         </div>
-        <div className="trust-item">
-          <Users size={16} />
+        <div className="flex items-center gap-3 text-white/60 text-[0.65rem] font-bold uppercase tracking-widest text-center">
+          <Users size={16} className="text-secondary" />
           <span>{t('trust.small')}</span>
         </div>
       </div>
 
-      <div className="footer-bottom container">
-        <div className="footer-legal">
-          <p>
+      <div className="container pt-6 pb-4">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[0.68rem] text-white/30 text-center md:text-left">
+          <p className="m-0 font-normal">
             &copy; {new Date().getFullYear()} Machu Picchu Andes Marathon. {lang === 'en' ? 'All rights reserved.' : 'Todos los derechos reservados.'}
           </p>
-          <div className="legal-links">
-            <a href="#">{lang === 'en' ? 'Privacy Policy' : 'Política de Privacidad'}</a>
-            <a href="#">{lang === 'en' ? 'Terms of Service' : 'Términos de Servicio'}</a>
+          <div className="flex gap-8 justify-center font-normal">
+            <a href="#" className="no-underline transition-colors hover:text-white">{lang === 'en' ? 'Privacy Policy' : 'Política de Privacidad'}</a>
+            <a href="#" className="no-underline transition-colors hover:text-white">{lang === 'en' ? 'Terms of Service' : 'Términos de Servicio'}</a>
           </div>
         </div>
       </div>

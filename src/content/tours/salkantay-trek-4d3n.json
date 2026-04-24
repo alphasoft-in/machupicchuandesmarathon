@@ -26,8 +26,23 @@
     "itinerary": [
       {
         "day": 1,
-        "title": "Salkantay Trail",
-        "description": "Explore the breathtaking Andean wilderness on the way to Machu Picchu."
+        "title": "Cusco – Soraypampa – Humantay Lake",
+        "description": "Early morning drive to Soraypampa (3,900m). Hike up to the stunning Humantay Lake (4,200m) to acclimatize. Return to Soraypampa for lunch and camp overnight with views of the Salkantay peak."
+      },
+      {
+        "day": 2,
+        "title": "Soraypampa – Salkantay Pass – Chaullay",
+        "description": "The most challenging day. Hike up to the Salkantay Pass (4,600m) enjoying spectacular views of the glacier. Descend into the cloud forest and camp at Chaullay (2,900m)."
+      },
+      {
+        "day": 3,
+        "title": "Chaullay – Lucmabamba – Hidroelectrica – Aguas Calientes",
+        "description": "Hike through the lush high jungle, passing coffee and passion fruit plantations. From Lucmabamba, take transport to Hidroelectrica, then walk along the train tracks to Aguas Calientes for a hotel stay."
+      },
+      {
+        "day": 4,
+        "title": "Aguas Calientes – Machu Picchu – Cusco",
+        "description": "Early bus to Machu Picchu. Enjoy a guided tour of the citadel. Afternoon train and private transport back to Cusco."
       }
     ]
   },
@@ -53,8 +68,23 @@
     "itinerary": [
       {
         "day": 1,
-        "title": "Sendero Salkantay",
-        "description": "Explora la impresionante naturaleza andina en camino a Machu Picchu."
+        "title": "Cusco – Soraypampa – Laguna Humantay",
+        "description": "Viaje temprano a Soraypampa (3,900m). Caminata hacia la impresionante Laguna Humantay (4,200m) para aclimatar. Regreso a Soraypampa para el almuerzo y campamento con vistas al nevado Salkantay."
+      },
+      {
+        "day": 2,
+        "title": "Soraypampa – Paso Salkantay – Chaullay",
+        "description": "El día más exigente. Subida al Paso Salkantay (4,600m) disfrutando de vistas espectaculares del glaciar. Descenso hacia el bosque nuboso y campamento en Chaullay (2,900m)."
+      },
+      {
+        "day": 3,
+        "title": "Chaullay – Lucmabamba – Hidroeléctrica – Aguas Calientes",
+        "description": "Caminata por la selva alta, pasando por plantaciones de café y maracuyá. Desde Lucmabamba, transporte a Hidroeléctrica y caminata por las vías del tren hasta Aguas Calientes para pasar la noche en un hotel."
+      },
+      {
+        "day": 4,
+        "title": "Aguas Calientes – Machu Picchu – Cusco",
+        "description": "Bus temprano a Machu Picchu. Tour guiado por la ciudadela. Por la tarde, tren y transporte privado de regreso a Cusco."
       }
     ]
   }

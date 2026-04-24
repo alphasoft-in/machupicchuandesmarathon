@@ -25,8 +25,28 @@
     "itinerary": [
       {
         "day": 1,
-        "title": "Choquequirao Extended",
-        "description": "Spend more time exploring the terraces and plazas of the city."
+        "title": "Cusco – Capuliyoc – Chiquiska",
+        "description": "Depart Cusco early morning, driving to Capuliyoc pass (2,900m). Enjoy panoramic views of the Apurimac canyon. Hike down to our first camp at Chiquiska (1,930m)."
+      },
+      {
+        "day": 2,
+        "title": "Chiquiska – Playa Rosalina – Marampata",
+        "description": "Descend to Playa Rosalina (1,550m) to cross the Apurimac River. Challenge yourself with an uphill hike to Marampata (2,850m) where we will camp and enjoy spectacular sunset views over the canyon."
+      },
+      {
+        "day": 3,
+        "title": "Marampata – Choquequirao (Full Day Exploration)",
+        "description": "A short hike brings us to the Choquequirao ruins. Spend the entire day exploring the vast archaeological complex, including the main plaza, terraces, and the famous llamas sector without rushing. Camp near the ruins."
+      },
+      {
+        "day": 4,
+        "title": "Choquequirao – Playa Rosalina – Chiquiska",
+        "description": "Enjoy a final morning view of Choquequirao before descending back to the Apurimac River at Playa Rosalina. Cross the bridge and hike up to Chiquiska camp for the night."
+      },
+      {
+        "day": 5,
+        "title": "Chiquiska – Capuliyoc – Cusco",
+        "description": "An early hike up to the Capuliyoc pass. Celebrate the completion of the trek, say goodbye to our team, and drive back to Cusco, arriving in the late afternoon."
       }
     ]
   },
@@ -51,8 +71,28 @@
     "itinerary": [
       {
         "day": 1,
-        "title": "Choquequirao Extendido",
-        "description": "Pasa más tiempo explorando las terrazas y plazas de la ciudad."
+        "title": "Cusco – Capuliyoc – Chiquiska",
+        "description": "Salida de Cusco temprano hacia el paso de Capuliyoc (2,900m). Disfruta de vistas panorámicas del cañón del Apurímac. Descenso hasta nuestro primer campamento en Chiquiska (1,930m)."
+      },
+      {
+        "day": 2,
+        "title": "Chiquiska – Playa Rosalina – Marampata",
+        "description": "Descenso a Playa Rosalina (1,550m) para cruzar el río Apurímac. Desafíate con un ascenso hasta Marampata (2,850m) donde acamparemos y disfrutaremos de espectaculares vistas del atardecer."
+      },
+      {
+        "day": 3,
+        "title": "Marampata – Choquequirao (Día Completo)",
+        "description": "Una corta caminata nos lleva a las ruinas de Choquequirao. Pasa todo el día explorando el vasto complejo arqueológico, incluyendo la plaza principal, andenes y el sector de las llamas sin prisas. Campamento cerca a las ruinas."
+      },
+      {
+        "day": 4,
+        "title": "Choquequirao – Playa Rosalina – Chiquiska",
+        "description": "Disfruta de una última vista matutina de Choquequirao antes de descender de regreso al río Apurímac en Playa Rosalina. Cruza el puente y sube al campamento de Chiquiska."
+      },
+      {
+        "day": 5,
+        "title": "Chiquiska – Capuliyoc – Cusco",
+        "description": "Caminata matutina hasta el paso de Capuliyoc. Celebramos el fin del trek, nos despedimos de nuestro equipo y regresamos a Cusco por la tarde."
       }
     ]
   }

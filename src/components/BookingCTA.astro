@@ -11,59 +11,58 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<section id="contact" class="cta-section">
+<section id="contact" class="min-h-[55vh] flex items-center relative overflow-hidden py-20 bg-cover bg-center bg-[linear-gradient(rgba(14,59,46,0.85),rgba(14,59,46,0.95)),url('/images/marathon.webp')]">
   <div class="container">
-    <div class="cta-grid animate-fade-in">
-      <div class="cta-info">
-        <div class="cta-eyebrow">
-          <span class="cta-eyebrow-dot"></span>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center animate-in fade-in duration-700">
+      <div class="text-center lg:text-left">
+        <div class="text-[0.7rem] font-bold uppercase tracking-[2px] text-secondary mb-5 text-center lg:text-left">
           {lang === 'en' ? 'Expert-guided expeditions since 2010' : 'Expediciones con guías expertos desde 2010'}
         </div>
 
-        <h2 class="serif">{t('booking.title')}</h2>
-        <p class="cta-subtitle">{t('booking.subtitle')}</p>
+        <h2 class="serif text-4xl lg:text-[2.4rem] leading-[1.1] mb-3 text-white">{t('booking.title')}</h2>
+        <p class="text-white/70 text-base leading-relaxed mb-10 max-w-[500px] mx-auto lg:mx-0">{t('booking.subtitle')}</p>
 
-        <div class="contact-card-list">
-          <a href="mailto:info@machupicchuandesmarathon.com" class="contact-item contact-item--link">
-            <div class="item-icon"><Mail size={18} /></div>
-            <div>
-              <strong>{lang === 'en' ? 'Email Us' : 'Escríbenos'}</strong>
-              <p>info@machupicchuandesmarathon.com</p>
+        <div class="flex flex-col gap-3 mb-10">
+          <a href="mailto:info@machupicchuandesmarathon.com" class="flex items-center gap-4 p-4 sm:p-[0.85rem_1rem] rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 max-w-[400px] mx-auto lg:mx-0 no-underline w-full">
+            <div class="w-[38px] h-[38px] bg-white/10 rounded-xl flex items-center justify-center text-secondary shrink-0"><Mail size={18} /></div>
+            <div class="text-left min-w-0">
+              <strong class="block text-[0.65rem] font-bold uppercase tracking-[1.5px] text-secondary mb-0.5">{lang === 'en' ? 'Email Us' : 'Escríbenos'}</strong>
+              <p class="m-0 text-[0.75rem] sm:text-[0.88rem] text-white/90 leading-[1.3] break-all sm:break-normal">info@machupicchuandesmarathon.com</p>
             </div>
           </a>
-          <a href="https://wa.me/51993187203" target="_blank" rel="noopener" class="contact-item contact-item--link">
-            <div class="item-icon item-icon--whatsapp"><Phone size={18} /></div>
-            <div>
-              <strong>{lang === 'en' ? 'Call / WhatsApp' : 'Llámanos / WhatsApp'}</strong>
-              <p>+51 993 187 203</p>
+          <a href="https://wa.me/51993187203" target="_blank" rel="noopener" class="flex items-center gap-4 p-4 sm:p-[0.85rem_1rem] rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 max-w-[400px] mx-auto lg:mx-0 no-underline w-full">
+            <div class="w-[38px] h-[38px] bg-white/10 rounded-xl flex items-center justify-center text-secondary shrink-0"><Phone size={18} /></div>
+            <div class="text-left min-w-0">
+              <strong class="block text-[0.65rem] font-bold uppercase tracking-[1.5px] text-secondary mb-0.5">{lang === 'en' ? 'Call / WhatsApp' : 'Llámanos / WhatsApp'}</strong>
+              <p class="m-0 text-[0.88rem] text-white/90 leading-[1.3]">+51 993 187 203</p>
             </div>
           </a>
-          <div class="contact-item">
-            <div class="item-icon"><MapPin size={18} /></div>
-            <div>
-              <strong>{lang === 'en' ? 'Visit Our HQ' : 'Visítanos'}</strong>
-              <p>Jr. Santa Rosa P7, Cusco – Perú</p>
+          <div class="flex items-center gap-4 p-4 sm:p-[0.85rem_1rem] rounded-2xl bg-white/5 border border-white/10 max-w-[400px] mx-auto lg:mx-0 w-full">
+            <div class="w-[38px] h-[38px] bg-white/10 rounded-xl flex items-center justify-center text-secondary shrink-0"><MapPin size={18} /></div>
+            <div class="text-left min-w-0">
+              <strong class="block text-[0.65rem] font-bold uppercase tracking-[1.5px] text-secondary mb-0.5">{lang === 'en' ? 'Visit Our HQ' : 'Visítanos'}</strong>
+              <p class="m-0 text-[0.88rem] text-white/90 leading-[1.3]">Jr. Santa Rosa P7, Cusco – Perú</p>
             </div>
           </div>
         </div>
 
-        <div class="trust-badges">
-          <div class="badge-item">
-            <CheckCircle size={16} />
+        <div class="flex flex-wrap justify-center lg:justify-start gap-2 mt-8 pt-6 border-t border-white/10 max-w-[500px] mx-auto lg:mx-0">
+          <div class="flex items-center gap-1.5 text-[0.65rem] sm:text-[0.7rem] font-semibold text-white/80 bg-white/5 p-1.5 sm:p-2 px-3 sm:px-4 rounded-full border border-white/10">
+            <CheckCircle size={14} className="text-green-400 shrink-0" />
             <span>{lang === 'en' ? 'Licensed Operator' : 'Operador Licenciado'}</span>
           </div>
-          <div class="badge-item">
-            <CheckCircle size={16} />
+          <div class="flex items-center gap-1.5 text-[0.65rem] sm:text-[0.7rem] font-semibold text-white/80 bg-white/5 p-1.5 sm:p-2 px-3 sm:px-4 rounded-full border border-white/10">
+            <CheckCircle size={14} className="text-green-400 shrink-0" />
             <span>{lang === 'en' ? '100% Local Guides' : 'Guías 100% Locales'}</span>
           </div>
-          <div class="badge-item">
-            <CheckCircle size={16} />
+          <div class="flex items-center gap-1.5 text-[0.65rem] sm:text-[0.7rem] font-semibold text-white/80 bg-white/5 p-1.5 sm:p-2 px-3 sm:px-4 rounded-full border border-white/10">
+            <CheckCircle size={14} className="text-green-400 shrink-0" />
             <span>{lang === 'en' ? 'Free Cancellation' : 'Cancelación Gratuita'}</span>
           </div>
         </div>
       </div>
       
-      <div class="cta-form-wrapper">
+      <div class="bg-white p-8 md:p-14 rounded-[40px] shadow-[0_40px_100px_rgba(0,0,0,0.3)] max-w-[520px] w-full mx-auto flex flex-col justify-center">
         <BookingForm client:visible lang={lang} tours={[]} />
       </div>
     </div>

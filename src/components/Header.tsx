@@ -36,24 +36,29 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
   ];
 
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
-      <nav className="nav container">
-        <div className="header-left">
-          <a href={translatePath('/')} className="logo">
+    <header 
+      className={`fixed top-0 left-0 w-full z-[9999] transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white/95 backdrop-blur-md py-4 shadow-[0_10px_30px_rgba(0,0,0,0.15)]' 
+          : 'bg-black/20 backdrop-blur-sm py-6'
+      }`}
+    >
+      <nav className="flex justify-between items-center max-w-[1400px] mx-auto px-4 md:px-8">
+        <div className="flex items-center min-w-0">
+          <a href={translatePath('/')} className="flex-shrink-0">
             <img 
               src="/images/logo.webp" 
               alt="Machu Picchu Andes Marathon" 
-              className="logo-img" 
+              className={`w-auto transition-all duration-300 ease-in-out ${isScrolled ? 'h-[32px] md:h-[40px]' : 'h-[38px] md:h-[48px]'}`} 
             />
           </a>
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="nav-links desktop-only">
+        <ul className="hidden md:flex gap-4 lg:gap-6 items-center ml-6 lg:ml-8 list-none m-0 p-0">
           {navLinks.map((link) => {
             const isHome = link.path === '/';
             const translated = translatePath(link.path);
-            // Handle home path matching specifically if needed
             const isActive = isHome 
               ? (currentPath === `/${lang}` || currentPath === `/${lang}/` || currentPath === '/')
               : (currentPath === translated || currentPath === `${translated}/`);
@@ -62,33 +67,54 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
               <li key={link.path}>
                 <a 
                   href={translated} 
-                  className={isActive ? 'active' : ''}
+                  className={`group relative py-2 text-sm font-medium tracking-wide transition-colors duration-300 whitespace-nowrap ${
+                    isActive ? '!text-secondary' : isScrolled ? 'text-primary hover:text-secondary' : 'text-white hover:text-white/80'
+                  }`}
                 >
                   {link.name}
+                  <span className={`absolute bottom-0 left-0 h-[2px] bg-secondary transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                 </a>
               </li>
             );
           })}
         </ul>
 
-        <div className="header-right">
-          <div className="nav-socials desktop-only">
-            <a href="#" target="_blank" aria-label="Instagram"><Instagram size={18} /></a>
-            <a href="#" target="_blank" aria-label="Facebook"><Facebook size={18} /></a>
-            <a href="#" target="_blank" aria-label="WhatsApp"><WhatsApp size={18} /></a>
+        <div className="flex items-center gap-2 sm:gap-5 shrink-0">
+          <div className={`hidden lg:flex gap-4 pr-5 border-r transition-colors duration-300 ${isScrolled ? 'border-black/10' : 'border-white/20'}`}>
+            <a href="#" target="_blank" aria-label="Instagram" className={`transition-colors duration-300 hover:!text-secondary ${isScrolled ? 'text-primary' : 'text-white'}`}><Instagram size={18} /></a>
+            <a href="#" target="_blank" aria-label="Facebook" className={`transition-colors duration-300 hover:!text-secondary ${isScrolled ? 'text-primary' : 'text-white'}`}><Facebook size={18} /></a>
+            <a href="#" target="_blank" aria-label="WhatsApp" className={`transition-colors duration-300 hover:!text-secondary ${isScrolled ? 'text-primary' : 'text-white'}`}><WhatsApp size={18} /></a>
           </div>
 
-          <div className="lang-switcher">
-            <a href={switchPath} className={lang === 'en' ? 'active' : ''}>EN</a>
-            <a href={switchPath} className={lang === 'es' ? 'active' : ''}>ES</a>
+          <div className={`flex items-center gap-0.5 p-0.5 rounded-full border transition-all duration-300 ${isScrolled ? 'bg-slate-100 border-slate-200' : 'bg-white/10 border-white/20'}`}>
+            <a 
+              href={switchPath} 
+              className={`text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full transition-all duration-300 ${
+                lang === 'en' 
+                  ? 'bg-secondary text-white opacity-100' 
+                  : `opacity-60 hover:opacity-100 ${isScrolled ? 'text-slate-600' : 'text-white'}`
+              }`}
+            >
+              EN
+            </a>
+            <a 
+              href={switchPath} 
+              className={`text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full transition-all duration-300 ${
+                lang === 'es' 
+                  ? 'bg-secondary text-white opacity-100' 
+                  : `opacity-60 hover:opacity-100 ${isScrolled ? 'text-slate-600' : 'text-white'}`
+              }`}
+            >
+              ES
+            </a>
           </div>
 
           <button 
-            className="mobile-toggle" 
+            className={`block md:hidden focus:outline-none transition-colors duration-300 ${isScrolled ? 'text-primary' : 'text-white'}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Menu"
           >
-            {isMenuOpen ? <X className="icon" /> : <Menu className="icon" />}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </nav>
@@ -97,36 +123,37 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
-            className="nav-links active"
+            className="fixed top-0 right-0 w-[280px] h-screen bg-white flex flex-col pt-24 px-8 shadow-[-10px_0_50px_rgba(0,0,0,0.2)] z-[-1]"
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            style={{ display: 'flex', padding: '6rem 3rem' }}
           >
-            {navLinks.map((link) => {
-              const isHome = link.path === '/';
-              const translated = translatePath(link.path);
-              const isActive = isHome 
-                ? (currentPath === `/${lang}` || currentPath === `/${lang}/` || currentPath === '/')
-                : (currentPath === translated || currentPath === `${translated}/`);
+            <ul className="flex flex-col w-full m-0 p-0 list-none">
+              {navLinks.map((link) => {
+                const isHome = link.path === '/';
+                const translated = translatePath(link.path);
+                const isActive = isHome 
+                  ? (currentPath === `/${lang}` || currentPath === `/${lang}/` || currentPath === '/')
+                  : (currentPath === translated || currentPath === `${translated}/`);
 
-              return (
-                <li key={link.path}>
-                  <a 
-                    href={translated} 
-                    className={isActive ? 'active' : ''}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              );
-            })}
-            <div className="mobile-socials" style={{ marginTop: '3rem', display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
-              <a href="#" target="_blank" aria-label="Instagram"><Instagram size={24} color="#333" /></a>
-              <a href="#" target="_blank" aria-label="Facebook"><Facebook size={24} color="#333" /></a>
-              <a href="#" target="_blank" aria-label="WhatsApp"><WhatsApp size={24} color="#333" /></a>
+                return (
+                  <li key={link.path} className="w-full">
+                    <a 
+                      href={translated} 
+                      className={`block w-full py-4 text-xl font-medium border-b border-gray-100 transition-colors ${isActive ? 'text-secondary' : 'text-primary'}`}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="mt-12 flex gap-6 justify-center w-full text-primary">
+              <a href="#" target="_blank" aria-label="Instagram" className="hover:text-secondary transition-colors"><Instagram size={28} /></a>
+              <a href="#" target="_blank" aria-label="Facebook" className="hover:text-secondary transition-colors"><Facebook size={28} /></a>
+              <a href="#" target="_blank" aria-label="WhatsApp" className="hover:text-secondary transition-colors"><WhatsApp size={28} /></a>
             </div>
           </motion.div>
         )}

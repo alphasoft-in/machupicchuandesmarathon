@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { useTranslations, useTranslatedPath } from '../../utils/i18n';
 import PageHeader from '../../components/PageHeader';
-
+import PremiumCTA from '../../components/PremiumCTA.astro';
 import { Sun, Zap, Users, GraduationCap, Heart, Leaf, Rocket } from 'lucide-react';
 
 export function getStaticPaths() {
@@ -156,7 +156,7 @@ const tAyni = content[lang];
     </div>
   </section>
 
-
+  <PremiumCTA lang={lang} />
 </Layout>
 
 <style>

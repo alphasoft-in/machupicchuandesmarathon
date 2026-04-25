@@ -20,7 +20,7 @@ export default function Footer({ lang }: Props) {
   const translatePath = useTranslatedPath(lang);
   
   return (
-    <footer className="bg-[#051c14] text-[#f8fafc] py-16 lg:py-24 pb-12 mt-0">
+    <footer className="bg-[#051c14] text-[#f8fafc] py-10 lg:py-12 pb-12 mt-0">
       <div className="container grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 pb-12 lg:pb-16">
         <div className="flex flex-col gap-8 items-center lg:items-start text-center lg:text-left">
           <a href={translatePath('/')} className="transition-opacity hover:opacity-80">

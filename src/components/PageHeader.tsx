@@ -12,7 +12,7 @@ interface Props {
 export default function PageHeader({ lang, title, titleAccent, subtitle, bgImage }: Props) {
   return (
     <section 
-      className="relative min-h-[55vh] flex items-center justify-center text-center pt-[180px] pb-20 text-white bg-cover bg-center bg-no-repeat"
+      className="relative min-h-[55vh] flex items-center justify-center text-center pt-[180px] pb-12 text-white bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-[#0e3b2e]/85 z-10"></div>

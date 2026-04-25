@@ -21,7 +21,7 @@ const translatePath = useTranslatedPath(lang);
 const allTours = await getCollection('tours');
 const luxuryTours = allTours
   .map(t => t.data)
-  .filter(t => t.en.tag === 'Luxury');
+  .filter(t => t.category === 'luxury');
 ---
 
 <Layout title={`${t('nav.luxury')} | Machu Picchu Andes Marathon`} lang={lang}>

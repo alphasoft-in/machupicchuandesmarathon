@@ -11,7 +11,7 @@ export default function BookingCTA({ lang }: Props) {
   const t = useTranslations(lang);
 
   return (
-    <section id="contact" className="w-full relative overflow-hidden py-24 bg-cover bg-center bg-[linear-gradient(rgba(14,59,46,0.85),rgba(14,59,46,0.95)),url('/images/marathon.webp')]">
+    <section id="contact" className="w-full relative overflow-hidden py-24 bg-cover bg-center bg-[linear-gradient(rgba(14,59,46,0.85),rgba(14,59,46,0.95)),url('/images/home/book-your-expedition.png')]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center justify-items-center">
           <div className="text-center lg:text-left">
@@ -61,7 +61,7 @@ export default function BookingCTA({ lang }: Props) {
               </div>
             </div>
           </div>
-          
+
           <div className="bg-white p-8 md:p-14 rounded-[40px] shadow-[0_40px_100px_rgba(0,0,0,0.3)] max-w-[520px] w-full mx-auto flex flex-col justify-center">
             <BookingForm lang={lang} tours={[]} />
           </div>

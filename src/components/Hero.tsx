@@ -11,10 +11,10 @@ interface Props {
 
 export default function Hero({ lang, subtitle, ctaText, categoryPath }: Props) {
   return (
-    <section id="home" className="relative flex items-center justify-center h-screen min-h-[700px] overflow-hidden text-center text-white bg-primary bg-[linear-gradient(rgba(0,0,0,0.4),rgba(14,59,46,0.7)),url('/images/hero_new.png')] bg-[position:center_25%] bg-cover bg-no-repeat">
+    <section id="home" className="relative flex items-center justify-center h-screen min-h-[700px] overflow-hidden text-center text-white bg-primary bg-[linear-gradient(rgba(0,0,0,0.4),rgba(14,59,46,0.7)),url('/images/hero.png')] bg-[position:center_25%] bg-cover bg-no-repeat">
       <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_top,rgba(14,59,46,0.8),transparent)] z-10"></div>
       <div className="relative z-20 container max-w-[900px] px-4 mx-auto">
-        <motion.div 
+        <motion.div
           className="flex items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -26,16 +26,16 @@ export default function Hero({ lang, subtitle, ctaText, categoryPath }: Props) {
           </span>
           <div className="h-[1px] w-8 sm:w-12 bg-white/30 hidden xs:block"></div>
         </motion.div>
-        
-        <motion.h1 
+
+        <motion.h1
           className="serif text-[clamp(1.8rem,6vw,3.5rem)] leading-[1.1] mb-6 sm:mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Machu Picchu <br/> <span className="block text-secondary">Andes Marathon</span>
+          Machu Picchu <br /> <span className="block text-secondary">Andes Marathon</span>
         </motion.h1>
-        
+
         <motion.p
           className="text-[clamp(0.85rem,4vw,1.1rem)] max-w-[600px] mx-auto mb-10 sm:mb-[clamp(2rem,5vw,3.5rem)] opacity-90 leading-relaxed px-4"
           initial={{ opacity: 0, y: 20 }}
@@ -44,8 +44,8 @@ export default function Hero({ lang, subtitle, ctaText, categoryPath }: Props) {
         >
           {subtitle}
         </motion.p>
-        
-        <motion.div 
+
+        <motion.div
           className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

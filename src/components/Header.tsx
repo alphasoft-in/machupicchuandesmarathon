@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Instagram, Facebook, Phone as WhatsApp } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import { useTranslations, useTranslatedPath } from '../utils/i18n';
+import SocialIcon from './SocialIcon';
 
 interface Props {
   lang: 'en' | 'es';
@@ -35,6 +35,14 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
     { name: t('nav.daily'), path: '/tour-days' },
   ];
 
+  const socialLinks = [
+    { icon: 'tripadvisor', label: 'TripAdvisor', url: 'https://www.tripadvisor.com.pe/UserReviewEdit-g294314-d28603761-Machupicchu_Andes_Marathon-Cusco_Cusco_Region.html', scale: 1.2 },
+    { icon: 'googlemaps', label: 'Google Maps', url: 'https://share.google/pAUNF0pj4QE86i5Hu', scale: 1.25 },
+    { icon: 'instagram', label: 'Instagram', url: 'https://instagram.com/machupicchu_andes' },
+    { icon: 'facebook', label: 'Facebook', url: 'https://www.facebook.com/machupicchuandesmarathn' },
+    { icon: 'tiktok', label: 'TikTok', url: '#' },
+  ];
+
   return (
     <header 
       className={`fixed top-0 left-0 w-full z-[9999] transition-all duration-300 ${
@@ -49,13 +57,13 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
             <img 
               src="/images/logo.webp" 
               alt="Machu Picchu Andes Marathon" 
-              className={`w-auto transition-all duration-300 ease-in-out ${isScrolled ? 'h-[32px] md:h-[40px]' : 'h-[38px] md:h-[48px]'}`} 
+              className={`w-auto transition-all duration-300 ease-in-out ${isScrolled ? 'h-[32px] md:h-[40px] 2xl:h-[48px]' : 'h-[38px] md:h-[48px] 2xl:h-[60px]'}`} 
             />
           </a>
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex gap-4 lg:gap-6 items-center ml-6 lg:ml-8 list-none m-0 p-0">
+        <ul className="hidden xl:flex gap-4 xl:gap-6 items-center ml-4 xl:ml-8 list-none m-0 p-0">
           {navLinks.map((link) => {
             const isHome = link.path === '/';
             const translated = translatePath(link.path);
@@ -67,7 +75,7 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
               <li key={link.path}>
                 <a 
                   href={translated} 
-                  className={`group relative py-2 text-sm font-medium tracking-wide transition-colors duration-300 whitespace-nowrap ${
+                  className={`group relative py-2 text-[13px] xl:text-base 2xl:text-lg font-semibold tracking-wide transition-colors duration-300 whitespace-nowrap ${
                     isActive ? '!text-secondary' : isScrolled ? 'text-primary hover:text-secondary' : 'text-white hover:text-white/80'
                   }`}
                 >
@@ -79,19 +87,15 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
           })}
         </ul>
 
-        <div className="flex items-center gap-2 sm:gap-5 shrink-0">
-          <div className={`hidden lg:flex gap-4 pr-5 border-r transition-colors duration-300 ${isScrolled ? 'border-black/10' : 'border-white/20'}`}>
-            <a href="#" target="_blank" aria-label="Instagram" className={`transition-colors duration-300 hover:!text-secondary ${isScrolled ? 'text-primary' : 'text-white'}`}><Instagram size={18} /></a>
-            <a href="#" target="_blank" aria-label="Facebook" className={`transition-colors duration-300 hover:!text-secondary ${isScrolled ? 'text-primary' : 'text-white'}`}><Facebook size={18} /></a>
-            <a href="#" target="_blank" aria-label="WhatsApp" className={`transition-colors duration-300 hover:!text-secondary ${isScrolled ? 'text-primary' : 'text-white'}`}><WhatsApp size={18} /></a>
-          </div>
+        <div className="flex items-center gap-3 xl:gap-5 shrink-0">
+
 
           <div className={`flex items-center gap-0.5 p-0.5 rounded-full border transition-all duration-300 ${isScrolled ? 'bg-slate-100 border-slate-200' : 'bg-white/10 border-white/20'}`}>
             <a 
               href={switchPath} 
               className={`text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full transition-all duration-300 ${
                 lang === 'en' 
-                  ? 'bg-secondary text-white opacity-100' 
+                  ? 'bg-secondary text-white shadow-sm' 
                   : `opacity-60 hover:opacity-100 ${isScrolled ? 'text-slate-600' : 'text-white'}`
               }`}
             >
@@ -101,7 +105,7 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
               href={switchPath} 
               className={`text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full transition-all duration-300 ${
                 lang === 'es' 
-                  ? 'bg-secondary text-white opacity-100' 
+                  ? 'bg-secondary text-white shadow-sm' 
                   : `opacity-60 hover:opacity-100 ${isScrolled ? 'text-slate-600' : 'text-white'}`
               }`}
             >
@@ -110,11 +114,11 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
           </div>
 
           <button 
-            className={`block md:hidden focus:outline-none transition-colors duration-300 ${isScrolled ? 'text-primary' : 'text-white'}`}
+            className={`block xl:hidden focus:outline-none transition-colors duration-300 ${isScrolled ? 'text-primary' : 'text-white'}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </nav>
@@ -150,10 +154,18 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
                 );
               })}
             </ul>
-            <div className="mt-12 flex gap-6 justify-center w-full text-primary">
-              <a href="#" target="_blank" aria-label="Instagram" className="hover:text-secondary transition-colors"><Instagram size={28} /></a>
-              <a href="#" target="_blank" aria-label="Facebook" className="hover:text-secondary transition-colors"><Facebook size={28} /></a>
-              <a href="#" target="_blank" aria-label="WhatsApp" className="hover:text-secondary transition-colors"><WhatsApp size={28} /></a>
+            <div className="mt-12 flex flex-wrap gap-6 justify-center w-full text-primary">
+              {socialLinks.map((link) => (
+                <a 
+                  key={link.icon}
+                  href={link.url} 
+                  target="_blank" 
+                  aria-label={link.label} 
+                  className="hover:text-secondary transition-all"
+                >
+                  <SocialIcon icon={link.icon} size={28 * (link.scale || 1)} />
+                </a>
+              ))}
             </div>
           </motion.div>
         )}

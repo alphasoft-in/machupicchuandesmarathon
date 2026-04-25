@@ -28,7 +28,7 @@ export default function Hero({ lang, subtitle, ctaText, categoryPath }: Props) {
         </motion.div>
         
         <motion.h1 
-          className="serif text-[clamp(1.8rem,7vw,4.2rem)] leading-[1.1] mb-6 sm:mb-8"
+          className="serif text-[clamp(1.8rem,6vw,3.5rem)] leading-[1.1] mb-6 sm:mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}

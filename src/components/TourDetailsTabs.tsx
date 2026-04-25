@@ -23,24 +23,18 @@ export default function TourDetailsTabs({ lang, content, tour }: Props) {
 
   return (
     <div className="w-full">
-      <nav className="flex gap-4 sm:gap-8 border-b border-slate-100 mb-10 overflow-x-auto no-scrollbar scroll-smooth" aria-label="Tour Information">
+      <nav className="flex gap-2 p-1 bg-slate-50/50 rounded-2xl border border-slate-100 mb-10 overflow-x-auto no-scrollbar scroll-smooth w-fit max-w-full" aria-label="Tour Information">
         {tabs.map((tab) => (
           <button
             key={tab.id}
-            className={`pb-4 text-[0.7rem] sm:text-[0.8rem] font-bold uppercase tracking-[2px] transition-all duration-300 relative whitespace-nowrap ${
+            className={`px-4 py-2 rounded-xl text-[0.65rem] sm:text-[0.75rem] font-black uppercase tracking-[1.5px] transition-all duration-300 whitespace-nowrap border ${
               activeTab === tab.id 
-                ? 'text-[#0e3b2e]' 
-                : 'text-slate-400 hover:text-slate-600'
+                ? 'bg-white text-[#0e3b2e] border-slate-200 shadow-sm' 
+                : 'text-slate-400 border-transparent hover:text-slate-600 hover:bg-white/50'
             }`}
             onClick={() => setActiveTab(tab.id)}
           >
             {tab.label}
-            {activeTab === tab.id && (
-              <motion.div 
-                layoutId="activeTab"
-                className="absolute bottom-0 left-0 right-0 h-0.5 bg-secondary"
-              />
-            )}
           </button>
         ))}
       </nav>

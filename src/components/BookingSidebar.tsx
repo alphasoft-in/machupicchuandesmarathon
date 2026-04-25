@@ -54,33 +54,33 @@ export default function BookingSidebar({ lang, tour }: Props) {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
           >
-            <div className="mb-8 pb-8 border-b border-slate-50">
-              <span className="block text-[0.7rem] uppercase tracking-[2px] text-slate-400 font-bold mb-1">{t('tour.from')}</span>
-              <h3 className="text-4xl font-black text-[#0e3b2e] tracking-tight">{tour.price}</h3>
+            <div className="mb-6 pb-6 border-b border-slate-50">
+              <span className="block text-[0.6rem] uppercase tracking-[2.5px] text-slate-400 font-bold mb-1">{t('tour.from')}</span>
+              <h3 className="text-3xl font-black text-[#0e3b2e] tracking-tight leading-none">{tour.price}</h3>
             </div>
             
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form className="space-y-5" onSubmit={handleSubmit}>
               <div className="space-y-2">
-                <label className="flex items-center gap-2 text-[0.7rem] font-black uppercase tracking-wider text-slate-500">
-                  <Calendar size={14} className="text-secondary" />
+                <label className="flex items-center gap-2 text-[0.6rem] font-black uppercase tracking-wider text-slate-500">
+                  <Calendar size={12} className="text-secondary" />
                   {lang === 'en' ? 'Select Date' : 'Selecciona Fecha'}
                 </label>
                 <input 
                   type="date" 
                   required 
-                  className="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-[#0e3b2e]/10 transition-all"
+                  className="w-full px-4 py-3.5 bg-white border border-slate-200 rounded-xl text-[13px] focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all shadow-sm"
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <label className="flex items-center gap-2 text-[0.7rem] font-black uppercase tracking-wider text-slate-500">
-                    <Users size={14} className="text-secondary" />
+                  <label className="flex items-center gap-2 text-[0.6rem] font-black uppercase tracking-wider text-slate-500">
+                    <Users size={12} className="text-secondary" />
                     {lang === 'en' ? 'Adults' : 'Adultos'}
                   </label>
                   <select 
                     defaultValue="2"
-                    className="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl text-sm focus:outline-none appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20stroke%3D%22%236b7280%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22m6%208%204%204%204-4%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1.25rem_1.25rem] bg-[right_1rem_center] bg-no-repeat"
+                    className="w-full px-4 py-3.5 bg-white border border-slate-200 rounded-xl text-[13px] focus:outline-none focus:border-secondary transition-all shadow-sm appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20stroke%3D%22%236b7280%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22m6%208%204%204%204-4%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1rem_1rem] bg-[right_0.75rem_center] bg-no-repeat"
                   >
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(n => (
                       <option key={n} value={n}>{n}{n === 10 ? '+' : ''}</option>
@@ -88,13 +88,13 @@ export default function BookingSidebar({ lang, tour }: Props) {
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label className="flex items-center gap-2 text-[0.7rem] font-black uppercase tracking-wider text-slate-500">
-                    <Baby size={14} className="text-secondary" />
+                  <label className="flex items-center gap-2 text-[0.6rem] font-black uppercase tracking-wider text-slate-500">
+                    <Baby size={12} className="text-secondary" />
                     {lang === 'en' ? 'Kids' : 'Niños'}
                   </label>
                   <select 
                     defaultValue="0"
-                    className="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl text-sm focus:outline-none appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20stroke%3D%22%236b7280%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22m6%208%204%204%204-4%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1.25rem_1.25rem] bg-[right_1rem_center] bg-no-repeat"
+                    className="w-full px-4 py-3.5 bg-white border border-slate-200 rounded-xl text-[13px] focus:outline-none focus:border-secondary transition-all shadow-sm appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20stroke%3D%22%236b7280%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22m6%208%204%204%204-4%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1rem_1rem] bg-[right_0.75rem_center] bg-no-repeat"
                   >
                     {[0, 1, 2, 3, 4, 5].map(n => (
                       <option key={n} value={n}>{n}{n === 5 ? '+' : ''}</option>
@@ -103,14 +103,14 @@ export default function BookingSidebar({ lang, tour }: Props) {
                 </div>
               </div>
 
-              <button type="submit" className="w-full bg-[#fc6111] hover:bg-[#e8560f] text-white py-5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all shadow-lg shadow-orange-200 flex items-center justify-center gap-3">
-                {t('tour.book')} <ArrowRight size={18} />
+              <button type="submit" className="w-full bg-[#fc6111] hover:bg-[#e8560f] text-white py-4 rounded-xl font-black text-[13px] uppercase tracking-widest transition-all shadow-lg shadow-orange-200 border-b-4 border-orange-800/20 active:border-b-0 active:translate-y-[2px] flex items-center justify-center gap-3">
+                {t('tour.book')} <ArrowRight size={16} />
               </button>
             </form>
             
-            <div className="mt-8 pt-8 border-t border-slate-50 text-center">
-              <p className="text-[0.65rem] font-bold text-slate-400 uppercase tracking-widest flex items-center justify-center gap-2">
-                <ShieldCheck size={12} className="text-emerald-500" />
+            <div className="mt-6 pt-6 border-t border-slate-50 text-center">
+              <p className="text-[0.6rem] font-bold text-slate-400 uppercase tracking-widest flex items-center justify-center gap-2">
+                <ShieldCheck size={11} className="text-emerald-500" />
                 {lang === 'en' ? 'No payment required yet' : 'Sin pago requerido aún'}
               </p>
             </div>

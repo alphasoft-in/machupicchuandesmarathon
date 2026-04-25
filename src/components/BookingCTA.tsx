@@ -11,9 +11,9 @@ export default function BookingCTA({ lang }: Props) {
   const t = useTranslations(lang);
 
   return (
-    <section id="contact" className="min-h-[55vh] flex items-center relative overflow-hidden py-10 bg-cover bg-center bg-[linear-gradient(rgba(14,59,46,0.85),rgba(14,59,46,0.95)),url('/images/marathon.webp')]">
-      <div className="container">
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-16">
+    <section id="contact" className="min-h-[60vh] flex items-center relative overflow-hidden py-24 bg-cover bg-center bg-[linear-gradient(rgba(14,59,46,0.85),rgba(14,59,46,0.95)),url('/images/marathon.webp')]">
+      <div className="container px-6 lg:px-12">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-32">
           <div className="text-center lg:text-left">
             <div className="text-[0.7rem] font-bold uppercase tracking-[2px] text-secondary mb-5 text-center lg:text-left">
               {lang === 'en' ? 'Expert-guided expeditions since 2010' : 'Expediciones con guías expertos desde 2010'}

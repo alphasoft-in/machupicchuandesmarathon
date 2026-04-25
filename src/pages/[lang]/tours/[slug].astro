@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 import { useTranslations, useTranslatedPath } from '../../../utils/i18n.js';
 import TourDetailsTabs from '../../../components/TourDetailsTabs';
 import BookingSidebar from '../../../components/BookingSidebar';
-import PremiumCTA from '../../../components/PremiumCTA.astro';
+import PremiumCTA from '../../../components/PremiumCTA';
 
 
 export async function getStaticPaths() {
@@ -171,5 +171,5 @@ const recommendations = allTours
           );
         })}
       </div>
-  <PremiumCTA lang={lang} />
+  <PremiumCTA client:visible lang={lang} />
 </Layout>

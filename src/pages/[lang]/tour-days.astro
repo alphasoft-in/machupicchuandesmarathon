@@ -5,7 +5,7 @@ import { useTranslations, useTranslatedPath } from '../../utils/i18n';
 import PageHeader from '../../components/PageHeader';
 import TourGrid from '../../components/TourGrid';
 
-import BookingForm from '../../components/BookingForm';
+
 export function getStaticPaths() {
   return [
     { params: { lang: 'en' } },
@@ -40,15 +40,7 @@ const dailyTours = tours
     </div>
   </section>
 
-  <section class="section bg-muted">
-    <div class="container max-w-2xl">
-      <div class="text-center mb-10">
-        <h2 class="serif text-4xl text-primary mb-4">{t('booking.title')}</h2>
-        <p class="text-slate-500">{t('booking.subtitle')}</p>
-      </div>
-      <BookingForm client:visible lang={lang} />
-    </div>
-  </section>
+
 </Layout>
 
 

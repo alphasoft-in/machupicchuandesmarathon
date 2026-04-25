@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import { useTranslations, useTranslatedPath } from '../../utils/i18n';
 import PageHeader from '../../components/PageHeader';
 import TourGrid from '../../components/TourGrid';
-import BookingCTA from '../../components/BookingCTA.astro';
+
 
 export function getStaticPaths() {
   return [
@@ -40,7 +40,7 @@ const dailyTours = tours
     </div>
   </section>
 
-  <BookingCTA lang={lang} />
+
 </Layout>
 
 

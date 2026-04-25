@@ -8,7 +8,7 @@ import CategoryGrid from '../../components/CategoryGrid';
 import TourGrid from '../../components/TourGrid';
 import TestimonialsSlider from '../../components/TestimonialsSlider';
 import BookingForm from '../../components/BookingForm';
-import BookingCTA from '../../components/BookingCTA.astro';
+
 
 export function getStaticPaths() {
   return [
@@ -168,5 +168,5 @@ const testimonials = [
   <TestimonialsSlider client:visible lang={lang} testimonials={testimonials} />
 
   <!-- Booking CTA Section -->
-  <BookingCTA lang={lang} />
+
 </Layout>

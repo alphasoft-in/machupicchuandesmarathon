@@ -11,7 +11,7 @@ export default function BookingCTA({ lang }: Props) {
   const t = useTranslations(lang);
 
   return (
-    <section id="contact" className="w-full relative overflow-hidden py-24 bg-cover bg-center bg-[linear-gradient(rgba(14,59,46,0.85),rgba(14,59,46,0.95)),url('/images/home/book-your-expedition.png')]">
+    <section id="contact" className="w-full relative overflow-hidden py-24 bg-cover bg-center bg-[linear-gradient(rgba(14,59,46,0.85),rgba(14,59,46,0.95)),url('/images/home/book-your-expedition.avif')]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center justify-items-center">
           <div className="text-center lg:text-left">

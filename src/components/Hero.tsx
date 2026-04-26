@@ -11,7 +11,7 @@ interface Props {
 
 export default function Hero({ lang, subtitle, ctaText, categoryPath }: Props) {
   return (
-    <section id="home" className="relative flex items-center justify-center h-screen min-h-[700px] overflow-hidden text-center text-white bg-primary bg-[linear-gradient(rgba(0,0,0,0.4),rgba(14,59,46,0.7)),url('/images/hero.png')] bg-[position:center_25%] bg-cover bg-no-repeat">
+    <section id="home" className="relative flex items-center justify-center h-screen min-h-[700px] overflow-hidden text-center text-white bg-primary bg-[linear-gradient(rgba(0,0,0,0.4),rgba(14,59,46,0.7)),url('/images/hero.avif')] bg-[position:center_25%] bg-cover bg-no-repeat">
       <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_top,rgba(14,59,46,0.8),transparent)] z-10"></div>
       <div className="relative z-20 container max-w-[900px] px-4 mx-auto">
         <motion.div 

@@ -66,6 +66,7 @@ export function TourCard({ lang, tour, t, translatePath, index }: Props) {
             href={whatsappUrl} 
             target="_blank" 
             rel="noopener noreferrer" 
+            aria-label={lang === 'en' ? `Consult about ${tour[lang].title} on WhatsApp` : `Consultar sobre ${tour[lang].title} por WhatsApp`}
             className="w-[40px] h-[40px] bg-slate-50 rounded-full flex items-center justify-center transition-colors duration-300 group-hover:bg-[#25D366]"
           >
              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="none" className="text-[#25D366] group-hover:text-white transition-colors duration-300">

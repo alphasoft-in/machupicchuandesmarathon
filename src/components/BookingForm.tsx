@@ -202,10 +202,11 @@ export default function BookingForm({ lang }: BookingFormProps) {
 
       {/* Date */}
       <div>
-        <label className={labelClasses}>
+        <label htmlFor="booking-date" className={labelClasses}>
           {lang === 'en' ? '📅 Travel Date' : '📅 Fecha de Viaje'}
         </label>
         <input
+          id="booking-date"
           type="date"
           min={today}
           value={date}
@@ -218,10 +219,11 @@ export default function BookingForm({ lang }: BookingFormProps) {
 
       {/* Category */}
       <div>
-        <label className={labelClasses}>
+        <label htmlFor="booking-category" className={labelClasses}>
           {lang === 'en' ? '🏔️ Expedition Type' : '🏔️ Tipo de Expedición'}
         </label>
         <select
+          id="booking-category"
           value={category}
           onChange={handleCategoryChange}
           required
@@ -243,10 +245,11 @@ export default function BookingForm({ lang }: BookingFormProps) {
       {/* Package */}
       {category && (
         <div className="animate-in fade-in slide-in-from-bottom-2 duration-300">
-          <label className={labelClasses}>
+          <label htmlFor="booking-package" className={labelClasses}>
             {lang === 'en' ? '🎒 Select Package' : '🎒 Selecciona Paquete'}
           </label>
           <select
+            id="booking-package"
             value={packageValue}
             onChange={e => setPackageValue(e.target.value)}
             required
@@ -279,7 +282,7 @@ export default function BookingForm({ lang }: BookingFormProps) {
         <span className="tracking-normal">{lang === 'en' ? 'Book via WhatsApp' : 'Reservar por WhatsApp'}</span>
       </button>
 
-      <p className="text-center text-[0.75rem] text-slate-400 m-0">
+      <p className="text-center text-[0.75rem] text-slate-600 m-0">
         {lang === 'en' ? '🔒 Secure & free consultation' : '🔒 Consulta segura y gratuita'}
       </p>
     </form>

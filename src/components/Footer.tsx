@@ -115,7 +115,7 @@ export default function Footer({ lang }: Props) {
       </div>
 
       <div className="container pt-6 pb-4">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[0.68rem] text-white/30 text-center md:text-left">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[0.68rem] text-white/60 text-center md:text-left">
           <p className="m-0 font-normal">
             &copy; {new Date().getFullYear()} Machu Picchu Andes Marathon. {lang === 'en' ? 'All rights reserved.' : 'Todos los derechos reservados.'}
           </p>

@@ -26,7 +26,7 @@ export default function TestimonialsSlider({ lang, testimonials }: Props) {
         <h2 className="serif text-[1.8rem] mb-4">
           {lang === 'en' ? 'Whispers from the Andes' : 'Susurros de los Andes'}
         </h2>
-        <p className="text-slate-500 mx-auto text-[1.05rem] max-w-[700px]">
+        <p className="text-slate-700 mx-auto text-[1.05rem] max-w-[700px]">
           {lang === 'en' 
             ? 'Join hundreds of satisfied explorers who found their soul in the mountains.' 
             : 'Únete a los cientos de exploradores que encontraron su alma en las montañas.'}

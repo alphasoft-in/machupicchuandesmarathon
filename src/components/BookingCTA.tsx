@@ -61,7 +61,7 @@ export default function BookingCTA({ lang }: Props) {
               </div>
             </div>
           </div>
-
+          
           <div className="bg-white p-8 md:p-14 rounded-[40px] shadow-[0_40px_100px_rgba(0,0,0,0.3)] max-w-[520px] w-full mx-auto flex flex-col justify-center">
             <BookingForm lang={lang} tours={[]} />
           </div>

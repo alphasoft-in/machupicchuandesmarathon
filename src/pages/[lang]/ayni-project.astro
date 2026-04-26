@@ -89,161 +89,142 @@ const tAyni = content[lang];
     lang={lang}
     title={tAyni.title}
     subtitle={tAyni.subtitle}
-    bgImage="/images/hero.webp"
+    bgImage="/images/bg-comunidades-andinas.png"
   />
 
-  <section class="py-10">
-    <div class="container max-w-800">
-      <div class="prose animate-fade-in">
-        <p class="lead text-lg mb-8">
+  <section class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <!-- Decorative background elements -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+      <div class="absolute top-1/3 -left-24 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container max-w-5xl mx-auto px-4 relative z-10">
+      
+      <!-- Intro Section -->
+      <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16 animate-fade-in">
+        <p class="text-base md:text-lg leading-relaxed text-gray-700 font-light">
           {tAyni.description}
         </p>
-        <div class="bg-muted p-6 rounded-xl mb-12 border-l-4 border-secondary">
-          <p class="m-0 font-medium italic">
-            {tAyni.phase}
+      </div>
+
+      <!-- Phase Card (Glassmorphism) -->
+      <div class="relative bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-3xl mb-24 border border-secondary/20 shadow-xl shadow-secondary/5 hover:shadow-2xl transition-shadow duration-500 overflow-hidden group">
+        <div class="absolute top-0 left-0 w-2 h-full bg-secondary"></div>
+        <div class="absolute -right-10 -bottom-10 opacity-5 group-hover:scale-110 transition-transform duration-700">
+          <Heart size={150} />
+        </div>
+        <p class="text-base m-0 font-medium italic text-gray-800 relative z-10">
+          "{tAyni.phase}"
+        </p>
+      </div>
+
+      <!-- Why is it necessary? -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 mb-20 md:mb-24 items-center">
+        <div>
+          <h2 class="font-serif text-2xl lg:text-3xl mb-4 md:mb-6 text-gray-900 leading-tight">
+            {tAyni.whyTitle}
+            <span class="block w-12 md:w-16 h-1 bg-secondary mt-3 md:mt-4 rounded-full"></span>
+          </h2>
+          <p class="text-gray-600 text-base mb-4 md:mb-6 leading-relaxed">
+            {tAyni.whyText}
+          </p>
+          <p class="text-gray-600 text-base leading-relaxed">
+            {tAyni.whyText2}
           </p>
         </div>
+        <div class="bg-primary/5 rounded-3xl p-8 border border-primary/10 relative">
+          <div class="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-lg text-secondary animate-bounce">
+            <Sun size={32} />
+          </div>
+          <img src="/images/bg-comunidades-andinas.png" alt="Comunidades Andinas" class="rounded-2xl shadow-md w-full h-auto object-cover aspect-video" />
+        </div>
+      </div>
 
-        <h2 class="serif text-3xl mb-6">{tAyni.whyTitle}</h2>
-        <p>{tAyni.whyText}</p>
-        <p class="mb-12">{tAyni.whyText2}</p>
-
-        <h2 class="serif text-3xl mb-8">{tAyni.objectivesTitle}</h2>
-        <div class="grid-list mb-12">
-          {tAyni.objectives.map((obj) => (
-            <div class="flex items-start gap-4 mb-4">
-              <div class="bg-secondary/10 p-2 rounded-lg text-secondary">
-                <obj.icon size={24} />
+      <!-- Main Objectives -->
+      <div class="mb-20 md:mb-24">
+        <div class="text-center mb-10 md:mb-12">
+          <h2 class="font-serif text-2xl lg:text-3xl text-gray-900 inline-block relative">
+            {tAyni.objectivesTitle}
+            <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-10 md:w-12 h-1 bg-secondary rounded-full"></span>
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {tAyni.objectives.map((obj, index) => (
+            <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-secondary/5 to-transparent rounded-bl-full -z-10 transition-transform group-hover:scale-150 duration-500"></div>
+              <div class="bg-secondary/10 w-10 h-10 md:w-12 md:h-12 rounded-xl text-secondary flex items-center justify-center mb-4 md:mb-6 group-hover:bg-secondary group-hover:text-white transition-colors duration-300 shadow-sm">
+                <obj.icon size={20} className="md:w-6 md:h-6" />
               </div>
-              <p class="m-0">{obj.text}</p>
+              <p class="text-gray-800 font-medium text-base m-0">{obj.text}</p>
             </div>
           ))}
         </div>
+      </div>
 
-        <div class="bg-dark text-white p-10 rounded-2xl mb-12 relative overflow-hidden">
-          <div class="relative z-10">
-            <h2 class="serif text-3xl mb-4 text-white">{tAyni.executionTitle}</h2>
-            <p class="text-white/80 m-0">{tAyni.executionText}</p>
+      <!-- Project Execution (Premium Dark Block) -->
+      <div class="bg-gradient-to-br from-[#0e3b2e] to-[#1a5c48] p-10 md:p-16 rounded-3xl mb-24 relative overflow-hidden shadow-2xl group">
+        <!-- Glow effect -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(252,97,17,0.15),transparent_50%)]"></div>
+        
+        <div class="relative z-10 md:w-2/3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-white/10 text-white/90 text-xs md:text-sm font-semibold tracking-wider uppercase mb-4 md:mb-6 border border-white/20 backdrop-blur-sm">
+            <Rocket size={14} className="md:w-4 md:h-4" /> 2025 – 2027
           </div>
-          <div class="absolute top-0 right-0 p-8 opacity-10">
-             <Rocket size={120} />
-          </div>
+          <h2 class="font-serif text-xl sm:text-2xl lg:text-3xl mb-3 md:mb-5 text-white leading-tight">
+            {tAyni.executionTitle}
+          </h2>
+          <p class="text-white/90 text-sm sm:text-base m-0 leading-relaxed font-light">
+            {tAyni.executionText}
+          </p>
         </div>
+        <div class="absolute top-1/2 -translate-y-1/2 -right-10 md:right-10 opacity-10 text-white group-hover:scale-110 group-hover:opacity-20 transition-all duration-700 pointer-events-none">
+           <Rocket size={240} strokeWidth={1} />
+        </div>
+      </div>
 
-        <h2 class="serif text-3xl mb-8 text-center">{tAyni.impactTitle}</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      <!-- Expected Impact -->
+      <div class="mb-20 md:mb-24">
+        <div class="text-center mb-12 md:mb-16">
+          <h2 class="font-serif text-2xl lg:text-3xl text-gray-900 inline-block relative">
+            {tAyni.impactTitle}
+            <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-10 md:w-12 h-1 bg-secondary rounded-full"></span>
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {tAyni.impacts.map((impact) => (
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
-              <div class="bg-primary/5 w-12 h-12 flex items-center justify-center rounded-full mx-auto mb-4 text-primary">
-                <impact.icon size={24} />
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:border-secondary/30 hover:shadow-lg transition-all duration-300 group">
+              <div class="bg-primary/5 w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full mx-auto mb-4 md:mb-6 text-primary relative group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+                <div class="absolute inset-0 border-2 border-primary/20 rounded-full scale-110 group-hover:scale-100 group-hover:border-transparent transition-all duration-500"></div>
+                <impact.icon size={24} className="md:w-7 md:h-7" />
               </div>
-              <h3 class="font-bold mb-2">{impact.title}</h3>
+              <h3 class="font-bold text-lg mb-2 md:mb-3 text-gray-900">{impact.title}</h3>
               <p class="text-sm text-gray-600 m-0">{impact.text}</p>
             </div>
           ))}
         </div>
+      </div>
 
-        <div class="text-center bg-secondary/5 p-12 rounded-3xl border border-secondary/20 mb-8">
-          <h2 class="serif text-4xl mb-6">{tAyni.ctaTitle}</h2>
-          <p class="max-w-600 mx-auto mb-8 text-lg">
+      <!-- CTA Section -->
+      <div class="bg-gradient-to-r from-secondary to-orange-500 p-8 sm:p-10 md:p-16 rounded-3xl md:rounded-[2.5rem] shadow-xl shadow-secondary/20 text-center relative overflow-hidden group">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+        <div class="relative z-10">
+          <h2 class="font-serif text-xl sm:text-2xl lg:text-3xl mb-4 md:mb-5 text-white drop-shadow-sm">
+            {tAyni.ctaTitle}
+          </h2>
+          <p class="max-w-2xl mx-auto mb-8 md:mb-10 text-sm sm:text-base text-white/90 font-light leading-relaxed">
             {tAyni.ctaText}
           </p>
-          <p class="font-bold text-secondary text-xl italic">
-            {tAyni.footerText}
-          </p>
+          <div class="inline-block bg-white/10 backdrop-blur-sm border border-white/30 p-4 md:p-6 rounded-2xl shadow-inner">
+            <p class="font-bold text-white text-base sm:text-lg italic m-0 tracking-wide drop-shadow-md">
+              "{tAyni.footerText}"
+            </p>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
   <BookingCTA client:visible lang={lang} />
 </Layout>
-
-<style>
-  .max-w-800 {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .max-w-600 {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .prose p {
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    color: #4b5563;
-  }
-  .grid-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .bg-dark {
-    background-color: #0e3b2e;
-  }
-  .grid {
-    display: grid;
-  }
-  @media (min-width: 768px) {
-    .md\:grid-cols-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-  @media (min-width: 1024px) {
-    .lg\:grid-cols-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
-  .items-center { align-items: center; }
-  .justify-center { justify-content: center; }
-  .text-center { text-align: center; }
-  .mx-auto { margin-left: auto; margin-right: auto; }
-  .mb-2 { margin-bottom: 0.5rem; }
-  .mb-4 { margin-bottom: 1rem; }
-  .mb-6 { margin-bottom: 1.5rem; }
-  .mb-8 { margin-bottom: 2rem; }
-  .mb-12 { margin-bottom: 3rem; }
-  .mb-16 { margin-bottom: 4rem; }
-  .m-0 { margin: 0; }
-  .p-2 { padding: 0.5rem; }
-  .p-6 { padding: 1.5rem; }
-  .p-10 { padding: 2.5rem; }
-  .p-12 { padding: 3rem; }
-  .rounded-lg { border-radius: 0.5rem; }
-  .rounded-xl { border-radius: 0.75rem; }
-  .rounded-2xl { border-radius: 1rem; }
-  .rounded-3xl { border-radius: 1.5rem; }
-  .font-medium { font-weight: 500; }
-  .font-bold { font-weight: 700; }
-  .italic { font-style: italic; }
-  .text-lg { font-size: 1.125rem; }
-  .text-xl { font-size: 1.25rem; }
-  .text-3xl { font-size: 1.875rem; }
-  .text-4xl { font-size: 2.25rem; }
-  .text-white { color: white; }
-  .text-white\/80 { color: rgba(255, 255, 255, 0.8); }
-  .text-secondary { color: #fc6111; }
-  .bg-secondary\/10 { background-color: rgba(252, 97, 17, 0.1); }
-  .bg-secondary\/5 { background-color: rgba(252, 97, 17, 0.05); }
-  .bg-primary\/5 { background-color: rgba(14, 59, 46, 0.05); }
-  .border-secondary\/20 { border-color: rgba(252, 97, 17, 0.2); }
-  .border-l-4 { border-left-width: 4px; }
-  .border-secondary { border-color: #fc6111; }
-  .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
-  .border { border-width: 1px; }
-  .border-gray-100 { border-color: #f3f4f6; }
-  .flex { display: flex; }
-  .items-start { align-items: flex-start; }
-  .gap-4 { gap: 1rem; }
-  .gap-6 { gap: 1.5rem; }
-  .relative { position: relative; }
-  .absolute { position: absolute; }
-  .top-0 { top: 0; }
-  .right-0 { right: 0; }
-  .z-10 { z-index: 10; }
-  .opacity-10 { opacity: 0.1; }
-  .w-12 { width: 3rem; }
-  .h-12 { height: 3rem; }
-</style>

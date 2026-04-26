@@ -1,238 +1,165 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import { getCollection } from "astro:content";
-import { Mail, Phone, MapPin, CheckCircle, Globe, Users } from "lucide-react";
-import { useTranslations, useTranslatedPath } from "../../utils/i18n";
-import Hero from "../../components/Hero";
-import CategoryGrid from "../../components/CategoryGrid";
-import TourGrid from "../../components/TourGrid";
-import TestimonialsSlider from "../../components/TestimonialsSlider";
-import BookingForm from "../../components/BookingForm";
-import BookingCTA from "../../components/BookingCTA";
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { Mail, Phone, MapPin, CheckCircle, Globe, Users } from 'lucide-react';
+import { useTranslations, useTranslatedPath } from '../../utils/i18n';
+import Hero from '../../components/Hero';
+import CategoryGrid from '../../components/CategoryGrid';
+import TourGrid from '../../components/TourGrid';
+import TestimonialsSlider from '../../components/TestimonialsSlider';
+import BookingForm from '../../components/BookingForm';
+import BookingCTA from '../../components/BookingCTA';
+
 
 export function getStaticPaths() {
-  return [{ params: { lang: "en" } }, { params: { lang: "es" } }];
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } }
+  ];
 }
 
 const { lang: rawLang } = Astro.params;
-const lang = rawLang as "en" | "es";
+const lang = rawLang as 'en' | 'es';
 
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
 // Data fetching
-const allTours = await getCollection("tours");
-const featuredTours = allTours.map((t) => t.data).slice(0, 6);
+const allTours = await getCollection('tours');
+const featuredTours = allTours
+  .map(t => t.data)
+  .slice(0, 6);
 
 const categories = [
   {
-    title: t("nav.inca"),
-    desc:
-      lang === "en"
-        ? "Discover the legendary path of the Incas. A unique journey through history and breathtaking landscapes."
-        : "Descubre el legendario camino de los Incas. Un viaje único a través de la historia y paisajes impresionantes.",
-    image: "/images/hero.webp",
+    title: t('nav.inca'),
+    desc: lang === 'en' 
+      ? "Discover the legendary path of the Incas. A unique journey through history and breathtaking landscapes." 
+      : "Descubre el legendario camino de los Incas. Un viaje único a través de la historia y paisajes impresionantes.",
+    image: "/images/inca-trail/bg-inca-trail.png",
     link: "/inca-trail",
-    accent: "#0e3b2e",
+    accent: "#0e3b2e"
   },
   {
-    title: t("nav.alternative"),
-    desc:
-      lang === "en"
-        ? "Explore off-the-beaten-path trails. Salkantay, Choquequirao, and more adventure awaits."
-        : "Explora rutas fuera de lo común. Salkantay, Choquequirao y más aventuras te esperan.",
-    image: "/images/salkantay.webp",
+    title: t('nav.alternative'),
+    desc: lang === 'en'
+      ? "Explore off-the-beaten-path trails. Salkantay, Choquequirao, and more adventure awaits."
+      : "Explora rutas fuera de lo común. Salkantay, Choquequirao y más aventuras te esperan.",
+    image: "/images/alternative-trek/bg-alternative-trek.png",
     link: "/alternative-treks",
-    accent: "#fc6111",
+    accent: "#fc6111"
   },
   {
-    title: t("nav.daily"),
-    desc:
-      lang === "en"
-        ? "Perfect daily excursions from Cusco and the Sacred Valley. Culture, adventure, and history in a single day."
-        : "Excursiones diarias perfectas desde Cusco y el Valle Sagrado. Cultura, aventura e historia en un solo día.",
-    image: "/images/sacred-valley.webp",
+    title: t('nav.daily'),
+    desc: lang === 'en'
+      ? "Perfect daily excursions from Cusco and the Sacred Valley. Culture, adventure, and history in a single day."
+      : "Excursiones diarias perfectas desde Cusco y el Valle Sagrado. Cultura, aventura e historia en un solo día.",
+    image: "/images/home/1-day-inca-trail.png",
     link: "/tour-days",
-    accent: "#ff8c42",
-  },
+    accent: "#ff8c42"
+  }
 ];
 
 const testimonials = [
   {
     rating: 5,
-    text:
-      lang === "en"
-        ? "The Premium Inca Trail was life-changing. The glamping tents and the private chef felt like a 5-star hotel in the middle of the mountains."
-        : "El Camino Inca Premium cambió mi vida. Las carpas glamping y el chef privado se sentían como un hotel de 5 estrellas en medio de las montañas.",
-    client: "Sarah Jenkins, UK",
+    text: lang === 'en' 
+      ? "The Premium Inca Trail was life-changing. The glamping tents and the private chef felt like a 5-star hotel in the middle of the mountains." 
+      : "El Camino Inca Premium cambió mi vida. Las carpas glamping y el chef privado se sentían como un hotel de 5 estrellas en medio de las montañas.",
+    client: "Sarah Jenkins, UK"
   },
   {
     rating: 5,
-    text:
-      lang === "en"
-        ? "Excellence in every step. Our guide knew every hidden stone and told stories that brought the ruins to life."
-        : "Excelencia en cada paso. Nuestro guía conocía cada piedra oculta y contaba historias que daban vida a las ruinas.",
-    client: "Marc Dubois, France",
+    text: lang === 'en'
+      ? "Excellence in every step. Our guide knew every hidden stone and told stories that brought the ruins to life." 
+      : "Excelencia en cada paso. Nuestro guía conocía cada piedra oculta y contaba historias que daban vida a las ruinas.",
+    client: "Marc Dubois, France"
   },
   {
     rating: 5,
-    text:
-      lang === "en"
-        ? "Best decision of my life. The local expertise of Machu Picchu Andes Marathon is unmatched. They really care about the culture."
-        : "La mejor decisión de mi vida. El conocimiento local de Machu Picchu Andes Marathon es inigualable. Realmente se preocupan por la cultura.",
-    client: "Elena Rossi, Italy",
+    text: lang === 'en'
+      ? "Best decision of my life. The local expertise of Machu Picchu Andes Marathon is unmatched. They really care about the culture." 
+      : "La mejor decisión de mi vida. El conocimiento local de Machu Picchu Andes Marathon es inigualable. Realmente se preocupan por la cultura.",
+    client: "Elena Rossi, Italy"
   },
   {
     rating: 5,
-    text:
-      lang === "en"
-        ? "Unforgettable experience. The attention to detail on the Salkantay Trek was beyond my expectations."
-        : "Experiencia inolvidable. La atención al detalle en el Salkantay Trek superó mis expectativas.",
-    client: "James Wilson, Australia",
-  },
+    text: lang === 'en'
+      ? "Unforgettable experience. The attention to detail on the Salkantay Trek was beyond my expectations." 
+      : "Experiencia inolvidable. La atención al detalle en el Salkantay Trek superó mis expectativas.",
+    client: "James Wilson, Australia"
+  }
 ];
 ---
 
-<Layout title={t("hero.title")} lang={lang}>
-  <Hero
-    client:load
-    lang={lang}
-    subtitle={t("hero.subtitle")}
-    ctaText={t("hero.cta")}
-    categoryPath={translatePath("/inca-trail")}
+<Layout title={t('hero.title')} lang={lang}>
+  <Hero 
+    client:load 
+    lang={lang} 
+    subtitle={t('hero.subtitle')} 
+    ctaText={t('hero.cta')} 
+    categoryPath={translatePath('/inca-trail')} 
   />
 
   <section id="categories" class="py-10 categories pb-0">
-    <CategoryGrid
-      client:visible
-      lang={lang}
-      categories={categories}
-      translatePath={translatePath}
-    />
+    <CategoryGrid client:visible lang={lang} categories={categories} translatePath={translatePath} />
   </section>
 
-  <section id="featured-tours" class="py-10 bg-light pt-0">
+  <section id="featured-tours" class="py-24 bg-light">
     <div class="container">
-      <div style="text-align: center; margin-bottom: 3rem; width: 100%;">
-        <h2
-          class="section-title serif"
-          style="margin-bottom: 1.5rem; text-align: center;"
-        >
-          {t("home.featured.title")}
-        </h2>
-        <p
-          class="section-subtitle"
-          style="max-width: 700px; margin-left: auto; margin-right: auto; text-align: center;"
-        >
-          {t("home.featured.subtitle")}
-        </p>
+      <div class="flex flex-col items-center text-center mb-16">
+        <h2 class="text-[clamp(1.6rem,4vw,3rem)] font-serif mb-6 leading-tight">{t('home.featured.title')}</h2>
+        <p class="text-[clamp(0.9rem,3vw,1.1rem)] text-slate-500 max-w-[600px] mx-auto">{t('home.featured.subtitle')}</p>
       </div>
-
+      
       <TourGrid client:visible lang={lang} tours={featuredTours} />
+      
     </div>
   </section>
 
   <!-- About / Why Us (Keep structural HTML in Astro, but using React icons) -->
-  <section
-    id="about"
-    class="min-h-[80vh] flex items-center py-16 lg:py-24 bg-[#f7f7f5]"
-  >
-    <div
-      class="container grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center w-full"
-    >
+  <section id="about" class="min-h-[80vh] flex items-center py-16 lg:py-24 bg-[#f7f7f5]">
+    <div class="container grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center w-full">
       <div>
-        <h2
-          class="serif text-[clamp(1.5rem,5vw,2.2rem)] leading-[1.2] tracking-tight mb-6 sm:mb-8 relative before:content-[''] before:absolute before:-top-5 before:left-0 before:w-[50px] before:h-[3px] before:bg-secondary"
-        >
-          {
-            lang === "en"
-              ? "Excellence in Every Step"
-              : "Excelencia en cada paso"
-          }
+        <h2 class="serif text-[clamp(1.5rem,5vw,2.2rem)] leading-[1.2] tracking-tight mb-6 sm:mb-8 relative before:content-[''] before:absolute before:-top-5 before:left-0 before:w-[50px] before:h-[3px] before:bg-secondary">
+          {lang === 'en' ? 'Excellence in Every Step' : 'Excelencia en cada paso'}
         </h2>
-        <p
-          class="text-[0.95rem] sm:text-[1.05rem] text-slate-500 mb-8 leading-relaxed max-w-full sm:max-w-[90%]"
-        >
-          {
-            lang === "en"
-              ? "With over 15 years of experience in the Peruvian Andes, we specialize in high-altitude logistics and luxury travel management. Our mission is to provide life-changing experiences while preserving the cultural and natural heritage of the Incas."
-              : "Con más de 15 años de experiencia en los Andes peruanos, nos especializamos en logística de gran altitud y gestión de viajes de lujo. Nuestra misión es brindar experiencias que cambien la vida mientras preservamos el patrimonio cultural y natural de los Incas."
-          }
+        <p class="text-[0.95rem] sm:text-[1.05rem] text-slate-500 mb-8 leading-relaxed max-w-full sm:max-w-[90%]">
+          {lang === 'en' ? 'With over 15 years of experience in the Peruvian Andes, we specialize in high-altitude logistics and luxury travel management. Our mission is to provide life-changing experiences while preserving the cultural and natural heritage of the Incas.' : 'Con más de 15 años de experiencia en los Andes peruanos, nos especializamos en logística de gran altitud y gestión de viajes de lujo. Nuestra misión es brindar experiencias que cambien la vida mientras preservamos el patrimonio cultural y natural de los Incas.'}
         </p>
-
+        
         <ul class="flex flex-col gap-4 list-none p-0 m-0">
           <li class="flex gap-4 items-center">
-            <div
-              class="w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] bg-white rounded-2xl flex items-center justify-center text-secondary shadow-[0_10px_20px_rgba(0,0,0,0.03)] shrink-0"
-            >
+            <div class="w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] bg-white rounded-2xl flex items-center justify-center text-secondary shadow-[0_10px_20px_rgba(0,0,0,0.03)] shrink-0">
               <Globe size={20} />
             </div>
             <div>
-              <strong
-                class="block text-[0.95rem] sm:text-[1.05rem] mb-0.5 leading-tight"
-                >{
-                  lang === "en" ? "Local Expertise" : "Experiencia Local"
-                }</strong
-              >
-              <p class="text-[0.85rem] sm:text-[0.9rem] text-slate-500 m-0">
-                {
-                  lang === "en"
-                    ? "100% Peruvian owned and operated company."
-                    : "Empresa 100% peruana."
-                }
-              </p>
+              <strong class="block text-[0.95rem] sm:text-[1.05rem] mb-0.5 leading-tight">{lang === 'en' ? 'Local Expertise' : 'Experiencia Local'}</strong>
+              <p class="text-[0.85rem] sm:text-[0.9rem] text-slate-500 m-0">{lang === 'en' ? '100% Peruvian owned and operated company.' : 'Empresa 100% peruana.'}</p>
             </div>
           </li>
           <li class="flex gap-4 items-center">
-            <div
-              class="w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] bg-white rounded-2xl flex items-center justify-center text-secondary shadow-[0_10px_20px_rgba(0,0,0,0.03)] shrink-0"
-            >
+            <div class="w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] bg-white rounded-2xl flex items-center justify-center text-secondary shadow-[0_10px_20px_rgba(0,0,0,0.03)] shrink-0">
               <Users size={20} />
             </div>
             <div>
-              <strong
-                class="block text-[0.95rem] sm:text-[1.05rem] mb-0.5 leading-tight"
-                >{lang === "en" ? "Small Groups" : "Grupos Pequeños"}</strong
-              >
-              <p class="text-[0.85rem] sm:text-[0.9rem] text-slate-500 m-0">
-                {
-                  lang === "en"
-                    ? "Personalized attention for an intimate experience."
-                    : "Atención personalizada para una experiencia íntima."
-                }
-              </p>
+              <strong class="block text-[0.95rem] sm:text-[1.05rem] mb-0.5 leading-tight">{lang === 'en' ? 'Small Groups' : 'Grupos Pequeños'}</strong>
+              <p class="text-[0.85rem] sm:text-[0.9rem] text-slate-500 m-0">{lang === 'en' ? 'Personalized attention for an intimate experience.' : 'Atención personalizada para una experiencia íntima.'}</p>
             </div>
           </li>
           <li class="flex gap-4 items-center">
-            <div
-              class="w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] bg-white rounded-2xl flex items-center justify-center text-secondary shadow-[0_10px_20px_rgba(0,0,0,0.03)] shrink-0"
-            >
+            <div class="w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] bg-white rounded-2xl flex items-center justify-center text-secondary shadow-[0_10px_20px_rgba(0,0,0,0.03)] shrink-0">
               <MapPin size={20} />
             </div>
             <div>
-              <strong
-                class="block text-[0.95rem] sm:text-[1.05rem] mb-0.5 leading-tight"
-                >{lang === "en" ? "Hidden Paths" : "Senderos Ocultos"}</strong
-              >
-              <p class="text-[0.85rem] sm:text-[0.9rem] text-slate-500 m-0">
-                {
-                  lang === "en"
-                    ? "Access to restricted and off-the-beaten-path locations."
-                    : "Acceso a lugares restringidos y fuera de las rutas comunes."
-                }
-              </p>
+              <strong class="block text-[0.95rem] sm:text-[1.05rem] mb-0.5 leading-tight">{lang === 'en' ? 'Hidden Paths' : 'Senderos Ocultos'}</strong>
+              <p class="text-[0.85rem] sm:text-[0.9rem] text-slate-500 m-0">{lang === 'en' ? 'Access to restricted and off-the-beaten-path locations.' : 'Acceso a lugares restringidos y fuera de las rutas comunes.'}</p>
             </div>
           </li>
         </ul>
       </div>
-      <div
-        class="relative shadow-[0_40px_100px_rgba(0,0,0,0.15)] rounded-[60px_15px_60px_15px] overflow-hidden transition-transform duration-[600ms] ease-[cubic-bezier(0.165,0.84,0.44,1)] hover:-translate-y-2.5 group/about"
-      >
-        <img
-          src="/images/home/excellence-in-every-step.png"
-          alt="Incan Trail"
-          class="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover/about:scale-105"
-        />
+      <div class="relative shadow-[0_40px_100px_rgba(0,0,0,0.15)] rounded-[60px_15px_60px_15px] overflow-hidden transition-transform duration-[600ms] ease-[cubic-bezier(0.165,0.84,0.44,1)] hover:-translate-y-2.5 group/about">
+        <img src="/images/home/excellence-in-every-step.png" alt="Incan Trail" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover/about:scale-105" />
       </div>
     </div>
   </section>

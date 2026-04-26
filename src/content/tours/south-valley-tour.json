@@ -1,11 +1,11 @@
 {
   "slug": "south-valley-tour",
   "category": "tour-days",
-  "price": "$70",
-  "image": "/images/sacred-valley.webp",
+  "price": "$90",
+  "image": "/images/tour-diarios/south-valley-1d.png",
   "rating": 4.7,
   "en": {
-    "title": "South Valley Tour",
+    "title": "South Valley Tour - 1D",
     "duration": "1 Day",
     "difficulty": "Easy",
     "maxAltitude": "3,500m",
@@ -31,7 +31,7 @@
     ]
   },
   "es": {
-    "title": "Tour Valle Sur",
+    "title": "Tour Valle Sur - 1D",
     "duration": "1 Día",
     "difficulty": "Fácil",
     "maxAltitude": "3,500m",

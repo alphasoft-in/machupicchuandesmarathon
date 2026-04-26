@@ -1,11 +1,11 @@
 {
   "slug": "extended-sacred-valley-tour-vip",
   "category": "tour-days",
-  "price": "$150",
-  "image": "/images/sacred-valley.webp",
+  "price": "$90",
+  "image": "/images/tour-diarios/valle-sagrado-vip-1d.png",
   "rating": 5,
   "en": {
-    "title": "Extended Sacred Valley Tour - VIP",
+    "title": "Extended Sacred Valley Tour - VIP - 1D",
     "duration": "1 Day",
     "difficulty": "Moderate",
     "maxAltitude": "3,350m",
@@ -31,7 +31,7 @@
     ]
   },
   "es": {
-    "title": "Tour Extendido Valle Sagrado - VIP",
+    "title": "Tour Extendido Valle Sagrado - VIP - 1D",
     "duration": "1 Día",
     "difficulty": "Moderado",
     "maxAltitude": "3,350m",

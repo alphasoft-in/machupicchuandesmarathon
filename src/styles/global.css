@@ -186,17 +186,6 @@ section.revealed {
 /* Base Sections & UI */
 
 
-.section-title {
-  font-size: clamp(1.6rem, 4vw, 3rem);
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-}
-
-.section-subtitle {
-  font-size: clamp(0.9rem, 3vw, 1.1rem);
-  color: var(--text-muted);
-  max-width: 600px;
-}
 
 .bg-muted { background-color: var(--bg-muted); }
 .bg-white { background-color: white; }
@@ -267,22 +256,6 @@ section.revealed {
 /* Sections */
 
 
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 2.5rem; /* Reducido de 4rem */
-}
-
-@media (max-width: 768px) {
-  .section { padding: 80px 0; }
-  .section-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
-  }
-}
-
 .pt-40 { padding-top: 40px !important; }
 .pb-40 { padding-bottom: 40px !important; }
 
@@ -295,7 +268,7 @@ section.revealed {
 /* --- Tour Detail Specific Styles --- */
 /* Legacy Tour Styles Removed - Replaced with Tailwind */
 
-.tour-cta { position: relative; padding: 120px 0; background-image: url('/images/cta-bg.webp'); background-size: cover; background-position: center; background-attachment: fixed; color: #fff; text-align: center; }
+.tour-cta { position: relative; padding: 120px 0; background-image: url('/images/home/book-your-expedition.png'); background-size: cover; background-position: center; background-attachment: fixed; color: #fff; text-align: center; }
 .cta-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4)); }
 .cta-content { position: relative; z-index: 10; max-width: 700px; margin: 0 auto; }
 

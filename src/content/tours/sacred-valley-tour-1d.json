@@ -2,10 +2,10 @@
   "slug": "sacred-valley-tour-1d",
   "category": "tour-days",
   "price": "$90",
-  "image": "/images/sacred-valley.webp",
+  "image": "/images/tour-diarios/valle-sur-1d.png",
   "rating": 4.8,
   "en": {
-    "title": "Sacred Valley Tour - 1 D",
+    "title": "Sacred Valley Tour - 1D",
     "duration": "1 Day",
     "difficulty": "Easy",
     "maxAltitude": "2,980m",
@@ -31,7 +31,7 @@
     ]
   },
   "es": {
-    "title": "Tour Valle Sagrado - 1 Día",
+    "title": "Tour Valle Sagrado - 1D",
     "duration": "1 Día",
     "difficulty": "Fácil",
     "maxAltitude": "2,980m",

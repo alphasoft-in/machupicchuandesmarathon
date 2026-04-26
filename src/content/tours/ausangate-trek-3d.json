@@ -1,11 +1,11 @@
 {
   "slug": "ausangate-trek-3d",
   "category": "alternative-treks",
-  "price": "Contact Us",
+  "price": "$350",
   "image": "/images/home/ausangate-trek-3d.png",
   "rating": 4.8,
   "en": {
-    "title": "Ausangate Trek - 3 Days",
+    "title": "Ausangate Trek - 3D/2N",
     "duration": "3 Days",
     "difficulty": "Hard",
     "maxAltitude": "5,080m",
@@ -43,7 +43,7 @@
     ]
   },
   "es": {
-    "title": "Ausangate Trek - 3 Días",
+    "title": "Ausangate Trek - 3D/2N",
     "duration": "3 Días",
     "difficulty": "Difícil",
     "maxAltitude": "5,080m",

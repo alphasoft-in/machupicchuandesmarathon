@@ -1,35 +1,36 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import { getCollection } from "astro:content";
-import { useTranslations, useTranslatedPath } from "../../utils/i18n";
-import PageHeader from "../../components/PageHeader";
-import TourGrid from "../../components/TourGrid";
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { useTranslations, useTranslatedPath } from '../../utils/i18n';
+import PageHeader from '../../components/PageHeader';
+import TourGrid from '../../components/TourGrid';
 
-import BookingCTA from "../../components/BookingCTA";
+import BookingCTA from '../../components/BookingCTA';
 export function getStaticPaths() {
-  return [{ params: { lang: "en" } }, { params: { lang: "es" } }];
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } }
+  ];
 }
 
 const { lang: rawLang } = Astro.params;
-const lang = rawLang as "en" | "es";
+const lang = rawLang as 'en' | 'es';
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
-const tours = await getCollection("tours");
+const tours = await getCollection('tours');
 const incaTours = tours
-  .map((t) => t.data)
-  .filter((t) => t.category === "inca-trail");
+  .map(t => t.data)
+  .filter(t => t.category === 'inca-trail');
 ---
 
-<Layout title={`${t("nav.inca")} | Machu Picchu Andes Marathon`} lang={lang}>
-  <PageHeader
+<Layout title={`${t('nav.inca')} | Machu Picchu Andes Marathon`} lang={lang}>
+  <PageHeader 
     client:load
     lang={lang}
-    title={lang === "en" ? "Inca Trail" : "Camino Inca"}
+    title={lang === 'en' ? 'Inca Trail' : 'Camino Inca'}
     titleAccent="Tours"
-    subtitle={lang === "en"
-      ? "Explore the ancient pathways of the Incan Empire. Every step is a story, every view is a masterpiece."
-      : "Explora los antiguos senderos del Imperio Inca. Cada paso es una historia, cada vista una obra maestra."}
+    subtitle={lang === 'en' ? "Explore the ancient pathways of the Incan Empire. Every step is a story, every view is a masterpiece." : "Explora los antiguos senderos del Imperio Inca. Cada paso es una historia, cada vista una obra maestra."}
     bgImage="/images/inca-trail/bg-inca-trail.png"
   />
 

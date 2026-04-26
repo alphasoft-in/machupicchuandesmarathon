@@ -1,11 +1,11 @@
 {
   "slug": "ausangate-trek-4d",
   "category": "alternative-treks",
-  "price": "Contact Us",
+  "price": "$450",
   "image": "/images/home/ausangate-circuit-4d.png",
   "rating": 4.9,
   "en": {
-    "title": "Ausangate Circuit Trek - 4 Days",
+    "title": "Ausangate Circuit Trek - 4D/3N",
     "duration": "4 Days",
     "difficulty": "Hard",
     "maxAltitude": "5,200m",
@@ -48,7 +48,7 @@
     ]
   },
   "es": {
-    "title": "Circuito Ausangate - 4 Días",
+    "title": "Circuito Ausangate - 4D/3N",
     "duration": "4 Días",
     "difficulty": "Difícil",
     "maxAltitude": "5,200m",

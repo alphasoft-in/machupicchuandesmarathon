@@ -1,11 +1,11 @@
 {
   "slug": "huchuy-qosqo-1d",
   "category": "tour-days",
-  "price": "$85",
-  "image": "/images/sacred-valley.webp",
+  "price": "$90",
+  "image": "/images/tour-diarios/huchuy-qosqo-1d.png",
   "rating": 4.7,
   "en": {
-    "title": "Huchuy Qosqo One Day Tour",
+    "title": "Huchuy Qosqo Tour - 1D",
     "duration": "1 Day",
     "difficulty": "Moderate",
     "maxAltitude": "4,100m",
@@ -30,7 +30,7 @@
     ]
   },
   "es": {
-    "title": "Tour Huchuy Qosqo 1 Día",
+    "title": "Tour Huchuy Qosqo - 1D",
     "duration": "1 Día",
     "difficulty": "Moderado",
     "maxAltitude": "4,100m",

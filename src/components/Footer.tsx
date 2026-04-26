@@ -21,15 +21,15 @@ export default function Footer({ lang }: Props) {
   
   return (
     <footer className="bg-[#051c14] text-[#f8fafc] py-10 lg:py-12 pb-12 mt-0">
-      <div className="container grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 pb-12 lg:pb-16">
-        <div className="flex flex-col gap-8 items-center lg:items-start text-center lg:text-left">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1.5fr] gap-10 lg:gap-8 pb-12 lg:pb-16 text-center sm:text-left">
+        <div className="flex flex-col gap-8 items-center sm:items-start">
           <a href={translatePath('/')} className="transition-opacity hover:opacity-80">
             <img src="/images/logo.webp" alt="Logo" className="h-[60px] w-auto" />
           </a>
           <p className="text-white/55 leading-loose text-[0.88rem] max-w-[260px]">
             {t('footer.tagline')}
           </p>
-          <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+          <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
             {socialLinks.map((link) => (
               <a
                 key={link.icon}
@@ -45,58 +45,56 @@ export default function Footer({ lang }: Props) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 text-center md:text-left">
-          <div className="flex flex-col gap-4">
-            <h3 className="serif text-lg text-white">{t('footer.expeditions')}</h3>
-            <ul className="flex flex-col gap-2 list-none p-0 m-0">
-              <li><a href={translatePath('/inca-trail')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.inca')}</a></li>
-              <li><a href={translatePath('/alternative-treks')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.alternative')}</a></li>
-              <li><a href={translatePath('/other-treks')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.other')}</a></li>
-              <li><a href={translatePath('/tour-days')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.daily')}</a></li>
-              <li><a href={translatePath('/luxury')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.luxury')}</a></li>
-              <li><a href={translatePath('/ayni-project')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.ayni')}</a></li>
-              <li><a href="#" className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{lang === 'en' ? 'Luxury Custom Trips' : 'Viajes Personalizados'}</a></li>
-            </ul>
-          </div>
+        <div className="flex flex-col gap-4">
+          <h3 className="serif text-lg text-white">{t('footer.expeditions')}</h3>
+          <ul className="flex flex-col gap-2 list-none p-0 m-0">
+            <li><a href={translatePath('/inca-trail')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.inca')}</a></li>
+            <li><a href={translatePath('/alternative-treks')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.alternative')}</a></li>
+            <li><a href={translatePath('/other-treks')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.other')}</a></li>
+            <li><a href={translatePath('/tour-days')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.daily')}</a></li>
+            <li><a href={translatePath('/luxury')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.luxury')}</a></li>
+            <li><a href={translatePath('/ayni-project')} className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('nav.ayni')}</a></li>
+            <li><a href="#" className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{lang === 'en' ? 'Luxury Custom Trips' : 'Viajes Personalizados'}</a></li>
+          </ul>
+        </div>
 
-          <div className="flex flex-col gap-4">
-            <h3 className="serif text-lg text-white">{t('footer.resources')}</h3>
-            <ul className="flex flex-col gap-2 list-none p-0 m-0">
-              <li><a href="#" className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('footer.safety')}</a></li>
-              <li><a href="#" className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('footer.packing')}</a></li>
-              <li><a href="#" className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('footer.altitude')}</a></li>
-              <li><a href="#" className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('footer.faq')}</a></li>
-            </ul>
-          </div>
+        <div className="flex flex-col gap-4">
+          <h3 className="serif text-lg text-white">{t('footer.resources')}</h3>
+          <ul className="flex flex-col gap-2 list-none p-0 m-0">
+            <li><a href="#" className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('footer.safety')}</a></li>
+            <li><a href="#" className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('footer.packing')}</a></li>
+            <li><a href="#" className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('footer.altitude')}</a></li>
+            <li><a href="#" className="text-white/60 text-[0.82rem] no-underline transition-all duration-300 hover:text-secondary hover:translate-x-1 inline-block">{t('footer.faq')}</a></li>
+          </ul>
+        </div>
 
-          <div className="flex flex-col gap-6">
-            <div className="flex flex-col gap-4">
-              <h3 className="serif text-lg text-white">{t('footer.contact')}</h3>
-              <ul className="flex flex-col gap-3 list-none p-0 m-0">
-                <li>
-                  <a href="mailto:info@machupicchuandesmarathon.com" className="flex items-center justify-center md:justify-start gap-3 text-white/60 text-[0.85rem] no-underline transition-all duration-300 hover:text-secondary group">
-                    <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center transition-colors group-hover:bg-secondary/20 shrink-0">
-                      <Mail size={16} className="group-hover:text-secondary" />
-                    </div>
-                    info@machupicchuandesmarathon.com
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+51993187203" className="flex items-center justify-center md:justify-start gap-3 text-white/60 text-[0.85rem] no-underline transition-all duration-300 hover:text-secondary group">
-                    <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center transition-colors group-hover:bg-secondary/20 shrink-0">
-                      <Phone size={16} className="group-hover:text-secondary" />
-                    </div>
-                    +51 993 187 203
-                  </a>
-                </li>
-                <li className="flex items-start justify-center md:justify-start gap-3 text-white/60 text-[0.85rem] leading-snug group">
-                  <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
-                    <MapPin size={16} />
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4">
+            <h3 className="serif text-lg text-white">{t('footer.contact')}</h3>
+            <ul className="flex flex-col gap-3 list-none p-0 m-0">
+              <li>
+                <a href="mailto:info@machupicchuandesmarathon.com" className="flex items-center justify-center sm:justify-start gap-3 text-white/60 text-[0.85rem] no-underline transition-all duration-300 hover:text-secondary group">
+                  <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center transition-colors group-hover:bg-secondary/20 shrink-0">
+                    <Mail size={16} className="group-hover:text-secondary" />
                   </div>
-                  <span className="mt-1">Jr. Santa Rosa P7, Cusco – Perú</span>
-                </li>
-              </ul>
-            </div>
+                  <span className="break-all sm:break-normal">info@machupicchuandesmarathon.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+51993187203" className="flex items-center justify-center sm:justify-start gap-3 text-white/60 text-[0.85rem] no-underline transition-all duration-300 hover:text-secondary group">
+                  <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center transition-colors group-hover:bg-secondary/20 shrink-0">
+                    <Phone size={16} className="group-hover:text-secondary" />
+                  </div>
+                  +51 993 187 203
+                </a>
+              </li>
+              <li className="flex items-start justify-center sm:justify-start gap-3 text-white/60 text-[0.85rem] leading-snug group">
+                <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
+                  <MapPin size={16} />
+                </div>
+                <span className="mt-1">Jr. Santa Rosa P7, Cusco – Perú</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

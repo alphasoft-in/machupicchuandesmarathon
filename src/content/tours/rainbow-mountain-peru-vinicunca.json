@@ -1,11 +1,11 @@
 {
   "slug": "rainbow-mountain-peru-vinicunca",
   "category": "tour-days",
-  "price": "$80",
-  "image": "/images/rainbow.webp",
+  "price": "$90",
+  "image": "/images/tour-diarios/rainbow-mountain.png",
   "rating": 4.8,
   "en": {
-    "title": "Rainbow Mountain Peru - Vinicunca",
+    "title": "Rainbow Mountain Peru - Vinicunca - 1D",
     "duration": "1 Day",
     "difficulty": "Hard",
     "maxAltitude": "5,200m",
@@ -31,7 +31,7 @@
     ]
   },
   "es": {
-    "title": "Montaña de Colores Perú - Vinicunca",
+    "title": "Montaña de Colores Perú - Vinicunca - 1D",
     "duration": "1 Día",
     "difficulty": "Difícil",
     "maxAltitude": "5,200m",

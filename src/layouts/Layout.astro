@@ -8,41 +8,136 @@ interface Props {
   title: string;
   description?: string;
   lang?: string;
+  image?: string;
 }
+
+const lang = (Astro.currentLocale as "en" | "es") || "en";
+
+const defaultDescEn = "Premier travel agency in Cusco specializing in Machu Picchu tours, Inca Trail trekking, luxury expeditions, and authentic Andean adventures.";
+const defaultDescEs = "Agencia de viajes en Cusco especializada en tours a Machu Picchu, trekking por el Camino Inca, expediciones de lujo y aventuras andinas auténticas.";
+
+const defaultKwEn = "Travel agency in Cusco, Machu Picchu tours, Inca Trail trekking, Peru adventure travel, luxury expeditions Cusco, Salkantay trek, hiking Peru, authentic tours";
+const defaultKwEs = "Agencia de viajes en Cusco, tours a Machu Picchu, trekking Camino Inca, viajes de aventura Perú, expediciones de lujo Cusco, ruta Salkantay, senderismo Cusco, tours auténticos";
 
 const {
   title,
-  description = "Discover the ultimate adventure in the Andes with Machu Picchu Andes Marathon. Luxury tours, trail marathons, and cultural experiences in the heart of Peru.",
+  description = lang === 'es' ? defaultDescEs : defaultDescEn,
+  image = "/images/og-default.jpg",
 } = Astro.props;
 
-const lang = (Astro.currentLocale as 'en' | 'es') || 'en';
+const pageKeywords = lang === 'es' ? defaultKwEs : defaultKwEn;
+const titleSuffix = lang === 'es' ? 'Agencia de viajes en Cusco' : 'Travel Agency in Cusco';
+
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 const currentPath = Astro.url.pathname;
 
 // Helper to switch language
-const otherLang = lang === 'en' ? 'es' : 'en';
-const switchPath = currentPath.includes(`/${lang}/`) 
-  ? currentPath.replace(`/${lang}/`, `/${otherLang}/`) 
+const otherLang = lang === "en" ? "es" : "en";
+const switchPath = currentPath.includes(`/${lang}/`)
+  ? currentPath.replace(`/${lang}/`, `/${otherLang}/`)
   : `/${otherLang}/`;
+
+// Canonical URL
+const siteUrl = "https://machupicchuandesmarathon.com";
+const canonicalUrl = `${siteUrl}${currentPath}`;
+
+// Hreflang URLs (i18n SEO)
+const currentLangUrl = canonicalUrl;
+const alternateLangUrl = `${siteUrl}${switchPath}`;
+
+// Open Graph
+const ogTitle = `${title} | Machu Picchu Andes Marathon`;
+const ogDescription = description;
+const ogUrl = canonicalUrl;
+const ogImage = `${siteUrl}${image}`;
+const ogSiteName = "Machu Picchu Andes Marathon";
+const ogLocale = lang === "en" ? "en_US" : "es_ES";
 ---
 
 <!doctype html>
 <html lang={lang}>
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon-nuevo.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} | Machu Picchu Andes Marathon</title>
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- SEO Basic -->
+    <title>
+      {title} | Machu Picchu Andes Marathon | {titleSuffix}
+    </title>
     <meta name="description" content={description} />
     <meta
       name="keywords"
-      content="Machu Picchu, Andes, Marathon, Peru, Travel Agency, Luxury Tours, Adventure Travel"
+      content={pageKeywords}
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Hreflang Tags for Multi-language SEO -->
+    <link rel="alternate" hreflang={lang} href={currentLangUrl} />
+    <link rel="alternate" hreflang={otherLang} href={alternateLangUrl} />
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/en/`} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content={ogSiteName} />
+    <meta property="og:locale" content={ogLocale} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={ogDescription} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- JSON-LD Schema -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        name: "Machu Picchu Andes Marathon",
+        description: description,
+        url: siteUrl,
+        logo: `${siteUrl}/images/logo.webp`,
+        image: `${siteUrl}/images/hero.png`,
+        telephone: "+51 993 187 203",
+        email: "info@machupicchuandesmarathon.com",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Jr. Santa Rosa P7",
+          addressLocality: "Cusco",
+          addressRegion: "Cusco",
+          addressCountry: "PE",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: "-13.5319",
+          longitude: "-71.9675",
+        },
+        sameAs: [
+          "https://www.facebook.com/machupicchuandesmarathn",
+          "https://instagram.com/machupicchu_andes",
+          "https://www.tripadvisor.com.pe/UserReviewEdit-g294314-d28603761-Machupicchu_Andes_Marathon-Cusco_Cusco_Region.html",
+        ],
+        priceRange: "$$$",
+      })}
     />
   </head>
   <body>
-    <Header client:load lang={lang} switchPath={switchPath} currentPath={currentPath} />
+    <Header
+      client:load
+      lang={lang}
+      switchPath={switchPath}
+      currentPath={currentPath}
+    />
 
     <main>
       <slot />
@@ -69,7 +164,7 @@ const switchPath = currentPath.includes(`/${lang}/`)
       });
 
       // Handle Astro view transitions if they are enabled later
-      document.addEventListener('astro:after-swap', () => {
+      document.addEventListener("astro:after-swap", () => {
         document.querySelectorAll("section").forEach((section) => {
           observer.observe(section);
         });

@@ -1,11 +1,11 @@
 {
   "slug": "machu-picchu-tour-by-train",
   "category": "tour-days",
-  "price": "$250",
-  "image": "/images/hero.webp",
+  "price": "$370",
+  "image": "/images/tour-diarios/machu-picchu-train.png",
   "rating": 4.9,
   "en": {
-    "title": "Machu Picchu Tour by Train - Full Day",
+    "title": "Machu Picchu Tour by Train - Full Day - 1D",
     "duration": "1 day",
     "difficulty": "Easy",
     "maxAltitude": "2,430m",
@@ -34,7 +34,7 @@
     ]
   },
   "es": {
-    "title": "Tour a Machu Picchu en Tren - Full Day",
+    "title": "Tour a Machu Picchu en Tren - Full Day - 1D",
     "duration": "1 día",
     "difficulty": "Fácil",
     "maxAltitude": "2,430m",

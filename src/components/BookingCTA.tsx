@@ -23,11 +23,11 @@ export default function BookingCTA({ lang }: Props) {
             <p className="text-white/70 text-base leading-relaxed mb-10 max-w-[500px] mx-auto lg:mx-0">{t('booking.subtitle')}</p>
 
             <div className="flex flex-col gap-3 mb-10">
-              <a href="mailto:info@machupicchuandesmarathon.com" className="flex items-center gap-4 p-4 sm:p-[0.85rem_1rem] rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 max-w-[400px] mx-auto lg:mx-0 no-underline w-full">
+              <a href="mailto:info@peruandestrekking.com" className="flex items-center gap-4 p-4 sm:p-[0.85rem_1rem] rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 max-w-[400px] mx-auto lg:mx-0 no-underline w-full">
                 <div className="w-[38px] h-[38px] bg-white/10 rounded-xl flex items-center justify-center text-secondary shrink-0"><Mail size={18} /></div>
                 <div className="text-left min-w-0">
                   <strong className="block text-[0.65rem] font-bold uppercase tracking-[1.5px] text-secondary mb-0.5">{lang === 'en' ? 'Email Us' : 'Escríbenos'}</strong>
-                  <p className="m-0 text-[0.75rem] sm:text-[0.88rem] text-white/90 leading-[1.3] break-all sm:break-normal">info@machupicchuandesmarathon.com</p>
+                  <p className="m-0 text-[0.75rem] sm:text-[0.88rem] text-white/90 leading-[1.3] break-all sm:break-normal">info@peruandestrekking.com</p>
                 </div>
               </a>
               <a href="https://wa.me/51993187203" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 sm:p-[0.85rem_1rem] rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 max-w-[400px] mx-auto lg:mx-0 no-underline w-full">

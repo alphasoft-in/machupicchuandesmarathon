@@ -73,11 +73,11 @@ export default function Footer({ lang }: Props) {
             <h3 className="serif text-lg text-white">{t('footer.contact')}</h3>
             <ul className="flex flex-col gap-3 list-none p-0 m-0">
               <li>
-                <a href="mailto:info@machupicchuandesmarathon.com" className="flex items-center justify-center sm:justify-start gap-3 text-white/60 text-[0.85rem] no-underline transition-all duration-300 hover:text-secondary group">
+                <a href="mailto:info@peruandestrekking.com" className="flex items-center justify-center sm:justify-start gap-3 text-white/60 text-[0.85rem] no-underline transition-all duration-300 hover:text-secondary group">
                   <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center transition-colors group-hover:bg-secondary/20 shrink-0">
                     <Mail size={16} className="group-hover:text-secondary" />
                   </div>
-                  <span className="break-all sm:break-normal">info@machupicchuandesmarathon.com</span>
+                  <span className="break-all sm:break-normal">info@peruandestrekking.com</span>
                 </a>
               </li>
               <li>
@@ -117,7 +117,7 @@ export default function Footer({ lang }: Props) {
       <div className="container pt-6 pb-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[0.68rem] text-white/60 text-center md:text-left">
           <p className="m-0 font-normal">
-            &copy; {new Date().getFullYear()} Machu Picchu Andes Marathon. {lang === 'en' ? 'All rights reserved.' : 'Todos los derechos reservados.'}
+            &copy; {new Date().getFullYear()} Peru Andes Trekking. {lang === 'en' ? 'All rights reserved.' : 'Todos los derechos reservados.'}
           </p>
           <div className="flex gap-8 justify-center font-normal">
             <a href="#" className="no-underline transition-colors hover:text-white">{lang === 'en' ? 'Privacy Policy' : 'Política de Privacidad'}</a>

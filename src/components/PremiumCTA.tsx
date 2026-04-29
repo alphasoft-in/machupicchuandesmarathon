@@ -13,8 +13,8 @@ export default function PremiumCTA({ lang }: Props) {
 
   const WHATSAPP_NUMBER = "51993187203";
   const defaultMessage = lang === 'es' 
-    ? "Hola, me gustaría planear mi próximo viaje con Machu Picchu Andes Marathon."
-    : "Hello, I would like to plan my next trip with Machu Picchu Andes Marathon.";
+    ? "Hola, me gustaría planear mi próximo viaje con Peru Andes Trekking."
+    : "Hello, I would like to plan my next trip with Peru Andes Trekking.";
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(defaultMessage)}`;
 
   return (

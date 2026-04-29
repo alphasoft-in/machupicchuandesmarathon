@@ -13,11 +13,11 @@ interface Props {
 
 const lang = (Astro.currentLocale as "en" | "es") || "en";
 
-const defaultDescEn = "Premier travel agency in Cusco specializing in Machu Picchu tours, Inca Trail trekking, luxury expeditions, and authentic Andean adventures.";
-const defaultDescEs = "Agencia de viajes en Cusco especializada en tours a Machu Picchu, trekking por el Camino Inca, expediciones de lujo y aventuras andinas auténticas.";
+const defaultDescEn = "Premier travel agency in Cusco with expert local guides. Specialized in trekking, Machu Picchu tours, and Inca Trail expeditions. Direct operator for authentic adventures.";
+const defaultDescEs = "Agencia de viajes en Cusco con guía local experto. Especialistas en trekking, tours a Machu Picchu y Camino Inca. Operador directo para aventuras auténticas en los Andes.";
 
-const defaultKwEn = "Travel agency in Cusco, Machu Picchu tours, Inca Trail trekking, Peru adventure travel, luxury expeditions Cusco, Salkantay trek, hiking Peru, authentic tours";
-const defaultKwEs = "Agencia de viajes en Cusco, tours a Machu Picchu, trekking Camino Inca, viajes de aventura Perú, expediciones de lujo Cusco, ruta Salkantay, senderismo Cusco, tours auténticos";
+const defaultKwEn = "Travel agency in Cusco, Local Guide, Trekking Peru, Inca Trail Specialist, Machu Picchu tours, Direct operator Cusco, Best treks Cusco, Hiking Peru, Cusco tour operator, Adventure travel Peru";
+const defaultKwEs = "Agencia de viajes en Cusco, Guía local, Trekking Peru, Camino Inca, Machu Picchu tours, Operador directo Cusco, Mejores treks Cusco, Senderismo Peru, Turismo Cusco, Viajes de aventura";
 
 const {
   title,
@@ -26,7 +26,7 @@ const {
 } = Astro.props;
 
 const pageKeywords = lang === 'es' ? defaultKwEs : defaultKwEn;
-const titleSuffix = lang === 'es' ? 'Agencia de viajes en Cusco' : 'Travel Agency in Cusco';
+const titleSuffix = lang === 'es' ? 'Agencia de Viajes en Cusco & Operador de Trekking' : 'Travel Agency in Cusco & Trekking Operator';
 
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
@@ -39,7 +39,7 @@ const switchPath = currentPath.includes(`/${lang}/`)
   : `/${otherLang}/`;
 
 // Canonical URL
-const siteUrl = "https://machupicchuandesmarathon.com";
+const siteUrl = "https://peruandestrekking.com";
 const canonicalUrl = `${siteUrl}${currentPath}`;
 
 // Hreflang URLs (i18n SEO)
@@ -47,17 +47,25 @@ const currentLangUrl = canonicalUrl;
 const alternateLangUrl = `${siteUrl}${switchPath}`;
 
 // Open Graph
-const ogTitle = `${title} | Machu Picchu Andes Marathon`;
+const ogTitle = `${title} | Peru Andes Trekking`;
 const ogDescription = description;
 const ogUrl = canonicalUrl;
 const ogImage = `${siteUrl}${image}`;
-const ogSiteName = "Machu Picchu Andes Marathon";
+const ogSiteName = "Peru Andes Trekking";
 const ogLocale = lang === "en" ? "en_US" : "es_ES";
 ---
 
 <!doctype html>
 <html lang={lang}>
   <head>
+    <!-- Google Tag Manager -->
+    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PXZKQCHT');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="/favicon-nuevo.avif" />
     <meta name="viewport" content="width=device-width" />
@@ -66,7 +74,7 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
 
     <!-- SEO Basic -->
     <title>
-      {title} | Machu Picchu Andes Marathon | {titleSuffix}
+      {title} | Peru Andes Trekking | {titleSuffix}
     </title>
     <meta name="description" content={description} />
     <meta
@@ -103,13 +111,13 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
       set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "TravelAgency",
-        name: "Machu Picchu Andes Marathon",
+        name: "Peru Andes Trekking",
         description: description,
         url: siteUrl,
         logo: `${siteUrl}/images/logo.webp`,
         image: `${siteUrl}/images/hero.avif`,
         telephone: "+51 993 187 203",
-        email: "info@machupicchuandesmarathon.com",
+        email: "info@peruandestrekking.com",
         address: {
           "@type": "PostalAddress",
           streetAddress: "Jr. Santa Rosa P7",
@@ -132,6 +140,11 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
     />
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXZKQCHT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <Header
       client:load
       lang={lang}

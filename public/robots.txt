@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://machupicchuandesmarathon.com/sitemap.xml
+Sitemap: https://peruandestrekking.com/sitemap-index.xml
 
 # Disallow admin/private areas (if any)
 # Disallow: /admin/

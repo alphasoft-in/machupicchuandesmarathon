@@ -41,7 +41,7 @@ export default function CategoryGrid({ lang, categories, translatePath }: Props)
             ></div>
           </div>
           <div className="relative z-20">
-            <h3 className="serif text-3xl mb-3">{cat.title}</h3>
+            <h2 className="serif text-3xl mb-3">{cat.title}</h2>
             <p className="text-white/80 mb-6 line-clamp-3">{cat.desc}</p>
             <span className="inline-flex items-center text-secondary font-bold uppercase tracking-wider text-sm">
               {lang === 'en' ? 'View Packages' : 'Ver Paquetes'} <ArrowRight size={18} className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />

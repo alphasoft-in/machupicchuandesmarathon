@@ -96,7 +96,7 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
               className={`text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full transition-all duration-300 ${
                 lang === 'en' 
                   ? 'bg-secondary text-white shadow-sm' 
-                  : `${isScrolled ? 'text-slate-600 hover:text-slate-900' : 'text-white/80 hover:text-white'}`
+                  : `${isScrolled ? 'text-slate-700 hover:text-slate-900' : 'text-white hover:text-white/80'}`
               }`}
             >
               EN
@@ -106,7 +106,7 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
               className={`text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full transition-all duration-300 ${
                 lang === 'es' 
                   ? 'bg-secondary text-white shadow-sm' 
-                  : `${isScrolled ? 'text-slate-600 hover:text-slate-900' : 'text-white/80 hover:text-white'}`
+                  : `${isScrolled ? 'text-slate-700 hover:text-slate-900' : 'text-white hover:text-white/80'}`
               }`}
             >
               ES

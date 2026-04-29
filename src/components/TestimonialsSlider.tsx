@@ -78,7 +78,7 @@ export default function TestimonialsSlider({ lang, testimonials }: Props) {
                   ))}
                 </div>
                 <p className="text-[0.95rem] sm:text-[1.1rem] italic mb-6 sm:mb-8 text-slate-800 leading-[1.6] sm:leading-[1.7]">"{item.text}"</p>
-                <div className="font-bold uppercase text-[0.7rem] sm:text-[0.75rem] tracking-[1.5px] text-secondary">- {item.client}</div>
+                <div className="font-bold uppercase text-[0.7rem] sm:text-[0.75rem] tracking-[1.5px] text-primary">- {item.client}</div>
               </div>
             </SwiperSlide>
           ))}

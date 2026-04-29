@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.peruandestrekking.com',
+  site: 'https://peruandestrekking.com',
   integrations: [react(), sitemap({
     changefreq: 'weekly',
     priority: 0.7,

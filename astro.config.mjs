@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://peruandestrekking.com',
+  site: 'https://www.peruandestrekking.com',
   integrations: [react(), sitemap()],
   i18n: {
     defaultLocale: 'en',

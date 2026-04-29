@@ -39,7 +39,7 @@ const switchPath = currentPath.includes(`/${lang}/`)
   : `/${otherLang}/`;
 
 // Canonical URL
-const siteUrl = "https://peruandestrekking.com";
+const siteUrl = "https://www.peruandestrekking.com";
 const canonicalUrl = `${siteUrl}${currentPath}`;
 
 // Hreflang URLs (i18n SEO)
@@ -67,6 +67,9 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
     <!-- End Google Tag Manager -->
 
     <meta charset="utf-8" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
     <link rel="icon" type="image/png" href="/favicon-nuevo.avif" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
@@ -118,6 +121,16 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
         image: `${siteUrl}/images/hero.avif`,
         telephone: "+51 993 187 203",
         email: "info@peruandestrekking.com",
+        priceRange: "$$$",
+        foundingDate: "2010",
+        areaServed: ["Cusco", "Machu Picchu", "Peru"],
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+51 993 187 203",
+          contactType: "customer service",
+          areaServed: "PE",
+          availableLanguage: ["English", "Spanish"]
+        },
         address: {
           "@type": "PostalAddress",
           streetAddress: "Jr. Santa Rosa P7",
@@ -135,7 +148,7 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
           "https://instagram.com/machupicchu_andes",
           "https://www.tripadvisor.com.pe/UserReviewEdit-g294314-d28603761-Machupicchu_Andes_Marathon-Cusco_Cusco_Region.html",
         ],
-        priceRange: "$$$",
+
       })}
     />
   </head>

@@ -19,6 +19,9 @@ export default defineConfig({
       prefixDefaultLocale: true
     }
   },
+  build: {
+    inlineStylesheets: 'always'
+  },
   vite: {
     ssr: {
       noExternal: ['lucide-react']

@@ -52,10 +52,10 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
 
   return (
     <header 
-      className={`fixed top-0 left-0 w-full z-[9999] transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-[9999] transition-[background-color,padding,box-shadow] duration-300 ease-in-out ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md py-4 shadow-[0_10px_30px_rgba(0,0,0,0.15)]' 
-          : 'bg-black/20 backdrop-blur-sm py-6'
+          ? 'bg-white/95 backdrop-blur-md py-3 md:py-4 shadow-[0_10px_30px_rgba(0,0,0,0.12)]' 
+          : 'bg-black/20 backdrop-blur-sm py-5 md:py-6'
       }`}
     >
       <nav className="flex justify-between items-center max-w-[1400px] mx-auto px-4 md:px-8">
@@ -66,7 +66,7 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
               alt="Peru Andes Trekking - Agencia de Viajes en Cusco" 
               width={220}
               height={72}
-              className={`w-auto transition-all duration-300 ease-in-out ${isScrolled ? 'h-[32px] md:h-[40px] 2xl:h-[48px]' : 'h-[38px] md:h-[48px] 2xl:h-[60px]'}`} 
+              className={`w-auto transition-[height] duration-300 ease-in-out ${isScrolled ? 'h-[32px] md:h-[40px] 2xl:h-[48px]' : 'h-[38px] md:h-[48px] 2xl:h-[60px]'}`} 
             />
           </a>
         </div>

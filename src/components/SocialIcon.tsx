@@ -21,7 +21,8 @@ export default function SocialIcon({ icon, size = 18, className = "" }: Props) {
         WebkitMaskImage: `url('/icons/social/${icon}.svg')`,
         WebkitMaskRepeat: 'no-repeat',
         WebkitMaskPosition: 'center',
-        WebkitMaskSize: 'contain'
+        WebkitMaskSize: 'contain',
+        contain: 'paint layout'
       }}
     />
   );

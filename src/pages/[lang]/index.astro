@@ -3,9 +3,9 @@ import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import { Mail, Phone, MapPin, CheckCircle, Globe, Users } from 'lucide-react';
 import { useTranslations, useTranslatedPath } from '../../utils/i18n';
-import Hero from '../../components/Hero';
-import CategoryGrid from '../../components/CategoryGrid';
-import TourGrid from '../../components/TourGrid';
+import Hero from '../../components/Hero.astro';
+import CategoryGrid from '../../components/CategoryGrid.astro';
+import TourGrid from '../../components/TourGrid.astro';
 import TestimonialsSlider from '../../components/TestimonialsSlider';
 import BookingForm from '../../components/BookingForm';
 import BookingCTA from '../../components/BookingCTA';
@@ -97,7 +97,6 @@ const image = "/images/hero.avif";
 
 <Layout title={title} description={description} image={image} lang={lang}>
   <Hero 
-    client:idle 
     lang={lang} 
     subtitle={t('hero.subtitle')} 
     ctaText={t('hero.cta')} 
@@ -105,7 +104,7 @@ const image = "/images/hero.avif";
   />
 
   <section id="categories" class="py-10 categories pb-0">
-    <CategoryGrid client:visible lang={lang} categories={categories} translatePath={translatePath} />
+    <CategoryGrid lang={lang} categories={categories} translatePath={translatePath} />
   </section>
 
   <section id="featured-tours" class="py-24 bg-light">
@@ -115,7 +114,7 @@ const image = "/images/hero.avif";
         <p class="text-[clamp(0.9rem,3vw,1.1rem)] text-slate-500 max-w-[600px] mx-auto">{t('home.featured.subtitle')}</p>
       </div>
       
-      <TourGrid client:visible lang={lang} tours={featuredTours} />
+      <TourGrid lang={lang} tours={featuredTours} />
       
     </div>
   </section>

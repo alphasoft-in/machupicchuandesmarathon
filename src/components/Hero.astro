@@ -1,0 +1,60 @@
+---
+import { ArrowRight } from 'lucide-react';
+
+interface Props {
+  lang: 'en' | 'es';
+  subtitle: string;
+  ctaText: string;
+  categoryPath: string;
+}
+
+const { lang, subtitle, ctaText, categoryPath } = Astro.props;
+---
+
+<section id="home" class="relative flex items-center justify-center h-screen min-h-[700px] overflow-hidden text-center text-white bg-primary bg-[linear-gradient(rgba(0,0,0,0.4),rgba(14,59,46,0.7)),url('/images/hero.avif')] bg-[position:center_25%] bg-cover bg-no-repeat">
+  <div class="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_top,rgba(14,59,46,0.8),transparent)] z-10"></div>
+  <div class="relative z-20 container max-w-[900px] px-4 mx-auto">
+    <div class="flex items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8 animate-fade-up">
+      <div class="h-[1px] w-8 sm:w-12 bg-white/30 hidden xs:block"></div>
+      <span class="text-[0.75rem] sm:text-[1rem] font-bold uppercase tracking-[3px] sm:tracking-[4px] text-white/90">
+        {lang === 'en' ? 'Experience the Andes like never before' : 'Vive los Andes como nunca antes'}
+      </span>
+      <div class="h-[1px] w-8 sm:w-12 bg-white/30 hidden xs:block"></div>
+    </div>
+    
+    <h1 class="serif text-[clamp(1.8rem,6vw,3.5rem)] leading-[1.1] mb-6 sm:mb-8 animate-fade-up" style="animation-delay: 0.2s">
+      Machu Picchu <br/> <span class="block text-secondary">Andes Marathon</span>
+    </h1>
+    
+    <p class="text-[clamp(0.85rem,4vw,1.1rem)] max-w-[600px] mx-auto mb-10 sm:mb-[clamp(2rem,5vw,3.5rem)] opacity-90 leading-relaxed px-4 animate-fade-up" style="animation-delay: 0.4s">
+      {subtitle}
+    </p>
+    
+    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-fade-up" style="animation-delay: 0.6s">
+      <a href={categoryPath} class="btn btn-primary w-full sm:w-auto max-w-[300px] flex justify-center items-center">
+        {ctaText} <ArrowRight size={20} class="ml-2" />
+      </a>
+      <a href="#about" class="btn btn-outline w-full sm:w-auto max-w-[300px] flex justify-center items-center">
+        {lang === 'en' ? 'Why Choose Us' : 'Por qué elegirnos'}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

@@ -14,11 +14,11 @@ export default function SocialIcon({ icon, size = 18, className = "" }: Props) {
         width: `${size}px`,
         height: `${size}px`,
         backgroundColor: 'currentColor',
-        maskImage: `url('https://cdn.simpleicons.org/${icon}')`,
+        maskImage: `url('/icons/social/${icon}.svg')`,
         maskRepeat: 'no-repeat',
         maskPosition: 'center',
         maskSize: 'contain',
-        WebkitMaskImage: `url('https://cdn.simpleicons.org/${icon}')`,
+        WebkitMaskImage: `url('/icons/social/${icon}.svg')`,
         WebkitMaskRepeat: 'no-repeat',
         WebkitMaskPosition: 'center',
         WebkitMaskSize: 'contain'

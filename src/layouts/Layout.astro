@@ -41,19 +41,20 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 const currentPath = Astro.url.pathname;
 
-// Normalize paths (ensure trailing slashes and remove /en prefix for default locale)
+// Normalize paths (ensure trailing slashes for consistency)
 const normalizePath = (path: string) => {
-  let p = path.replace(/^\/en(\/|$)/, "/");
-  return p.endsWith("/") ? p : `${p}/`;
+  return path.endsWith("/") ? path : `${path}/`;
 };
 
 const normalizedCurrentPath = normalizePath(currentPath);
 
 // Helper to switch language
 const otherLang = lang === "en" ? "es" : "en";
-const rawSwitchPath = lang === "en" 
-  ? `/es${normalizedCurrentPath}`
-  : normalizedCurrentPath.replace('/es/', '/') || '/';
+const rawSwitchPath = currentPath.includes(`/${lang}/`)
+  ? currentPath.replace(`/${lang}/`, `/${otherLang}/`)
+  : currentPath === `/${lang}`
+    ? `/${otherLang}/`
+    : `/${otherLang}/`;
 
 const normalizedSwitchPath = normalizePath(rawSwitchPath);
 
@@ -146,7 +147,7 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
     <!-- Hreflang Tags for Multi-language SEO -->
     <link rel="alternate" hreflang={lang} href={currentLangUrl} />
     <link rel="alternate" hreflang={otherLang} href={alternateLangUrl} />
-    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/en/`} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />

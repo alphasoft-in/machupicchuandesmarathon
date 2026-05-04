@@ -113,9 +113,7 @@ export function useTranslations(lang) {
 export function useTranslatedPath(lang) {
   return function translatePath(path, l = lang) {
     const cleanPath = path === '/' ? '' : (path.startsWith('/') ? path : '/' + path);
-    // If the language is the default one ('en'), don't add the prefix
-    const prefix = l === 'en' ? '' : `/${l}`;
-    const finalPath = `${prefix}${cleanPath}/`;
-    return finalPath === '' ? '/' : finalPath;
+    const finalPath = `/${l}${cleanPath}/`;
+    return finalPath;
   }
 }

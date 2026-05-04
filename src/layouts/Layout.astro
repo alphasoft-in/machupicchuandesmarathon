@@ -14,37 +14,48 @@ interface Props {
 
 const lang = (Astro.currentLocale as "en" | "es") || "en";
 
-const defaultDescEn = "Premier travel agency in Cusco with expert local guides. Specialized in trekking, Machu Picchu tours, and Inca Trail expeditions. Direct operator for authentic adventures.";
-const defaultDescEs = "Agencia de viajes en Cusco con guía local experto. Especialistas en trekking, tours a Machu Picchu y Camino Inca. Operador directo para aventuras auténticas en los Andes.";
+const defaultDescEn =
+  "Premier travel agency in Cusco with expert local guides. Specialized in trekking, Machu Picchu tours, and Inca Trail expeditions. Direct operator for authentic adventures.";
+const defaultDescEs =
+  "Agencia de viajes en Cusco con guía local experto. Especialistas en trekking, tours a Machu Picchu y Camino Inca. Operador directo para aventuras auténticas en los Andes.";
 
-const defaultKwEn = "Travel agency in Cusco, Local Guide, Trekking Peru, Inca Trail Specialist, Machu Picchu tours, Direct operator Cusco, Best treks Cusco, Hiking Peru, Cusco tour operator, Adventure travel Peru";
-const defaultKwEs = "Agencia de viajes en Cusco, Guía local, Trekking Peru, Camino Inca, Machu Picchu tours, Operador directo Cusco, Mejores treks Cusco, Senderismo Peru, Turismo Cusco, Viajes de aventura";
+const defaultKwEn =
+  "Travel agency in Cusco, Local Guide, Trekking Peru, Inca Trail Specialist, Machu Picchu tours, Direct operator Cusco, Best treks Cusco, Hiking Peru, Cusco tour operator, Adventure travel Peru";
+const defaultKwEs =
+  "Agencia de viajes en Cusco, Guía local, Trekking Peru, Camino Inca, Machu Picchu tours, Operador directo Cusco, Mejores treks Cusco, Senderismo Peru, Turismo Cusco, Viajes de aventura";
 
 const {
   title,
-  description = lang === 'es' ? defaultDescEs : defaultDescEn,
+  description = lang === "es" ? defaultDescEs : defaultDescEn,
   image = "/images/og-default.jpg",
   structuredData,
 } = Astro.props;
 
-const pageKeywords = lang === 'es' ? defaultKwEs : defaultKwEn;
-const titleSuffix = lang === 'es' ? 'Agencia de Viajes en Cusco & Operador de Trekking' : 'Travel Agency in Cusco & Trekking Operator';
+const pageKeywords = lang === "es" ? defaultKwEs : defaultKwEn;
+const titleSuffix =
+  lang === "es"
+    ? "Agencia de Viajes en Cusco & Operador de Trekking"
+    : "Travel Agency in Cusco & Trekking Operator";
 
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 const currentPath = Astro.url.pathname;
 
+// Normalize paths (ensure trailing slashes and remove /en prefix for default locale)
+const normalizePath = (path: string) => {
+  let p = path.replace(/^\/en(\/|$)/, "/");
+  return p.endsWith("/") ? p : `${p}/`;
+};
+
+const normalizedCurrentPath = normalizePath(currentPath);
+
 // Helper to switch language
 const otherLang = lang === "en" ? "es" : "en";
-const rawSwitchPath = currentPath.includes(`/${lang}/`)
-  ? currentPath.replace(`/${lang}/`, `/${otherLang}/`)
-  : currentPath === `/${lang}` 
-    ? `/${otherLang}`
-    : `/${otherLang}/`;
+const rawSwitchPath = lang === "en" 
+  ? `/es${normalizedCurrentPath}`
+  : normalizedCurrentPath.replace('/es/', '/') || '/';
 
-// Normalize paths (remove trailing slashes for consistency)
-const normalizedCurrentPath = currentPath.endsWith('/') && currentPath.length > 1 ? currentPath.slice(0, -1) : currentPath;
-const normalizedSwitchPath = rawSwitchPath.endsWith('/') && rawSwitchPath.length > 1 ? rawSwitchPath.slice(0, -1) : rawSwitchPath;
+const normalizedSwitchPath = normalizePath(rawSwitchPath);
 
 // Canonical URL
 const siteUrl = "https://peruandestrekking.com";
@@ -55,11 +66,12 @@ const currentLangUrl = canonicalUrl;
 const alternateLangUrl = `${siteUrl}${normalizedSwitchPath}`;
 
 // Open Graph
-const ogTitle = `${title} | Peru Andes Trekking`;
+const ogTitle = `${title} | Peru Andes Trekking | agencia de viajes en cusco y operador local de trekking`;
 const ogDescription = description;
 const ogUrl = canonicalUrl;
 const ogImage = `${siteUrl}${image}`;
-const ogSiteName = "Peru Andes Trekking";
+const ogSiteName =
+  "Peru Andes Trekking | agencia de viajes en cusco y operador local de trekking";
 const ogLocale = lang === "en" ? "en_US" : "es_ES";
 ---
 
@@ -67,11 +79,30 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
 <html lang={lang}>
   <head>
     <!-- Google Tag Manager -->
-    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PXZKQCHT');</script>
+    <script is:inline>
+      function loadGTM() {
+        if (window.gtmLoaded) return;
+        window.gtmLoaded = true;
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-PXZKQCHT");
+      }
+
+      // Load GTM on first user interaction
+      ["mousedown", "mousemove", "touchstart", "scroll", "keydown"].forEach((event) => {
+        window.addEventListener(event, loadGTM, { once: true, passive: true });
+      });
+
+      // Fallback: load after 4 seconds if no interaction
+      setTimeout(loadGTM, 4000);
+    </script>
     <!-- End Google Tag Manager -->
 
     <meta charset="utf-8" />
@@ -79,10 +110,22 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" media="print" onload="this.media='all'" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
     <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      />
     </noscript>
 
     <link rel="icon" type="image/png" href="/favicon-nuevo.avif" />
@@ -95,10 +138,7 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
       {title} | Peru Andes Trekking | {titleSuffix}
     </title>
     <meta name="description" content={description} />
-    <meta
-      name="keywords"
-      content={pageKeywords}
-    />
+    <meta name="keywords" content={pageKeywords} />
 
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalUrl} />
@@ -106,7 +146,7 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
     <!-- Hreflang Tags for Multi-language SEO -->
     <link rel="alternate" hreflang={lang} href={currentLangUrl} />
     <link rel="alternate" hreflang={otherLang} href={alternateLangUrl} />
-    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/en/`} />
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -144,7 +184,7 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
           telephone: "+51 993 187 203",
           contactType: "customer service",
           areaServed: "PE",
-          availableLanguage: ["English", "Spanish"]
+          availableLanguage: ["English", "Spanish"],
         },
         address: {
           "@type": "PostalAddress",
@@ -163,22 +203,32 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
           "https://instagram.com/machupicchu_andes",
           "https://www.tripadvisor.com.pe/UserReviewEdit-g294314-d28603761-Machupicchu_Andes_Marathon-Cusco_Cusco_Region.html",
         ],
-
       })}
     />
 
     <!-- Dynamic Structured Data (Tours, Breadcrumbs, etc.) -->
-    {structuredData && (
-      <script
-        type="application/ld+json"
-        set:html={typeof structuredData === 'string' ? structuredData : JSON.stringify(structuredData)}
-      />
-    )}
+    {
+      structuredData && (
+        <script
+          type="application/ld+json"
+          set:html={
+            typeof structuredData === "string"
+              ? structuredData
+              : JSON.stringify(structuredData)
+          }
+        />
+      )
+    }
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXZKQCHT"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PXZKQCHT"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
     <!-- End Google Tag Manager (noscript) -->
 
     <Header
@@ -192,7 +242,7 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
       <slot />
     </main>
 
-    <Footer client:load lang={lang} />
+    <Footer client:visible lang={lang} />
 
     <script>
       // Scroll Reveal Observer

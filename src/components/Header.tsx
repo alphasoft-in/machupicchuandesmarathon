@@ -18,10 +18,17 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 50);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -57,6 +64,8 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
             <img 
               src="/images/logo-opt.webp" 
               alt="Peru Andes Trekking - Agencia de Viajes en Cusco" 
+              width={220}
+              height={72}
               className={`w-auto transition-all duration-300 ease-in-out ${isScrolled ? 'h-[32px] md:h-[40px] 2xl:h-[48px]' : 'h-[38px] md:h-[48px] 2xl:h-[60px]'}`} 
             />
           </a>

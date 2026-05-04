@@ -29,7 +29,7 @@ const image = "/images/tour-diarios/bg-tour-diarios.avif";
 
 <Layout title={title} description={description} image={image} lang={lang}>
   <PageHeader 
-    client:load
+    client:idle
     lang={lang}
     title={lang === 'en' ? 'Daily' : 'Tours de'}
     titleAccent={lang === 'en' ? 'Tours' : 'un Día'}

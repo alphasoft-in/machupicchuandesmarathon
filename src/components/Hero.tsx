@@ -27,23 +27,17 @@ export default function Hero({ lang, subtitle, ctaText, categoryPath }: Props) {
           <div className="h-[1px] w-8 sm:w-12 bg-white/30 hidden xs:block"></div>
         </motion.div>
         
-        <motion.h1 
+        <h1 
           className="serif text-[clamp(1.8rem,6vw,3.5rem)] leading-[1.1] mb-6 sm:mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
         >
           Machu Picchu <br/> <span className="block text-secondary">Andes Marathon</span>
-        </motion.h1>
+        </h1>
         
-        <motion.p
+        <p
           className="text-[clamp(0.85rem,4vw,1.1rem)] max-w-[600px] mx-auto mb-10 sm:mb-[clamp(2rem,5vw,3.5rem)] opacity-90 leading-relaxed px-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
         >
           {subtitle}
-        </motion.p>
+        </p>
         
         <motion.div 
           className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center"

@@ -90,9 +90,12 @@ const testimonials = [
     client: "James Wilson, Australia"
   }
 ];
+const title = t('hero.title');
+const description = lang === 'en' ? "Machu Picchu Andes Marathon. Experience the Andes like never before with our expert local guides. Trekking Peru expeditions and luxury travel." : "Machu Picchu Andes Marathon. Vive los Andes como nunca antes con nuestros guías locales expertos. Expediciones de trekking en Perú y viajes de lujo.";
+const image = "/images/hero.avif";
 ---
 
-<Layout title={t('hero.title')} lang={lang}>
+<Layout title={title} description={description} image={image} lang={lang}>
   <Hero 
     client:load 
     lang={lang} 

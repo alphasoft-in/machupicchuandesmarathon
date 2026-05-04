@@ -24,7 +24,7 @@ export default function Footer({ lang }: Props) {
       <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1.5fr] gap-10 lg:gap-8 pb-12 lg:pb-16 text-center sm:text-left">
         <div className="flex flex-col gap-8 items-center sm:items-start">
           <a href={translatePath('/')} className="transition-opacity hover:opacity-80">
-            <img src="/images/logo.webp" alt="Logo" className="h-[60px] w-auto" />
+            <img src="/images/logo-opt.webp" alt="Logo" className="h-[60px] w-auto" />
           </a>
           <p className="text-white/55 leading-loose text-[0.88rem] max-w-[260px]">
             {t('footer.tagline')}

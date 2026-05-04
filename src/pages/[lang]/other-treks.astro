@@ -22,16 +22,19 @@ const tours = await getCollection('tours');
 const otherTours = tours
   .map(t => t.data)
   .filter(t => t.category === 'other-treks');
+const title = t('nav.other');
+const description = lang === 'en' ? "Unique and specialized treks for the adventurous spirit." : "Treks únicos y especializados para el espíritu aventurero.";
+const image = "/images/other-treks/bg-other-treks.avif";
 ---
 
-<Layout title={`${t('nav.other')} | Peru Andes Trekking`} lang={lang}>
+<Layout title={title} description={description} image={image} lang={lang}>
   <PageHeader 
     client:load
     lang={lang}
     title={lang === 'en' ? 'Other' : 'Otros'}
     titleAccent={lang === 'en' ? 'Treks' : 'Treks'}
-    subtitle={lang === 'en' ? "Unique and specialized treks for the adventurous spirit." : "Treks únicos y especializados para el espíritu aventurero."}
-    bgImage="/images/other-treks/bg-other-treks.avif"
+    subtitle={description}
+    bgImage={image}
   />
 
   <section class="py-10">

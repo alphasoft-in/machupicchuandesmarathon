@@ -9,6 +9,7 @@ interface Props {
   description?: string;
   lang?: string;
   image?: string;
+  structuredData?: string | object;
 }
 
 const lang = (Astro.currentLocale as "en" | "es") || "en";
@@ -23,6 +24,7 @@ const {
   title,
   description = lang === 'es' ? defaultDescEs : defaultDescEn,
   image = "/images/og-default.jpg",
+  structuredData,
 } = Astro.props;
 
 const pageKeywords = lang === 'es' ? defaultKwEs : defaultKwEn;
@@ -34,17 +36,23 @@ const currentPath = Astro.url.pathname;
 
 // Helper to switch language
 const otherLang = lang === "en" ? "es" : "en";
-const switchPath = currentPath.includes(`/${lang}/`)
+const rawSwitchPath = currentPath.includes(`/${lang}/`)
   ? currentPath.replace(`/${lang}/`, `/${otherLang}/`)
-  : `/${otherLang}/`;
+  : currentPath === `/${lang}` 
+    ? `/${otherLang}`
+    : `/${otherLang}/`;
+
+// Normalize paths (remove trailing slashes for consistency)
+const normalizedCurrentPath = currentPath.endsWith('/') && currentPath.length > 1 ? currentPath.slice(0, -1) : currentPath;
+const normalizedSwitchPath = rawSwitchPath.endsWith('/') && rawSwitchPath.length > 1 ? rawSwitchPath.slice(0, -1) : rawSwitchPath;
 
 // Canonical URL
 const siteUrl = "https://peruandestrekking.com";
-const canonicalUrl = `${siteUrl}${currentPath}`;
+const canonicalUrl = `${siteUrl}${normalizedCurrentPath}`;
 
 // Hreflang URLs (i18n SEO)
 const currentLangUrl = canonicalUrl;
-const alternateLangUrl = `${siteUrl}${switchPath}`;
+const alternateLangUrl = `${siteUrl}${normalizedSwitchPath}`;
 
 // Open Graph
 const ogTitle = `${title} | Peru Andes Trekking`;
@@ -124,7 +132,7 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
         name: "Peru Andes Trekking",
         description: description,
         url: siteUrl,
-        logo: `${siteUrl}/images/logo.webp`,
+        logo: `${siteUrl}/images/logo-opt.webp`,
         image: `${siteUrl}/images/hero.avif`,
         telephone: "+51 993 187 203",
         email: "info@peruandestrekking.com",
@@ -158,6 +166,14 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
 
       })}
     />
+
+    <!-- Dynamic Structured Data (Tours, Breadcrumbs, etc.) -->
+    {structuredData && (
+      <script
+        type="application/ld+json"
+        set:html={typeof structuredData === 'string' ? structuredData : JSON.stringify(structuredData)}
+      />
+    )}
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -168,8 +184,8 @@ const ogLocale = lang === "en" ? "en_US" : "es_ES";
     <Header
       client:load
       lang={lang}
-      switchPath={switchPath}
-      currentPath={currentPath}
+      switchPath={normalizedSwitchPath}
+      currentPath={normalizedCurrentPath}
     />
 
     <main>

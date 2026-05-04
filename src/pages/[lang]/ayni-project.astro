@@ -81,15 +81,16 @@ const content = {
 };
 
 const tAyni = content[lang];
+const image = "/images/bg-comunidades-andinas.avif";
 ---
 
-<Layout title={`${tAyni.title} | Peru Andes Trekking`} lang={lang}>
+<Layout title={tAyni.title} description={tAyni.description} image={image} lang={lang}>
   <PageHeader 
     client:load
     lang={lang}
     title={tAyni.title}
     subtitle={tAyni.subtitle}
-    bgImage="/images/bg-comunidades-andinas.avif"
+    bgImage={image}
   />
 
   <section class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">

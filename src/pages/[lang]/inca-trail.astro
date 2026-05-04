@@ -22,16 +22,19 @@ const tours = await getCollection('tours');
 const incaTours = tours
   .map(t => t.data)
   .filter(t => t.category === 'inca-trail');
+const title = t('nav.inca');
+const description = lang === 'en' ? "Explore the ancient pathways of the Incan Empire. Every step is a story, every view is a masterpiece." : "Explora los antiguos senderos del Imperio Inca. Cada paso es una historia, cada vista una obra maestra.";
+const image = "/images/inca-trail/bg-inca-trail.avif";
 ---
 
-<Layout title={`${t('nav.inca')} | Peru Andes Trekking`} lang={lang}>
+<Layout title={title} description={description} image={image} lang={lang}>
   <PageHeader 
     client:load
     lang={lang}
     title={lang === 'en' ? 'Inca Trail' : 'Camino Inca'}
     titleAccent="Tours"
-    subtitle={lang === 'en' ? "Explore the ancient pathways of the Incan Empire. Every step is a story, every view is a masterpiece." : "Explora los antiguos senderos del Imperio Inca. Cada paso es una historia, cada vista una obra maestra."}
-    bgImage="/images/inca-trail/bg-inca-trail.avif"
+    subtitle={description}
+    bgImage={image}
   />
 
   <section class="py-10">

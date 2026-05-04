@@ -55,7 +55,7 @@ export default function Header({ lang, switchPath, currentPath }: Props) {
         <div className="flex items-center min-w-0">
           <a href={translatePath('/')} className="flex-shrink-0">
             <img 
-              src="/images/logo.webp" 
+              src="/images/logo-opt.webp" 
               alt="Peru Andes Trekking - Agencia de Viajes en Cusco" 
               className={`w-auto transition-all duration-300 ease-in-out ${isScrolled ? 'h-[32px] md:h-[40px] 2xl:h-[48px]' : 'h-[38px] md:h-[48px] 2xl:h-[60px]'}`} 
             />

@@ -22,16 +22,19 @@ const allTours = await getCollection('tours');
 const luxuryTours = allTours
   .map(t => t.data)
   .filter(t => t.category === 'luxury');
+const title = t('nav.luxury');
+const description = lang === 'en' ? "Indulge in the extraordinary. Bespoke journeys that blend high-altitude adventure with world-class comfort and elegance." : "Entrégate a lo extraordinario. Viajes a medida que combinan la aventura de alta montaña con el confort y la elegancia de clase mundial.";
+const image = "/images/luxury/bg-luxury.avif";
 ---
 
-<Layout title={`${t('nav.luxury')} | Peru Andes Trekking`} lang={lang}>
+<Layout title={title} description={description} image={image} lang={lang}>
   <PageHeader 
     client:load
     lang={lang}
     title={lang === 'en' ? 'Luxury' : 'Experiencias'}
     titleAccent={lang === 'en' ? 'Experiences' : 'de Lujo'}
-    subtitle={lang === 'en' ? "Indulge in the extraordinary. Bespoke journeys that blend high-altitude adventure with world-class comfort and elegance." : "Entrégate a lo extraordinario. Viajes a medida que combinan la aventura de alta montaña con el confort y la elegancia de clase mundial."}
-    bgImage="/images/luxury/bg-luxury.avif"
+    subtitle={description}
+    bgImage={image}
   />
 
   <section class="py-10">

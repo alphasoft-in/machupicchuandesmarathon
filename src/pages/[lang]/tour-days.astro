@@ -22,16 +22,19 @@ const tours = await getCollection('tours');
 const dailyTours = tours
   .map(t => t.data)
   .filter(t => t.category === 'tour-days');
+const title = t('nav.daily');
+const description = lang === 'en' ? "Short immersions, deep connections. Experience the highlights of Cusco and the Sacred Valley in a single day." : "Inmersiones cortas, conexiones profundas. Experimenta los puntos más destacados de Cusco y el Valle Sagrado en un solo día.";
+const image = "/images/tour-diarios/bg-tour-diarios.avif";
 ---
 
-<Layout title={`${t('nav.daily')} | Peru Andes Trekking`} lang={lang}>
+<Layout title={title} description={description} image={image} lang={lang}>
   <PageHeader 
     client:load
     lang={lang}
     title={lang === 'en' ? 'Daily' : 'Tours de'}
     titleAccent={lang === 'en' ? 'Tours' : 'un Día'}
-    subtitle={lang === 'en' ? "Short immersions, deep connections. Experience the highlights of Cusco and the Sacred Valley in a single day." : "Inmersiones cortas, conexiones profundas. Experimenta los puntos más destacados de Cusco y el Valle Sagrado en un solo día."}
-    bgImage="/images/tour-diarios/bg-tour-diarios.avif"
+    subtitle={description}
+    bgImage={image}
   />
 
   <section class="py-10">

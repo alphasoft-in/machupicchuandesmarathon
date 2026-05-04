@@ -31,9 +31,30 @@ const recommendations = allTours
   .sort(() => Math.random() - 0.5)
   .slice(0, 4)
   .map((t) => t.data);
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  name: content.title,
+  description: content.description,
+  image: `https://peruandestrekking.com${tour.image}`,
+  touristType: "Sightseeing",
+  offers: {
+    "@type": "Offer",
+    price: tour.price ? tour.price.replace(/[^0-9.]/g, "") : "",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock"
+  }
+};
 ---
 
-<Layout title={`${content.title} | Peru Andes Trekking`} lang={lang}>
+<Layout 
+  title={content.title} 
+  description={content.description}
+  image={tour.image}
+  structuredData={structuredData}
+  lang={lang}
+>
   <section
     class="relative min-h-[75vh] flex items-center justify-center pt-[140px] sm:pt-[180px] pb-16 overflow-hidden bg-cover bg-center"
     style={`background-image: url(${tour.image})`}
